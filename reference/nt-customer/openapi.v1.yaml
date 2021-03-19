@@ -15,7 +15,103 @@ servers:
   - url: 'https://customerapi.cattelecom.com'
     description: Production
 
-paths:
+paths:  
+  '/billing/{bill_acct_number}/invoice':
+    parameters:
+      - in: path
+        name: bill_acct_number
+        schema:
+          type: string
+          format: number
+          example: '11234768'
+        required: true
+    get:
+      operationId: B3
+      description: Retrieve invoice info by bill_acct_number
+      summary: Get Invoice Info by BA Number.
+      tags: []
+      responses:
+        '200':
+          description: Data Found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ./models/invoice.v1.yaml    
+        '400':
+          description: Bad request.
+        '401':
+          description: Authorization information is missing or invalid.
+        '404':
+          description: Data was not found.
+        '500':
+          description: Unexpected error.
+
+  '/billing/{bill_acct_number}/debt':
+    parameters:
+      - in: path
+        name: bill_acct_number
+        schema:
+          type: string
+          format: number
+          example: '11234768'
+        required: true
+    get:
+      operationId: B4
+      description: Retrieve invoice info by bill_acct_number
+      summary: Get Invoice Info by BA Number.
+      tags: []
+      responses:
+        '200':
+          description: Data Found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ./models/invoice.v1.yaml
+        '400':
+          description: Bad request.
+        '401':
+          description: Authorization information is missing or invalid.
+        '404':
+          description: Data was not found.
+        '500':
+          description: Unexpected error.
+
+  '/billing/{bill_acct_number}/{record}':
+    parameters:
+      - in: path
+        name: bill_acct_number
+        schema:
+          type: string
+          format: number
+          example: '11234768'
+        required: true
+    get:
+      operationId: B5
+      description: Retrieve invoice info by bill_acct_number
+      summary: Get Invoice Info by BA Number.
+      tags: []
+      responses:
+        '200':
+          description: Data Found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ./models/invoice.v1.yaml
+        '400':
+          description: Bad request.
+        '401':
+          description: Authorization information is missing or invalid.
+        '404':
+          description: Data was not found.
+        '500':
+          description: Unexpected error.
+
   '/invoice/{invoice_number}':
     parameters:
       - in: path
@@ -28,17 +124,30 @@ paths:
     get:
       operationId: I1
       description: Retrieve invoice info by invoice_number
-      summary: Get Invoice Info by Invoice Number
+      summary: Get Invoice Info by Invoice Number.
       tags: []
       responses:
         '200':
-          description: Invoice Found
+          description: Data Found
           content:
             application/json:
               schema:
-                $ref: ./models/invoice.v1.yaml
+                type: array
+                items:
+                  $ref: ./models/invoice.v1.yaml
+                oneOf:
+                  - minItems: 0
+                    maxItems: 0
+                  - minItems: 1
+                    maxItems: 1                  
+        '400':
+          description: Bad request.
+        '401':
+          description: Authorization information is missing or invalid.
         '404':
-          description: Invoice Not Found
+          description: Data was not found.
+        '500':
+          description: Unexpected error.
 
   '/users/{userId}':
     parameters:
@@ -74,6 +183,7 @@ paths:
       description: Retrieve the information of the user with the matching user ID.
     patch:
       summary: Update User Information
+      tags: []
       operationId: patch-users-userId
       responses:
         '200':
@@ -127,6 +237,7 @@ paths:
   /user:
     post:
       summary: Create New User
+      tags: []
       operationId: post-user
       responses:
         '200':
