@@ -10,11 +10,36 @@ info:
     name: MIT
     url: 'https://github.com/pwangsom/nt-customer-api/blob/main/LICENSE'
 servers:
-  - url: 'https://customerapi.cattelecom.com/dev/'
+  - url: 'https://customerapi.cattelecom.com/dev'
     description: Development
-  - url: 'https://customerapi.cattelecom.com/'
+  - url: 'https://customerapi.cattelecom.com'
     description: Production
+
 paths:
+  '/invoice/{invoice_number}':
+    parameters:
+      - in: path
+        name: invoice_number
+        schema:
+          type: string
+          format: number
+          example: '11234768'
+        required: true
+    get:
+      operationId: I1
+      description: Retrieve invoice info by invoice_number
+      summary: Get Invoice Info by Invoice Number
+      tags: []
+      responses:
+        '200':
+          description: Invoice Found
+          content:
+            application/json:
+              schema:
+                $ref: ./models/invoice.v1.yaml
+        '404':
+          description: Invoice Not Found
+
   '/users/{userId}':
     parameters:
       - schema:

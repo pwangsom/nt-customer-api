@@ -58,7 +58,7 @@ properties:
   invoice_sub_list:
     type: array
     items:
-      $ref: Invoice.v1.yaml
+      $ref: invoice-subscriber.v1.yaml
 description: Invoice model
 x-tags:
   - Invoice
