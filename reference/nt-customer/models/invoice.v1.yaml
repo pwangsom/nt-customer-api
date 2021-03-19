@@ -1,0 +1,64 @@
+title: Invoice
+type: object
+properties:
+  invoice_number:
+    type: string
+    format: number
+    example: '25856552'
+  issue_date:
+    type: string
+    format: date
+    example: '2020-06-10'
+    description: วันที่ออก Invoice
+  due_date:
+    type: string
+    format: date
+    example: '2020-06-25'
+    description: วันที่ครบกำหนดชำระ
+  period_from:
+    type: string
+    format: date
+    example: '2020-05-01'
+    description: วันที่เริ่มต้นคิดค่าบริการ (วันที่เริ่มต้นรอบบิล)
+  period_to:
+    type: string
+    format: date
+    example: '2020-05-31'
+    description: วันที่สิ้นสุดคิดค่าบริการ (วันที่สิ้นสุดรอบบิล)
+  amount:
+    type: number
+    format: double
+    example: 590
+    description: ยอดหนี้ไม่รวม VAT
+  vat:
+    type: number
+    format: double
+    example: 41.3
+    description: VAT
+  paid_amount:
+    type: number
+    format: double
+    example: 0
+    description: ยอดชำระรวม VAT
+  last_paid_date:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: วันที่ชำระเงินล่าสุด
+  balance_amount:
+    type: number
+    format: double
+    example: 590
+    description: ยอดหนี้คงค้างรวม VAT
+  balance_update_date:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: วันที่เปลี่ยนแปลงยอด balance_amount ล่าสุด
+  invoice_sub_list:
+    type: array
+    items:
+      $ref: Invoice.v1.yaml
+description: Invoice model
+x-tags:
+  - Invoice

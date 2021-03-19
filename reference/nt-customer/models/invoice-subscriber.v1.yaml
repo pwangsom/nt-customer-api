@@ -1,0 +1,21 @@
+title: InvoiceSubscirber
+type: object
+properties:
+  invoice_number:
+    type: string
+    format: number
+    example: '25856552'
+  ref_subscr_no:
+    type: string
+    format: number
+    example: '25412'
+  amount:
+    type: number
+    format: double
+    example: 590
+    description: ยอดหนี้ไม่รวม VAT
+required:
+  - invoice_number
+  - ref_subscr_no
+  - amount
+description: Invoice subscriber model
