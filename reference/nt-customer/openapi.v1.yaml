@@ -28,7 +28,7 @@ paths:
     get:
       operationId: B3
       description: Retrieve a list of invoices by bill_acct_number
-      summary: Get List of Invoices by BA Number.
+      summary: Get All Invoices by BA Number.
       tags: []
       responses:
         '200':
@@ -60,7 +60,7 @@ paths:
     get:
       operationId: B4
       description: Retrieve a list of debt invoices by bill_acct_number
-      summary: Get List of Debt Invoices by BA Number.
+      summary: Get Debt Invoices by BA Number.
       tags: []
       responses:
         '200':
@@ -99,7 +99,7 @@ paths:
     get:
       operationId: B5
       description: Retrieve invoice info by bill_acct_number and number of record
-      summary: Get Invoice Info by BA Number and Number of Record.
+      summary: Get Invoices by BA Number and Desired Record.
       tags: []
       responses:
         '200':
@@ -168,7 +168,7 @@ paths:
     get:
       operationId: I3
       description: Retrieve payment info by invoice_number
-      summary: Get Payment Info by Invoice Number.
+      summary: Get All Payment Trans by Invoice Number.
       tags: []
       responses:
         '200':
@@ -208,7 +208,7 @@ paths:
     get:
       operationId: I4
       description: Retrieve payment info by invoice_number and tracking_id
-      summary: Get Payment Info by Invoice Number and Tracking ID.
+      summary: Get a Payment Tran by Invoice Number and Tracking ID.
       tags: []
       responses:
         '200':
