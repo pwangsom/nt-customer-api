@@ -1,10 +1,18 @@
 title: Invoice
 type: object
+description: Invoice model
+x-tags:
+  - Invoice
 properties:
   invoice_number:
     type: string
     format: number
     example: '25856552'
+  bill_acct_number:
+    type: string
+    format: number
+    example: '23658745'
+    description: หมายเลข BA
   issue_date:
     type: string
     format: date
@@ -58,7 +66,9 @@ properties:
   invoice_sub_list:
     type: array
     items:
-      $ref: invoice-subscriber.v1.yaml
-description: Invoice model
-x-tags:
-  - Invoice
+      $ref: InvoiceSubscriber.v1.yaml
+required:
+  - invoice_number
+  - issue_date
+  - due_date
+  - amount

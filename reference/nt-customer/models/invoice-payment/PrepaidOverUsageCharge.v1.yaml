@@ -1,0 +1,24 @@
+title: PrepaidOverUsageCharge
+type: object
+description: PrepaidOverUsageCharge
+properties:
+  usage_date:
+    type: string
+    format: date
+    example: '2020-06-10'
+  ref_subscr_no:
+    type: string
+    format: number
+    example: '25856552'
+  subscriber_number:
+    type: string
+    example: '0882543698'
+  amount:
+    type: number
+    format: double
+    example: 50
+    description: ยอดเงินการใช้จ่ายส่วนเกิน
+required:
+  - usage_date
+  - subscriber_number
+  - amount

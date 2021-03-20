@@ -1,0 +1,37 @@
+title: PaymentTransaction
+type: object
+properties:
+  tracking_id:
+    type: string
+    format: number
+    example: '25856552'
+    description: payment transaction id
+  invoice_number:
+    type: string
+    format: number
+    example: '25856552'
+  pay_date:
+    type: string
+    format: date
+    example: '2020-06-10'
+  amount:
+    type: number
+    format: double
+    example: 590
+    description: ยอดชำระ
+  vat:
+    type: number
+    format: double
+    example: 41.3
+  location:
+    type: string
+    example: ศูนย์บริการลูกค้าสุขุมวิท
+    description: สถานที่รับชำระ
+  receipt_id:
+    type: string
+    example: '25856552'
+    description: เลขที่ใบเสร็จ
+required:
+  - tracking_id
+  - invoice_number
+description: Payment transaction model

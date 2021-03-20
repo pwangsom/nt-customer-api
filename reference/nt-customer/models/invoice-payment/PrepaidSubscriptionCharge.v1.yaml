@@ -1,0 +1,43 @@
+title: PrepaidSubscriptionCharge
+type: object
+description: Prepaid subscription charge model
+properties:
+  subscription_id:
+    type: string
+    example: U2003010000075937752
+  subscription_date:
+    type: string
+    format: date
+    example: '2020-06-10'
+  ref_subscr_no:
+    type: string
+    format: number
+    example: '25856552'
+  subscriber_number:
+    type: string
+    example: '0882543698'
+  offer_id:
+    type: string
+    format: number
+    example: '51006022'
+    description: รหัสโปรโมชั่น
+  offer_name:
+    type: string
+    example: เน็ตสุดคุ้ม 1 Mbps. 279
+    description: ชื่อโปรโมชั่น
+  amount:
+    type: number
+    format: double
+    example: 50
+    description: ยอดเงินสมัครโปรโมชั่น
+  charge_type:
+    type: string
+    example: RC
+    description: 'ประเภทการ Charge (NRC, RC)'
+required:
+  - subscription_id
+  - subscription_date
+  - subscriber_number
+  - offer_id
+  - amount
+  - charge_type
