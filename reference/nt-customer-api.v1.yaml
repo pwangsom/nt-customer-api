@@ -17,5 +17,5 @@ servers:
 
 paths:
   /customer/generate/customer_acct_number/{offset}:
-      $ref: "paths/utility/U01.v1.yaml"
+      $ref: ./paths/utility/U01.v1.yaml
     
