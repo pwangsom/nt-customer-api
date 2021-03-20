@@ -1,33 +1,33 @@
-  get:
-    operationId: U01
-    description: Generate CA number
-    summary: Get CA Number.
-    tags: []
-    parameters:
-      - in: path
-        name: offset
-        schema:
-          type: string
-          format: number
-          example: '11234768'
-        required: true       
-    responses:
-      '200':
-        description: Generate success.
-        content:
-          application/json:
-            schema:
-              type: array
-              items:
-                type: string
-                format: number
-                example: '7017480851'
-                description: CA reference number
-      '400':
-        description: Bad request.
-      '401':
-        description: Authorization information is missing or invalid.
-      '404':
-        description: Generate failed.
-      '500':
-        description: Unexpected error.
+get:
+  operationId: U01
+  description: Generate CA number
+  summary: Get CA Number.
+  tags: []
+  parameters:
+    - in: path
+      name: offset
+      schema:
+        type: string
+        format: number
+        example: '11234768'
+      required: true       
+  responses:
+    '200':
+      description: Generate success.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: string
+              format: number
+              example: '7017480851'
+              description: CA reference number
+    '400':
+      description: Bad request.
+    '401':
+      description: Authorization information is missing or invalid.
+    '404':
+      description: Generate failed.
+    '500':
+      description: Unexpected error.
