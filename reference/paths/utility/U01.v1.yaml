@@ -3,6 +3,14 @@
     description: Generate CA number
     summary: Get CA Number.
     tags: []
+    parameters:
+      - in: path
+        name: offset
+        schema:
+          type: string
+          format: number
+          example: '11234768'
+        required: true       
     responses:
       '200':
         description: Generate success.
