@@ -89,6 +89,13 @@ paths:
           format: number
           example: '11234768'
         required: true
+      - in: path
+        name: record
+        schema:
+          type: string
+          format: number
+          example: '1'
+        required: true
     get:
       operationId: B5
       description: Retrieve invoice info by bill_acct_number
