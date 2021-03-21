@@ -1,0 +1,26 @@
+/customer/generate/customer_acct_number/{offset}:
+  $ref: utility/U01.v1.yaml
+
+'/billing/{bill_acct_number}/invoice':
+  $ref: billing-account/B03.v1.yaml
+
+'/billing/{bill_acct_number}/invoice/debt':
+  $ref: billing-account/B04.v1.yaml
+
+'/billing/{bill_acct_number}/invoice/{invoice_record}':
+  $ref: billing-account/B05.v1.yaml
+
+'/invoice/{invoice_number}':      
+  $ref: invoice-payment/I01.v1.yaml
+
+'/invoice/{invoice_number}/payment':      
+  $ref: invoice-payment/I03.v1.yaml      
+
+'/invoice/{invoice_number}/payment/{tracking_id}':      
+  $ref: invoice-payment/I04.v1.yaml      
+
+'/prepaid/sub/{subscriber_number}/subscription_charge/peroid/{date_from}/{date_to}':
+  $ref: invoice-payment/I05.v1.yaml 
+
+'/prepaid/sub/{subscriber_number}/over_usage/peroid/{date_from}/{date_to}':
+  $ref: invoice-payment/I06.v1.yaml 

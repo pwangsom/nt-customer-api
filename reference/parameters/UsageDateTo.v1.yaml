@@ -1,0 +1,8 @@
+name: usage_date_to
+in: path
+required: true
+description: วันที่สิ้นสุดของช่วงเวลาการค้นหา
+schema:
+  type: string
+  format: date
+  example: '2020-06-30'

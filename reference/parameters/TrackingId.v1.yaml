@@ -1,0 +1,8 @@
+name: tracking_id
+in: path
+required: true
+description: หมายเลข Tracking ID
+schema:
+  type: string
+  format: number
+  example: '11234768'

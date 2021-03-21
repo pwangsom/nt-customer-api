@@ -1,0 +1,26 @@
+get:
+  operationId: I06
+  description: Retrieve prepaid over usage by subscriber_number, usage_date_from, and usage_date_to
+  summary: Get Prepaid Over Usage by Subscriber Number.
+  tags: []
+  parameters:
+    - $ref: ../../parameters/SubscriberNumber.v1.yaml  
+    - $ref: ../../parameters/DateFrom.v1.yaml    
+    - $ref: ../../parameters/DateTo.v1.yaml    
+  responses:
+    '200':
+      description: Data Found
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../../models/invoice-payment/PrepaidOverUsageCharge.v1.yaml
+    '400':
+      description: Bad request.
+    '401':
+      description: Authorization information is missing or invalid.
+    '404':
+      description: Data was not found.
+    '500':
+      description: Unexpected error.

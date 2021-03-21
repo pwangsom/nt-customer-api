@@ -1,0 +1,8 @@
+name: invoice_number
+in: path
+required: true
+description: หมายเลข invoice
+schema:
+  type: string
+  format: number
+  example: '1225412'
