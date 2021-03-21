@@ -1,8 +1,5 @@
 title: Invoice
 type: object
-description: Invoice model
-x-tags:
-  - Invoice
 properties:
   invoice_number:
     type: string
@@ -72,3 +69,6 @@ required:
   - issue_date
   - due_date
   - amount
+x-tags:
+  - Invoice
+description: Invoice model

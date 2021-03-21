@@ -1,10 +1,7 @@
 title: NewIndyCustomerOtherIdCard
 type: object
-description: New Individual Customer Other ID Card
-x-tags:
-  - NewIndyCustomerOtherIdCard
 properties:
-  indy_id_card_name: "NewIndyCustomerOtherIdCard"
+  indy_id_card_name: NewIndyCustomerOtherIdCard
   id_card_type_lkp:
     type: string
     format: number
@@ -13,19 +10,17 @@ properties:
   id_card_number:
     type: string
     example: '1234567890123'
-  id_card_issued_by:
-    type: string
-    example: เขตหลักสี่
-    description: หน่วยงานที่ออกเอกสาร
-  id_card_expired_date:
-    type: string
-    format: date
-    example: '2030-02-02'
+    description: หมายเลขเอกสารของลูกค้า
   tax_number:
     type: string
     example: '1234567890123'
+    description: หมายเลขประจำตัวผู้เสียภาษี
   branch_id:
     type: string
-    description: หน่วยงานที่ออกเอกสาร
+    example: '00000'
+    description: หมายเลขประจำสาขา 5 หลัก
 required:
   - id_card_type_lkp
+description: New individual customer other ID card model
+x-tags:
+  - NewIndyCustomerOtherIdCard

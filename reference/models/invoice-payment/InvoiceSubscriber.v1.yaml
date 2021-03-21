@@ -19,3 +19,5 @@ required:
   - ref_subscr_no
   - amount
 description: Invoice subscriber model
+x-tags:
+  - InvoiceSubscirber

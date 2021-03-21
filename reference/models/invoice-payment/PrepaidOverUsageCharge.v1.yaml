@@ -1,6 +1,5 @@
 title: PrepaidOverUsageCharge
 type: object
-description: PrepaidOverUsageCharge
 properties:
   usage_date:
     type: string
@@ -22,3 +21,6 @@ required:
   - usage_date
   - subscriber_number
   - amount
+x-tags:
+  - PrepaidOverUsageCharge
+description: PrepaidOverUsageCharge

@@ -1,15 +1,15 @@
 title: NewIndividualCustomer
 type: object
-x-tags:
-  - NewIndividualCustomer
-description: New individual customer
 properties:
   customer_acct_number:
     type: string
     format: number
     example: '7017480851'
     description: CA reference number
-  id_card_type:
-    oneOf:
-      - $ref: NewIndyCustomerThaiIdCard.v1.yaml
-      - $ref: NewIndyCustomerOtherIdCard.v1.yaml
+  indy_card:
+    $ref: NewIndyCustomerCard.v1.yaml
+required:
+  - id_card_type
+x-tags:
+  - NewIndividualCustomer
+description: New individual customer model

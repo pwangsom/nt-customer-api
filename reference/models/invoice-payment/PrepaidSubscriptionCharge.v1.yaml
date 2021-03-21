@@ -1,6 +1,5 @@
 title: PrepaidSubscriptionCharge
 type: object
-description: Prepaid subscription charge model
 properties:
   subscription_id:
     type: string
@@ -41,3 +40,6 @@ required:
   - offer_id
   - amount
   - charge_type
+x-tags:
+  - PrepaidSubscriptionCharge
+description: Prepaid subscription charge model
