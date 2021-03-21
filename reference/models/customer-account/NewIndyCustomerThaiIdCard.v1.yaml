@@ -1,0 +1,20 @@
+title: NewIndyCustomerThaiIdCard
+type: object
+description: New Individual Customer Thai ID Card
+x-tags:
+  - NewIndyCustomerThaiIdCard
+properties:
+  indy_id_card_name: "NewIndyCustomerThaiIdCard"
+  id_card_number:
+    type: string
+    example: '1234567890123'
+  id_card_issued_by:
+    type: string
+    example: เขตหลักสี่
+    description: หน่วยงานที่ออกเอกสาร
+  id_card_expired_date:
+    type: string
+    format: date
+    example: '2030-02-02'
+required:
+  - id_card_number

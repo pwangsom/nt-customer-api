@@ -1,0 +1,18 @@
+post:
+  operationId: C19
+  description: Create an individual customer
+  summary: Create an individual customer.
+  tags: []
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: ../../models/customer-account/NewIndividualCustomer.v1.yaml
+  responses:
+    '200':
+      description: Operation success
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/operation/OperationSuccess.v1.yaml

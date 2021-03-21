@@ -1,0 +1,14 @@
+title: Lookup
+type: object
+x-tags:
+  - Lookup
+description: Lookup model
+properties:
+  id:
+    type: string
+    format: number
+  display_value:
+    type: string
+required:
+  - id
+  - display_value
