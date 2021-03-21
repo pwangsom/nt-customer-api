@@ -16,8 +16,4 @@ servers:
     description: Production
 
 paths:
-  /customer/generate/customer_acct_number/{offset}:
-      $ref: paths/utility/U01.v1.yaml
-  
-  '/invoice/{invoice_number}':      
-      $ref: paths/invoice-payment/I01.v1.yaml
+  $ref: paths/index.v1.yaml
