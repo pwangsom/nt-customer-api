@@ -1,7 +1,7 @@
 title: NewIndyCustomerOtherIdCard
 type: object
 properties:
-  indy_id_card_name: NewIndyCustomerOtherIdCard
+  indy_id_card_name: 'NewIndyCustomerOtherIdCard'
   id_card_type_lkp:
     type: string
     format: number

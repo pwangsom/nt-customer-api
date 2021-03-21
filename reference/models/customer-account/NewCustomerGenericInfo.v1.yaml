@@ -1,0 +1,27 @@
+title: NewCustomerGenericInfo
+type: object
+properties:
+  customer_acct_number:
+    type: string
+    format: number
+    example: '7017480851'
+    description: CA reference number
+  customer_segment_lkp:
+    type: string
+    example: 14
+    description: Customer Segment (ลูกค้าบุคคล ลูกค้าเอกชน ลูกค้าผู้ประกอบการ และลูกค้าภาครัฐ)
+  customer_group_lkp:
+    type: string
+    example: 5
+    description: Customer Group
+  original_data_owner_lkp:
+    type: string
+    example: 1
+    description: ลูกค้า NT1 หรือ NT2
+  original_reference_key:
+    type: string
+    example: 1
+    description: Reference key สำหรับใช้อ้างอิง กรณีลูกค้า NT2
+description: New customer generic info model
+x-tags:
+  - NewCustomerGenericInfo
