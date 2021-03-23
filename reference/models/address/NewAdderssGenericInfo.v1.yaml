@@ -1,0 +1,21 @@
+title: NewAdderssGenericInfo
+type: object
+description: New address generic info model
+x-tags:
+  - NewAdderssGenericInfo
+properties:
+  address_type_lkp:
+    type: string
+    format: number
+    example: '1'
+    description: 'ประเภทที่อยู่ Home, Office,'
+  latitude:
+    type: string
+    format: number
+    example: '13.03135321643213'
+  longtitude:
+    type: string
+    format: number
+    example: '13.03135321643213'
+required:
+  - address_type_lkp

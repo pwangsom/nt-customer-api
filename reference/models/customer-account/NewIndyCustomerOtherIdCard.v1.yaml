@@ -1,7 +1,9 @@
 title: NewIndyCustomerOtherIdCard
 type: object
 properties:
-  indy_id_card_name: 'NewIndyCustomerOtherIdCard'
+  indy_id_card_type:
+    value: 'NewIndyCustomerOtherIdCard'
+    description: เอกสารประเภทอื่นที่ไม่ใช่บัตรประชาชน
   id_card_type_lkp:
     type: string
     format: number

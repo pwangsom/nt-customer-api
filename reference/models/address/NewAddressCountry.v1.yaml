@@ -1,0 +1,7 @@
+title: NewAddressCountry
+oneOf:
+  - $ref: NewAddressTh.v1.yaml
+  - $ref: NewAdderssForiegn.v1.yaml
+description: New address country model
+x-tags:
+  - NewAddressCountry

@@ -1,0 +1,7 @@
+title: NewAddressWithNewCA
+allOf:
+  - $ref: NewAdderssGenericInfo.v1.yaml
+  - $ref: NewAddressCountry.v1.yaml
+x-tags:
+  - NewAddressWithNewCA
+description: New address with new CA model
