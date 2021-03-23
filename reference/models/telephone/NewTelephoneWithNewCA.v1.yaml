@@ -1,0 +1,15 @@
+title: NewTelephoneWithNewCA
+allOf:
+  - oneOf:
+    - $ref: NewTelephoneMobileTH.v1.yaml
+    - $ref: NewTelephoneGeneral.v1.yaml
+  - type: object
+    properties:
+      is_primary:
+        type: integer
+        enum:
+          - 1
+        description: เบอร์โทรหลัก
+x-tags:
+  - NewTelephoneWithNewCA
+description: New telephone with new CA model

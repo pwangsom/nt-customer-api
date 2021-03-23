@@ -8,7 +8,7 @@ post:
     content:
       application/json:
         schema:
-          $ref: ../../models/customer-account/NewIndividualCustomer.v1.yaml
+          $ref: ../../models/customer-account/new-individual/NewIndyCustomer.v1.yaml
   responses:
     '200':
       description: Operation success

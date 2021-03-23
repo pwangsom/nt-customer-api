@@ -1,0 +1,20 @@
+title: NewSocialWithNewCA
+type: object
+properties:
+  social_type_lkp:
+    type: string
+    format: number
+    example: 'Line'
+    description: ประเภทของ Social Account
+  social_account:
+    type: string
+    example: 'abc_12346'
+    description: Social Account
+  is_primary:
+    type: integer
+    enum:
+      - 1
+    description: บัญชีหลัก
+x-tags:
+  - NewSocialWithNewCA
+description: New social with new CA model

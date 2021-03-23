@@ -1,0 +1,18 @@
+title: NewTelephoneMobileTH
+type: object
+x-tags:
+  - NewTelephoneMobileTH
+description: New telephone mobile TH model
+properties:
+  telephone_type:
+    type: string
+    enum:
+      - 'NewTelephoneMobileTH'
+    description: โทรศัพท์มือถือของไทย
+  telephone_number:
+    type: string
+    format: number
+    example: '0987654321'
+    description: หมายเลขโทรศัพท์มือถือ 10 หลัก มี 0 นำหน้า
+required:
+  - telephone_number
