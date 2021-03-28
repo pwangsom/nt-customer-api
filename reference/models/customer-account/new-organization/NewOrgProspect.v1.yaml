@@ -3,10 +3,10 @@ type: object
 properties:
   client_info:
     $ref: ../../common/RequestClientInfo.v1.yaml
-  id_card_type:
+  id_card_info:
     $ref: NewOrgCustomerCard.v1.yaml
   customer_acct_type:
-    $ref: NewOrganizationFull.v1.yaml
+    $ref: NewOrganization.v1.yaml
   general_info:
     $ref: ../NewCustomerGenericInfo.v1.yaml
   address:

@@ -6,10 +6,10 @@ description: New indy prospect model
 properties:
   client_info:
     $ref: ../../common/RequestClientInfo.v1.yaml
-  id_card_type:
+  id_card_info:
     $ref: NewIndyCustomerCard.v1.yaml
   customer_acct_type:
-    $ref: NewIndividualBasic.v1.yaml
+    $ref: NewBasicIndividual.v1.yaml
   general_info:
     $ref: ../NewCustomerGenericInfo.v1.yaml
   address:

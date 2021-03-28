@@ -1,0 +1,66 @@
+title: CustomerGenericInfo
+type: object
+properties:
+  customer_segment_lkp:
+    allOf:
+      - ref: ../common/Lookup.v1.yaml
+    description: Customer Segment (ลูกค้าบุคคล ลูกค้าเอกชน ลูกค้าผู้ประกอบการ และลูกค้าภาครัฐ)
+    example:
+      lookup_category_name: 'customer_segment_lkp'
+      lookup_ref_id: '14'
+      display_value: 'ลูกค้าบุคคล'
+  customer_group_lkp:
+    allOf:
+      - ref: ../common/Lookup.v1.yaml
+    description: Customer group
+    example:
+      lookup_category_name: 'customer_group_lkp'
+      lookup_ref_id: '25'
+      display_value: 'บุคคลทั่วไป'
+  currency_lkp:
+    type: string
+    example: '1'
+    description: Default is Baht.
+  language_lkp:
+    type: string
+    example: '1'
+    description: Default is Thai.
+  is_vip_sales:
+    type: integer
+    example: 0
+    description: VIP customer for sales department.
+  is_vip_debt:
+    type: integer
+    example: 0
+    description: VIP customer for debt department.
+  black_list_lkp:
+    type: string
+    example: '1'
+    description: Default is None.
+  collection_treatment_lkp:
+    type: string
+    example: '1'
+    description: Default is Null.
+  related_party_lkp:
+    type: string
+    example: '1'
+    description: Default is Null.
+  trading_partner:
+    type: string
+    example: M345
+    description: Default is Null.
+  is_internal_customer_account:
+    type: integer
+    example: 0
+    description: Internal customer flag.
+  original_data_owner_lkp:
+    type: string
+    example: '1'
+    description: ลูกค้า NT1 หรือ NT2
+  original_reference_key:
+    type: string
+    example: '3464656546'
+    description: Reference key สำหรับใช้อ้างอิง กรณีลูกค้า NT2
+x-tags:
+  - CustomerGenericInfo
+description: Customer generic info model

@@ -1,10 +1,10 @@
 get:
   operationId: C13
-  description: Retrieve incustomer infoy invoice_number
-  summary: Get Invoice Info by Invoice Number.
+  description: Retrieve customer infoy customer_acct_number
+  summary: Get Customer Info by Customer Number.
   tags: []
   parameters:
-    - $ref: ../../parameters/InvoiceNumber.v1.yaml  
+    - $ref: ../../parameters/CustomerAcctNumber.v1.yaml
   responses:
     '200':
       description: Data Found
@@ -13,7 +13,7 @@ get:
           schema:
             type: array
             items:
-              $ref: ../../models/invoice-payment/Invoice.v1.yaml
+              $ref: ../../models/customer-account/CustomerAccount.v1.yaml
             oneOf:
               - minItems: 0
                 maxItems: 0

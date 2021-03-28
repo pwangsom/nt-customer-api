@@ -1,8 +1,5 @@
-title: NewIndividualBasic
+title: Individual
 type: object
-x-tags:
-  - NewIndividualBasic
-description: New individual basic model
 properties:
   salutation_lkp:
     type: string
@@ -51,5 +48,6 @@ properties:
     type: string
     example: '12345678'
     description: รหัสประจำตัวพนักงาน กรณีที่ลูกค้าเป็นพนักงานของ NT
-required:
-  - first_name
+x-tags:
+  - Individual
+description: Individual model

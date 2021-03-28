@@ -1,6 +1,9 @@
 '/customer/generate/customer_acct_number/{offset}':
   $ref: utility/U01.v1.yaml
 
+'/customer/{customer_acct_number}':
+  $ref: customer-account/C13.v1.yaml
+
 '/customer/individual/create':
   $ref: customer-account/C19.v1.yaml
 

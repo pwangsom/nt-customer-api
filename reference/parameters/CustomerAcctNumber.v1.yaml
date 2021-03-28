@@ -1,0 +1,8 @@
+name: customer_acct_number
+in: path
+required: true
+description: หมายเลข CA
+schema:
+  type: string
+  format: number
+  example: '7017480851'

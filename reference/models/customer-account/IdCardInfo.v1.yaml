@@ -1,0 +1,32 @@
+title: IdCardInfo
+type: object
+properties:
+  id_card_type_lkp:
+    type: string
+    format: number
+    example: '6'
+    description: ประเภทเอกสารของลูกค้า
+  id_card_number:
+    type: string
+    example: '1234567890123'
+    description: หมายเลขเอกสารของลูกค้า
+  id_card_issued_by:
+    type: string
+    example: เขตหลักสี่
+    description: หน่วยงานที่ออกเอกสาร
+  id_card_expired_date:
+    type: string
+    format: date
+    example: '2030-02-02'
+    description: วันหมดอายุของเอกสาร
+  tax_number:
+    type: string
+    example: '1234567890123'
+    description: หมายเลขประจำตัวผู้เสียภาษี
+  branch_id:
+    type: string
+    example: '00000'
+    description: หมายเลขประจำสาขา 5 หลัก
+x-tags:
+  - IdCardInfo
+description: Id card info model
