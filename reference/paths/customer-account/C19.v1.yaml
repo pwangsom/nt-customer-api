@@ -3,6 +3,10 @@ post:
   description: Create an individual customer
   summary: Create an individual customer.
   tags: []
+  parameters:
+    - $ref: ../../parameters/XClientId.v1.yaml
+    - $ref: ../../parameters/XClientName.v1.yaml
+    - $ref: ../../parameters/XClientTimestamp.v1.yaml
   requestBody:
     required: true
     content:

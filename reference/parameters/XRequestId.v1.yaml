@@ -1,7 +1,0 @@
-name: X-Request-ID
-in: header
-required: true
-description: Transaction ID ใช้สำหรับอ้างอิง
-schema:
-  type: string
-  example: 'ORDER-12254127'
