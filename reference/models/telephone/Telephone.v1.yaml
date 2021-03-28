@@ -11,7 +11,7 @@ properties:
       - $ref: ../common/Lookup.v1.yaml
     description: ประเภทของเบอร์โทรศัพท์
     example:
-      lookup_category_name: 'telephone_country_code_lkp'
+      lookup_category_name: 'telephone_type_lkp'
       lookup_ref_id: '1'
       display_value: 'Mobile'
   telephone_country_code_lkp:
@@ -19,7 +19,7 @@ properties:
       - $ref: ../common/Lookup.v1.yaml
     description: รหัสประเทศ
     example:
-      lookup_category_name: 'telephone_type_lkp'
+      lookup_category_name: 'telephone_country_code_lkp'
       lookup_ref_id: '1'
       display_value: 'Thai'
   telephone_number:
