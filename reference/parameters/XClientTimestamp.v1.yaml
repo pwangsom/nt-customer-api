@@ -1,0 +1,8 @@
+name: X-Client-Timestamp
+in: header
+required: true
+description: Date-timestamp from client
+schema:
+  type: string
+  format: date-time
+  example: '2016-08-29T09:12:33.001Z'

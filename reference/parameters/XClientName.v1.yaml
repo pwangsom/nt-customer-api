@@ -1,0 +1,7 @@
+name: X-Client-Name
+in: header
+required: true
+description: ชื่อ Client ที่เรียกใช้ API
+schema:
+  type: string
+  example: 'OM UDB'

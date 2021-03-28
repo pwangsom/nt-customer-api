@@ -6,8 +6,8 @@ properties:
     example: U2003010000075937752
   subscription_date:
     type: string
-    format: date
-    example: '2020-06-10'
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
   ref_subscr_no:
     type: string
     format: number
