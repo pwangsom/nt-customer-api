@@ -2,10 +2,13 @@ title: Organization
 type: object
 properties:
   corp_type_lkp:
-    type: string
-    format: number
-    example: '1'
-    description: คำนำหน้าองค์กรไทย เช่น บมจ. บจก. และห้างหุ้นส่วน
+    allOf:
+      - $ref: ../common/Lookup.v1.yaml
+    description: คำนำหน้าองค์กรไทย
+    example:
+      lookup_category_name: 'corp_type_lkp'
+      lookup_ref_id: '4'
+      display_value: 'บจก.'
   organization_name:
     type: string
     example: เชฟรอน
@@ -13,10 +16,13 @@ properties:
     type: string
     example: สาขานครศรีธรรมราช
   corp_type_en_lkp:
-    type: string
-    format: number
-    example: '1'
+    allOf:
+      - $ref: ../common/Lookup.v1.yaml
     description: คำนำหน้าองค์กรอังกฤษ
+    example:
+      lookup_category_name: 'corp_type_en_lkp'
+      lookup_ref_id: 'ค'
+      display_value: 'PLC.'
   organization_name_en:
     type: string
     example: Chevron

@@ -7,7 +7,7 @@ properties:
   lookup_category_name:
     type: string
     example: 'customer_acct_lkp'
-    decription: Lookup category
+    description: Lookup category
   lookup_ref_id:
     type: string
     example: '1'

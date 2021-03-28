@@ -1,5 +1,0 @@
-title: GeneralAddress
-type: object
-properties:
-  id:
-    type: string

@@ -1,0 +1,16 @@
+title: BasicCustomerAccount
+allOf:
+  - $ref: ../common/CustomerAcctNumber.v1.yaml
+  - type: object
+    properties:
+      customer_full_name:
+        type: string
+        example: นายสมชาย เจริญยิ่ง
+        description: Customer full name.
+      id_card_info:
+        $ref: IdCardInfo.v1.yaml
+      generic_info:
+        $ref: CustomerGenericInfo.v1.yaml
+x-tags:
+  - BasicCustomerAccount
+description: Basic customer account model

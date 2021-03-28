@@ -2,10 +2,13 @@ title: Individual
 type: object
 properties:
   salutation_lkp:
-    type: string
-    format: number
-    example: '1'
+    allOf:
+      - $ref: ../common/Lookup.v1.yaml
     description: คำนำหน้าชื่อไทย
+    example:
+      lookup_category_name: 'salutation_lkp'
+      lookup_ref_id: '1'
+      display_value: 'นาย'
   first_name:
     type: string
     example: สมชาย
@@ -16,10 +19,13 @@ properties:
     type: string
     example: เจริญยิ่ง
   salutation_en_lkp:
-    type: string
-    format: number
-    example: '1'
+    allOf:
+      - $ref: ../common/Lookup.v1.yaml
     description: คำนำหน้าชื่ออังกฤษ
+    example:
+      lookup_category_name: 'salutation_en_lkp'
+      lookup_ref_id: '5'
+      display_value: 'Mr.'
   first_name_en:
     type: string
     example: John
@@ -30,20 +36,26 @@ properties:
     type: string
     example: Henry
   gender_lkp:
-    type: string
-    format: number
-    example: '1'
-    description: เพศ ชาย หญิง
+    allOf:
+      - $ref: ../common/Lookup.v1.yaml
+    description: เพศ
+    example:
+      lookup_category_name: 'gender_lkp'
+      lookup_ref_id: '1'
+      display_value: 'ชาย'
   date_of_birth:
     type: string
     format: date
     example: '2030-02-02'
     description: วันเกิด
   nationality_lkp:
-    type: string
-    format: number
-    example: '1'
+    allOf:
+      - $ref: ../common/Lookup.v1.yaml
     description: สัญชาติ
+    example:
+      lookup_category_name: 'nationality_lkp'
+      lookup_ref_id: '1'
+      display_value: 'ไทย'
   employee_code:
     type: string
     example: '12345678'

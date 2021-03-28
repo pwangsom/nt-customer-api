@@ -1,0 +1,41 @@
+title: Telephone
+type: object
+properties:
+  telephone_id:
+    type: string
+    format: number
+    example: '2425'
+    description: Address reference number
+  telephone_type_lkp:
+    allOf:
+      - $ref: ../common/Lookup.v1.yaml
+    description: ประเภทของเบอร์โทรศัพท์
+    example:
+      lookup_category_name: 'telephone_country_code_lkp'
+      lookup_ref_id: '1'
+      display_value: 'Mobile'
+  telephone_country_code_lkp:
+    allOf:
+      - $ref: ../common/Lookup.v1.yaml
+    description: รหัสประเทศ
+    example:
+      lookup_category_name: 'telephone_type_lkp'
+      lookup_ref_id: '1'
+      display_value: 'Thai'
+  telephone_number:
+    type: string
+    format: number
+    example: '021041322'
+    description: หมายเลขโทรศัพท์
+  extension_code:
+    type: string
+    format: number
+    example: '4321'
+    description: เบอร์ต่อ
+  is_primary:
+    type: integer
+    example: 1
+    description: Primary telphone.
+x-tags:
+  - Telephone
+description: Telephone model
