@@ -4,13 +4,7 @@ allOf:
   - oneOf:
     - $ref: NewAddressTH.v1.yaml
     - $ref: NewAdderssForiegn.v1.yaml
-  - type: object
-    properties:
-      is_primary:
-        type: integer
-        enum:
-          - 1
-        description: ที่อยู่หลัก
+  - $ref: ../common/IsPrimary.v1.yaml
 x-tags:
   - NewAddressWithNewCA
 description: New address with new CA model

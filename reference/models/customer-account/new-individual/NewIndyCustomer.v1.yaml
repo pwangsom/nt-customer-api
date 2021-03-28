@@ -14,9 +14,14 @@ allOf:
         $ref: ../../email-social/NewEmailWithNewCA.v1.yaml
       social_account:
         $ref: ../../email-social/NewSocialWithNewCA.v1.yaml
+      create_by:
+        type: string
+        example: '12345678'
+        description: รหัสพนักงาน หรือ Username ของระบบต้นทาง
     required:
       - customer_acct_type
       - address
+      - create_by
 x-tags:
   - NewIndividualCustomer
 description: New individual customer model
