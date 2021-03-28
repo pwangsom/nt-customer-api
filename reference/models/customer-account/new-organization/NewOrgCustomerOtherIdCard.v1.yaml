@@ -1,0 +1,31 @@
+title: NewOrgCustomerOtherIdCard
+type: object
+x-tags:
+  - NewOrgCustomerOtherIdCard
+description: New organization customer other ID card model
+properties:
+  org_id_card_type:
+    type: string
+    enum:
+      - NewOrgCustomerOtherIdCard
+    description: เอกสารประเภทอื่นที่ไม่ใช่เลขประจำตัวผู้เสียภาษี
+  id_card_type_lkp:
+    type: string
+    format: number
+    example: '6'
+    description: ประเภทเอกสารของลูกค้า
+  id_card_number:
+    type: string
+    example: '1234567890123'
+    description: หมายเลขเอกสารของลูกค้า
+  tax_number:
+    type: string
+    example: '1234567890123'
+    description: หมายเลขประจำตัวผู้เสียภาษี
+  branch_id:
+    type: string
+    example: '00000'
+    description: หมายเลขประจำสาขา 5 หลัก ค่า Default = '00000'
+required:
+  - org_id_card_type
+  - id_card_type_lkp

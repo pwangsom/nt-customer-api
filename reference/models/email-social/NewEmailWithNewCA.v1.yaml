@@ -9,8 +9,11 @@ allOf:
         description: ประเภทของอีเมล์
       email_address:
         type: string
-        example: 'abc@def.com'
+        example: abc@def.com
         description: อีเมล์
+    required:
+      - email_type_lkp
+      - email_address
   - $ref: ../common/IsPrimary.v1.yaml
 x-tags:
   - NewEmailWithNewCA

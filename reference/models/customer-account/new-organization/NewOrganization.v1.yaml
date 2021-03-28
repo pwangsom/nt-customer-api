@@ -1,0 +1,42 @@
+title: NewOrganization
+type: object
+x-tags:
+  - NewOrganization
+description: New Organization model
+properties:
+  corp_type_lkp:
+    type: string
+    format: number
+    example: '1'
+    description: คำนำหน้าองค์กรไทย เช่น บมจ. บจก. และห้างหุ้นส่วน
+  organization_name:
+    type: string
+    example: 'เชฟรอน'
+  branch_name:
+    type: string
+    example: 'สาขานครศรีธรรมราช'
+  corp_type_en_lkp:
+    type: string
+    format: number
+    example: '1'
+    description: คำนำหน้าองค์กรอังกฤษ
+  organization_name_en:
+    type: string
+    example: 'Chevron'
+    description: ชื่อองค์กรภาษาอังกฤษ
+  branch_name_en:
+    type: string
+    example: 'South branch'
+    description: ชื่อสาขาภาษาอังกฤษ
+  registration_date:
+    type: string
+    format: date
+    example: '2030-02-02'
+    description: วันที่จดทะเบียน
+  government_code:
+    type: string
+    example: 'G001'
+    description: รหัสหน่วยงานราชการ
+required:
+  - corp_type_lkp
+  - organization_name

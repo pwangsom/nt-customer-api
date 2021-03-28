@@ -1,27 +1,27 @@
 title: NewIndividualCustomer
-allOf:
-  - $ref: ../NewCustomerGenericInfo.v1.yaml
-  - $ref: NewIndyCustomerCard.v1.yaml
-  - type: object
-    properties:
-      customer_acct_type:
-        $ref: NewIndividual.v1.yaml
-      address:
-        $ref: ../../address/NewAddressWithNewCA.v1.yaml
-      telephone:
-        $ref: ../../telephone/NewTelephoneWithNewCA.v1.yaml
-      email:
-        $ref: ../../email-social/NewEmailWithNewCA.v1.yaml
-      social_account:
-        $ref: ../../email-social/NewSocialWithNewCA.v1.yaml
-      create_by:
-        type: string
-        example: '12345678'
-        description: รหัสพนักงาน หรือ Username ของระบบต้นทาง
-    required:
-      - customer_acct_type
-      - address
-      - create_by
+type: object
+properties:
+  client_info:
+    $ref: ../../common/RequestClientInfo.v1.yaml
+  id_card_type:
+    $ref: NewIndyCustomerCard.v1.yaml
+  customer_acct_type:
+    $ref: NewIndividual.v1.yaml
+  general_info:
+    $ref: ../NewCustomerGenericInfo.v1.yaml
+  address:
+    $ref: ../../address/NewAddressWithNewCA.v1.yaml
+  telephone:
+    $ref: ../../telephone/NewTelephoneWithNewCA.v1.yaml
+  email:
+    $ref: ../../email-social/NewEmailWithNewCA.v1.yaml
+  social_account:
+    $ref: ../../email-social/NewSocialWithNewCA.v1.yaml
+required:
+  - client_info
+  - id_card_type
+  - customer_acct_type
+  - address
 x-tags:
   - NewIndividualCustomer
 description: New individual customer model

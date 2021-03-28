@@ -4,6 +4,9 @@
 '/customer/individual/create':
   $ref: customer-account/C19.v1.yaml
 
+'/customer/organization/create':
+  $ref: customer-account/C20.v1.yaml
+
 '/billing/{bill_acct_number}/invoice':
   $ref: billing-account/B03.v1.yaml
 

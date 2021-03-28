@@ -14,6 +14,46 @@ properties:
     type: string
     example: '5'
     description: Customer Group
+  customer_value_lkp:
+    type: string
+    example: '3'
+    description: Customer Value such as Platinum, Gold, Silver, and Bronze. Default is Bronze.
+  currency_lkp:
+    type: string
+    example: '1'
+    description: Default is Baht.
+  language_lkp:
+    type: string
+    example: '1'
+    description: Default is Thai.
+  is_vip_sales:
+    type: integer
+    enum: [0, 1]
+    description: Default is 0 (No).
+  is_vip_debt:
+    type: integer
+    enum: [0, 1]
+    description: Default is 0 (No).
+  black_list_lkp:
+    type: string
+    example: '1'
+    description: Default is None.
+  collection_treatment_lkp:
+    type: string
+    example: '1'
+    description: Default is Null.
+  related_party_lkp:
+    type: string
+    example: '1'
+    description: Default is Null.
+  trading_partner:
+    type: string
+    example: 'M345'
+    description: Default is Null.
+  is_internal_customer_account:
+    type: integer
+    enum: [0, 1]
+    description: Default is 0 (No).
   original_data_owner_lkp:
     type: string
     example: '1'

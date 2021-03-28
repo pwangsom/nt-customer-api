@@ -1,0 +1,27 @@
+title: RequestClientInfo
+type: object
+x-tags:
+  - RequestClientInfo
+properties:
+  client_trans_id:
+    type: string
+    example: ORDER-12345678
+    description: Client transaction ID for reference
+  client_name:
+    type: string
+    example: OM UDB
+    description: 'Client name such as CAT Priviliege, OM UDB, and OM MFE'
+  client_timestamp:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+  client_user:
+    type: string
+    example: '12345678'
+    description: Username in the client app may be NT employee code
+required:
+  - client_trans_id
+  - client_name
+  - client_timestamp
+  - client_user
+description: RequestClientInfo

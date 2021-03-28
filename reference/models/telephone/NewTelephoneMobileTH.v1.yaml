@@ -7,7 +7,7 @@ properties:
   telephone_type:
     type: string
     enum:
-      - 'NewTelephoneMobileTH'
+      - NewTelephoneMobileTH
     description: โทรศัพท์มือถือของไทย
   telephone_number:
     type: string
@@ -15,4 +15,5 @@ properties:
     example: '0987654321'
     description: หมายเลขโทรศัพท์มือถือ 10 หลัก มี 0 นำหน้า
 required:
+  - telephone_type
   - telephone_number

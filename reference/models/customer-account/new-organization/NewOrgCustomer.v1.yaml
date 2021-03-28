@@ -1,0 +1,22 @@
+title: NewOrgCustomer
+type: object
+properties:
+  client_info:
+    $ref: ../../common/RequestClientInfo.v1.yaml
+  id_card_type:
+    $ref: NewOrgCustomerCard.v1.yaml
+  customer_acct_type:
+    $ref: NewOrganization.v1.yaml
+  general_info:
+    $ref: ../NewCustomerGenericInfo.v1.yaml
+  address:
+    $ref: ../../address/NewAddressWithNewCA.v1.yaml
+  telephone:
+    $ref: ../../telephone/NewTelephoneWithNewCA.v1.yaml
+  email:
+    $ref: ../../email-social/NewEmailWithNewCA.v1.yaml
+  social_account:
+    $ref: ../../email-social/NewSocialWithNewCA.v1.yaml
+x-tags:
+  - NewOrgCustomer
+description: New organization customer model

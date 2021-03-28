@@ -1,0 +1,23 @@
+title: NewOrgCustomerTaxIdCard
+type: object
+properties:
+  org_id_card_type:
+    type: string
+    enum:
+      - NewOrgCustomerTaxIdCard
+    description: เลขประจำตัวผู้เสียภาษี
+  id_card_number:
+    type: string
+    example: '1234567890123'
+    description: เลขประจำตัวผู้เสียภาษี 13 หลัก ตามรูปแบบของกรมสรรพากร
+  branch_id:
+    type: string
+    example: '00000'
+    description: หมายเลขประจำสาขา 5 หลัก ค่า Default = '00000'
+required:
+  - org_id_card_type
+  - id_card_number
+  - branch_id
+x-tags:
+  - NewOrgCustomerTaxIdCard
+description: New organization customer Tax ID card model

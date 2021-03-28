@@ -4,7 +4,7 @@ properties:
   indy_id_card_type:
     type: string
     enum:
-      - 'NewIndyCustomerOtherIdCard'
+      - NewIndyCustomerOtherIdCard
     description: เอกสารประเภทอื่นที่ไม่ใช่บัตรประชาชน
   id_card_type_lkp:
     type: string
@@ -24,6 +24,7 @@ properties:
     example: '00000'
     description: หมายเลขประจำสาขา 5 หลัก
 required:
+  - indy_id_card_type
   - id_card_type_lkp
 description: New individual customer other ID card model
 x-tags:
