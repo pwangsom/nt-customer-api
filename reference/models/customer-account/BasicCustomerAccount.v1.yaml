@@ -5,7 +5,7 @@ allOf:
     properties:
       customer_full_name:
         type: string
-        example: นายสมชาย เจริญยิ่ง
+        example: 'นายสมชาย เจริญยิ่ง'
         description: Customer full name.
       id_card_info:
         $ref: IdCardInfo.v1.yaml

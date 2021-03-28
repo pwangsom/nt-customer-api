@@ -6,8 +6,7 @@ properties:
       - $ref: ../common/Lookup.v1.yaml
     description: คำนำหน้าองค์กรไทย
     example:
-      lookup_category_name: 'corp_type_lkp'
-      lookup_ref_id: '4'
+      id: '4'
       display_value: 'บจก.'
   organization_name:
     type: string
@@ -20,8 +19,7 @@ properties:
       - $ref: ../common/Lookup.v1.yaml
     description: คำนำหน้าองค์กรอังกฤษ
     example:
-      lookup_category_name: 'corp_type_en_lkp'
-      lookup_ref_id: 'ค'
+      id: '6'
       display_value: 'PLC.'
   organization_name_en:
     type: string

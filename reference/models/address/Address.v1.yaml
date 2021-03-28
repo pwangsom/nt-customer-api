@@ -11,17 +11,15 @@ properties:
       - $ref: ../common/Lookup.v1.yaml
     description: ประเภทที่อยู่ เช่น Home Office
     example:
-      lookup_category_name: 'address_type_lkp'
-      lookup_ref_id: '1'
-      display_value: Home
+      id: '1'
+      display_value: 'Home'
   address_country_lkp:
     allOf:
       - $ref: ../common/Lookup.v1.yaml
     description: ประเทศ
     example:
-      lookup_category_name: 'address_country_lkp'
-      lookup_ref_id: '1'
-      display_value: Thailand
+      id: '1'
+      display_value: 'Thailand'
   house_number:
     type: string
     example: 202/24

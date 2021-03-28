@@ -4,11 +4,7 @@ x-tags:
   - Lookup
 description: Lookup model
 properties:
-  lookup_category_name:
-    type: string
-    example: 'customer_acct_lkp'
-    description: Lookup category
-  lookup_ref_id:
+  id:
     type: string
     example: '1'
     format: number
@@ -18,6 +14,5 @@ properties:
     example: 'Individual'
     description: Display value
 required:
-  - lookup_category_name
-  - lookup_ref_id
+  - lookup_category_name  - lookup_ref_id
   - display_value

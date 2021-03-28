@@ -1,5 +1,8 @@
 title: InvoiceSubscirber
 type: object
+description: Invoice subscriber model
+x-tags:
+  - InvoiceSubscirber
 properties:
   invoice_number:
     type: string
@@ -14,10 +17,3 @@ properties:
     format: double
     example: 590
     description: ยอดหนี้ไม่รวม VAT
-required:
-  - invoice_number
-  - ref_subscr_no
-  - amount
-description: Invoice subscriber model
-x-tags:
-  - InvoiceSubscirber

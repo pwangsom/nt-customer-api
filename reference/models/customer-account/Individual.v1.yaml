@@ -6,8 +6,7 @@ properties:
       - $ref: ../common/Lookup.v1.yaml
     description: คำนำหน้าชื่อไทย
     example:
-      lookup_category_name: 'salutation_lkp'
-      lookup_ref_id: '1'
+      id: '1'
       display_value: 'นาย'
   first_name:
     type: string
@@ -23,8 +22,7 @@ properties:
       - $ref: ../common/Lookup.v1.yaml
     description: คำนำหน้าชื่ออังกฤษ
     example:
-      lookup_category_name: 'salutation_en_lkp'
-      lookup_ref_id: '5'
+      id: '5'
       display_value: 'Mr.'
   first_name_en:
     type: string
@@ -40,8 +38,7 @@ properties:
       - $ref: ../common/Lookup.v1.yaml
     description: เพศ
     example:
-      lookup_category_name: 'gender_lkp'
-      lookup_ref_id: '1'
+      id: '1'
       display_value: 'ชาย'
   date_of_birth:
     type: string
@@ -53,8 +50,7 @@ properties:
       - $ref: ../common/Lookup.v1.yaml
     description: สัญชาติ
     example:
-      lookup_category_name: 'nationality_lkp'
-      lookup_ref_id: '1'
+      id: '1'
       display_value: 'ไทย'
   employee_code:
     type: string

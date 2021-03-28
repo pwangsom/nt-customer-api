@@ -6,32 +6,28 @@ properties:
       - $ref: ../common/Lookup.v1.yaml
     description: Customer Segment (ลูกค้าบุคคล ลูกค้าเอกชน ลูกค้าผู้ประกอบการ และลูกค้าภาครัฐ)
     example:
-      lookup_category_name: 'customer_segment_lkp'
-      lookup_ref_id: '14'
+      id: '14'
       display_value: 'ลูกค้าบุคคล'
   customer_group_lkp:
     allOf:
       - $ref: ../common/Lookup.v1.yaml
     description: Customer group
     example:
-      lookup_category_name: 'customer_group_lkp'
-      lookup_ref_id: '25'
+      id: '25'
       display_value: 'บุคคลทั่วไป'
   currency_lkp:
     allOf:
       - $ref: ../common/Lookup.v1.yaml
     description: Default currency
     example:
-      lookup_category_name: 'currency_lkp'
-      lookup_ref_id: '1'
+      id: '1'
       display_value: 'Baht'
   language_lkp:
     allOf:
       - $ref: ../common/Lookup.v1.yaml
     description: Default language
     example:
-      lookup_category_name: 'language_lkp'
-      lookup_ref_id: '1'
+      id: '1'
       display_value: 'Thai'
   is_vip_sales:
     type: integer
@@ -54,8 +50,7 @@ properties:
       - $ref: ../common/Lookup.v1.yaml
     description: ประเภทความสัมพันธ์กัน
     example:
-      lookup_category_name: 'related_party_lkp'
-      lookup_ref_id: '1'
+      id: '1'
       display_value: 'หน่วยงานหรือบุคคลที่เกี่ยวข้อง'
   trading_partner:
     type: string
@@ -70,8 +65,7 @@ properties:
       - $ref: ../common/Lookup.v1.yaml
     description: ต้นฉบับข้อมูลลูกค้า
     example:
-      lookup_category_name: 'original_data_owner_lkp'
-      lookup_ref_id: '1'
+      id: '1'
       display_value: 'NT1'
   original_reference_key:
     type: string

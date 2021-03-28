@@ -1,5 +1,8 @@
 title: PrepaidOverUsageCharge
 type: object
+x-tags:
+  - PrepaidOverUsageCharge
+description: PrepaidOverUsageCharge
 properties:
   usage_date:
     type: string
@@ -17,10 +20,3 @@ properties:
     format: double
     example: 50
     description: ยอดเงินการใช้จ่ายส่วนเกิน
-required:
-  - usage_date
-  - subscriber_number
-  - amount
-x-tags:
-  - PrepaidOverUsageCharge
-description: PrepaidOverUsageCharge

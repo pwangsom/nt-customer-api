@@ -1,5 +1,8 @@
 title: Invoice
 type: object
+x-tags:
+  - Invoice
+description: Invoice model
 properties:
   invoice_number:
     type: string
@@ -64,11 +67,3 @@ properties:
     type: array
     items:
       $ref: InvoiceSubscriber.v1.yaml
-required:
-  - invoice_number
-  - issue_date
-  - due_date
-  - amount
-x-tags:
-  - Invoice
-description: Invoice model

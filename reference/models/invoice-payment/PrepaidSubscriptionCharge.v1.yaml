@@ -1,5 +1,8 @@
 title: PrepaidSubscriptionCharge
 type: object
+x-tags:
+  - PrepaidSubscriptionCharge
+description: Prepaid subscription charge model
 properties:
   subscription_id:
     type: string
@@ -33,13 +36,3 @@ properties:
     type: string
     example: RC
     description: 'ประเภทการ Charge (NRC, RC)'
-required:
-  - subscription_id
-  - subscription_date
-  - subscriber_number
-  - offer_id
-  - amount
-  - charge_type
-x-tags:
-  - PrepaidSubscriptionCharge
-description: Prepaid subscription charge model
