@@ -1,7 +1,7 @@
-title: NewOrganization
+title: NewOrganizationFull
 type: object
 x-tags:
-  - NewOrganization
+  - NewOrganizationFull
 description: New Organization model
 properties:
   corp_type_lkp:

@@ -1,7 +1,7 @@
 post:
-  operationId: C20
-  description: Create an organization customer
-  summary: Create An Organization Customer.
+  operationId: C68
+  description: Create an organization prospect
+  summary: Create An Organization Prospect.
   tags: []
   parameters:
     - $ref: ../../parameters/XClientId.v1.yaml
@@ -12,7 +12,7 @@ post:
     content:
       application/json:
         schema:
-          $ref: ../../models/customer-account/new-organization/NewOrgCustomer.v1.yaml
+          $ref: ../../models/customer-account/new-organization/NewOrgProspect.v1.yaml
   responses:
     '200':
       description: Operation success

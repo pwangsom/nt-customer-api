@@ -1,15 +1,15 @@
-title: NewOrgCustomer
+title: NewIndyProspect
 type: object
 x-tags:
-  - NewOrgCustomer
-description: New organization customer model
+  - NewIndyProspect
+description: New indy prospect model
 properties:
   client_info:
     $ref: ../../common/RequestClientInfo.v1.yaml
   id_card_type:
-    $ref: NewOrgCustomerCard.v1.yaml
+    $ref: NewIndyCustomerCard.v1.yaml
   customer_acct_type:
-    $ref: NewOrganizationFull.v1.yaml
+    $ref: NewIndividualBasic.v1.yaml
   general_info:
     $ref: ../NewCustomerGenericInfo.v1.yaml
   address:
@@ -22,6 +22,5 @@ properties:
     $ref: ../../email-social/NewSocialWithNewCA.v1.yaml
 required:
   - client_info
-  - id_card_type
   - customer_acct_type
-  - address
+  - telephone

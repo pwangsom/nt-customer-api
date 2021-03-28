@@ -1,4 +1,4 @@
-title: NewIndividualCustomer
+title: NewIndyCustomer
 type: object
 properties:
   client_info:
@@ -6,7 +6,7 @@ properties:
   id_card_type:
     $ref: NewIndyCustomerCard.v1.yaml
   customer_acct_type:
-    $ref: NewIndividual.v1.yaml
+    $ref: NewIndividualFull.v1.yaml
   general_info:
     $ref: ../NewCustomerGenericInfo.v1.yaml
   address:
@@ -23,5 +23,5 @@ required:
   - customer_acct_type
   - address
 x-tags:
-  - NewIndividualCustomer
-description: New individual customer model
+  - NewIndyCustomer
+description: New indy customer model

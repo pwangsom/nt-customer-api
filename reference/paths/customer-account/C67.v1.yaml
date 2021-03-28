@@ -1,7 +1,7 @@
 post:
-  operationId: C20
-  description: Create an organization customer
-  summary: Create An Organization Customer.
+  operationId: C67
+  description: Create an individual prospect
+  summary: Create An Individual Prospect.
   tags: []
   parameters:
     - $ref: ../../parameters/XClientId.v1.yaml
@@ -12,7 +12,7 @@ post:
     content:
       application/json:
         schema:
-          $ref: ../../models/customer-account/new-organization/NewOrgCustomer.v1.yaml
+          $ref: ../../models/customer-account/new-individual/NewIndyProspect.v1.yaml
   responses:
     '200':
       description: Operation success
@@ -35,4 +35,4 @@ post:
           schema:
             $ref: ../../models/common/OperationFailed.v1.yaml      
     '500':
-      description: Unexpected error.        
+      description: Unexpected error.            

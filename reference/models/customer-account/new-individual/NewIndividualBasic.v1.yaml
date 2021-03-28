@@ -1,0 +1,55 @@
+title: NewIndividualBasic
+type: object
+x-tags:
+  - NewIndividualBasic
+description: New individual basic model
+properties:
+  salutation_lkp:
+    type: string
+    format: number
+    example: '1'
+    description: คำนำหน้าชื่อไทย
+  first_name:
+    type: string
+    example: สมชาย
+  middle_name:
+    type: string
+    example: ชื่อกลาง
+  last_name:
+    type: string
+    example: เจริญยิ่ง
+  salutation_en_lkp:
+    type: string
+    format: number
+    example: '1'
+    description: คำนำหน้าชื่ออังกฤษ
+  first_name_en:
+    type: string
+    example: John
+  middle_name_en:
+    type: string
+    example: W
+  last_name_en:
+    type: string
+    example: Henry
+  gender_lkp:
+    type: string
+    format: number
+    example: '1'
+    description: เพศ ชาย หญิง
+  date_of_birth:
+    type: string
+    format: date
+    example: '2030-02-02'
+    description: วันเกิด
+  nationality_lkp:
+    type: string
+    format: number
+    example: '1'
+    description: สัญชาติ
+  employee_code:
+    type: string
+    example: '12345678'
+    description: รหัสประจำตัวพนักงาน กรณีที่ลูกค้าเป็นพนักงานของ NT
+required:
+  - first_name

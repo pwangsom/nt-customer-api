@@ -1,7 +1,7 @@
 post:
   operationId: C19
   description: Create an individual customer
-  summary: Create an individual customer.
+  summary: Create An Individual Customer.
   tags: []
   parameters:
     - $ref: ../../parameters/XClientId.v1.yaml
@@ -19,12 +19,20 @@ post:
       content:
         application/json:
           schema:
-            $ref: ../../models/operation/OperationSuccess.v1.yaml
+            $ref: ../../models/common/OperationSuccess.v1.yaml
     '400':
       description: Bad request.
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/common/OperationFailed.v1.yaml
     '401':
       description: Authorization information is missing or invalid.
     '404':
-      description: Data was not found.
+      description: Operation failed.
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/common/OperationFailed.v1.yaml      
     '500':
       description: Unexpected error.            

@@ -1,0 +1,17 @@
+title: ErrorInfo
+type: object
+x-tags:
+  - ErrorInfo
+description: Error info model
+properties:
+  error_type:
+    type: string
+    example: required field missing
+    description: Short description of error type
+  error_detail:
+    type: string
+    example: first_name
+    description: Error details related to error type
+required:
+  - error_type
+  - error_detail

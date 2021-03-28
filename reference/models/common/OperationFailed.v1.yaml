@@ -1,0 +1,21 @@
+title: OperationFailed
+type: object
+properties:
+  client_info:
+    $ref: RequestClientInfo.v1.yaml
+  api_trans_id:
+    type: string
+    example: '29'
+    description: API transaction id for reference
+  api_timestamp:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: API Response timestamp
+  error_info:
+    type: array
+    items:
+      $ref: ErrorInfo.v1.yaml
+x-tags:
+  - OperationFailed
+description: Operation faied model

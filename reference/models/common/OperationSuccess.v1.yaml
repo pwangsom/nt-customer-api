@@ -1,0 +1,29 @@
+title: OperationSuccess
+type: object
+properties:
+  client_info:
+    $ref: RequestClientInfo.v1.yaml
+  api_trans_id:
+    type: string
+    example: '29'
+    description: API transaction id for reference
+  api_timestamp:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: API Response timestamp
+  reference_type:
+    type: string
+    example: customer_acct_number
+    description: 'Types of related objects such as customer_acct_number, bill_acct_number, subscriber_number, address_id, and telephone_id'
+  reference_id:
+    type: string
+    example: '13216523'
+    description: ID of reference type
+required:
+  - client_info
+  - api_trans_id
+  - api_timestamp
+  - reference_type
+  - reference_id
+description: Operation success model

@@ -1,5 +1,0 @@
-title: OperationSuccess
-type: object
-properties:
-  id:
-    type: string

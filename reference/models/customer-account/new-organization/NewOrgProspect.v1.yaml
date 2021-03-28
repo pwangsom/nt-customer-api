@@ -1,8 +1,5 @@
-title: NewOrgCustomer
+title: NewOrgProspect
 type: object
-x-tags:
-  - NewOrgCustomer
-description: New organization customer model
 properties:
   client_info:
     $ref: ../../common/RequestClientInfo.v1.yaml
@@ -22,6 +19,8 @@ properties:
     $ref: ../../email-social/NewSocialWithNewCA.v1.yaml
 required:
   - client_info
-  - id_card_type
   - customer_acct_type
-  - address
+  - telephone
+x-tags:
+  - NewOrgProspect
+description: New organization prospect model

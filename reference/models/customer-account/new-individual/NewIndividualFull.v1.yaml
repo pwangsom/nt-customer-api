@@ -1,4 +1,4 @@
-title: NewIndividual
+title: NewIndividualFull
 type: object
 properties:
   salutation_lkp:
@@ -53,6 +53,6 @@ required:
   - first_name
   - last_name
   - gender_lkp
-description: New individual model
+description: New individual full model
 x-tags:
-  - NewIndividual
+  - NewIndividualFull

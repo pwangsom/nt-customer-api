@@ -7,6 +7,12 @@
 '/customer/organization/create':
   $ref: customer-account/C20.v1.yaml
 
+'/prospect/individual/create':
+  $ref: customer-account/C67.v1.yaml
+
+'/prospect/organization/create':
+  $ref: customer-account/C68.v1.yaml
+
 '/billing/{bill_acct_number}/invoice':
   $ref: billing-account/B03.v1.yaml
 
