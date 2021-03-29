@@ -2,7 +2,7 @@ title: NewAddressWithNewCA
 allOf:
   - $ref: NewAdderssGenericInfo.v1.yaml
   - oneOf:
-    - $ref: NewAddressTH.v1.yaml
+    - $ref: NewAddressTh.v1.yaml
     - $ref: NewAdderssForiegn.v1.yaml
   - $ref: ../common/IsPrimary.v1.yaml
 x-tags:

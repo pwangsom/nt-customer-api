@@ -15,7 +15,7 @@ properties:
   is_primary:
     type: integer
     example: 1
-    description: Primary email.
+    description: Primary social account (0 = No, 1 = Yes).
 x-tags:
   - SocialAccount
 description: Social account model

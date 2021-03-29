@@ -71,7 +71,7 @@ properties:
   is_primary:
     type: integer
     example: 1
-    description: Primary address.
+    description: Primary address (0 = No, 1 = Yes).
 x-tags:
   - Address
 description: Address model

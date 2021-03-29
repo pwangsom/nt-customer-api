@@ -33,7 +33,11 @@ properties:
   is_primary:
     type: integer
     example: 1
-    description: Primary telphone.
+    description: Primary telephone (0 = No, 1 = Yes).
+  is_my_number:
+    type: integer
+    example: 0
+    description: my number (0 = No, 1 = Yes).
 x-tags:
   - Telephone
 description: Telephone model
