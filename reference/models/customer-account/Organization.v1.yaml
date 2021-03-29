@@ -3,11 +3,12 @@ type: object
 properties:
   corp_type_lkp:
     allOf:
-      - $ref: ../common/Lookup.v1.yaml
+      - $ref: ../common/DisplayLookup.v1.yaml
     description: คำนำหน้าองค์กรไทย
     example:
-      id: '4'
+      lookup_ref_id: '4'
       display_value: 'บจก.'
+      lookup_category_name: 'corp_type_lkp'
   organization_name:
     type: string
     example: เชฟรอน
@@ -16,11 +17,12 @@ properties:
     example: สาขานครศรีธรรมราช
   corp_type_en_lkp:
     allOf:
-      - $ref: ../common/Lookup.v1.yaml
+      - $ref: ../common/DisplayLookup.v1.yaml
     description: คำนำหน้าองค์กรอังกฤษ
     example:
-      id: '6'
+      lookup_ref_id: '6'
       display_value: 'PLC.'
+      lookup_category_name: 'corp_type_en_lkp'
   organization_name_en:
     type: string
     example: Chevron

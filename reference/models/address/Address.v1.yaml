@@ -8,18 +8,20 @@ properties:
     description: Address reference number
   address_type_lkp:
     allOf:
-      - $ref: ../common/Lookup.v1.yaml
+      - $ref: ../common/DisplayLookup.v1.yaml
     description: ประเภทที่อยู่ เช่น Home Office
     example:
-      id: '1'
+      lookup_ref_id: '1'
       display_value: 'Home'
+      lookup_category_name: 'address_type_lkp'
   address_country_lkp:
     allOf:
-      - $ref: ../common/Lookup.v1.yaml
+      - $ref: ../common/DisplayLookup.v1.yaml
     description: ประเทศ
     example:
-      id: '1'
+      lookup_ref_id: '1'
       display_value: 'Thailand'
+      lookup_category_name: 'address_country_lkp'
   house_number:
     type: string
     example: 202/24

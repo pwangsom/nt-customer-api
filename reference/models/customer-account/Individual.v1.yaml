@@ -3,11 +3,12 @@ type: object
 properties:
   salutation_lkp:
     allOf:
-      - $ref: ../common/Lookup.v1.yaml
+      - $ref: ../common/DisplayLookup.v1.yaml
     description: คำนำหน้าชื่อไทย
     example:
-      id: '1'
+      lookup_ref_id: '1'
       display_value: 'นาย'
+      lookup_category_name: 'salutation_lkp'
   first_name:
     type: string
     example: สมชาย
@@ -19,11 +20,12 @@ properties:
     example: เจริญยิ่ง
   salutation_en_lkp:
     allOf:
-      - $ref: ../common/Lookup.v1.yaml
+      - $ref: ../common/DisplayLookup.v1.yaml
     description: คำนำหน้าชื่ออังกฤษ
     example:
-      id: '5'
+      lookup_ref_id: '5'
       display_value: 'Mr.'
+      lookup_category_name: 'salutation_en_lkp'
   first_name_en:
     type: string
     example: John
@@ -35,11 +37,12 @@ properties:
     example: Henry
   gender_lkp:
     allOf:
-      - $ref: ../common/Lookup.v1.yaml
+      - $ref: ../common/DisplayLookup.v1.yaml
     description: เพศ
     example:
-      id: '1'
+      lookup_ref_id: '1'
       display_value: 'ชาย'
+      lookup_category_name: 'gender_lkp'
   date_of_birth:
     type: string
     format: date
@@ -47,11 +50,12 @@ properties:
     description: วันเกิด
   nationality_lkp:
     allOf:
-      - $ref: ../common/Lookup.v1.yaml
+      - $ref: ../common/DisplayLookup.v1.yaml
     description: สัญชาติ
     example:
-      id: '1'
+      lookup_ref_id: '1'
       display_value: 'ไทย'
+      lookup_category_name: 'nationality_lkp'
   employee_code:
     type: string
     example: '12345678'

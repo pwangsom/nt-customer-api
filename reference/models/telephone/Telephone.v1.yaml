@@ -8,18 +8,20 @@ properties:
     description: Address reference number
   telephone_type_lkp:
     allOf:
-      - $ref: ../common/Lookup.v1.yaml
+      - $ref: ../common/DisplayLookup.v1.yaml
     description: ประเภทของเบอร์โทรศัพท์
     example:
-      id: '1'
+      lookup_ref_id: '1'
       display_value: 'Mobile'
+      lookup_category_name: 'telephone_type_lkp'
   telephone_country_code_lkp:
     allOf:
-      - $ref: ../common/Lookup.v1.yaml
+      - $ref: ../common/DisplayLookup.v1.yaml
     description: รหัสประเทศ
     example:
-      id: '1'
+      lookup_ref_id: '1'
       display_value: 'Thai'
+      lookup_category_name: 'social_typetelephone_country_code_lkp_lkp'
   telephone_number:
     type: string
     format: number

@@ -3,11 +3,12 @@ type: object
 properties:
   email_type_lkp:
     allOf:
-      - $ref: ../common/Lookup.v1.yaml
+      - $ref: ../common/DisplayLookup.v1.yaml
     description: ประเภทอีเมล์
     example:
-      id: '1'
+      ilookup_ref_idd: '1'
       display_value: Work
+      lookup_category_name: 'email_type_lkp'
   email_address:
     type: string
     example: abc@def.com

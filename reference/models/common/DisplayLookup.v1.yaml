@@ -1,10 +1,10 @@
-title: Lookup
+title: DisplayLookup
 type: object
 x-tags:
-  - Lookup
+  - DisplayLookup
 description: Lookup model
 properties:
-  id:
+  lookup_ref_id:
     type: string
     example: '1'
     format: number
@@ -13,6 +13,11 @@ properties:
     type: string
     example: 'Individual'
     description: Display value
+  lookup_category_name:
+    type: string
+    example: 'id_card_type_lkp'
+    description: Category name
 required:
-  - lookup_category_name  - lookup_ref_id
+  - lookup_ref_id
   - display_value
+  - lookup_category_name  

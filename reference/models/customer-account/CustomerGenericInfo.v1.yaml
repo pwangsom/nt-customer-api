@@ -3,32 +3,36 @@ type: object
 properties:
   customer_segment_lkp:
     allOf:
-      - $ref: ../common/Lookup.v1.yaml
+      - $ref: ../common/DisplayLookup.v1.yaml
     description: Customer Segment (ลูกค้าบุคคล ลูกค้าเอกชน ลูกค้าผู้ประกอบการ และลูกค้าภาครัฐ)
     example:
-      id: '14'
+      lookup_ref_id: '14'
       display_value: 'ลูกค้าบุคคล'
+      lookup_category_name: 'customer_segment_lkp'
   customer_group_lkp:
     allOf:
-      - $ref: ../common/Lookup.v1.yaml
+      - $ref: ../common/DisplayLookup.v1.yaml
     description: Customer group
     example:
-      id: '25'
+      lookup_ref_id: '25'
       display_value: 'บุคคลทั่วไป'
+      lookup_category_name: 'customer_group_lkp'
   currency_lkp:
     allOf:
-      - $ref: ../common/Lookup.v1.yaml
+      - $ref: ../common/DisplayLookup.v1.yaml
     description: Default currency
     example:
-      id: '1'
+      lookup_ref_id: '1'
       display_value: 'Baht'
+      lookup_category_name: 'currency_lkp'
   language_lkp:
     allOf:
-      - $ref: ../common/Lookup.v1.yaml
+      - $ref: ../common/DisplayLookup.v1.yaml
     description: Default language
     example:
-      id: '1'
+      lookup_ref_id: '1'
       display_value: 'Thai'
+      lookup_category_name: 'language_lkp'
   is_vip_sales:
     type: integer
     example: 0
@@ -47,11 +51,12 @@ properties:
     description: Default is Null.
   related_party_lkp:
     allOf:
-      - $ref: ../common/Lookup.v1.yaml
+      - $ref: ../common/DisplayLookup.v1.yaml
     description: ประเภทความสัมพันธ์กัน
     example:
-      id: '1'
+      lookup_ref_id: '1'
       display_value: 'หน่วยงานหรือบุคคลที่เกี่ยวข้อง'
+      lookup_category_name: 'related_party_lkp'
   trading_partner:
     type: string
     example: M345
@@ -62,11 +67,12 @@ properties:
     description: Internal customer flag.
   original_data_owner_lkp:
     allOf:
-      - $ref: ../common/Lookup.v1.yaml
+      - $ref: ../common/DisplayLookup.v1.yaml
     description: ต้นฉบับข้อมูลลูกค้า
     example:
-      id: '1'
+      lookup_ref_id: '1'
       display_value: 'NT1'
+      lookup_category_name: 'original_data_owner_lkp'
   original_reference_key:
     type: string
     example: '3464656546'
