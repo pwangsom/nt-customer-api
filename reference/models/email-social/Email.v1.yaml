@@ -1,6 +1,11 @@
 title: Email
 type: object
 properties:
+  email_id:
+    type: string
+    format: number
+    example: '2425'
+    description: Email reference id
   email_type_lkp:
     allOf:
       - $ref: ../common/DisplayLookup.v1.yaml

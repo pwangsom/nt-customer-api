@@ -1,0 +1,7 @@
+name: social_account
+in: path
+required: true
+description: Social account
+schema:
+  type: string
+  example: 'abc_12346'

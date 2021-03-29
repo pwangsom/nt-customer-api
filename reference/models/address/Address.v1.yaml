@@ -5,7 +5,7 @@ properties:
     type: string
     format: number
     example: '2425'
-    description: Address reference number
+    description: Address reference id
   address_type_lkp:
     allOf:
       - $ref: ../common/DisplayLookup.v1.yaml

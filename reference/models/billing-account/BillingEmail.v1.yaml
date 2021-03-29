@@ -1,0 +1,22 @@
+title: BillingEmail
+type: object
+properties:
+  bill_email_id:
+    type: string
+    format: number
+    example: '2425'
+    description: Billing email reference id
+  bill_email_type_lkp:
+    allOf:
+      - $ref: ../common/DisplayLookup.v1.yaml
+    description: 'ประเภทที่อยู่ เช่น Billing Email Address, VAT Email Addreas, and Receipt Email Address'
+    example:
+      lookup_ref_id: '1'
+      display_value: Billing Address
+      lookup_category_name: bill_email_type_lkp
+  email_address:
+    type: string
+    example: abc@def.com
+    description: อีเมล์
+x-tags:
+  - BillingEmail

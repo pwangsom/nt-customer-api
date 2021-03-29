@@ -16,6 +16,9 @@
 '/customer/sub/{subscriber_number}':
   $ref: customer-account/C05.v1.yaml
 
+'/customer/tel/{telephone_number}':
+  $ref: customer-account/C06.v1.yaml
+
 '/customer/id/{id_card_number}/ba/{bill_acct_number}':
   $ref: customer-account/C09.v1.yaml
 
@@ -30,6 +33,18 @@
 
 '/customer/{customer_acct_number}':
   $ref: customer-account/C13.v1.yaml
+
+'/customer/{customer_acct_number}/address':
+  $ref: customer-account/C15.v1.yaml
+
+'/customer/{customer_acct_number}/telephone':
+  $ref: customer-account/C16.v1.yaml
+
+'/customer/{customer_acct_number}/email':
+  $ref: customer-account/C17.v1.yaml
+
+'/customer/{customer_acct_number}/social_account':
+  $ref: customer-account/C18.v1.yaml
 
 '/customer/individual/create':
   $ref: customer-account/C19.v1.yaml
@@ -66,3 +81,10 @@
 
 '/prepaid/sub/{subscriber_number}/over_usage/peroid/{date_from}/{date_to}':
   $ref: invoice-payment/I06.v1.yaml 
+
+'/lookup/{lookup_category_name}':
+  $ref: utility/U03.v1.yaml
+
+
+
+

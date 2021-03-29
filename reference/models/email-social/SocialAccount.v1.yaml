@@ -1,6 +1,11 @@
 title: SocialAccount
 type: object
 properties:
+  social_acct_id:
+    type: string
+    format: number
+    example: '2425'
+    description: Social account reference id
   social_type_lkp:
     allOf:
       - $ref: ../common/DisplayLookup.v1.yaml

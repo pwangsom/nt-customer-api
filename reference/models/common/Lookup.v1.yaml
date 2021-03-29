@@ -1,0 +1,47 @@
+title: Lookup
+type: object
+properties:
+  lookup_ref_id:
+    type: string
+    example: '1'
+    format: number
+    description: Lookup reference number for each lookup category
+  lookup_category_name:
+    type: string
+    example: address_country_lkp
+    description: Category name
+  list_order:
+    type: integer
+    example: 1
+    description: The order of values displayed on screen
+  display_value:
+    type: string
+    example: Thailand
+    description: Display value
+  alternative_value:
+    type: string
+    example: TH
+    description: Alternative value
+  code_value:
+    type: string
+    example: THAI
+    description: Code value
+  parent_category_name:
+    type: string
+    example: country_lkp
+    description: Parent category name
+  parent_lookup_ref_id:
+    type: string
+    example: '1'
+    format: number
+    description: Parent lookup ref id
+  extra_filter:
+    type: string
+    example: 'individual,organization'
+  is_screen_visibility:
+    type: integer
+    example: 1
+    description: 'Screen visibility (0 = No, 1 = Yes).'
+x-tags:
+  - Lookup
+description: Lookup model

@@ -1,0 +1,7 @@
+name: email_address
+in: path
+required: true
+description: Email address
+schema:
+  type: string
+  example: 'abc@def.com'

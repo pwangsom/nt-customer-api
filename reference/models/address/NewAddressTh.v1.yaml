@@ -1,4 +1,4 @@
-title: NewAddressTH
+title: NewAddressTh
 type: object
 x-tags:
   - NewAddressTh
@@ -7,7 +7,7 @@ properties:
   address_country_type:
     type: string
     enum:
-      - NewAddressTH
+      - NewAddressTh
     description: ที่อยู่ตามรูปแบบของประเทศไทย
   house_number:
     type: string

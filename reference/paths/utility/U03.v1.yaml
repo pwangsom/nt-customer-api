@@ -1,0 +1,30 @@
+get:
+  operationId: U03
+  description: Retrieve lookup info by lookup_category_name
+  summary: Get Lookup Info by Lookup Category Name.
+  tags: []
+  parameters:
+    - in: path
+      name: lookup_category_name
+      schema:
+        type: string
+        example: 'id_card_type_lkp'
+      description: Lookup category name.
+      required: true
+  responses:
+    '200':
+      description: Data Found
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../../models/common/Lookup.v1.yaml
+    '400':
+      description: Bad request.
+    '401':
+      description: Authorization information is missing or invalid.
+    '404':
+      description: Data was not found.
+    '500':
+      description: Unexpected error.
