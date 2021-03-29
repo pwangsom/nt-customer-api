@@ -1,6 +1,33 @@
 '/customer/generate/customer_acct_number/{offset}':
   $ref: utility/U01.v1.yaml
 
+'/customer/name/{customer_full_name}':
+  $ref: customer-account/C01.v1.yaml
+
+'/customer/tax/{tax_number}':
+  $ref: customer-account/C02.v1.yaml
+
+'/customer/id/{id_card_number}':
+  $ref: customer-account/C03.v1.yaml
+
+'/customer/ba/{bill_acct_number}':
+  $ref: customer-account/C04.v1.yaml
+
+'/customer/sub/{subscriber_number}':
+  $ref: customer-account/C05.v1.yaml
+
+'/customer/id/{id_card_number}/ba/{bill_acct_number}':
+  $ref: customer-account/C09.v1.yaml
+
+'/customer/id/{id_card_number}/sub/{subscriber_number}':
+  $ref: customer-account/C10.v1.yaml
+
+'/customer/id/{id_card_number}/tel/{telephone_number}':
+  $ref: customer-account/C11.v1.yaml
+
+'/customer/{customer_acct_number}/duplication':
+  $ref: customer-account/C12.v1.yaml
+
 '/customer/{customer_acct_number}':
   $ref: customer-account/C13.v1.yaml
 

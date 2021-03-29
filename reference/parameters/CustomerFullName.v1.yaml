@@ -1,0 +1,7 @@
+name: customer_full_name
+in: path
+required: true
+description: Customer full name
+schema:
+  type: string
+  example: 'สมชาย เจริญยิ่ง'

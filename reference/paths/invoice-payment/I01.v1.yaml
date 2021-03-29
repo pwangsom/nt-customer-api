@@ -13,12 +13,7 @@ get:
           schema:
             type: array
             items:
-              $ref: ../../models/invoice-payment/Invoice.v1.yaml
-            oneOf:
-              - minItems: 0
-                maxItems: 0
-              - minItems: 1
-                maxItems: 1                  
+              $ref: ../../models/invoice-payment/Invoice.v1.yaml   
     '400':
       description: Bad request.
     '401':

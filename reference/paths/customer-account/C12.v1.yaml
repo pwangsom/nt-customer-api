@@ -1,7 +1,7 @@
 get:
-  operationId: C13
-  description: Retrieve customer info by customer_acct_number
-  summary: Get Customer Info by Customer Number.
+  operationId: C12
+  description: Retrieve duplication customer info by customer_acct_number
+  summary: Get Duplication Customer Info by Customer Number.
   tags: []
   parameters:
     - $ref: ../../parameters/CustomerAcctNumber.v1.yaml

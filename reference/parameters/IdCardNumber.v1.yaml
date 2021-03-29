@@ -1,0 +1,7 @@
+name: id_card_number
+in: path
+required: true
+description: หมายเลขบัตร
+schema:
+  type: string
+  example: '123457890123'

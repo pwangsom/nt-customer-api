@@ -1,5 +1,5 @@
 get:
-  operationId: I40
+  operationId: I04
   description: Retrieve payment info by invoice_number and tracking_id
   summary: Get a Payment Tran by Invoice Number and Tracking ID.
   tags: []
@@ -15,11 +15,6 @@ get:
             type: array
             items:
               $ref: ../../models/invoice-payment/PaymentTransaction.v1.yaml
-            oneOf:
-              - minItems: 0
-                maxItems: 0
-              - minItems: 1
-                maxItems: 1                  
     '400':
       description: Bad request.
     '401':

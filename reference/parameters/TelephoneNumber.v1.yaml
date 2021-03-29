@@ -1,0 +1,8 @@
+name: telephone_number
+in: path
+required: true
+description: Telephone Number 10 digits
+schema:
+  type: string
+  format: number
+  example: '0882951234'

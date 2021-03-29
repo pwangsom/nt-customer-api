@@ -1,0 +1,8 @@
+name: tax_number
+in: path
+required: true
+description: Tax Number
+schema:
+  type: string
+  format: number
+  example: '7017480851'

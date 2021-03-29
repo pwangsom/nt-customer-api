@@ -1,10 +1,11 @@
 get:
-  operationId: C13
-  description: Retrieve customer info by customer_acct_number
-  summary: Get Customer Info by Customer Number.
+  operationId: C11
+  description: Retrieve customer info by id_card_number and telephone_number
+  summary: Get Customer Info by ID Card Number and Telephone Number.
   tags: []
   parameters:
-    - $ref: ../../parameters/CustomerAcctNumber.v1.yaml
+    - $ref: ../../parameters/IdCardNumber.v1.yaml
+    - $ref: ../../parameters/TelephoneNumber.v1.yaml
   responses:
     '200':
       description: Data Found
@@ -13,7 +14,7 @@ get:
           schema:
             type: array
             items:
-              $ref: ../../models/customer-account/CustomerAccount.v1.yaml
+              $ref: ../../models/customer-account/CustomerAccount.v1.yaml         
     '400':
       description: Bad request.
     '401':
