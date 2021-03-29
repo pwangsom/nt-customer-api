@@ -1,0 +1,2710 @@
+---
+openapi: 3.0.0
+info:
+  title: NT Customer API
+  description: Full API services for NT customer database
+  contact:
+    name: Peerasak Wangsom
+    email: peerasak.w@nc.ntplc.co.th
+  license:
+    name: MIT
+    url: https://github.com/pwangsom/nt-customer-api/blob/main/LICENSE
+  version: 2.0.0
+servers:
+- url: https://customerapi.cattelecom.com/dev
+  description: Development
+- url: https://customerapi.cattelecom.com
+  description: Production
+paths:
+  /customer/generate/customer_acct_number/{offset}:
+    get:
+      tags: []
+      summary: Get CA Number.
+      description: Generate CA number
+      operationId: U01
+      parameters:
+      - name: X-Client-ID
+        in: header
+        description: Client Transaction ID ใช้สำหรับอ้างอิง
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          example: ORDER-12254127
+      - name: X-Client-Name
+        in: header
+        description: ชื่อ Client ที่เรียกใช้ API
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          example: OM UDB
+      - name: X-Client-Timestamp
+        in: header
+        description: Date-timestamp from client
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          format: date-time
+          example: 2016-08-29T09:12:33.001Z
+      - name: offset
+        in: path
+        description: Offset
+        required: true
+        style: simple
+        explode: false
+        schema:
+          maximum: 100
+          minimum: 1
+          type: integer
+          example: 1
+      responses:
+        "200":
+          description: Generate success.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+                  description: CA reference number
+                  format: number
+                  example: "7017480851"
+        "400":
+          description: Bad request.
+        "401":
+          description: Authorization information is missing or invalid.
+        "404":
+          description: Generate failed.
+        "500":
+          description: Unexpected error.
+  /customer/name/{customer_full_name}:
+    get:
+      tags: []
+      summary: Get Customer Info by Customer Full Name.
+      description: Retrieve customer info by customer_full_name
+      operationId: C01
+      parameters:
+      - name: customer_full_name
+        in: path
+        description: Customer full name
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          example: สมชาย เจริญยิ่ง
+      responses:
+        "200":
+          description: Data Found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/CustomerAccount.v1'
+        "400":
+          description: Bad request.
+        "401":
+          description: Authorization information is missing or invalid.
+        "404":
+          description: Data was not found.
+        "500":
+          description: Unexpected error.
+  /customer/tax/{tax_number}:
+    get:
+      tags: []
+      summary: Get Customer Info by Tax Number.
+      description: Retrieve customer info by tax_number
+      operationId: C02
+      parameters:
+      - name: tax_number
+        in: path
+        description: Tax Number
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          format: number
+          example: "7017480851"
+      responses:
+        "200":
+          description: Data Found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/CustomerAccount.v1'
+        "400":
+          description: Bad request.
+        "401":
+          description: Authorization information is missing or invalid.
+        "404":
+          description: Data was not found.
+        "500":
+          description: Unexpected error.
+  /customer/id/{id_card_number}:
+    get:
+      tags: []
+      summary: Get Customer Info by ID Card Number.
+      description: Retrieve customer info by id_card_number
+      operationId: C03
+      parameters:
+      - name: id_card_number
+        in: path
+        description: หมายเลขบัตร
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          example: "123457890123"
+      responses:
+        "200":
+          description: Data Found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/CustomerAccount.v1'
+        "400":
+          description: Bad request.
+        "401":
+          description: Authorization information is missing or invalid.
+        "404":
+          description: Data was not found.
+        "500":
+          description: Unexpected error.
+  /customer/ba/{bill_acct_number}:
+    get:
+      tags: []
+      summary: Get Customer Info by BA Number.
+      description: Retrieve customer info by bill_acct_number
+      operationId: C04
+      parameters:
+      - name: bill_acct_number
+        in: path
+        description: หมายเลข BA
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          format: number
+          example: "12254127"
+      responses:
+        "200":
+          description: Data Found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/CustomerAccount.v1'
+        "400":
+          description: Bad request.
+        "401":
+          description: Authorization information is missing or invalid.
+        "404":
+          description: Data was not found.
+        "500":
+          description: Unexpected error.
+  /customer/sub/{subscriber_number}:
+    get:
+      tags: []
+      summary: Get Customer Info by Subscriber Number.
+      description: Retrieve customer info by subscriber_number
+      operationId: C05
+      parameters:
+      - name: subscriber_number
+        in: path
+        description: หมายเลข Subscriber
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          example: "882952859"
+      responses:
+        "200":
+          description: Data Found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/CustomerAccount.v1'
+        "400":
+          description: Bad request.
+        "401":
+          description: Authorization information is missing or invalid.
+        "404":
+          description: Data was not found.
+        "500":
+          description: Unexpected error.
+  /customer/id/{id_card_number}/ba/{bill_acct_number}:
+    get:
+      tags: []
+      summary: Get Customer Info by ID Card Number and BA Number.
+      description: Retrieve customer info by id_card_number and subscriber_number
+      operationId: C09
+      parameters:
+      - name: id_card_number
+        in: path
+        description: หมายเลขบัตร
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          example: "123457890123"
+      - name: bill_acct_number
+        in: path
+        description: หมายเลข BA
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          format: number
+          example: "12254127"
+      responses:
+        "200":
+          description: Data Found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/CustomerAccount.v1'
+        "400":
+          description: Bad request.
+        "401":
+          description: Authorization information is missing or invalid.
+        "404":
+          description: Data was not found.
+        "500":
+          description: Unexpected error.
+  /customer/id/{id_card_number}/sub/{subscriber_number}:
+    get:
+      tags: []
+      summary: Get Customer Info by ID Card Number and Subscriber Number.
+      description: Retrieve customer info by id_card_number and subscriber_number
+      operationId: C10
+      parameters:
+      - name: id_card_number
+        in: path
+        description: หมายเลขบัตร
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          example: "123457890123"
+      - name: subscriber_number
+        in: path
+        description: หมายเลข Subscriber
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          example: "882952859"
+      responses:
+        "200":
+          description: Data Found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/CustomerAccount.v1'
+        "400":
+          description: Bad request.
+        "401":
+          description: Authorization information is missing or invalid.
+        "404":
+          description: Data was not found.
+        "500":
+          description: Unexpected error.
+  /customer/id/{id_card_number}/tel/{telephone_number}:
+    get:
+      tags: []
+      summary: Get Customer Info by ID Card Number and Telephone Number.
+      description: Retrieve customer info by id_card_number and telephone_number
+      operationId: C11
+      parameters:
+      - name: id_card_number
+        in: path
+        description: หมายเลขบัตร
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          example: "123457890123"
+      - name: telephone_number
+        in: path
+        description: Telephone Number 10 digits
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          format: number
+          example: "0882951234"
+      responses:
+        "200":
+          description: Data Found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/CustomerAccount.v1'
+        "400":
+          description: Bad request.
+        "401":
+          description: Authorization information is missing or invalid.
+        "404":
+          description: Data was not found.
+        "500":
+          description: Unexpected error.
+  /customer/{customer_acct_number}/duplication:
+    get:
+      tags: []
+      summary: Get Duplication Customer Info by Customer Number.
+      description: Retrieve duplication customer info by customer_acct_number
+      operationId: C12
+      parameters:
+      - name: customer_acct_number
+        in: path
+        description: หมายเลข CA
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          format: number
+          example: "7017480851"
+      responses:
+        "200":
+          description: Data Found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/CustomerAccount.v1'
+        "400":
+          description: Bad request.
+        "401":
+          description: Authorization information is missing or invalid.
+        "404":
+          description: Data was not found.
+        "500":
+          description: Unexpected error.
+  /customer/{customer_acct_number}:
+    get:
+      tags: []
+      summary: Get Customer Info by Customer Number.
+      description: Retrieve customer info by customer_acct_number
+      operationId: C13
+      parameters:
+      - name: customer_acct_number
+        in: path
+        description: หมายเลข CA
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          format: number
+          example: "7017480851"
+      responses:
+        "200":
+          description: Data Found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/CustomerAccount.v1'
+        "400":
+          description: Bad request.
+        "401":
+          description: Authorization information is missing or invalid.
+        "404":
+          description: Data was not found.
+        "500":
+          description: Unexpected error.
+  /customer/individual/create:
+    post:
+      tags: []
+      summary: Create An Individual Customer.
+      description: Create an individual customer
+      operationId: C19
+      parameters:
+      - name: X-Client-ID
+        in: header
+        description: Client Transaction ID ใช้สำหรับอ้างอิง
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          example: ORDER-12254127
+      - name: X-Client-Name
+        in: header
+        description: ชื่อ Client ที่เรียกใช้ API
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          example: OM UDB
+      - name: X-Client-Timestamp
+        in: header
+        description: Date-timestamp from client
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          format: date-time
+          example: 2016-08-29T09:12:33.001Z
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NewIndyCustomer.v1'
+        required: true
+      responses:
+        "200":
+          description: Operation success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OperationSuccess.v1'
+        "400":
+          description: Bad request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OperationFailed.v1'
+        "401":
+          description: Authorization information is missing or invalid.
+        "404":
+          description: Operation failed.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OperationFailed.v1'
+        "500":
+          description: Unexpected error.
+  /customer/organization/create:
+    post:
+      tags: []
+      summary: Create An Organization Customer.
+      description: Create an organization customer
+      operationId: C20
+      parameters:
+      - name: X-Client-ID
+        in: header
+        description: Client Transaction ID ใช้สำหรับอ้างอิง
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          example: ORDER-12254127
+      - name: X-Client-Name
+        in: header
+        description: ชื่อ Client ที่เรียกใช้ API
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          example: OM UDB
+      - name: X-Client-Timestamp
+        in: header
+        description: Date-timestamp from client
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          format: date-time
+          example: 2016-08-29T09:12:33.001Z
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NewOrgCustomer.v1'
+        required: true
+      responses:
+        "200":
+          description: Operation success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OperationSuccess.v1'
+        "400":
+          description: Bad request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OperationFailed.v1'
+        "401":
+          description: Authorization information is missing or invalid.
+        "404":
+          description: Operation failed.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OperationFailed.v1'
+        "500":
+          description: Unexpected error.
+  /prospect/individual/create:
+    post:
+      tags: []
+      summary: Create An Individual Prospect.
+      description: Create an individual prospect
+      operationId: C67
+      parameters:
+      - name: X-Client-ID
+        in: header
+        description: Client Transaction ID ใช้สำหรับอ้างอิง
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          example: ORDER-12254127
+      - name: X-Client-Name
+        in: header
+        description: ชื่อ Client ที่เรียกใช้ API
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          example: OM UDB
+      - name: X-Client-Timestamp
+        in: header
+        description: Date-timestamp from client
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          format: date-time
+          example: 2016-08-29T09:12:33.001Z
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NewIndyProspect.v1'
+        required: true
+      responses:
+        "200":
+          description: Operation success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OperationSuccess.v1'
+        "400":
+          description: Bad request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OperationFailed.v1'
+        "401":
+          description: Authorization information is missing or invalid.
+        "404":
+          description: Operation failed.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OperationFailed.v1'
+        "500":
+          description: Unexpected error.
+  /prospect/organization/create:
+    post:
+      tags: []
+      summary: Create An Organization Prospect.
+      description: Create an organization prospect
+      operationId: C68
+      parameters:
+      - name: X-Client-ID
+        in: header
+        description: Client Transaction ID ใช้สำหรับอ้างอิง
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          example: ORDER-12254127
+      - name: X-Client-Name
+        in: header
+        description: ชื่อ Client ที่เรียกใช้ API
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          example: OM UDB
+      - name: X-Client-Timestamp
+        in: header
+        description: Date-timestamp from client
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          format: date-time
+          example: 2016-08-29T09:12:33.001Z
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NewOrgProspect.v1'
+        required: true
+      responses:
+        "200":
+          description: Operation success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OperationSuccess.v1'
+        "400":
+          description: Bad request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OperationFailed.v1'
+        "401":
+          description: Authorization information is missing or invalid.
+        "404":
+          description: Operation failed.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OperationFailed.v1'
+        "500":
+          description: Unexpected error.
+  /billing/{bill_acct_number}/invoice:
+    get:
+      tags: []
+      summary: Get All Invoices by BA Number.
+      description: Retrieve a list of invoices by bill_acct_number
+      operationId: B03
+      parameters:
+      - name: bill_acct_number
+        in: path
+        description: หมายเลข BA
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          format: number
+          example: "12254127"
+      responses:
+        "200":
+          description: Data Found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Invoice.v1'
+        "400":
+          description: Bad request.
+        "401":
+          description: Authorization information is missing or invalid.
+        "404":
+          description: Data was not found.
+        "500":
+          description: Unexpected error.
+  /billing/{bill_acct_number}/invoice/debt:
+    get:
+      tags: []
+      summary: Get Debt Invoices by BA Number.
+      description: Retrieve a list of debt invoices by bill_acct_number
+      operationId: B04
+      parameters:
+      - name: bill_acct_number
+        in: path
+        description: หมายเลข BA
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          format: number
+          example: "12254127"
+      responses:
+        "200":
+          description: Data Found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Invoice.v1'
+        "400":
+          description: Bad request.
+        "401":
+          description: Authorization information is missing or invalid.
+        "404":
+          description: Data was not found.
+        "500":
+          description: Unexpected error.
+  /billing/{bill_acct_number}/invoice/{invoice_record}:
+    get:
+      tags: []
+      summary: Get Invoices by BA Number and Desired Record.
+      description: Retrieve invoice info by bill_acct_number and number of record
+      operationId: B05
+      parameters:
+      - name: bill_acct_number
+        in: path
+        description: หมายเลข BA
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          format: number
+          example: "12254127"
+      - name: invoice_record
+        in: path
+        description: Record of Invoice
+        required: true
+        style: simple
+        explode: false
+        schema:
+          maximum: 12
+          minimum: 1
+          type: integer
+          example: 1
+      responses:
+        "200":
+          description: Data Found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Invoice.v1'
+        "400":
+          description: Bad request.
+        "401":
+          description: Authorization information is missing or invalid.
+        "404":
+          description: Data was not found.
+        "500":
+          description: Unexpected error.
+  /invoice/{invoice_number}:
+    get:
+      tags: []
+      summary: Get Invoice Info by Invoice Number.
+      description: Retrieve invoice info by invoice_number
+      operationId: I01
+      parameters:
+      - name: invoice_number
+        in: path
+        description: หมายเลข invoice
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          format: number
+          example: "1225412"
+      responses:
+        "200":
+          description: Data Found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Invoice.v1'
+        "400":
+          description: Bad request.
+        "401":
+          description: Authorization information is missing or invalid.
+        "404":
+          description: Data was not found.
+        "500":
+          description: Unexpected error.
+  /invoice/{invoice_number}/payment:
+    get:
+      tags: []
+      summary: Get All Payment Trans by Invoice Number.
+      description: Retrieve payment info by invoice_number
+      operationId: I03
+      parameters:
+      - name: invoice_number
+        in: path
+        description: หมายเลข invoice
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          format: number
+          example: "1225412"
+      responses:
+        "200":
+          description: Data Found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PaymentTransaction.v1'
+        "400":
+          description: Bad request.
+        "401":
+          description: Authorization information is missing or invalid.
+        "404":
+          description: Data was not found.
+        "500":
+          description: Unexpected error.
+  /invoice/{invoice_number}/payment/{tracking_id}:
+    get:
+      tags: []
+      summary: Get a Payment Tran by Invoice Number and Tracking ID.
+      description: Retrieve payment info by invoice_number and tracking_id
+      operationId: I04
+      parameters:
+      - name: invoice_number
+        in: path
+        description: หมายเลข invoice
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          format: number
+          example: "1225412"
+      - name: tracking_id
+        in: path
+        description: หมายเลข Tracking ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          format: number
+          example: "11234768"
+      responses:
+        "200":
+          description: Data Found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PaymentTransaction.v1'
+        "400":
+          description: Bad request.
+        "401":
+          description: Authorization information is missing or invalid.
+        "404":
+          description: Data was not found.
+        "500":
+          description: Unexpected error.
+  /prepaid/sub/{subscriber_number}/subscription_charge/peroid/{date_from}/{date_to}:
+    get:
+      tags: []
+      summary: Get Prepaid Subscriptions by Subscriber Number.
+      description: Retrieve prepaid subscriptions by subscriber_number, subscription_date_from, and subscription_date_to
+      operationId: I05
+      parameters:
+      - name: subscriber_number
+        in: path
+        description: หมายเลข Subscriber
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          example: "882952859"
+      - name: date_from
+        in: path
+        description: วันที่เริ่มต้นของช่วงเวลาการค้นหา
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          format: date
+          example: 2020-06-01
+      - name: date_to
+        in: path
+        description: วันที่สิ้นสุดของช่วงเวลาการค้นหา
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          format: date
+          example: 2020-06-30
+      responses:
+        "200":
+          description: Data Found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PrepaidSubscriptionCharge.v1'
+        "400":
+          description: Bad request.
+        "401":
+          description: Authorization information is missing or invalid.
+        "404":
+          description: Data was not found.
+        "500":
+          description: Unexpected error.
+  /prepaid/sub/{subscriber_number}/over_usage/peroid/{date_from}/{date_to}:
+    get:
+      tags: []
+      summary: Get Prepaid Over Usage by Subscriber Number.
+      description: Retrieve prepaid over usage by subscriber_number, usage_date_from, and usage_date_to
+      operationId: I06
+      parameters:
+      - name: subscriber_number
+        in: path
+        description: หมายเลข Subscriber
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          example: "882952859"
+      - name: date_from
+        in: path
+        description: วันที่เริ่มต้นของช่วงเวลาการค้นหา
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          format: date
+          example: 2020-06-01
+      - name: date_to
+        in: path
+        description: วันที่สิ้นสุดของช่วงเวลาการค้นหา
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          format: date
+          example: 2020-06-30
+      responses:
+        "200":
+          description: Data Found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PrepaidOverUsageCharge.v1'
+        "400":
+          description: Bad request.
+        "401":
+          description: Authorization information is missing or invalid.
+        "404":
+          description: Data was not found.
+        "500":
+          description: Unexpected error.
+components:
+  schemas:
+    Address.v1:
+      title: Address
+      type: object
+      properties:
+        address_id:
+          type: string
+          description: Address reference number
+          format: number
+          example: "2425"
+        address_type_lkp:
+          description: ประเภทที่อยู่ เช่น Home Office
+          example:
+            id: "1"
+            display_value: Home
+          allOf:
+          - $ref: '#/components/schemas/Lookup.v1'
+        address_country_lkp:
+          description: ประเทศ
+          example:
+            id: "1"
+            display_value: Thailand
+          allOf:
+          - $ref: '#/components/schemas/Lookup.v1'
+        house_number:
+          type: string
+          description: บ้านเลขที่
+          example: 202/24
+        moo:
+          type: string
+          description: หมู่ที่
+          example: "1"
+        village:
+          type: string
+          description: หมู่บ้าน
+          example: เมืองทองธานี
+        more_info:
+          type: string
+          description: อาคาร/ชั้น/ห้อง
+          example: ตึก 4
+        trok_soi:
+          type: string
+          description: ตรอก/ซอย
+          example: ซอย 19
+        road:
+          type: string
+          description: ถนน
+          example: ถนนแจ้งวัฒนะ
+        subdistrict:
+          type: string
+          description: ตำบล/แขวง
+          example: ตำบลคลองเกลือ
+        district:
+          type: string
+          description: อำเภอ/เขต
+          example: อำเภอปากเกร็ด
+        province:
+          type: string
+          description: จังหวัด
+          example: นนทบุรี
+        postal_code:
+          type: string
+          description: รหัสไปรษณีย์
+          example: "11120"
+        latitude:
+          type: string
+          format: number
+          example: "13.03135321643213"
+        longtitude:
+          type: string
+          format: number
+          example: "13.03135321643213"
+        is_primary:
+          type: integer
+          description: Primary address (0 = No, 1 = Yes).
+          example: 1
+      description: Address model
+      x-tags:
+      - Address
+    NewAdderssForiegn.v1:
+      title: NewAdderssForiegn
+      required:
+      - address_country_lkp
+      - address_country_type
+      - house_number
+      - postal_code
+      - province
+      type: object
+      properties:
+        address_country_type:
+          type: string
+          description: ที่อยู่รองรับที่อยู่ต่างประเทศ
+          enum:
+          - NewAdderssForiegn
+        address_country_lkp:
+          type: string
+          description: ประเทศ
+          format: number
+          example: "1"
+        house_number:
+          type: string
+          description: บ้านเลขที่
+          example: 202/24
+        moo:
+          type: string
+          description: หมู่ที่
+          example: "1"
+        village:
+          type: string
+          description: หมู่บ้าน
+          example: เมืองทองธานี
+        more_info:
+          type: string
+          description: อาคาร/ชั้น/ห้อง
+          example: ตึก 4
+        trok_soi:
+          type: string
+          description: ตรอก/ซอย
+          example: ซอย 19
+        road:
+          type: string
+          description: ถนน
+          example: ถนนแจ้งวัฒนะ
+        subdistrict:
+          type: string
+          description: ตำบล/แขวง
+          example: ตำบลคลองเกลือ
+        district:
+          type: string
+          description: อำเภอ/เขต
+          example: อำเภอปากเกร็ด
+        province:
+          type: string
+          description: จังหวัด
+          example: นนทบุรี
+        postal_code:
+          type: string
+          description: รหัสไปรษณีย์
+          example: "11120"
+      description: New foreign address model
+      x-tags:
+      - NewAdderssForiegn
+    NewAdderssGenericInfo.v1:
+      title: NewAdderssGenericInfo
+      required:
+      - address_type_lkp
+      type: object
+      properties:
+        address_type_lkp:
+          type: string
+          description: ประเภทที่อยู่ Home, Office,
+          format: number
+          example: "1"
+        latitude:
+          type: string
+          format: number
+          example: "13.03135321643213"
+        longtitude:
+          type: string
+          format: number
+          example: "13.03135321643213"
+      description: New address generic info model
+      x-tags:
+      - NewAdderssGenericInfo
+    NewAddressTh.v1:
+      title: NewAddressTH
+      required:
+      - address_country_type
+      - district
+      - house_number
+      - postal_code
+      - province
+      - subdistrict
+      type: object
+      properties:
+        address_country_type:
+          type: string
+          description: ที่อยู่ตามรูปแบบของประเทศไทย
+          enum:
+          - NewAddressTH
+        house_number:
+          type: string
+          description: บ้านเลขที่
+          example: 202/24
+        moo:
+          type: string
+          description: หมู่ที่
+          example: "1"
+        village:
+          type: string
+          description: หมู่บ้าน
+          example: เมืองทองธานี
+        more_info:
+          type: string
+          description: อาคาร/ชั้น/ห้อง
+          example: ตึก 4
+        trok_soi:
+          type: string
+          description: ตรอก/ซอย
+          example: ซอย 19
+        road:
+          type: string
+          description: ถนน
+          example: ถนนแจ้งวัฒนะ
+        subdistrict:
+          type: string
+          description: ตำบล/แขวง
+          example: ตำบลคลองเกลือ
+        district:
+          type: string
+          description: อำเภอ/เขต
+          example: อำเภอปากเกร็ด
+        province:
+          type: string
+          description: จังหวัด
+          example: นนทบุรี
+        postal_code:
+          type: string
+          description: รหัสไปรษณีย์
+          example: "11120"
+      description: New Thai address model
+      x-tags:
+      - NewAddressTh
+    NewAddressWithNewCA.v1:
+      title: NewAddressWithNewCA
+      description: New address with new CA model
+      allOf:
+      - $ref: '#/components/schemas/NewAdderssGenericInfo.v1'
+      - oneOf:
+        - $ref: '#/components/schemas/NewAddressTh.v1'
+        - $ref: '#/components/schemas/NewAdderssForiegn.v1'
+      - $ref: '#/components/schemas/IsPrimary.v1'
+      x-tags:
+      - NewAddressWithNewCA
+    CustomerAcctNumber.v1:
+      title: CustomerAcctNumber
+      required:
+      - customer_acct_number
+      type: object
+      properties:
+        customer_acct_number:
+          type: string
+          description: CA reference number
+          format: number
+          example: "7017480851"
+    ErrorInfo.v1:
+      title: ErrorInfo
+      required:
+      - error_detail
+      - error_type
+      type: object
+      properties:
+        error_type:
+          type: string
+          description: Short description of error type
+          example: required field missing
+        error_detail:
+          type: string
+          description: Error details related to error type
+          example: first_name
+      description: Error info model
+      x-tags:
+      - ErrorInfo
+    IsPrimary.v1:
+      title: IsPrimary
+      required:
+      - is_primary
+      type: object
+      properties:
+        is_primary:
+          type: integer
+          description: ข้อมูลหลัก
+          enum:
+          - 1
+      description: Is primary model
+      x-tags:
+      - IsPrimary
+    Lookup.v1:
+      title: Lookup
+      required:
+      - display_value
+      - lookup_category_name  - lookup_ref_id
+      type: object
+      properties:
+        id:
+          type: string
+          description: Lookup reference number for each lookup category
+          format: number
+          example: "1"
+        display_value:
+          type: string
+          description: Display value
+          example: Individual
+      description: Lookup model
+      x-tags:
+      - Lookup
+    OperationFailed.v1:
+      title: OperationFailed
+      type: object
+      properties:
+        client_info:
+          $ref: '#/components/schemas/RequestClientInfo.v1'
+        api_trans_id:
+          type: string
+          description: API transaction id for reference
+          example: "29"
+        api_timestamp:
+          type: string
+          description: API Response timestamp
+          format: date-time
+          example: 2016-08-29T09:12:33.001Z
+        error_info:
+          type: array
+          items:
+            $ref: '#/components/schemas/ErrorInfo.v1'
+      description: Operation faied model
+      x-tags:
+      - OperationFailed
+    OperationSuccess.v1:
+      title: OperationSuccess
+      required:
+      - api_timestamp
+      - api_trans_id
+      - client_info
+      - reference_id
+      - reference_type
+      type: object
+      properties:
+        client_info:
+          $ref: '#/components/schemas/RequestClientInfo.v1'
+        api_trans_id:
+          type: string
+          description: API transaction id for reference
+          example: "29"
+        api_timestamp:
+          type: string
+          description: API Response timestamp
+          format: date-time
+          example: 2016-08-29T09:12:33.001Z
+        reference_type:
+          type: string
+          description: Types of related objects such as customer_acct_number, bill_acct_number, subscriber_number, address_id, and telephone_id
+          example: customer_acct_number
+        reference_id:
+          type: string
+          description: ID of reference type
+          example: "13216523"
+      description: Operation success model
+    RequestClientInfo.v1:
+      title: RequestClientInfo
+      required:
+      - client_name
+      - client_timestamp
+      - client_trans_id
+      - client_user
+      type: object
+      properties:
+        client_trans_id:
+          type: string
+          description: Client transaction ID for reference
+          example: ORDER-12345678
+        client_name:
+          type: string
+          description: Client name such as CAT Priviliege, OM UDB, and OM MFE
+          example: OM UDB
+        client_timestamp:
+          type: string
+          format: date-time
+          example: 2016-08-29T09:12:33.001Z
+        client_user:
+          type: string
+          description: Username in the client app may be NT employee code
+          example: "12345678"
+      description: RequestClientInfo
+      x-tags:
+      - RequestClientInfo
+    BasicCustomerAccount.v1:
+      title: BasicCustomerAccount
+      description: Basic customer account model
+      allOf:
+      - $ref: '#/components/schemas/CustomerAcctNumber.v1'
+      - type: object
+        properties:
+          customer_full_name:
+            type: string
+            description: Customer full name.
+            example: นายสมชาย เจริญยิ่ง
+          id_card_info:
+            $ref: '#/components/schemas/IdCardInfo.v1'
+          generic_info:
+            $ref: '#/components/schemas/CustomerGenericInfo.v1'
+      x-tags:
+      - BasicCustomerAccount
+    CustomerAccount.v1:
+      title: CustomerAccount
+      description: Customer full info model
+      allOf:
+      - $ref: '#/components/schemas/BasicCustomerAccount.v1'
+      - type: object
+        properties:
+          customer_acct_type:
+            oneOf:
+            - $ref: '#/components/schemas/Individual.v1'
+            - $ref: '#/components/schemas/Organization.v1'
+          address:
+            $ref: '#/components/schemas/Address.v1'
+          telephone:
+            $ref: '#/components/schemas/Telephone.v1'
+          email:
+            $ref: '#/components/schemas/Email.v1'
+          social_account:
+            $ref: '#/components/schemas/SocialAccount.v1'
+      x-tags:
+      - CustomerAccount
+    CustomerGenericInfo.v1:
+      title: CustomerGenericInfo
+      type: object
+      properties:
+        customer_segment_lkp:
+          description: Customer Segment (ลูกค้าบุคคล ลูกค้าเอกชน ลูกค้าผู้ประกอบการ และลูกค้าภาครัฐ)
+          example:
+            id: "14"
+            display_value: ลูกค้าบุคคล
+          allOf:
+          - $ref: '#/components/schemas/Lookup.v1'
+        customer_group_lkp:
+          description: Customer group
+          example:
+            id: "25"
+            display_value: บุคคลทั่วไป
+          allOf:
+          - $ref: '#/components/schemas/Lookup.v1'
+        currency_lkp:
+          description: Default currency
+          example:
+            id: "1"
+            display_value: Baht
+          allOf:
+          - $ref: '#/components/schemas/Lookup.v1'
+        language_lkp:
+          description: Default language
+          example:
+            id: "1"
+            display_value: Thai
+          allOf:
+          - $ref: '#/components/schemas/Lookup.v1'
+        is_vip_sales:
+          type: integer
+          description: VIP customer for sales department.
+          example: 0
+        is_vip_debt:
+          type: integer
+          description: VIP customer for debt department.
+          example: 0
+        black_list_lkp:
+          type: string
+          description: Default is None.
+          example: "1"
+        collection_treatment_lkp:
+          type: string
+          description: Default is Null.
+          example: "1"
+        related_party_lkp:
+          description: ประเภทความสัมพันธ์กัน
+          example:
+            id: "1"
+            display_value: หน่วยงานหรือบุคคลที่เกี่ยวข้อง
+          allOf:
+          - $ref: '#/components/schemas/Lookup.v1'
+        trading_partner:
+          type: string
+          description: Default is Null.
+          example: M345
+        is_internal_customer_account:
+          type: integer
+          description: Internal customer flag.
+          example: 0
+        original_data_owner_lkp:
+          description: ต้นฉบับข้อมูลลูกค้า
+          example:
+            id: "1"
+            display_value: NT1
+          allOf:
+          - $ref: '#/components/schemas/Lookup.v1'
+        original_reference_key:
+          type: string
+          description: Reference key สำหรับใช้อ้างอิง กรณีลูกค้า NT2
+          example: "3464656546"
+      description: Customer generic info model
+      x-tags:
+      - CustomerGenericInfo
+    IdCardInfo.v1:
+      title: IdCardInfo
+      type: object
+      properties:
+        id_card_type_lkp:
+          description: ประเภทเอกสาร
+          example:
+            id: "1"
+            display_value: บัตรประชาชน
+          allOf:
+          - $ref: '#/components/schemas/Lookup.v1'
+        id_card_number:
+          type: string
+          description: หมายเลขเอกสารของลูกค้า
+          example: "1234567890123"
+        id_card_issued_by:
+          type: string
+          description: หน่วยงานที่ออกเอกสาร
+          example: เขตหลักสี่
+        id_card_expired_date:
+          type: string
+          description: วันหมดอายุของเอกสาร
+          format: date
+          example: 2030-02-02
+        tax_number:
+          type: string
+          description: หมายเลขประจำตัวผู้เสียภาษี
+          example: "1234567890123"
+        branch_id:
+          type: string
+          description: หมายเลขประจำสาขา 5 หลัก
+          example: "00000"
+      description: Id card info model
+      x-tags:
+      - IdCardInfo
+    Individual.v1:
+      title: Individual
+      type: object
+      properties:
+        salutation_lkp:
+          description: คำนำหน้าชื่อไทย
+          example:
+            id: "1"
+            display_value: นาย
+          allOf:
+          - $ref: '#/components/schemas/Lookup.v1'
+        first_name:
+          type: string
+          example: สมชาย
+        middle_name:
+          type: string
+          example: ชื่อกลาง
+        last_name:
+          type: string
+          example: เจริญยิ่ง
+        salutation_en_lkp:
+          description: คำนำหน้าชื่ออังกฤษ
+          example:
+            id: "5"
+            display_value: Mr.
+          allOf:
+          - $ref: '#/components/schemas/Lookup.v1'
+        first_name_en:
+          type: string
+          example: John
+        middle_name_en:
+          type: string
+          example: W
+        last_name_en:
+          type: string
+          example: Henry
+        gender_lkp:
+          description: เพศ
+          example:
+            id: "1"
+            display_value: ชาย
+          allOf:
+          - $ref: '#/components/schemas/Lookup.v1'
+        date_of_birth:
+          type: string
+          description: วันเกิด
+          format: date
+          example: 2030-02-02
+        nationality_lkp:
+          description: สัญชาติ
+          example:
+            id: "1"
+            display_value: ไทย
+          allOf:
+          - $ref: '#/components/schemas/Lookup.v1'
+        employee_code:
+          type: string
+          description: รหัสประจำตัวพนักงาน กรณีที่ลูกค้าเป็นพนักงานของ NT
+          example: "12345678"
+      description: Individual model
+      x-tags:
+      - Individual
+    NewCustomerGenericInfo.v1:
+      title: NewCustomerGenericInfo
+      type: object
+      properties:
+        customer_acct_number:
+          type: string
+          description: CA reference number
+          format: number
+          example: "7017480851"
+        customer_segment_lkp:
+          type: string
+          description: Customer Segment (ลูกค้าบุคคล ลูกค้าเอกชน ลูกค้าผู้ประกอบการ และลูกค้าภาครัฐ)
+          example: "14"
+        customer_group_lkp:
+          type: string
+          description: Customer Group
+          example: "5"
+        customer_value_lkp:
+          type: string
+          description: Customer Value such as Platinum, Gold, Silver, and Bronze. Default is Bronze.
+          example: "3"
+        currency_lkp:
+          type: string
+          description: Default is Baht.
+          example: "1"
+        language_lkp:
+          type: string
+          description: Default is Thai.
+          example: "1"
+        is_vip_sales:
+          type: integer
+          description: Default is 0 (No).
+          enum:
+          - 0
+          - 1
+        is_vip_debt:
+          type: integer
+          description: Default is 0 (No).
+          enum:
+          - 0
+          - 1
+        black_list_lkp:
+          type: string
+          description: Default is None.
+          example: "1"
+        collection_treatment_lkp:
+          type: string
+          description: Default is Null.
+          example: "1"
+        related_party_lkp:
+          type: string
+          description: Default is Null.
+          example: "1"
+        trading_partner:
+          type: string
+          description: Default is Null.
+          example: M345
+        is_internal_customer_account:
+          type: integer
+          description: Default is 0 (No).
+          enum:
+          - 0
+          - 1
+        original_data_owner_lkp:
+          type: string
+          description: ลูกค้า NT1 หรือ NT2
+          example: "1"
+        original_reference_key:
+          type: string
+          description: Reference key สำหรับใช้อ้างอิง กรณีลูกค้า NT2
+          example: "3464656546"
+      description: New customer generic info model
+      x-tags:
+      - NewCustomerGenericInfo
+    Organization.v1:
+      title: Organization
+      type: object
+      properties:
+        corp_type_lkp:
+          description: คำนำหน้าองค์กรไทย
+          example:
+            id: "4"
+            display_value: บจก.
+          allOf:
+          - $ref: '#/components/schemas/Lookup.v1'
+        organization_name:
+          type: string
+          example: เชฟรอน
+        branch_name:
+          type: string
+          example: สาขานครศรีธรรมราช
+        corp_type_en_lkp:
+          description: คำนำหน้าองค์กรอังกฤษ
+          example:
+            id: "6"
+            display_value: PLC.
+          allOf:
+          - $ref: '#/components/schemas/Lookup.v1'
+        organization_name_en:
+          type: string
+          description: ชื่อองค์กรภาษาอังกฤษ
+          example: Chevron
+        branch_name_en:
+          type: string
+          description: ชื่อสาขาภาษาอังกฤษ
+          example: South branch
+        registration_date:
+          type: string
+          description: วันที่จดทะเบียน
+          format: date
+          example: 2030-02-02
+        government_code:
+          type: string
+          description: รหัสหน่วยงานราชการ
+          example: G001
+      description: Organization model
+      x-tags:
+      - Organization
+    NewBasicIndividual.v1:
+      title: NewBasicIndividual
+      required:
+      - first_name
+      type: object
+      properties:
+        salutation_lkp:
+          type: string
+          description: คำนำหน้าชื่อไทย
+          format: number
+          example: "1"
+        first_name:
+          type: string
+          example: สมชาย
+        middle_name:
+          type: string
+          example: ชื่อกลาง
+        last_name:
+          type: string
+          example: เจริญยิ่ง
+        salutation_en_lkp:
+          type: string
+          description: คำนำหน้าชื่ออังกฤษ
+          format: number
+          example: "1"
+        first_name_en:
+          type: string
+          example: John
+        middle_name_en:
+          type: string
+          example: W
+        last_name_en:
+          type: string
+          example: Henry
+        gender_lkp:
+          type: string
+          description: เพศ ชาย หญิง
+          format: number
+          example: "1"
+        date_of_birth:
+          type: string
+          description: วันเกิด
+          format: date
+          example: 2030-02-02
+        nationality_lkp:
+          type: string
+          description: สัญชาติ
+          format: number
+          example: "1"
+        employee_code:
+          type: string
+          description: รหัสประจำตัวพนักงาน กรณีที่ลูกค้าเป็นพนักงานของ NT
+          example: "12345678"
+      description: New basic individual model
+      x-tags:
+      - NewBasicIndividual
+    NewIndividual.v1:
+      title: NewIndividual
+      required:
+      - first_name
+      - gender_lkp
+      - last_name
+      - salutation_lkp
+      type: object
+      properties:
+        salutation_lkp:
+          type: string
+          description: คำนำหน้าชื่อไทย
+          format: number
+          example: "1"
+        first_name:
+          type: string
+          example: สมชาย
+        middle_name:
+          type: string
+          example: ชื่อกลาง
+        last_name:
+          type: string
+          example: เจริญยิ่ง
+        salutation_en_lkp:
+          type: string
+          description: คำนำหน้าชื่ออังกฤษ
+          format: number
+          example: "1"
+        first_name_en:
+          type: string
+          example: John
+        middle_name_en:
+          type: string
+          example: W
+        last_name_en:
+          type: string
+          example: Henry
+        gender_lkp:
+          type: string
+          description: เพศ ชาย หญิง
+          format: number
+          example: "1"
+        date_of_birth:
+          type: string
+          description: วันเกิด
+          format: date
+          example: 2030-02-02
+        nationality_lkp:
+          type: string
+          description: สัญชาติ
+          format: number
+          example: "1"
+        employee_code:
+          type: string
+          description: รหัสประจำตัวพนักงาน กรณีที่ลูกค้าเป็นพนักงานของ NT
+          example: "12345678"
+      description: New individual model
+      x-tags:
+      - NewIndividual
+    NewIndyCustomer.v1:
+      title: NewIndyCustomer
+      required:
+      - address
+      - client_info
+      - customer_acct_type
+      - id_card_type
+      type: object
+      properties:
+        client_info:
+          $ref: '#/components/schemas/RequestClientInfo.v1'
+        id_card_info:
+          $ref: '#/components/schemas/NewIndyCustomerCard.v1'
+        customer_acct_type:
+          $ref: '#/components/schemas/NewIndividual.v1'
+        general_info:
+          $ref: '#/components/schemas/NewCustomerGenericInfo.v1'
+        address:
+          $ref: '#/components/schemas/NewAddressWithNewCA.v1'
+        telephone:
+          $ref: '#/components/schemas/NewTelephoneWithNewCA.v1'
+        email:
+          $ref: '#/components/schemas/NewEmailWithNewCA.v1'
+        social_account:
+          $ref: '#/components/schemas/NewSocialWithNewCA.v1'
+      description: New indy customer model
+      x-tags:
+      - NewIndyCustomer
+    NewIndyCustomerCard.v1:
+      title: NewIndyCustomerCard
+      description: New individual customer card model
+      allOf:
+      - oneOf:
+        - $ref: '#/components/schemas/NewIndyCustomerThaiIdCard.v1'
+        - $ref: '#/components/schemas/NewIndyCustomerOtherIdCard.v1'
+      - type: object
+        properties:
+          id_card_issued_by:
+            type: string
+            description: หน่วยงานที่ออกเอกสาร
+            example: เขตหลักสี่
+          id_card_expired_date:
+            type: string
+            description: วันหมดอายุของเอกสาร
+            format: date
+            example: 2030-02-02
+      x-tags:
+      - NewIndyCustomerCard
+    NewIndyCustomerOtherIdCard.v1:
+      title: NewIndyCustomerOtherIdCard
+      required:
+      - id_card_type_lkp
+      - indy_id_card_type
+      type: object
+      properties:
+        indy_id_card_type:
+          type: string
+          description: เอกสารประเภทอื่นที่ไม่ใช่บัตรประชาชน
+          enum:
+          - NewIndyCustomerOtherIdCard
+        id_card_type_lkp:
+          type: string
+          description: ประเภทเอกสารของลูกค้า
+          format: number
+          example: "6"
+        id_card_number:
+          type: string
+          description: หมายเลขเอกสารของลูกค้า
+          example: "1234567890123"
+        tax_number:
+          type: string
+          description: หมายเลขประจำตัวผู้เสียภาษี
+          example: "1234567890123"
+        branch_id:
+          type: string
+          description: หมายเลขประจำสาขา 5 หลัก
+          example: "00000"
+      description: New individual customer other ID card model
+      x-tags:
+      - NewIndyCustomerOtherIdCard
+    NewIndyCustomerThaiIdCard.v1:
+      title: NewIndyCustomerThaiIdCard
+      required:
+      - id_card_number
+      - indy_id_card_type
+      type: object
+      properties:
+        indy_id_card_type:
+          type: string
+          description: บัตรประชาชน
+          enum:
+          - NewIndyCustomerThaiIdCard
+        id_card_number:
+          type: string
+          description: หมายเลขบัตรประชาชน 13 หลัก ตามรูปแบบของกรมการปกครอง
+          example: "1234567890123"
+      description: New individual customer Thai ID card model
+      x-tags:
+      - NewIndyCustomerThaiIdCard
+    NewIndyProspect.v1:
+      title: NewIndyProspect
+      required:
+      - client_info
+      - customer_acct_type
+      - telephone
+      type: object
+      properties:
+        client_info:
+          $ref: '#/components/schemas/RequestClientInfo.v1'
+        id_card_info:
+          $ref: '#/components/schemas/NewIndyCustomerCard.v1'
+        customer_acct_type:
+          $ref: '#/components/schemas/NewBasicIndividual.v1'
+        general_info:
+          $ref: '#/components/schemas/NewCustomerGenericInfo.v1'
+        address:
+          $ref: '#/components/schemas/NewAddressWithNewCA.v1'
+        telephone:
+          $ref: '#/components/schemas/NewTelephoneWithNewCA.v1'
+        email:
+          $ref: '#/components/schemas/NewEmailWithNewCA.v1'
+        social_account:
+          $ref: '#/components/schemas/NewSocialWithNewCA.v1'
+      description: New indy prospect model
+      x-tags:
+      - NewIndyProspect
+    NewOrgCustomer.v1:
+      title: NewOrgCustomer
+      required:
+      - address
+      - client_info
+      - customer_acct_type
+      - id_card_type
+      type: object
+      properties:
+        client_info:
+          $ref: '#/components/schemas/RequestClientInfo.v1'
+        id_card_info:
+          $ref: '#/components/schemas/NewOrgCustomerCard.v1'
+        customer_acct_type:
+          $ref: '#/components/schemas/NewOrganization.v1'
+        general_info:
+          $ref: '#/components/schemas/NewCustomerGenericInfo.v1'
+        address:
+          $ref: '#/components/schemas/NewAddressWithNewCA.v1'
+        telephone:
+          $ref: '#/components/schemas/NewTelephoneWithNewCA.v1'
+        email:
+          $ref: '#/components/schemas/NewEmailWithNewCA.v1'
+        social_account:
+          $ref: '#/components/schemas/NewSocialWithNewCA.v1'
+      description: New organization customer model
+      x-tags:
+      - NewOrgCustomer
+    NewOrgCustomerCard.v1:
+      title: NewOrgCustomerCard
+      description: New organization customer card model
+      allOf:
+      - oneOf:
+        - $ref: '#/components/schemas/NewOrgCustomerTaxIdCard.v1'
+        - $ref: '#/components/schemas/NewOrgCustomerOtherIdCard.v1'
+      - type: object
+        properties:
+          id_card_issued_by:
+            type: string
+            description: หน่วยงานที่ออกเอกสาร
+            example: เขตหลักสี่
+          id_card_expired_date:
+            type: string
+            description: วันหมดอายุของเอกสาร
+            format: date
+            example: 2030-02-02
+      x-tags:
+      - NewOrgCustomerCard
+    NewOrgCustomerOtherIdCard.v1:
+      title: NewOrgCustomerOtherIdCard
+      required:
+      - id_card_type_lkp
+      - org_id_card_type
+      type: object
+      properties:
+        org_id_card_type:
+          type: string
+          description: เอกสารประเภทอื่นที่ไม่ใช่เลขประจำตัวผู้เสียภาษี
+          enum:
+          - NewOrgCustomerOtherIdCard
+        id_card_type_lkp:
+          type: string
+          description: ประเภทเอกสารของลูกค้า
+          format: number
+          example: "6"
+        id_card_number:
+          type: string
+          description: หมายเลขเอกสารของลูกค้า
+          example: "1234567890123"
+        tax_number:
+          type: string
+          description: หมายเลขประจำตัวผู้เสียภาษี
+          example: "1234567890123"
+        branch_id:
+          type: string
+          description: หมายเลขประจำสาขา 5 หลัก ค่า Default = '00000'
+          example: "00000"
+      description: New organization customer other ID card model
+      x-tags:
+      - NewOrgCustomerOtherIdCard
+    NewOrgCustomerTaxIdCard.v1:
+      title: NewOrgCustomerTaxIdCard
+      required:
+      - branch_id
+      - id_card_number
+      - org_id_card_type
+      type: object
+      properties:
+        org_id_card_type:
+          type: string
+          description: เลขประจำตัวผู้เสียภาษี
+          enum:
+          - NewOrgCustomerTaxIdCard
+        id_card_number:
+          type: string
+          description: เลขประจำตัวผู้เสียภาษี 13 หลัก ตามรูปแบบของกรมสรรพากร
+          example: "1234567890123"
+        branch_id:
+          type: string
+          description: หมายเลขประจำสาขา 5 หลัก ค่า Default = '00000'
+          example: "00000"
+      description: New organization customer Tax ID card model
+      x-tags:
+      - NewOrgCustomerTaxIdCard
+    NewOrgProspect.v1:
+      title: NewOrgProspect
+      required:
+      - client_info
+      - customer_acct_type
+      - telephone
+      type: object
+      properties:
+        client_info:
+          $ref: '#/components/schemas/RequestClientInfo.v1'
+        id_card_info:
+          $ref: '#/components/schemas/NewOrgCustomerCard.v1'
+        customer_acct_type:
+          $ref: '#/components/schemas/NewOrganization.v1'
+        general_info:
+          $ref: '#/components/schemas/NewCustomerGenericInfo.v1'
+        address:
+          $ref: '#/components/schemas/NewAddressWithNewCA.v1'
+        telephone:
+          $ref: '#/components/schemas/NewTelephoneWithNewCA.v1'
+        email:
+          $ref: '#/components/schemas/NewEmailWithNewCA.v1'
+        social_account:
+          $ref: '#/components/schemas/NewSocialWithNewCA.v1'
+      description: New organization prospect model
+      x-tags:
+      - NewOrgProspect
+    NewOrganization.v1:
+      title: NewOrganization
+      required:
+      - corp_type_lkp
+      - organization_name
+      type: object
+      properties:
+        corp_type_lkp:
+          type: string
+          description: คำนำหน้าองค์กรไทย เช่น บมจ. บจก. และห้างหุ้นส่วน
+          format: number
+          example: "1"
+        organization_name:
+          type: string
+          example: เชฟรอน
+        branch_name:
+          type: string
+          example: สาขานครศรีธรรมราช
+        corp_type_en_lkp:
+          type: string
+          description: คำนำหน้าองค์กรอังกฤษ
+          format: number
+          example: "1"
+        organization_name_en:
+          type: string
+          description: ชื่อองค์กรภาษาอังกฤษ
+          example: Chevron
+        branch_name_en:
+          type: string
+          description: ชื่อสาขาภาษาอังกฤษ
+          example: South branch
+        registration_date:
+          type: string
+          description: วันที่จดทะเบียน
+          format: date
+          example: 2030-02-02
+        government_code:
+          type: string
+          description: รหัสหน่วยงานราชการ
+          example: G001
+      description: New Organization model
+      x-tags:
+      - NewOrganization
+    Email.v1:
+      title: Email
+      type: object
+      properties:
+        email_type_lkp:
+          description: ประเภทอีเมล์
+          example:
+            id: "1"
+            display_value: Work
+          allOf:
+          - $ref: '#/components/schemas/Lookup.v1'
+        email_address:
+          type: string
+          description: อีเมล์
+          example: abc@def.com
+        is_primary:
+          type: integer
+          description: Primary email (0 = No, 1 = Yes).
+          example: 1
+      description: Email model
+      x-tags:
+      - Email
+    NewEmailWithNewCA.v1:
+      title: NewEmailWithNewCA
+      description: New email with new CA model
+      allOf:
+      - required:
+        - email_address
+        - email_type_lkp
+        type: object
+        properties:
+          email_type_lkp:
+            type: string
+            description: ประเภทของอีเมล์
+            format: number
+            example: "6"
+          email_address:
+            type: string
+            description: อีเมล์
+            example: abc@def.com
+      - $ref: '#/components/schemas/IsPrimary.v1'
+      x-tags:
+      - NewEmailWithNewCA
+    NewSocialWithNewCA.v1:
+      title: NewSocialWithNewCA
+      description: New social with new CA model
+      allOf:
+      - required:
+        - social_account
+        - social_type_lkp
+        type: object
+        properties:
+          social_type_lkp:
+            type: string
+            description: ประเภทของ Social Account
+            format: number
+            example: Line
+          social_account:
+            type: string
+            description: Social Account
+            example: abc_12346
+      - $ref: '#/components/schemas/IsPrimary.v1'
+      x-tags:
+      - NewSocialWithNewCA
+    SocialAccount.v1:
+      title: SocialAccount
+      type: object
+      properties:
+        social_type_lkp:
+          description: ประเภท Social Account
+          example:
+            id: "1"
+            display_value: Line
+          allOf:
+          - $ref: '#/components/schemas/Lookup.v1'
+        social_account:
+          type: string
+          description: Social Account
+          example: abc_12346
+        is_primary:
+          type: integer
+          description: Primary social account (0 = No, 1 = Yes).
+          example: 1
+      description: Social account model
+      x-tags:
+      - SocialAccount
+    Invoice.v1:
+      title: Invoice
+      type: object
+      properties:
+        invoice_number:
+          type: string
+          format: number
+          example: "25856552"
+        bill_acct_number:
+          type: string
+          description: หมายเลข BA
+          format: number
+          example: "23658745"
+        issue_date:
+          type: string
+          description: วันที่ออก Invoice
+          format: date
+          example: 2020-06-10
+        due_date:
+          type: string
+          description: วันที่ครบกำหนดชำระ
+          format: date
+          example: 2020-06-25
+        period_from:
+          type: string
+          description: วันที่เริ่มต้นคิดค่าบริการ (วันที่เริ่มต้นรอบบิล)
+          format: date
+          example: 2020-05-01
+        period_to:
+          type: string
+          description: วันที่สิ้นสุดคิดค่าบริการ (วันที่สิ้นสุดรอบบิล)
+          format: date
+          example: 2020-05-31
+        amount:
+          type: number
+          description: ยอดหนี้ไม่รวม VAT
+          format: double
+          example: 590
+        vat:
+          type: number
+          description: VAT
+          format: double
+          example: 41.3
+        paid_amount:
+          type: number
+          description: ยอดชำระรวม VAT
+          format: double
+          example: 0
+        last_paid_date:
+          type: string
+          description: วันที่ชำระเงินล่าสุด
+          format: date-time
+          example: 2016-08-29T09:12:33.001Z
+        balance_amount:
+          type: number
+          description: ยอดหนี้คงค้างรวม VAT
+          format: double
+          example: 590
+        balance_update_date:
+          type: string
+          description: วันที่เปลี่ยนแปลงยอด balance_amount ล่าสุด
+          format: date-time
+          example: 2016-08-29T09:12:33.001Z
+        invoice_sub_list:
+          type: array
+          items:
+            $ref: '#/components/schemas/InvoiceSubscriber.v1'
+      description: Invoice model
+      x-tags:
+      - Invoice
+    InvoiceSubscriber.v1:
+      title: InvoiceSubscirber
+      type: object
+      properties:
+        invoice_number:
+          type: string
+          format: number
+          example: "25856552"
+        ref_subscr_no:
+          type: string
+          format: number
+          example: "25412"
+        amount:
+          type: number
+          description: ยอดหนี้ไม่รวม VAT
+          format: double
+          example: 590
+      description: Invoice subscriber model
+      x-tags:
+      - InvoiceSubscirber
+    PaymentTransaction.v1:
+      title: PaymentTransaction
+      type: object
+      properties:
+        tracking_id:
+          type: string
+          description: payment transaction id
+          format: number
+          example: "25856552"
+        invoice_number:
+          type: string
+          format: number
+          example: "25856552"
+        pay_date:
+          type: string
+          format: date
+          example: 2020-06-10
+        amount:
+          type: number
+          description: ยอดชำระ
+          format: double
+          example: 590
+        vat:
+          type: number
+          format: double
+          example: 41.3
+        location:
+          type: string
+          description: สถานที่รับชำระ
+          example: ศูนย์บริการลูกค้าสุขุมวิท
+        receipt_id:
+          type: string
+          description: เลขที่ใบเสร็จ
+          example: "25856552"
+      description: Payment transaction model
+      x-tags:
+      - PaymentTransaction
+    PrepaidOverUsageCharge.v1:
+      title: PrepaidOverUsageCharge
+      type: object
+      properties:
+        usage_date:
+          type: string
+          format: date
+          example: 2020-06-10
+        ref_subscr_no:
+          type: string
+          format: number
+          example: "25856552"
+        subscriber_number:
+          type: string
+          example: "0882543698"
+        amount:
+          type: number
+          description: ยอดเงินการใช้จ่ายส่วนเกิน
+          format: double
+          example: 50
+      description: PrepaidOverUsageCharge
+      x-tags:
+      - PrepaidOverUsageCharge
+    PrepaidSubscriptionCharge.v1:
+      title: PrepaidSubscriptionCharge
+      type: object
+      properties:
+        subscription_id:
+          type: string
+          example: U2003010000075937752
+        subscription_date:
+          type: string
+          format: date-time
+          example: 2016-08-29T09:12:33.001Z
+        ref_subscr_no:
+          type: string
+          format: number
+          example: "25856552"
+        subscriber_number:
+          type: string
+          example: "0882543698"
+        offer_id:
+          type: string
+          description: รหัสโปรโมชั่น
+          format: number
+          example: "51006022"
+        offer_name:
+          type: string
+          description: ชื่อโปรโมชั่น
+          example: เน็ตสุดคุ้ม 1 Mbps. 279
+        amount:
+          type: number
+          description: ยอดเงินสมัครโปรโมชั่น
+          format: double
+          example: 50
+        charge_type:
+          type: string
+          description: ประเภทการ Charge (NRC, RC)
+          example: RC
+      description: Prepaid subscription charge model
+      x-tags:
+      - PrepaidSubscriptionCharge
+    NewTelephoneGeneral.v1:
+      title: NewTelephoneGeneral
+      required:
+      - telephone_country_code_lkp
+      - telephone_number
+      - telephone_type_lkp
+      type: object
+      properties:
+        telephone_type_lkp:
+          type: string
+          description: ประเภทของเบอร์โทรศัพท์
+          format: number
+          example: "6"
+        telephone_country_code_lkp:
+          type: string
+          description: รหัสประเทศ
+          format: number
+          example: "66"
+        telephone_number:
+          type: string
+          description: หมายเลขโทรศัพท์
+          format: number
+          example: "021041322"
+        extension_code:
+          type: string
+          description: เบอร์ต่อ
+          format: number
+          example: "4321"
+      description: New telephone general model
+      x-tags:
+      - NewTelephoneGeneral
+    NewTelephoneMobileTH.v1:
+      title: NewTelephoneMobileTH
+      required:
+      - telephone_number
+      - telephone_type
+      type: object
+      properties:
+        telephone_type:
+          type: string
+          description: โทรศัพท์มือถือของไทย
+          enum:
+          - NewTelephoneMobileTH
+        telephone_number:
+          type: string
+          description: หมายเลขโทรศัพท์มือถือ 10 หลัก มี 0 นำหน้า
+          format: number
+          example: "0987654321"
+      description: New telephone mobile TH model
+      x-tags:
+      - NewTelephoneMobileTH
+    NewTelephoneWithNewCA.v1:
+      title: NewTelephoneWithNewCA
+      description: New telephone with new CA model
+      allOf:
+      - oneOf:
+        - $ref: '#/components/schemas/NewTelephoneMobileTH.v1'
+        - $ref: '#/components/schemas/NewTelephoneGeneral.v1'
+      - $ref: '#/components/schemas/IsPrimary.v1'
+      x-tags:
+      - NewTelephoneWithNewCA
+    Telephone.v1:
+      title: Telephone
+      type: object
+      properties:
+        telephone_id:
+          type: string
+          description: Address reference number
+          format: number
+          example: "2425"
+        telephone_type_lkp:
+          description: ประเภทของเบอร์โทรศัพท์
+          example:
+            id: "1"
+            display_value: Mobile
+          allOf:
+          - $ref: '#/components/schemas/Lookup.v1'
+        telephone_country_code_lkp:
+          description: รหัสประเทศ
+          example:
+            id: "1"
+            display_value: Thai
+          allOf:
+          - $ref: '#/components/schemas/Lookup.v1'
+        telephone_number:
+          type: string
+          description: หมายเลขโทรศัพท์
+          format: number
+          example: "021041322"
+        extension_code:
+          type: string
+          description: เบอร์ต่อ
+          format: number
+          example: "4321"
+        is_primary:
+          type: integer
+          description: Primary telephone (0 = No, 1 = Yes).
+          example: 1
+        is_my_number:
+          type: integer
+          description: my number (0 = No, 1 = Yes).
+          example: 0
+      description: Telephone model
+      x-tags:
+      - Telephone
+  parameters:
+    BillAcctNumber.v1:
+      name: bill_acct_number
+      in: path
+      description: หมายเลข BA
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+        format: number
+        example: "12254127"
+    CustomerAcctNumber.v1_2:
+      name: customer_acct_number
+      in: path
+      description: หมายเลข CA
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+        format: number
+        example: "7017480851"
+    CustomerFullName.v1:
+      name: customer_full_name
+      in: path
+      description: Customer full name
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+        example: สมชาย เจริญยิ่ง
+    DateFrom.v1:
+      name: date_from
+      in: path
+      description: วันที่เริ่มต้นของช่วงเวลาการค้นหา
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+        format: date
+        example: 2020-06-01
+    DateTo.v1:
+      name: date_to
+      in: path
+      description: วันที่สิ้นสุดของช่วงเวลาการค้นหา
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+        format: date
+        example: 2020-06-30
+    IdCardNumber.v1:
+      name: id_card_number
+      in: path
+      description: หมายเลขบัตร
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+        example: "123457890123"
+    InvoiceNumber.v1:
+      name: invoice_number
+      in: path
+      description: หมายเลข invoice
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+        format: number
+        example: "1225412"
+    InvoiceRecord.v1:
+      name: invoice_record
+      in: path
+      description: Record of Invoice
+      required: true
+      style: simple
+      explode: false
+      schema:
+        maximum: 12
+        minimum: 1
+        type: integer
+        example: 1
+    Offset.v1:
+      name: offset
+      in: path
+      description: Offset
+      required: true
+      style: simple
+      explode: false
+      schema:
+        maximum: 100
+        minimum: 1
+        type: integer
+        example: 1
+    SubscriberNumber.v1:
+      name: subscriber_number
+      in: path
+      description: หมายเลข Subscriber
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+        example: "882952859"
+    TaxNumber.v1:
+      name: tax_number
+      in: path
+      description: Tax Number
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+        format: number
+        example: "7017480851"
+    TelephoneNumber.v1:
+      name: telephone_number
+      in: path
+      description: Telephone Number 10 digits
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+        format: number
+        example: "0882951234"
+    TrackingId.v1:
+      name: tracking_id
+      in: path
+      description: หมายเลข Tracking ID
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+        format: number
+        example: "11234768"
+    XClientId.v1:
+      name: X-Client-ID
+      in: header
+      description: Client Transaction ID ใช้สำหรับอ้างอิง
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+        example: ORDER-12254127
+    XClientName.v1:
+      name: X-Client-Name
+      in: header
+      description: ชื่อ Client ที่เรียกใช้ API
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+        example: OM UDB
+    XClientTimestamp.v1:
+      name: X-Client-Timestamp
+      in: header
+      description: Date-timestamp from client
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+        format: date-time
+        example: 2016-08-29T09:12:33.001Z
