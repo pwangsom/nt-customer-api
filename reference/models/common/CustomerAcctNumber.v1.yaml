@@ -6,5 +6,3 @@ properties:
     format: number
     example: '7017480851'
     description: CA reference number
-required:
-  - customer_acct_number

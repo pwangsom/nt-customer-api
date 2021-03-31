@@ -6,6 +6,11 @@ properties:
     format: number
     example: '12254127'
     description: BA number
+  customer_acct_number:
+    type: string
+    format: number
+    example: '7017480851'
+    description: CA reference number    
   active_date:
     type: string
     format: date
@@ -101,6 +106,34 @@ properties:
     type: string
     example: 'HO-C internet (On Net)'
     description: Billing group    
+  payment_method_lkp:
+    allOf:
+      - $ref: ../common/DisplayLookup.v1.yaml
+    description: Payment method
+    example:
+      lookup_ref_id: '1'
+      display_value: 'Cash'
+      lookup_category_name: 'payment_method_lkp'   
+  billing_system_lkp:
+    allOf:
+      - $ref: ../common/DisplayLookup.v1.yaml
+    description: Billing system
+    example:
+      lookup_ref_id: '1'
+      display_value: 'NT1'
+      lookup_category_name: 'billing_system_lkp'   
+  original_data_owner_lkp:
+    allOf:
+      - $ref: ../common/DisplayLookup.v1.yaml
+    description: ต้นฉบับข้อมูลลูกค้า
+    example:
+      lookup_ref_id: '1'
+      display_value: 'NT1'
+      lookup_category_name: 'original_data_owner_lkp'
+  original_reference_key:
+    type: string
+    example: '3464656546'
+    description: Reference key สำหรับใช้อ้างอิง กรณีลูกค้า NT2
   bill_address_list:
     type: array
     items:
@@ -109,3 +142,7 @@ properties:
     type: array
     items:
       $ref: BillingEmail.v1.yaml
+  subscriber_list:
+    type: array
+    items:
+      $ref: ../subscriber/BasicSubscriber.v1.yaml

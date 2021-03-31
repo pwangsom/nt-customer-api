@@ -1,0 +1,12 @@
+title: ServiceType
+type: object
+properties:
+  service_code:
+    type: string
+    format: number
+    example: '110'
+    description: รหัสบริการ
+  service_name:
+    type: string
+    example: 'my Postpaid'
+    decription: ชื่อบริการ

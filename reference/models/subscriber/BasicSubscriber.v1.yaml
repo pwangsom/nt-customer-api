@@ -1,0 +1,97 @@
+title: BasicSubscriber
+type: object
+properties:
+  ref_subscr_no:
+    type: string
+    format: number
+    example: '25412'
+    description: Sub reference number
+  customer_acct_number:
+    type: string
+    format: number
+    example: '7017480851'
+    description: CA reference number
+  bill_acct_number:
+    type: string
+    format: number
+    example: '12254127'
+    description: BA number
+  service_type:
+    allOf:
+      - $ref: ServiceType.v1.yaml
+    description: Service type
+    example:
+      service_code: '110'
+      service_name: my Postpaid
+  status_lkp:
+    allOf:
+      - $ref: ../common/DisplayLookup.v1.yaml
+    description: Subscriber status
+    example:
+      lookup_ref_id: '1'
+      display_value: Active
+      lookup_category_name: status_lkp
+  subscriber_number:
+    type: string
+    example: '881234567'
+    description: Subscriber number
+  subscriber_property:
+    type: string
+    example: '1234567890123456789'
+    description: Subscriber property e.g. ICCID
+  start_date:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: วันที่เริ่มต้นใช้บริการ
+  end_date:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: วันที่สิ้นสุดการใช้บริการ
+  css_cat_id:
+    type: string
+    example: '123654855881234567'
+    description: CSS CAT ID
+  sales_employee_code:
+    type: string
+    example: '00123456'
+    description: Sales employee code
+  sap_cost_center:
+    type: string
+    example: 1J23456
+    description: Sales department unit
+  order_pending_lkp:
+    allOf:
+      - $ref: ../common/DisplayLookup.v1.yaml
+    description: Subscriber order status
+    example:
+      lookup_ref_id: '1'
+      display_value: Pending
+      lookup_category_name: order_pending_lkp
+  reason_lkp:
+    allOf:
+      - $ref: ../common/DisplayLookup.v1.yaml
+    description: Terminated reason
+    example:
+      lookup_ref_id: '1'
+      display_value: Change operater
+      lookup_category_name: reason_lkp
+  reason_ext:
+    type: string
+    example: ราคาถูกกว่า
+    description: Reason extension
+  original_data_owner_lkp:
+    allOf:
+      - $ref: ../common/DisplayLookup.v1.yaml
+    description: ต้นฉบับข้อมูลลูกค้า
+    example:
+      lookup_ref_id: '1'
+      display_value: NT1
+      lookup_category_name: original_data_owner_lkp
+  original_reference_key:
+    type: string
+    example: '3464656546'
+    description: Reference key สำหรับใช้อ้างอิง กรณีลูกค้า NT2
+x-tags:
+  - BasicSubscriber

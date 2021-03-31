@@ -1,0 +1,13 @@
+title: BasicCustomerAccountWithBaSub
+allOf:
+  - $ref: BasicCustomerAccount.v1.yaml
+  - type: object
+    properties:
+      billing_account_list:
+        type: array
+        items:
+          $ref: ../billing-account/BasicBillingAccount.v1.yaml
+      prepaid_subscriber_list:
+        type: array
+        items:
+          $ref: ../subscriber/BasicSubscriber.v1.yaml

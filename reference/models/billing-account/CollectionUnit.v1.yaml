@@ -4,10 +4,10 @@ properties:
   region_code:
     type: string
     example: '34521'
-    descriptiong: Collection unit code
+    description: Collection unit code
   collection_unit:
     type: string
     example: 0000 คต.
-    descriptiong: Collection unit name
+    description: Collection unit name
 x-tags:
   - CollectionUnit
