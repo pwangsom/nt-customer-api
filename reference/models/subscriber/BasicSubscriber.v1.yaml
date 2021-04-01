@@ -21,8 +21,8 @@ properties:
       - $ref: ServiceType.v1.yaml
     description: Service type
     example:
-      service_code: '110'
-      service_name: my Postpaid
+      service_type_code: '110'
+      service_type_name: my Postpaid
   status_lkp:
     allOf:
       - $ref: ../common/DisplayLookup.v1.yaml

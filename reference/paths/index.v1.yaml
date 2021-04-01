@@ -34,6 +34,9 @@
 '/customer/{customer_acct_number}':
   $ref: customer-account/C13.v1.yaml
 
+'/customer/{customer_acct_number}/bill_sub':
+  $ref: customer-account/C14.v1.yaml
+
 '/customer/{customer_acct_number}/address':
   $ref: customer-account/C15.v1.yaml
 

@@ -1,0 +1,16 @@
+title: DisplayProduct
+type: object
+properties:
+  part_number:
+    type: string
+    format: number
+    example: '25252'
+    description: Billing system reference number
+  product_name:
+    type: string
+    example: 'C internet Package Home(IP Public) 100/100 Mbps'
+    description: Product name
+  price:
+    type: number
+    format: double
+    example: 590.00
