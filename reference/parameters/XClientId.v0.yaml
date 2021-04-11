@@ -1,7 +1,0 @@
-name: X-Client-ID
-in: header
-required: true
-description: Client Transaction ID ใช้สำหรับอ้างอิง
-schema:
-  type: string
-  example: 'ORDER-12254127'

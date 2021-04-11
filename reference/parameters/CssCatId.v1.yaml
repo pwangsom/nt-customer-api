@@ -1,0 +1,7 @@
+name: css_cat_id
+in: path
+required: true
+description: CSS CAT ID
+schema:
+  type: string
+  example: '4646448946445'

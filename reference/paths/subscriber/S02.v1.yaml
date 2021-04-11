@@ -1,0 +1,25 @@
+get:
+  operationId: S02
+  description: Retrieve basic subscriber with active packages and components by customer_acct_number and subscriber_number
+  summary: Get Basic Subscriber with Active Pakages and Components by CA Number and Subscriber Number.
+  tags: []
+  parameters:
+    - $ref: ../../parameters/CustomerAcctNumber.v1.yaml
+    - $ref: ../../parameters/SubscriberNumber.v1.yaml
+  responses:
+    '200':
+      description: Data Found
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../../models/subscriber/BasicSubscriberWithActivePackageComponent.v1.yaml
+    '400':
+      description: Bad request.
+    '401':
+      description: Authorization information is missing or invalid.
+    '404':
+      description: Data was not found.
+    '500':
+      description: Unexpected error.

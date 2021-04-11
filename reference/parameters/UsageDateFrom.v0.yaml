@@ -1,8 +1,0 @@
-name: usage_date_from
-in: path
-required: true
-description: วันที่เริ่มต้นของช่วงเวลาการค้นหา
-schema:
-  type: string
-  format: date
-  example: '2020-06-01'

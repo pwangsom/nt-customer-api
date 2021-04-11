@@ -1,0 +1,20 @@
+title: BasicSubscriberWithAllPackageComponent
+allOf:
+  - $ref: BasicSubscriber.v1.yaml
+  - type: object
+    properties:
+      active_package_component:
+        type: string
+        enum:
+          - BasicSubscriberWithAllPackageComponent
+        description: All Packages and Components
+      package_list:
+        type: array
+        items:
+          $ref: Package.v1.yaml
+      component_list:
+        type: array
+        items:
+          $ref: Component.v1.yaml
+x-tags:
+  - BasicSubscriberWithAllPackageComponent

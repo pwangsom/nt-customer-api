@@ -1,0 +1,16 @@
+title: Package
+allOf:
+  - type: object
+    properties:
+      package_id:
+        type: string
+        format: number
+        example: '13654'
+        description: Package reference number
+      component_list:
+        type: array
+        items:
+          $ref: Component.v1.yaml
+  - $ref: DisplayProduct.v1.yaml
+x-tags:
+  - Package

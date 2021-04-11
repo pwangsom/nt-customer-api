@@ -1,0 +1,7 @@
+name: ref_subscr_no
+in: path
+required: true
+description: Subscriber reference number
+schema:
+  type: string
+  example: '464644'

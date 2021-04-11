@@ -1,10 +1,10 @@
 get:
-  operationId: B01
-  description: Retrieve basic BA info by bill_acct_number
-  summary: Get Basic BA Info by BA Number.
+  operationId: S04
+  description: Retrieve basic subscriber with active packages and components by subscriber_number
+  summary: Get Basic Subscriber with Active Pakages and Components by Subscriber Number.
   tags: []
   parameters:
-    - $ref: ../../parameters/BillAcctNumber.v1.yaml
+    - $ref: ../../parameters/SubscriberNumber.v1.yaml
   responses:
     '200':
       description: Data Found
@@ -13,7 +13,7 @@ get:
           schema:
             type: array
             items:
-              $ref: ../../models/customer-account/BasicCustomerAccountWithBaSub.v1.yaml
+              $ref: ../../models/subscriber/BasicSubscriberWithActivePackageComponent.v1.yaml
     '400':
       description: Bad request.
     '401':

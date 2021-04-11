@@ -61,6 +61,9 @@
 '/prospect/organization/create':
   $ref: customer-account/C68.v1.yaml
 
+'/billing/{bill_acct_number}/basic':
+  $ref: billing-account/B01.v1.yaml
+
 '/billing/{bill_acct_number}/invoice':
   $ref: billing-account/B03.v1.yaml
 
@@ -69,6 +72,30 @@
 
 '/billing/{bill_acct_number}/invoice/{invoice_record}':
   $ref: billing-account/B05.v1.yaml
+
+'/subscriber/{ref_subscr_no}/basic':
+  $ref: subscriber/S01.v1.yaml
+
+'/subscriber/ca/{customer_acct_number}/sub/{subscriber_number}':
+  $ref: subscriber/S02.v1.yaml
+
+'/subscriber/{ref_subscr_no}/package_comp':
+  $ref: subscriber/S03.v1.yaml
+
+'/subscriber/sub/{subscriber_number}':
+  $ref: subscriber/S04.v1.yaml
+
+'/subscriber/css/{css_cat_id}':
+  $ref: subscriber/S05.v1.yaml
+
+'/subscriber/ca/{customer_acct_number}':
+  $ref: subscriber/S06.v1.yaml
+
+'/subscriber/tel/{telephone_number}':
+  $ref: subscriber/S09.v1.yaml
+
+'/subscriber/ba/{bill_acct_number}':
+  $ref: subscriber/S10.v1.yaml
 
 '/invoice/{invoice_number}':      
   $ref: invoice-payment/I01.v1.yaml

@@ -1,0 +1,27 @@
+# Not publish yet
+# Create: 12-Apr-21
+# Version: 2.0.3
+get:
+  operationId: S07
+  description: Retrieve basic subscriber with active packages and components by customer_full_name
+  summary: Get Basic Subscriber with Active Pakages and Components by Customer Name.
+  tags: []
+  parameters:
+    - $ref: ../../parameters/CustomerFullName.v1.yaml
+  responses:
+    '200':
+      description: Data Found
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../../models/subscriber/BasicSubscriberWithActivePackageComponent.v1.yaml
+    '400':
+      description: Bad request.
+    '401':
+      description: Authorization information is missing or invalid.
+    '404':
+      description: Data was not found.
+    '500':
+      description: Unexpected error.

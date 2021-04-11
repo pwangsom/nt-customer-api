@@ -1,19 +1,12 @@
 title: Component
-type: object
-properties:
-  component_id:
-    type: string
-    format: number
-    example: '1365436'
-    description: Component reference number
-  part_number:
-    type: string
-    format: number
-    example: '25252'
-    description: Billing system reference number
-  product_name:
-    type: string
-    format: number
-    example: '25252'
-    description: Billing system reference number
-
+allOf:
+  - type: object
+    properties:
+      component_id:
+        type: string
+        format: number
+        example: '1365436'
+        description: Component reference number
+  - $ref: DisplayProduct.v1.yaml
+x-tags:
+  - Component
