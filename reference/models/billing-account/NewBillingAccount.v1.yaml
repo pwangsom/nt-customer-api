@@ -1,0 +1,132 @@
+title: NewBillingAccount
+type: object
+properties:
+  customer_acct_number:
+    type: string
+    format: number
+    example: '7017480851'
+    description: CA reference number
+  bill_acct_number:
+    type: string
+    format: number
+    example: '12254127'
+    description: BA number
+  active_date:
+    type: string
+    format: date
+    example: '2030-02-02'
+    description: วันที่เริ่มใช้งาน
+  bill_acct_category_lkp:
+    type: string
+    format: number
+    example: '6'
+    description: Billing account category (bill_acct_category_lkp)
+  currency_lkp:
+    type: string
+    format: number
+    example: '1'
+    description: currency_lkp
+  language_lkp:
+    type: string
+    format: number
+    example: '1'
+    description: language_lkp     
+  parent_bill_acct_number:
+    type: string
+    format: number
+    example: '22254127'
+    description: Parent BA number
+  vat_rate_lkp:
+    type: string
+    format: number
+    example: '1'
+    description: vat_rate_lkp   
+  dispatch_method_lkp:
+    type: string
+    format: number
+    example: '1'
+    description: dispatch_method_lkp   
+  is_display_vat:
+    type: integer
+    example: 1
+    description: Display VAT.
+  collection_unit:
+    type: string
+    example: '34521'
+    description: Collection unit code (Region code)
+  collection_treatment_lkp:
+    type: string
+    format: number
+    example: '1'
+    description: collection_treatment_lkp   
+  vat_dispatch_method_lkp:
+    type: string
+    format: number
+    example: '1'
+    description: dispatch_method_lkp   
+  receipt_dispatch_method_lkp:
+    allOf:
+      - $ref: ../common/DisplayLookup.v1.yaml
+    description: Receipt dispatch method
+    example:
+      lookup_ref_id: '1'
+      display_value: Printing & Email
+      lookup_category_name: dispatch_method_lkp
+  tax_number:
+    type: string
+    example: '1234567890123'
+    description: หมายเลขประจำตัวผู้เสียภาษี
+  tax_branch_id:
+    type: string
+    example: '00000'
+    description: หมายเลขประจำสาขา 5 หลัก
+  is_billable:
+    type: integer
+    example: 1
+    description: Billable.
+  is_internal_bill:
+    type: integer
+    example: 0
+    description: Internal bill.
+  billing_group:
+    type: string
+    example: HO-C internet (On Net)
+    description: Billing group
+  payment_method_lkp:
+    allOf:
+      - $ref: ../common/DisplayLookup.v1.yaml
+    description: Payment method
+    example:
+      lookup_ref_id: '1'
+      display_value: Cash
+      lookup_category_name: payment_method_lkp
+  billing_system_lkp:
+    allOf:
+      - $ref: ../common/DisplayLookup.v1.yaml
+    description: Billing system
+    example:
+      lookup_ref_id: '1'
+      display_value: NT1
+      lookup_category_name: billing_system_lkp
+  original_data_owner_lkp:
+    allOf:
+      - $ref: ../common/DisplayLookup.v1.yaml
+    description: ต้นฉบับข้อมูลลูกค้า
+    example:
+      lookup_ref_id: '1'
+      display_value: NT1
+      lookup_category_name: original_data_owner_lkp
+  original_reference_key:
+    type: string
+    example: '3464656546'
+    description: Reference key สำหรับใช้อ้างอิง กรณีลูกค้า NT2
+  bill_address_list:
+    type: array
+    items:
+      $ref: BillingAddress.v1.yaml
+  bill_email_list:
+    type: array
+    items:
+      $ref: BillingEmail.v1.yaml
+x-tags:
+  - NewBillingAccount

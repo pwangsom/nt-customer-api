@@ -40,6 +40,11 @@ properties:
       lookup_ref_id: '1'
       display_value: 'Thai'
       lookup_category_name: 'language_lkp'      
+  parent_bill_acct_number:
+    type: string
+    format: number
+    example: '22254127'
+    description: Parent BA number
   vat_rate_lkp:
     allOf:
       - $ref: ../common/DisplayLookup.v1.yaml
