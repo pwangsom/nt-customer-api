@@ -99,6 +99,12 @@ properties:
     type: string
     example: '00000'
     description: หมายเลขประจำสาขา 5 หลัก        
+  government_unit:
+    $ref: GovernmentUnit.v1.yaml
+  nacc_number:
+    type: string
+    example: '99393'
+    description: NACC number
   is_billable:
     type: integer
     example: 1
@@ -111,6 +117,31 @@ properties:
     type: string
     example: 'HO-C internet (On Net)'
     description: Billing group    
+  sub_billing_group:
+    type: string
+    example: 'HO-C internet (On Net)'
+    description: Bundle group  
+  credit_limit:
+    type: number
+    format: double
+    example: 590
+    description: Credit limit
+  is_vip_dept:
+    type: integer
+    example: 0
+    description: Internal bill.
+  related_party_lkp:
+    allOf:
+      - $ref: ../common/DisplayLookup.v1.yaml
+    description: Related party
+    example:
+      lookup_ref_id: '1'
+      display_value: 'Cash'
+      lookup_category_name: 'related_party_lkp'   
+  trading_partner:
+    type: string
+    example: '1234567890123'
+    description: Trading partner
   payment_method_lkp:
     allOf:
       - $ref: ../common/DisplayLookup.v1.yaml

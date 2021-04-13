@@ -1,4 +1,4 @@
-title: NewBillingAccount
+title: NewGeneralBilling
 type: object
 properties:
   customer_acct_number:
@@ -30,7 +30,7 @@ properties:
     type: string
     format: number
     example: '1'
-    description: language_lkp     
+    description: language_lkp
   parent_bill_acct_number:
     type: string
     format: number
@@ -40,38 +40,35 @@ properties:
     type: string
     format: number
     example: '1'
-    description: vat_rate_lkp   
+    description: vat_rate_lkp
   dispatch_method_lkp:
     type: string
     format: number
     example: '1'
-    description: dispatch_method_lkp   
+    description: dispatch_method_lkp
   is_display_vat:
     type: integer
     example: 1
     description: Display VAT.
-  collection_unit:
+  collection_region_code:
     type: string
     example: '34521'
-    description: Collection unit code (Region code)
+    description: Collection region code
   collection_treatment_lkp:
     type: string
     format: number
     example: '1'
-    description: collection_treatment_lkp   
+    description: collection_treatment_lkp
   vat_dispatch_method_lkp:
     type: string
     format: number
     example: '1'
-    description: dispatch_method_lkp   
+    description: dispatch_method_lkp
   receipt_dispatch_method_lkp:
-    allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
-    description: Receipt dispatch method
-    example:
-      lookup_ref_id: '1'
-      display_value: Printing & Email
-      lookup_category_name: dispatch_method_lkp
+    type: string
+    format: number
+    example: '1'
+    description: dispatch_method_lkp
   tax_number:
     type: string
     example: '1234567890123'
@@ -80,6 +77,14 @@ properties:
     type: string
     example: '00000'
     description: หมายเลขประจำสาขา 5 หลัก
+  government_code:
+    type: string
+    example: '99393'
+    description: รหัสหน่วยงานราชการ
+  nacc_number:
+    type: string
+    example: '99393'
+    description: NACC number
   is_billable:
     type: integer
     example: 1
@@ -92,30 +97,43 @@ properties:
     type: string
     example: HO-C internet (On Net)
     description: Billing group
+  sub_billing_group:
+    type: string
+    example: 'HO-C internet (On Net)'
+    description: Bundle group  
+  credit_limit:
+    type: number
+    format: double
+    example: 590
+    description: Credit limit
+  is_vip_dept:
+    type: integer
+    example: 0
+    description: Internal bill.
+  related_party_lkp:
+    type: string
+    format: number
+    example: '1'
+    description: related_party_lkp
+  trading_partner:
+    type: string
+    example: '1234567890123'
+    description: Trading partner
   payment_method_lkp:
-    allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
-    description: Payment method
-    example:
-      lookup_ref_id: '1'
-      display_value: Cash
-      lookup_category_name: payment_method_lkp
+    type: string
+    format: number
+    example: '1'
+    description: payment_method_lkp
   billing_system_lkp:
-    allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
-    description: Billing system
-    example:
-      lookup_ref_id: '1'
-      display_value: NT1
-      lookup_category_name: billing_system_lkp
+    type: string
+    format: number
+    example: '1'
+    description: billing_system_lkp
   original_data_owner_lkp:
-    allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
-    description: ต้นฉบับข้อมูลลูกค้า
-    example:
-      lookup_ref_id: '1'
-      display_value: NT1
-      lookup_category_name: original_data_owner_lkp
+    type: string
+    format: number
+    example: '1'
+    description: original_data_owner_lkp
   original_reference_key:
     type: string
     example: '3464656546'
@@ -129,4 +147,4 @@ properties:
     items:
       $ref: BillingEmail.v1.yaml
 x-tags:
-  - NewBillingAccount
+  - NewGeneralBilling

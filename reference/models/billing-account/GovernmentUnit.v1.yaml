@@ -1,0 +1,13 @@
+title: GovernmentUnit
+type: object
+properties:
+  government_code:
+    type: string
+    example: '34521'
+    description: Government code
+  government_name:
+    type: string
+    example: กระทรวงศึกษาธิการ
+    description: Government name
+x-tags:
+  - GovernmentUnit
