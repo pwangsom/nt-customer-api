@@ -10,18 +10,18 @@ properties:
     type: string
     format: number
     example: '7017480851'
-    description: CA reference number    
+    description: CA reference number
   general_info:
     $ref: BillingGeneralInfo.v1.yaml
+  dispatch_method_info:
+    $ref: BillingDispatchMethodInfo.v1.yaml
   billing_address_list:
     type: array
     items:
       $ref: BillingAddress.v1.yaml
-  billing_email_list:
-    type: array
-    items:
-      $ref: BillingEmail.v1.yaml
   subscriber_list:
     type: array
     items:
       $ref: ../subscriber/BasicSubscriber.v1.yaml
+x-tags:
+  - BasicBillingAccount

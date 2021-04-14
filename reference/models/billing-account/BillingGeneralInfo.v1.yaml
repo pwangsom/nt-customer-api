@@ -43,14 +43,6 @@ properties:
       lookup_ref_id: '1'
       display_value: VAT 7% (Include)
       lookup_category_name: vat_rate_lkp
-  dispatch_method_lkp:
-    allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
-    description: Billing dispatch method
-    example:
-      lookup_ref_id: '1'
-      display_value: Printing & Email
-      lookup_category_name: dispatch_method_lkp
   is_display_vat:
     type: integer
     example: 1
@@ -65,22 +57,6 @@ properties:
       lookup_ref_id: '1'
       display_value: CAT Staff
       lookup_category_name: collection_treatment_lkp
-  vat_dispatch_method_lkp:
-    allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
-    description: VAT dispatch method
-    example:
-      lookup_ref_id: '1'
-      display_value: Printing & Email
-      lookup_category_name: dispatch_method_lkp
-  receipt_dispatch_method_lkp:
-    allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
-    description: Receipt dispatch method
-    example:
-      lookup_ref_id: '1'
-      display_value: Printing & Email
-      lookup_category_name: dispatch_method_lkp
   tax_number:
     type: string
     example: '1234567890123'

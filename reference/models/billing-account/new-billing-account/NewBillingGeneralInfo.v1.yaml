@@ -33,11 +33,6 @@ properties:
     format: number
     example: '1'
     description: vat_rate_lkp
-  dispatch_method_lkp:
-    type: string
-    format: number
-    example: '1'
-    description: dispatch_method_lkp
   is_display_vat:
     type: integer
     example: 1
@@ -51,16 +46,6 @@ properties:
     format: number
     example: '1'
     description: collection_treatment_lkp
-  vat_dispatch_method_lkp:
-    type: string
-    format: number
-    example: '1'
-    description: dispatch_method_lkp
-  receipt_dispatch_method_lkp:
-    type: string
-    format: number
-    example: '1'
-    description: dispatch_method_lkp
   tax_number:
     type: string
     example: '1234567890123'

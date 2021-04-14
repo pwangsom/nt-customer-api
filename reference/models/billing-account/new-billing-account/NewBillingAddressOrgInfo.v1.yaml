@@ -1,0 +1,19 @@
+title: NewBillingAddressOrgInfo
+type: object
+properties:
+  billing_address_general_type:
+    type: string
+    enum:
+      - NewBillingAddressOrgInfo
+    description: ระบุชื่อองค์กรเพียงอย่างเดียว
+  corp_type_lkp:
+    type: string
+    format: number
+    example: '1'
+    description: คำนำหน้าองค์กรไทย เช่น บมจ. บจก. และห้างหุ้นส่วน
+  organization_name:
+    type: string
+    example: เชฟรอน
+required:
+  - billing_address_general_type
+  - organization_name

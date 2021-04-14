@@ -1,0 +1,51 @@
+title: NewBillingDispatchMethodInfo
+type: object
+properties:
+  dispatch_method:
+    type: object
+    required:
+      - dispatch_method_lkp
+    properties:
+      dispatch_method_lkp:
+        type: string
+        format: number
+        example: '1'
+        description: dispatch_method_lkp
+      email_address:
+        type: string
+        example: abc@def.com
+        description: อีเมล์
+  vat_dispatch_method:
+    type: object
+    required:
+      - vat_dispatch_method_lkp
+    properties:
+      vat_dispatch_method_lkp:
+        type: string
+        format: number
+        example: '1'
+        description: dispatch_method_lkp
+      email_address:
+        type: string
+        example: abc@def.com
+        description: อีเมล์
+  receipt_dispatch_method:
+    type: object
+    required:
+      - receipt_dispatch_method_lkp
+    properties:
+      receipt_dispatch_method_lkp:
+        type: string
+        format: number
+        example: '1'
+        description: dispatch_method_lkp
+      email_address:
+        type: string
+        example: abc@def.com
+        description: อีเมล์
+required:
+  - dispatch_method
+  - vat_dispatch_method
+  - receipt_dispatch_method
+x-tags:
+  - NewBillingDispatchMethodInfo
