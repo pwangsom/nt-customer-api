@@ -1,0 +1,5 @@
+title: NewBillingMoreInfo
+type: object
+properties:
+  id:
+    type: string
