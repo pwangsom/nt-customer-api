@@ -1,0 +1,20 @@
+title: NewBillingAccount
+type: object
+x-tags:
+  - NewBillingAccount
+properties:
+  customer_acct_number:
+    type: string
+    format: number
+    example: '7017480851'
+    description: CA reference number
+  bill_acct_number:
+    type: string
+    format: number
+    example: '12254127'
+    description: BA number
+  general_info:
+    $ref: NewBillingGeneralInfo.v1.yaml
+required:
+  - customer_acct_number
+  - general_info

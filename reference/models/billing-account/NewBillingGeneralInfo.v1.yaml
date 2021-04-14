@@ -1,16 +1,8 @@
-title: NewGeneralBilling
+title: NewBillingGeneralInfo
 type: object
+x-tags:
+  - NewBillingGeneralInfo
 properties:
-  customer_acct_number:
-    type: string
-    format: number
-    example: '7017480851'
-    description: CA reference number
-  bill_acct_number:
-    type: string
-    format: number
-    example: '12254127'
-    description: BA number
   active_date:
     type: string
     format: date
@@ -31,7 +23,7 @@ properties:
     format: number
     example: '1'
     description: language_lkp
-  parent_bill_acct_number:
+  parent_acct_number:
     type: string
     format: number
     example: '22254127'
@@ -81,6 +73,11 @@ properties:
     type: string
     example: '99393'
     description: รหัสหน่วยงานราชการ
+  rate_class_lkp:
+    type: string
+    format: number
+    example: '1'
+    description: rate_class_lkp
   nacc_number:
     type: string
     example: '99393'
@@ -99,13 +96,29 @@ properties:
     description: Billing group
   sub_billing_group:
     type: string
-    example: 'HO-C internet (On Net)'
-    description: Bundle group  
+    example: HO-C internet (On Net)
+    description: Bundle group
   credit_limit:
     type: number
     format: double
     example: 590
     description: Credit limit
+  bundle_service_name:
+    type: string
+    example: Internet
+    description: Bundle Service Name
+  discount_bundle_acct_number:
+    type: string
+    example: '948484738'
+    description: Discount bundle account number
+  is_accumulated_charge:
+    type: integer
+    example: 0
+    description: บิลพันยอดหรือไม่
+  is_period_on_service_active:
+    type: integer
+    example: 0
+    description: Bill period on service active
   is_vip_dept:
     type: integer
     example: 0
@@ -138,13 +151,10 @@ properties:
     type: string
     example: '3464656546'
     description: Reference key สำหรับใช้อ้างอิง กรณีลูกค้า NT2
-  bill_address_list:
-    type: array
-    items:
-      $ref: BillingAddress.v1.yaml
-  bill_email_list:
-    type: array
-    items:
-      $ref: BillingEmail.v1.yaml
-x-tags:
-  - NewGeneralBilling
+required:
+  - active_date
+  - bill_acct_category_lkp
+  - collection_region_code
+  - collection_treatment_lkp
+  - tax_number
+  - billing_group

@@ -40,7 +40,7 @@ properties:
       lookup_ref_id: '1'
       display_value: 'Thai'
       lookup_category_name: 'language_lkp'      
-  parent_bill_acct_number:
+  parent_acct_number:
     type: string
     format: number
     example: '22254127'
@@ -51,7 +51,7 @@ properties:
     description: VAT
     example:
       lookup_ref_id: '1'
-      display_value: '7%'
+      display_value: 'VAT 7% (Include)'
       lookup_category_name: 'vat_rate_lkp'     
   dispatch_method_lkp:
     allOf:
@@ -101,6 +101,14 @@ properties:
     description: หมายเลขประจำสาขา 5 หลัก        
   government_unit:
     $ref: GovernmentUnit.v1.yaml
+  rate_class_lkp:
+    allOf:
+      - $ref: ../common/DisplayLookup.v1.yaml
+    description: Rate class
+    example:
+      lookup_ref_id: '1'
+      display_value: 'CAT Standard Rate Class'
+      lookup_category_name: 'rate_class_lkp'   
   nacc_number:
     type: string
     example: '99393'
@@ -126,6 +134,22 @@ properties:
     format: double
     example: 590
     description: Credit limit
+  bundle_service_name:
+    type: string
+    example: 'Internet'
+    description: Bundle Service Name
+  discount_bundle_acct_number:
+    type: string
+    example: '948484738'
+    description: Discount bundle account number
+  is_accumulated_charge:
+    type: integer
+    example: 0
+    description: บิลพันยอดหรือไม่
+  is_period_on_service_active:
+    type: integer
+    example: 0
+    description: Bill period on service active
   is_vip_dept:
     type: integer
     example: 0
