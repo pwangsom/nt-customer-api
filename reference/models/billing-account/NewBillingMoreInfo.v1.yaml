@@ -1,5 +1,45 @@
 title: NewBillingMoreInfo
 type: object
 properties:
-  id:
+  invoice_type_lkp:
     type: string
+    format: number
+    example: '1'
+    description: Invoice type
+  carrier_type_lkp:
+    type: string
+    format: number
+    example: '1'
+    description: Carrier type
+  credit_term:
+    type: string
+    format: number
+    example: '1'
+    description: Credit term
+  gso_no:
+    type: string
+    example: '1'
+    description: GSO number
+  po_no:
+    type: string
+    example: '1'
+    description: PO number
+  service_type:
+    type: string
+    example: '1'
+    description: Service type
+  statement_parent_lkp:
+    type: string
+    format: number
+    example: '1'
+    description: Statement parent
+  attention:
+    type: string
+    example: '1'
+    description: Attention
+  ppm_number:
+    type: string
+    example: '1'
+    description: PPM number
+x-tags:
+  - NewBillingMoreInfo

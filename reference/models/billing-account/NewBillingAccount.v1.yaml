@@ -3,6 +3,8 @@ type: object
 x-tags:
   - NewBillingAccount
 properties:
+  client_info:
+    $ref: ../common/RequestClientInfo.v1.yaml
   customer_acct_number:
     type: string
     format: number
@@ -15,6 +17,11 @@ properties:
     description: BA number
   general_info:
     $ref: NewBillingGeneralInfo.v1.yaml
+  more_info:
+    $ref: NewBillingMoreInfo.v1.yaml
+  egp_info:
+    $ref: NewBillingEgpInfo.v1.yaml
 required:
+  - client_info
   - customer_acct_number
   - general_info
