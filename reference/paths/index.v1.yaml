@@ -64,6 +64,9 @@
 '/billing/{bill_acct_number}/basic':
   $ref: billing-account/B01.v1.yaml
 
+'/billing/{bill_acct_number}':
+  $ref: billing-account/B02.v1.yaml
+
 '/billing/{bill_acct_number}/invoice':
   $ref: billing-account/B03.v1.yaml
 
@@ -72,6 +75,15 @@
 
 '/billing/{bill_acct_number}/invoice/{invoice_record}':
   $ref: billing-account/B05.v1.yaml
+
+'/billing/create/billing/customer_db':
+  $ref: billing-account/B06.v1.yaml
+
+'/billing/create/customer_db':
+  $ref: billing-account/B07.v1.yaml
+
+'/billing/create/billing':
+  $ref: billing-account/B08.v1.yaml
 
 '/subscriber/{ref_subscr_no}/basic':
   $ref: subscriber/S01.v1.yaml

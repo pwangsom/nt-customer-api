@@ -1,0 +1,31 @@
+title: BillingAccount
+type: object
+properties:
+  bill_acct_number:
+    type: string
+    format: number
+    example: '12254127'
+    description: BA number
+  customer_acct_number:
+    type: string
+    format: number
+    example: '7017480851'
+    description: CA reference number
+  general_info:
+    $ref: BillingGeneralInfo.v1.yaml
+  dispatch_method_info:
+    $ref: BillingDispatchMethodInfo.v1.yaml
+  payment_method_info:
+    $ref: BillingPaymentMethodInfo.v1.yaml
+  billing_address_list:
+    type: array
+    items:
+      $ref: BillingAddress.v1.yaml
+  subscriber_list:
+    type: array
+    items:
+      $ref: ../subscriber/BasicSubscriber.v1.yaml
+  more_info:
+    $ref: BillingMoreInfo.v1.yaml
+  egp_info:
+    $ref: BillingEgpInfo.v1.yaml

@@ -1,0 +1,24 @@
+get:
+  operationId: B02
+  description: Retrieve full BA info by bill_acct_number
+  summary: Get Full BA Info by BA Number.
+  tags: []
+  parameters:
+    - $ref: ../../parameters/BillAcctNumber.v1.yaml
+  responses:
+    '200':
+      description: Data Found
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../../models/billing-account/BillingAccount.v1.yaml
+    '400':
+      description: Bad request.
+    '401':
+      description: Authorization information is missing or invalid.
+    '404':
+      description: Data was not found.
+    '500':
+      description: Unexpected error.
