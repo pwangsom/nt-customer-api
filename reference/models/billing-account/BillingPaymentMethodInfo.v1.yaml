@@ -1,0 +1,18 @@
+title: BillingPaymentMethodInfo
+type: object
+properties:
+  payment_method_lkp:
+    allOf:
+      - $ref: ../common/DisplayLookup.v1.yaml
+    description: Payment method
+    example:
+      lookup_ref_id: '1'
+      display_value: Cash
+      lookup_category_name: payment_method_lkp
+  payment_method_info:
+    oneOf:
+      - $ref: PaymentMethodBankAccount.v1.yaml
+      - $ref: PaymentMethodCreditCard.v1.yaml
+      - $ref: PaymentEmployeePayroll.v1.yaml
+x-tags:
+  - BillingPaymentMethodInfo

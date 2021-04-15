@@ -1,0 +1,28 @@
+title: PaymentMethodCreditCard
+type: object
+properties:
+  payment_method_type:
+    type: string
+    enum:
+      - PaymentMethodCreditCard
+    description: รูปแบบการชำระเงินแบบหักผ่านบัตรเครดิต
+  credit_carrier_lkp:
+    allOf:
+      - $ref: ../common/DisplayLookup.v1.yaml
+    description: Credit card carrier
+    example:
+      lookup_ref_id: '1'
+      display_value: Krung Thai
+      lookup_category_name: credit_carrier_lkp
+  credit_card_number:
+    type: string
+    format: number
+    example: '1234567890123456'
+    description: Credit card number
+  credit_card_expire_date:
+    type: string
+    format: number
+    example: '0725'
+    description: Credit card expiration (MMYY)
+x-tags:
+  - PaymentMethodCreditCard

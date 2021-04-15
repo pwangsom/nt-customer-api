@@ -1,0 +1,27 @@
+title: BillingEgpInfo
+type: object
+properties:
+  egp_number:
+    type: string
+    example: '1'
+    description: e-GP number
+  egp_contract:
+    type: string
+    example: '1'
+    description: e-GP contract
+  egp_start_date:
+    type: string
+    format: date
+    example: '2020-05-01'
+    description: e-GP start date
+  egp_end_date:
+    type: string
+    format: date
+    example: '2025-04-30'
+    description: e-GP end date
+  egp_value:
+    type: string
+    example: '1'
+    description: e-GP value
+x-tags:
+  - BillingEgpInfo

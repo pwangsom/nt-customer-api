@@ -1,0 +1,23 @@
+title: PaymentMethodBankAccount
+type: object
+properties:
+  payment_method_type:
+    type: string
+    enum:
+      - PaymentMethodBankAccount
+    description: รูปแบบการชำระเงินแบบหักผ่านบัญชีธนาคาร
+  bank_name_lkp:
+    allOf:
+      - $ref: ../common/DisplayLookup.v1.yaml
+    description: Bank name
+    example:
+      lookup_ref_id: '1'
+      display_value: Krung Thai
+      lookup_category_name: bank_name_lkp
+  bank_number:
+    type: string
+    format: number
+    example: '1234567890'
+    description: Bank number
+x-tags:
+  - PaymentMethodBankAccount
