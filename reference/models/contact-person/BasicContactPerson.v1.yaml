@@ -1,0 +1,22 @@
+title: BasicContactPerson
+type: object
+properties:
+  salutation_lkp:
+    allOf:
+      - $ref: ../common/DisplayLookup.v1.yaml
+    description: คำนำหน้าชื่อไทย
+    example:
+      lookup_ref_id: '1'
+      display_value: นาย
+      lookup_category_name: salutation_lkp
+  first_name:
+    type: string
+    example: สมชาย
+  middle_name:
+    type: string
+    example: ชื่อกลาง
+  last_name:
+    type: string
+    example: เจริญยิ่ง
+x-tags:
+  - BasicContactPerson

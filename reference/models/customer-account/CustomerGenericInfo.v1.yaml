@@ -42,13 +42,21 @@ properties:
     example: 0
     description: VIP customer for debt department.
   black_list_lkp:
-    type: string
-    example: '1'
-    description: Default is None.
+    allOf:
+      - $ref: ../common/DisplayLookup.v1.yaml
+    description: Black list
+    example:
+      lookup_ref_id: '1'
+      display_value: None
+      lookup_category_name: black_list_lkp
   collection_treatment_lkp:
-    type: string
-    example: '1'
-    description: Default is Null.
+    allOf:
+      - $ref: ../common/DisplayLookup.v1.yaml
+    description: Collection treatment
+    example:
+      lookup_ref_id: '1'
+      display_value: CAT Staff
+      lookup_category_name: collection_treatment_lkp
   related_party_lkp:
     allOf:
       - $ref: ../common/DisplayLookup.v1.yaml

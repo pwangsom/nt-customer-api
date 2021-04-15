@@ -1,0 +1,15 @@
+title: Subscriber
+allOf:
+  - $ref: BasicSubscriber.v1.yaml
+  - type: object
+    properties:
+      installation_address_list:
+        type: array
+        items:
+          $ref: InstallationAddress.v1.yaml
+      subscriber_property_list:
+        type: array
+        items:
+          $ref: SubscriberProperty.v1.yaml
+x-tags:
+  - Subscriber

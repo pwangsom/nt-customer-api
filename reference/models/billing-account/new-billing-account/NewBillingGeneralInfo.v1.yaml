@@ -8,6 +8,11 @@ properties:
     format: date
     example: '2030-02-02'
     description: วันที่เริ่มใช้งาน
+  customer_contract_id:
+    type: string
+    format: number
+    example: '65546'
+    description: Customer contract reference key
   bill_acct_category_lkp:
     type: string
     format: number

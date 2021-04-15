@@ -14,10 +14,6 @@ properties:
     type: string
     example: '5'
     description: Customer Group
-  customer_value_lkp:
-    type: string
-    example: '3'
-    description: Customer Value such as Platinum, Gold, Silver, and Bronze. Default is Bronze.
   currency_lkp:
     type: string
     example: '1'

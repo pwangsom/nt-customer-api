@@ -1,0 +1,13 @@
+title: SalesRepresentative
+type: object
+properties:
+  sales_employee_code:
+    type: string
+    example: '00123456'
+    description: Sales employee code
+  sales_employee_name:
+    type: string
+    example: สมชาย เจริญยิ่ง
+    description: Sales employee name
+x-tags:
+  - SalesRepresentative

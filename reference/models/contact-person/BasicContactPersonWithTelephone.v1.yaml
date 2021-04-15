@@ -1,0 +1,9 @@
+title: BasicContactPersonWithTelephone
+allOf:
+  - $ref: BasicContactPerson.v1.yaml
+  - type: object
+    properties:
+      telephone:
+        $ref: ../telephone/Telephone.v1.yaml
+x-tags:
+  - BasicContactPersonWithTelephone

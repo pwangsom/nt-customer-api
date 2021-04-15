@@ -1,0 +1,15 @@
+title: ContactPerson
+allOf:
+  - $ref: BasicContactPerson.v1.yaml
+  - type: object
+    properties:
+      address:
+        $ref: ../address/Address.v1.yaml
+      telephone:
+        $ref: ../telephone/Telephone.v1.yaml
+      email:
+        $ref: ../email-social/Email.v1.yaml
+      social_account:
+        $ref: ../email-social/SocialAccount.v1.yaml
+x-tags:
+  - ContactPerson

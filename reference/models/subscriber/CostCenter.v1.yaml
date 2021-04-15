@@ -1,0 +1,13 @@
+title: CostCenter
+type: object
+properties:
+  sap_cost_center:
+    type: string
+    example: 1J23456
+    description: Sales department code
+  cost_center_name:
+    type: string
+    example: ส่วนการขายเอกชน 1
+    description: Sales department unit
+x-tags:
+  - CostCenter

@@ -1,0 +1,12 @@
+title: DisplayCustomerContract
+type: object
+properties:
+  customer_contract_id:
+    type: string
+    format: number
+    example: '65546'
+    description: Customer contract reference key
+  contract_name:
+    type: string
+    example: 'โครงการ Mega Bangna'
+    description: Contract name

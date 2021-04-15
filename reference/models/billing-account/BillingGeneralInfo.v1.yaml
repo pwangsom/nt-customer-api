@@ -6,6 +6,8 @@ properties:
     format: date
     example: '2030-02-02'
     description: วันที่เริ่มใช้งาน
+  customer_contract:
+    $ref: ../customer-contract/DisplayCustomerContract.v1.yaml
   bill_acct_category_lkp:
     allOf:
       - $ref: ../common/DisplayLookup.v1.yaml
