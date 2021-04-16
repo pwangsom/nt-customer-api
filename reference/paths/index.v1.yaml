@@ -64,9 +64,6 @@
 '/billing/{bill_acct_number}/basic':
   $ref: billing-account/B01.v1.yaml
 
-'/billing/{bill_acct_number}':
-  $ref: billing-account/B02.v1.yaml
-
 '/billing/{bill_acct_number}/invoice':
   $ref: billing-account/B03.v1.yaml
 
