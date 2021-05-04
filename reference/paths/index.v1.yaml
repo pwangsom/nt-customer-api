@@ -106,6 +106,9 @@
 '/subscriber/ba/{bill_acct_number}':
   $ref: subscriber/S10.v1.yaml
 
+'/subscriber/{ref_subscr_no}':
+  $ref: subscriber/S11.v1.yaml
+
 '/invoice/{invoice_number}':      
   $ref: invoice-payment/I01.v1.yaml
 

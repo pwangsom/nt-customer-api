@@ -11,5 +11,13 @@ allOf:
         type: array
         items:
           $ref: SubscriberProperty.v1.yaml
+      package_list:
+        type: array
+        items:
+          $ref: Package.v1.yaml
+      component_list:
+        type: array
+        items:
+          $ref: Component.v1.yaml
 x-tags:
   - Subscriber

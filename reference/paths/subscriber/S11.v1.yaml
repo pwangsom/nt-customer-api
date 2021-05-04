@@ -1,0 +1,24 @@
+get:
+  operationId: S11
+  description: Retrieve full info of subscriber with all packages and components by ref_subscr_no
+  summary: Get Full Info of Subscriber with All Pakages and Components by Reference Subscriber Number.
+  tags: []
+  parameters:
+    - $ref: ../../parameters/RefSubscrNo.v1.yaml
+  responses:
+    '200':
+      description: Data Found
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../../models/subscriber/Subscriber.v1.yaml
+    '400':
+      description: Bad request.
+    '401':
+      description: Authorization information is missing or invalid.
+    '404':
+      description: Data was not found.
+    '500':
+      description: Unexpected error.
