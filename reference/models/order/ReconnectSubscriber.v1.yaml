@@ -1,0 +1,31 @@
+title: ReconnectSubscriber
+allOf:
+  - $ref: SubscriberInfo.v1.yaml
+  - type: object
+    properties:
+      order_type:
+        type: string
+        enum:
+          - ReconnectSubscriber
+        description: Reconnect order
+      order_subtype_lkp:
+        allOf:
+          - $ref: ../common/DisplayLookup.v1.yaml
+        description: Subscriber status
+        example:
+          lookup_ref_id: '5'
+          display_value: Reconnected-Debt
+          lookup_category_name: order_subtype_lkp
+      order_no:
+        type: string
+        example: '25412'
+        description: Reference order number
+      client_info:
+        $ref: ../common/RequestClientInfo.v1.yaml
+    required:
+      - order_type
+      - order_subtype_lkp
+      - order_no
+      - client_info
+x-tags:
+  - ReconnectSubscriber

@@ -109,6 +109,15 @@
 '/subscriber/{ref_subscr_no}':
   $ref: subscriber/S11.v1.yaml
 
+'/subscriber/suspend':
+  $ref: subscriber/S17.v1.yaml
+
+'/subscriber/reconnect':
+  $ref: subscriber/S18.v1.yaml
+
+'/subscriber/terminate':
+  $ref: subscriber/S19.v1.yaml
+
 '/invoice/{invoice_number}':      
   $ref: invoice-payment/I01.v1.yaml
 

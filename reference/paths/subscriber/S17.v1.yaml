@@ -1,14 +1,14 @@
-post:
-  operationId: B08
-  description: Create an billing account in Billing
-  summary: Create an Billing Account in Billing.
+patch:
+  operationId: S17
+  description: Suspend subscriber
+  summary: Suspend Subscriber.
   tags: []
   requestBody:
     required: true
     content:
       application/json:
         schema:
-          $ref: ../../models/billing-account/new-billing-account/NewBillingAccount.v1.yaml
+          $ref: ../../models/order/SuspendSubscriber.v1.yaml
   responses:
     '200':
       description: Operation success

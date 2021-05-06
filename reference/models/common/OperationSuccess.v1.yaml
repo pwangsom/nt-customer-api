@@ -12,14 +12,10 @@ properties:
     format: date-time
     example: '2016-08-29T09:12:33.001Z'
     description: API Response timestamp
-  reference_type:
-    type: string
-    example: customer_acct_number
-    description: 'Types of related objects such as customer_acct_number, bill_acct_number, subscriber_number, address_id, and telephone_id'
-  reference_id:
-    type: string
-    example: '13216523'
-    description: ID of reference type
+  reference_info:
+    type: array
+    items:
+      $ref: ReferenceInfo.yaml
 required:
   - client_info
   - api_trans_id

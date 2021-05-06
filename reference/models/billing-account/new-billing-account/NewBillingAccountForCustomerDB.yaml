@@ -1,0 +1,37 @@
+title: NewBillingAccountForCustomerDB
+type: object
+properties:
+  client_info:
+    $ref: ../../common/RequestClientInfo.v1.yaml
+  customer_acct_number:
+    type: string
+    format: number
+    example: '7017480851'
+    description: CA reference number
+  bill_acct_number:
+    type: string
+    format: number
+    example: '12254127'
+    description: BA number
+  esb_bill_acct_id:
+    type: string
+    format: number
+    example: '12254127'
+    description: Reference ESB number
+  general_info:
+    $ref: NewBillingGeneralInfo.v1.yaml
+  dispatch_method_info:
+    $ref: NewBillingDispatchMethodInfo.v1.yaml
+  billing_address_list:
+    $ref: NewBillingAddress.v1.yaml
+  more_info:
+    $ref: NewBillingMoreInfo.v1.yaml
+  egp_info:
+    $ref: NewBillingEgpInfo.v1.yaml
+required:
+  - customer_acct_number
+  - bill_acct_number
+  - esb_bill_acct_id
+  - general_info
+  - dispatch_method_info
+  - billing_address_list
