@@ -55,6 +55,12 @@
 '/customer/organization/create':
   $ref: customer-account/C20.v1.yaml
 
+'/customer/individual/update/info':
+  $ref: customer-account/C21.v1.yaml
+
+'/customer/organization/update/info':
+  $ref: customer-account/C22.v1.yaml
+
 '/prospect/individual/create':
   $ref: customer-account/C67.v1.yaml
 
@@ -109,14 +115,20 @@
 '/subscriber/{ref_subscr_no}':
   $ref: subscriber/S11.v1.yaml
 
-'/subscriber/suspend':
+'/subscriber/{ref_subscr_no}/change/subscriber_number':
+  $ref: subscriber/S14.v1.yaml
+
+'/subscriber/{ref_subscr_no}/suspend':
   $ref: subscriber/S17.v1.yaml
 
-'/subscriber/reconnect':
+'/subscriber/{ref_subscr_no}/reconnect':
   $ref: subscriber/S18.v1.yaml
 
-'/subscriber/terminate':
+'/subscriber/{ref_subscr_no}/terminate':
   $ref: subscriber/S19.v1.yaml
+
+'/subscriber/{ref_subscr_no}/change/subscriber_property':
+  $ref: subscriber/S35.v1.yaml
 
 '/invoice/{invoice_number}':      
   $ref: invoice-payment/I01.v1.yaml

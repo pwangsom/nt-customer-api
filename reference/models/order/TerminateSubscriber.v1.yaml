@@ -4,9 +4,9 @@ allOf:
   - type: object
     properties:
       order_type:
-        type: string
+        type: integer
         enum:
-          - TerminateSubscriber
+          - 4
         description: Teminate order
       order_subtype_lkp:
         allOf:

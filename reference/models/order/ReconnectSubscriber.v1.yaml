@@ -4,9 +4,9 @@ allOf:
   - type: object
     properties:
       order_type:
-        type: string
+        type: integer
         enum:
-          - ReconnectSubscriber
+          - 3
         description: Reconnect order
       order_subtype_lkp:
         allOf:

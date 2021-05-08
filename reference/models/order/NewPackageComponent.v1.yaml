@@ -1,4 +1,4 @@
-title: SuspendSubscriber
+title: NewPackageComponent
 allOf:
   - $ref: SubscriberInfo.v1.yaml
   - type: object
@@ -6,16 +6,13 @@ allOf:
       order_type:
         type: integer
         enum:
+          - 5
+        description: Change order
+      order_subtype:
+        type: integer
+        enum:
           - 2
-        description: Suspend order
-      order_subtype_lkp:
-        allOf:
-          - $ref: ../common/DisplayLookup.v1.yaml
-        description: Subscriber status
-        example:
-          lookup_ref_id: '9'
-          display_value: Suspended-Debt
-          lookup_category_name: order_subtype_lkp
+        description: Change package
       order_no:
         type: string
         example: '25412'
@@ -24,8 +21,8 @@ allOf:
         $ref: ../common/RequestClientInfo.v1.yaml
     required:
       - order_type
-      - order_subtype_lkp
+      - order_subtype
       - order_no
       - client_info
 x-tags:
-  - SuspendSubscriber
+  - NewPackageComponent
