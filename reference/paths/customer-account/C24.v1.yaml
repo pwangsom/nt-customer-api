@@ -1,14 +1,14 @@
 post:
-  operationId: C21
-  description: Update basic info of an individual customer
-  summary: Update Basic Info of An Invididual Customer.
+  operationId: C24
+  description: Update ID card of an organization customer
+  summary: Update ID card of An Organization Customer.
   tags: []
   requestBody:
     required: true
     content:
       application/json:
         schema:
-          $ref: ../../models/customer-account/update-customer/UpdateIndividualGeneralInfo.v1.yaml
+          $ref: ../../models/customer-account/update-customer/UpdateOrganizationIdCard.v1.yaml
   responses:
     '200':
       description: Operation success

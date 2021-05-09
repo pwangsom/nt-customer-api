@@ -1,0 +1,15 @@
+title: UpdateCustomerBlacklist
+type: object
+properties:
+  client_info:
+    $ref: ../../common/RequestClientInfo.v1.yaml
+  reference_info:
+    $ref: UpdateCustomerReference.v1.yaml
+  black_list_lkp:
+    type: string
+    example: '1'
+    description: Default is None.
+required:
+  - client_info
+  - reference_info
+  - black_list_lkp

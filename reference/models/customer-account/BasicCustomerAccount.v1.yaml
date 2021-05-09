@@ -6,6 +6,11 @@ properties:
     format: number
     example: '7017480851'
     description: CA reference number
+  reference_time:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: Reference up-to-date time 
   customer_full_name:
     type: string
     example: 'นายสมชาย เจริญยิ่ง'

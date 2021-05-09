@@ -1,14 +1,14 @@
-put:
+post:
   operationId: C22
   description: Update basic info of an organization customer
-  summary: Create Basic Info of An Organization Customer.
+  summary: Update Basic Info of An Organization Customer.
   tags: []
   requestBody:
     required: true
     content:
       application/json:
         schema:
-          $ref: ../../models/customer-account/update-customer/UpdateOrganizationInfo.v1.yaml
+          $ref: ../../models/customer-account/update-customer/UpdateOrganizationGeneralInfo.v1.yaml
   responses:
     '200':
       description: Operation success

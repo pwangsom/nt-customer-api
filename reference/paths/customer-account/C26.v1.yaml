@@ -1,14 +1,14 @@
 post:
-  operationId: C21
-  description: Update basic info of an individual customer
-  summary: Update Basic Info of An Invididual Customer.
+  operationId: C26
+  description: Update Blacklist of a customer
+  summary: Update Blacklist of A Customer.
   tags: []
   requestBody:
     required: true
     content:
       application/json:
         schema:
-          $ref: ../../models/customer-account/update-customer/UpdateIndividualGeneralInfo.v1.yaml
+          $ref: ../../models/customer-account/update-customer/UpdateCustomerBlacklist.v1.yaml
   responses:
     '200':
       description: Operation success

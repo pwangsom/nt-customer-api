@@ -55,11 +55,17 @@
 '/customer/organization/create':
   $ref: customer-account/C20.v1.yaml
 
-'/customer/individual/update/info':
+'/customer/{customer_acct_number}/individual/update/info':
   $ref: customer-account/C21.v1.yaml
 
-'/customer/organization/update/info':
+'/customer/{customer_acct_number}/organization/update/info':
   $ref: customer-account/C22.v1.yaml
+
+'/customer/{customer_acct_number}/individual/update/id':
+  $ref: customer-account/C23.v1.yaml
+
+'/customer/{customer_acct_number}/organization/update/id':
+  $ref: customer-account/C24.v1.yaml
 
 '/prospect/individual/create':
   $ref: customer-account/C67.v1.yaml

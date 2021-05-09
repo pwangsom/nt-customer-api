@@ -1,0 +1,15 @@
+title: UpdateIndividualIdCard
+type: object
+x-tags:
+  - UpdateIndividualIdCard
+properties:
+  client_info:
+    $ref: ../../common/RequestClientInfo.v1.yaml
+  reference_info:
+    $ref: UpdateCustomerReference.v1.yaml
+  id_card_info:
+    $ref: ../new-individual/NewIndyCustomerCard.v1.yaml
+required:
+  - client_info
+  - reference_info
+  - id_card_info

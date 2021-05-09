@@ -6,6 +6,11 @@ properties:
     format: number
     example: '2425'
     description: Telephone reference id
+  reference_time:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: Reference up-to-date time 
   telephone_type_lkp:
     allOf:
       - $ref: ../common/DisplayLookup.v1.yaml

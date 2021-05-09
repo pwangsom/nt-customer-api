@@ -1,15 +1,6 @@
-title: UpdateIndividualInfo
+title: IndividualGeneralInfo
 type: object
-x-tags:
-  - UpdateIndividualInfo
 properties:
-  client_info:
-    $ref: ../../common/RequestClientInfo.v1.yaml
-  customer_acct_number:
-    type: string
-    format: number
-    example: '7017480851'
-    description: CA reference number
   salutation_lkp:
     type: string
     format: number
@@ -57,18 +48,21 @@ properties:
     type: string
     example: '12345678'
     description: รหัสประจำตัวพนักงาน กรณีที่ลูกค้าเป็นพนักงานของ NT
-required:
-  - client_info
-  - customer_acct_number
-  - salutation_lkp
-  - first_name
-  - middle_name
-  - last_name
-  - salutation_en_lkp
-  - first_name_en
-  - middle_name_en
-  - last_name_en
-  - gender_lkp
-  - date_of_birth
-  - nationality_lkp
-  - employee_code
+  customer_segment_lkp:
+    type: string
+    example: '14'
+    description: Customer Segment (ลูกค้าบุคคล ลูกค้าเอกชน ลูกค้าผู้ประกอบการ และลูกค้าภาครัฐ)
+  customer_group_lkp:
+    type: string
+    example: '5'
+    description: Customer Group
+  currency_lkp:
+    type: string
+    example: '1'
+    description: Default is Baht.
+  language_lkp:
+    type: string
+    example: '1'
+    description: Default is Thai.
+x-tags:
+  - IndividualGeneralInfo
