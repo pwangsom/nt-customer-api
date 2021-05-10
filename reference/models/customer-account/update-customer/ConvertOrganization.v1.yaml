@@ -1,0 +1,18 @@
+title: ConvertOrganization
+type: object
+x-tags:
+  - ConvertOrganization
+properties:
+  client_info:
+    $ref: ../../common/RequestClientInfo.v1.yaml
+  reference_info:
+    $ref: UpdateCustomerReference.v1.yaml
+  general_info:
+    $ref: OrganizationGeneralInfo.v1.yaml
+  id_card_info:
+    $ref: ../new-individual/NewIndyCustomerCard.v1.yaml
+required:
+  - client_info
+  - reference_info
+  - general_info
+  - id_card_info

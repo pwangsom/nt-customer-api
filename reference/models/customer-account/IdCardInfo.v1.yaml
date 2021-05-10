@@ -6,7 +6,7 @@ properties:
       - $ref: ../common/DisplayLookup.v1.yaml
     description: ประเภทเอกสาร
     example:
-      lookup_ref_idid: '1'
+      lookup_ref_id: '1'
       display_value: 'บัตรประชาชน'
       lookup_category_name: 'id_card_type_lkp'
   id_card_number:

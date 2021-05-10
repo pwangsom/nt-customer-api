@@ -1,0 +1,75 @@
+title: CustomerValue
+type: object
+properties:
+  customer_value_lkp:
+    allOf:
+      - $ref: ../common/DisplayLookup.v1.yaml
+    description: Customer value class
+    example:
+      lookup_ref_id: '1'
+      display_value: 'Platinum'
+      lookup_category_name: 'customer_value_lkp'
+  reference_time:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: Reference up-to-date time 
+  user_customer_value_lkp:
+    allOf:
+      - $ref: ../common/DisplayLookup.v1.yaml
+    description: Customer value class
+    example:
+      lookup_ref_id: '1'
+      display_value: 'Platinum'
+      lookup_category_name: 'customer_value_lkp'
+  user_update_date:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: Reference up-to-date time 
+  user_update_by:
+    type: string
+    example: '12345678'
+    description: User employee code who make a recent update
+  service_value_list:
+    type: array
+    items:
+      type: object
+      properties:
+        service_value_lkp:
+          allOf:
+            - $ref: ../common/DisplayLookup.v1.yaml
+          description: Customer value class
+          example:
+            lookup_ref_id: '1'
+            display_value: 'Platinum'
+            lookup_category_name: 'customer_value_lkp'
+        service_type:
+          allOf:
+            - $ref: ../subscriber/ServiceType.v1.yaml
+          description: Service type
+          example:
+            service_type_code: '110'
+            service_type_name: my Postpaid            
+        reference_time:
+          type: string
+          format: date-time
+          example: '2016-08-29T09:12:33.001Z'
+          description: Reference up-to-date time 
+        user_customer_value_lkp:
+          allOf:
+            - $ref: ../common/DisplayLookup.v1.yaml
+          description: Customer value class
+          example:
+            lookup_ref_id: '1'
+            display_value: 'Platinum'
+            lookup_category_name: 'customer_value_lkp'
+        user_update_date:
+          type: string
+          format: date-time
+          example: '2016-08-29T09:12:33.001Z'
+          description: Reference up-to-date time 
+        user_update_by:
+          type: string
+          example: '12345678'
+          description: User employee code who make a recent update        
