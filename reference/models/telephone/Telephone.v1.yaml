@@ -47,4 +47,3 @@ properties:
     description: my number (0 = No, 1 = Yes).
 x-tags:
   - Telephone
-description: Telephone model

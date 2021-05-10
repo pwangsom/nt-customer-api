@@ -1,8 +1,10 @@
-patch:
+post:
   operationId: S19
-  description: Terminate subscriber
-  summary: Terminate Subscriber.
+  description: Terminate subscriber by ref_subscr_no
+  summary: Terminate Subscriber by Reference Subscriber Number.
   tags: []
+  parameters:
+    - $ref: ../../parameters/RefSubscrNo.v1.yaml
   requestBody:
     required: true
     content:

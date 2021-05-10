@@ -1,8 +1,10 @@
 post:
   operationId: C22
-  description: Update basic info of an organization customer
-  summary: Update Basic Info of An Organization Customer.
+  description: Update basic info of an organization customer by customer_acct_number
+  summary: Update Basic Info of An Organization Customer by Customer Number.
   tags: []
+  parameters:
+    - $ref: ../../parameters/CustomerAcctNumber.v1.yaml
   requestBody:
     required: true
     content:

@@ -1,8 +1,10 @@
 post:
   operationId: C24
-  description: Update ID card of an organization customer
-  summary: Update ID card of An Organization Customer.
+  description: Update ID card of an organization customer by customer_acct_number
+  summary: Update ID card of An Organization Customer by Customer Number.
   tags: []
+  parameters:
+    - $ref: ../../parameters/CustomerAcctNumber.v1.yaml
   requestBody:
     required: true
     content:

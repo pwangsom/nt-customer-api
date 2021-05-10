@@ -20,6 +20,4 @@ required:
   - client_info
   - api_trans_id
   - api_timestamp
-  - reference_type
-  - reference_id
-description: Operation success model
+  - reference_info

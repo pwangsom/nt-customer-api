@@ -32,4 +32,3 @@ properties:
     description: หมายเลขประจำสาขา 5 หลัก
 x-tags:
   - IdCardInfo
-description: Id card info model

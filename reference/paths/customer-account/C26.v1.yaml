@@ -1,8 +1,10 @@
 post:
   operationId: C26
-  description: Update Blacklist of a customer
-  summary: Update Blacklist of A Customer.
+  description: Update Blacklist of a customer by customer_acct_number
+  summary: Update Blacklist of A Customer by Customer Number.
   tags: []
+  parameters:
+    - $ref: ../../parameters/CustomerAcctNumber.v1.yaml
   requestBody:
     required: true
     content:

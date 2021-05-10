@@ -1,8 +1,10 @@
 post:
   operationId: C21
-  description: Update basic info of an individual customer
-  summary: Update Basic Info of An Invididual Customer.
+  description: Update basic info of an individual customer by customer_acct_number
+  summary: Update Basic Info of An Invididual Customer by Customer Number.
   tags: []
+  parameters:
+    - $ref: ../../parameters/CustomerAcctNumber.v1.yaml
   requestBody:
     required: true
     content:

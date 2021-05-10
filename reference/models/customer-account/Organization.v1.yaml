@@ -42,4 +42,3 @@ properties:
     description: รหัสหน่วยงานราชการ
 x-tags:
   - Organization
-description: Organization model

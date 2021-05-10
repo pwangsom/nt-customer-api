@@ -2,7 +2,6 @@ title: PrepaidSubscriptionCharge
 type: object
 x-tags:
   - PrepaidSubscriptionCharge
-description: Prepaid subscription charge model
 properties:
   subscription_id:
     type: string

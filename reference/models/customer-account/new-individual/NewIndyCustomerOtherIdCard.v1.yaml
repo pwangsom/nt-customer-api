@@ -26,6 +26,5 @@ properties:
 required:
   - indy_id_card_type
   - id_card_type_lkp
-description: New individual customer other ID card model
 x-tags:
   - NewIndyCustomerOtherIdCard

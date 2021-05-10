@@ -2,7 +2,6 @@ title: NewTelephoneGeneral
 type: object
 x-tags:
   - NewTelephoneGeneral
-description: New telephone general model
 properties:
   telephone_type_lkp:
     type: string

@@ -1,8 +1,10 @@
 post:
   operationId: C23
-  description: Update ID card of an individual customer
-  summary: Post ID card of An Individual Customer.
+  description: Update ID card of an individual customer by customer_acct_number
+  summary: Post ID card of An Individual Customer by Customer Number.
   tags: []
+  parameters:
+    - $ref: ../../parameters/CustomerAcctNumber.v1.yaml
   requestBody:
     required: true
     content:

@@ -53,6 +53,5 @@ required:
   - first_name
   - last_name
   - gender_lkp
-description: New individual model
 x-tags:
   - NewIndividual

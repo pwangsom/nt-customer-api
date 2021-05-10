@@ -62,4 +62,3 @@ properties:
     description: รหัสประจำตัวพนักงาน กรณีที่ลูกค้าเป็นพนักงานของ NT
 x-tags:
   - Individual
-description: Individual model

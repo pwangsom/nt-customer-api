@@ -1,0 +1,7 @@
+title: NewCustomerAddress
+allOf:
+  - $ref: NewAdderssGenericInfo.v1.yaml
+  - oneOf:
+    - $ref: NewAddressTh.v1.yaml
+    - $ref: NewAdderssForiegn.v1.yaml
+  - $ref: ../common/IsPrimaryType.v1.yaml

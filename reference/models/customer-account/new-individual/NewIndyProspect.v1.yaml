@@ -2,7 +2,6 @@ title: NewIndyProspect
 type: object
 x-tags:
   - NewIndyProspect
-description: New indy prospect model
 properties:
   client_info:
     $ref: ../../common/RequestClientInfo.v1.yaml

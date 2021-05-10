@@ -29,4 +29,3 @@ properties:
     description: Primary social account (0 = No, 1 = Yes).
 x-tags:
   - SocialAccount
-description: Social account model

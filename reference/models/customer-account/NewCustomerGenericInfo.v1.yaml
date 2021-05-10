@@ -58,6 +58,5 @@ properties:
     type: string
     example: '3464656546'
     description: Reference key สำหรับใช้อ้างอิง กรณีลูกค้า NT2
-description: New customer generic info model
 x-tags:
   - NewCustomerGenericInfo

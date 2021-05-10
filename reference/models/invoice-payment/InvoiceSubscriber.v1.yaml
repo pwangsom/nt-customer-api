@@ -1,6 +1,5 @@
 title: InvoiceSubscirber
 type: object
-description: Invoice subscriber model
 x-tags:
   - InvoiceSubscirber
 properties:

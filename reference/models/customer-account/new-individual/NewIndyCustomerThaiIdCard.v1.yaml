@@ -13,6 +13,5 @@ properties:
 required:
   - indy_id_card_type
   - id_card_number
-description: New individual customer Thai ID card model
 x-tags:
   - NewIndyCustomerThaiIdCard

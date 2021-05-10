@@ -73,6 +73,21 @@
 '/customer/{customer_acct_number}/organization/convert':
   $ref: customer-account/C69.v1.yaml
 
+'/customer/{customer_acct_number}/address/add':
+  $ref: customer-account/C30.v1.yaml
+
+'/customer/{customer_acct_number}/telephone/add':
+  $ref: customer-account/C31.v1.yaml
+
+'/customer/{customer_acct_number}/email/add':
+  $ref: customer-account/C32.v1.yaml
+
+'/customer/{customer_acct_number}/social_account/add':
+  $ref: customer-account/C33.v1.yaml
+
+'/customer/{customer_acct_number}/customer_value':
+  $ref: customer-account/C64.v1.yaml
+
 '/prospect/individual/create':
   $ref: customer-account/C67.v1.yaml
 
@@ -127,8 +142,11 @@
 '/subscriber/{ref_subscr_no}':
   $ref: subscriber/S11.v1.yaml
 
-'/subscriber/{ref_subscr_no}/change/subscriber_number':
+'/subscriber/{ref_subscr_no}/subscriber_number/change':
   $ref: subscriber/S14.v1.yaml
+
+'/subscriber/{ref_subscr_no}/subscriber_property/change':
+  $ref: subscriber/S35.v1.yaml
 
 '/subscriber/{ref_subscr_no}/suspend':
   $ref: subscriber/S17.v1.yaml
@@ -138,9 +156,6 @@
 
 '/subscriber/{ref_subscr_no}/terminate':
   $ref: subscriber/S19.v1.yaml
-
-'/subscriber/{ref_subscr_no}/change/subscriber_property':
-  $ref: subscriber/S35.v1.yaml
 
 '/invoice/{invoice_number}':      
   $ref: invoice-payment/I01.v1.yaml

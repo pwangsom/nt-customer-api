@@ -1,0 +1,17 @@
+title: NewEmail
+type: object
+properties:
+  email_type_lkp:
+    type: string
+    format: number
+    example: '6'
+    description: ประเภทของอีเมล์
+  email_address:
+    type: string
+    example: abc@def.com
+    description: อีเมล์
+required:
+  - email_type_lkp
+  - email_address
+x-tags:
+  - NewEmail

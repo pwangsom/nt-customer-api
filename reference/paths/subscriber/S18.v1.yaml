@@ -1,8 +1,10 @@
-patch:
+post:
   operationId: S18
-  description: Reconnect subscriber
-  summary: Reconnect Subscriber.
+  description: Reconnect subscriber by ref_subscr_no
+  summary: Reconnect Subscriber by Reference Subscriber Number.
   tags: []
+  parameters:
+    - $ref: ../../parameters/RefSubscrNo.v1.yaml
   requestBody:
     required: true
     content:

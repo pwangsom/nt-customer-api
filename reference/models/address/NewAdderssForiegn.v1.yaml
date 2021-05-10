@@ -2,7 +2,6 @@ title: NewAdderssForiegn
 type: object
 x-tags:
   - NewAdderssForiegn
-description: New foreign address model
 properties:
   address_country_type:
     type: string

@@ -2,7 +2,6 @@ title: NewBasicIndividual
 type: object
 x-tags:
   - NewBasicIndividual
-description: New basic individual model
 properties:
   salutation_lkp:
     type: string

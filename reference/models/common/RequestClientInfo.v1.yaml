@@ -24,4 +24,3 @@ required:
   - client_name
   - client_timestamp
   - client_user
-description: RequestClientInfo

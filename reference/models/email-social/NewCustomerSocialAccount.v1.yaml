@@ -1,0 +1,6 @@
+title: NewCustomerSocialAccount
+allOf:
+  - $ref: NewSocialAccount.v1.yaml
+  - $ref: ../common/IsPrimaryType.v1.yaml
+x-tags:
+  - NewCustomerSocialAccount

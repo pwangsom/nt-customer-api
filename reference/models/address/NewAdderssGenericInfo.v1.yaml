@@ -1,6 +1,5 @@
 title: NewAdderssGenericInfo
 type: object
-description: New address generic info model
 x-tags:
   - NewAdderssGenericInfo
 properties:

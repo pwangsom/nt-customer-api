@@ -1,0 +1,6 @@
+title: NewCustomerEmail
+allOf:
+  - $ref: NewEmail.v1.yaml
+  - $ref: ../common/IsPrimaryType.v1.yaml
+x-tags:
+  - NewCustomerEmail

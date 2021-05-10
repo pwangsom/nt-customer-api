@@ -20,4 +20,3 @@ required:
   - branch_id
 x-tags:
   - NewOrgCustomerTaxIdCard
-description: New organization customer Tax ID card model

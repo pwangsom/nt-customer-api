@@ -16,4 +16,3 @@ allOf:
         description: วันหมดอายุของเอกสาร
 x-tags:
   - NewOrgCustomerCard
-description: New organization customer card model

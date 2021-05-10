@@ -1,0 +1,17 @@
+title: AddCustomerAddress
+type: object
+x-tags:
+  - AddCustomerAddress
+properties:
+  client_info:
+    $ref: ../../common/RequestClientInfo.v1.yaml
+  reference_info:
+    $ref: UpdateCustomerReference.v1.yaml
+  address_list:
+    type: array
+    items:
+      $ref: ../../address/NewCustomerAddress.v1.yaml
+required:
+  - client_info
+  - reference_info
+  - address_list

@@ -21,4 +21,3 @@ properties:
     $ref: CustomerGenericInfo.v1.yaml
 x-tags:
   - BasicCustomerAccount
-description: Basic customer account model

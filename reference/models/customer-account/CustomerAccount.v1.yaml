@@ -17,4 +17,3 @@ allOf:
         $ref: ../email-social/SocialAccount.v1.yaml
 x-tags:
   - CustomerAccount
-description: Customer full info model

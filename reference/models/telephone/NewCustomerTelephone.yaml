@@ -1,8 +1,8 @@
-title: NewTelephoneWithNewCA
+title: NewCustomerTelephone
 allOf:
   - oneOf:
     - $ref: NewTelephoneMobileTH.v1.yaml
     - $ref: NewTelephoneGeneral.v1.yaml
-  - $ref: ../common/IsPrimary.v1.yaml
+  - $ref: ../common/IsPrimaryType.v1.yaml
 x-tags:
-  - NewTelephoneWithNewCA
+  - NewCustomerTelephone

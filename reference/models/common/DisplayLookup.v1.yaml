@@ -2,7 +2,6 @@ title: DisplayLookup
 type: object
 x-tags:
   - DisplayLookup
-description: Lookup model
 properties:
   lookup_ref_id:
     type: string

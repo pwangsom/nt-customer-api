@@ -2,7 +2,6 @@ title: NewTelephoneMobileTH
 type: object
 x-tags:
   - NewTelephoneMobileTH
-description: New telephone mobile TH model
 properties:
   telephone_type:
     type: string

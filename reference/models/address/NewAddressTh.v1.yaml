@@ -2,7 +2,6 @@ title: NewAddressTh
 type: object
 x-tags:
   - NewAddressTh
-description: New Thai address model
 properties:
   address_country_type:
     type: string

@@ -18,4 +18,3 @@ properties:
       $ref: ErrorInfo.v1.yaml
 x-tags:
   - OperationFailed
-description: Operation faied model

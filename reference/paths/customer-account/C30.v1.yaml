@@ -1,16 +1,16 @@
 post:
-  operationId: S14
-  description: Change subscriber number by ref_subscr_no
-  summary: Change Subscriber Number by Reference Subscriber Number.
+  operationId: C30
+  description: Add new address to a customer by customer_acct_number
+  summary: Add New Address to A Customer by Customer Number.
   tags: []
   parameters:
-    - $ref: ../../parameters/RefSubscrNo.v1.yaml
+    - $ref: ../../parameters/CustomerAcctNumber.v1.yaml
   requestBody:
     required: true
     content:
       application/json:
         schema:
-          $ref: ../../models/order/ChangeSubscriberNumber.v1.yaml
+          $ref: ../../models/customer-account/update-customer/AddCustomerAddress.v1.yaml
   responses:
     '200':
       description: Operation success
@@ -33,4 +33,4 @@ post:
           schema:
             $ref: ../../models/common/OperationFailed.v1.yaml      
     '500':
-      description: Unexpected error.            
+      description: Unexpected error.

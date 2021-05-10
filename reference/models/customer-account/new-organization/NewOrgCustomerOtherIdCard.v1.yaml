@@ -2,7 +2,6 @@ title: NewOrgCustomerOtherIdCard
 type: object
 x-tags:
   - NewOrgCustomerOtherIdCard
-description: New organization customer other ID card model
 properties:
   org_id_card_type:
     type: string

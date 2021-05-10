@@ -1,12 +1,11 @@
-title: IsPrimary
+title: IsPrimaryType
 type: object
 properties:
   is_primary:
     type: integer
     enum:
+      - 0
       - 1
     description: ข้อมูลหลัก
 required:
   - is_primary
-x-tags:
-  - IsPrimary

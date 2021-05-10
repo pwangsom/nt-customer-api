@@ -81,4 +81,3 @@ properties:
     description: Primary address (0 = No, 1 = Yes).
 x-tags:
   - Address
-description: Address model

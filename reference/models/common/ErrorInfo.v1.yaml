@@ -2,7 +2,6 @@ title: ErrorInfo
 type: object
 x-tags:
   - ErrorInfo
-description: Error info model
 properties:
   error_type:
     type: string

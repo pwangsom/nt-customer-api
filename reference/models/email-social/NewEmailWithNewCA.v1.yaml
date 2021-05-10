@@ -1,20 +1,6 @@
 title: NewEmailWithNewCA
 allOf:
-  - type: object
-    properties:
-      email_type_lkp:
-        type: string
-        format: number
-        example: '6'
-        description: ประเภทของอีเมล์
-      email_address:
-        type: string
-        example: abc@def.com
-        description: อีเมล์
-    required:
-      - email_type_lkp
-      - email_address
+  - $ref: NewEmail.v1.yaml
   - $ref: ../common/IsPrimary.v1.yaml
 x-tags:
   - NewEmailWithNewCA
-description: New email with new CA model

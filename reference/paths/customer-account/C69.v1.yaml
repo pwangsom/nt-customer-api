@@ -1,8 +1,10 @@
 post:
   operationId: C69
-  description: Convert an individual customer to an organization customer
-  summary: Convert An Individual Customer to An Organization Customer.
+  description: Convert an individual customer to an organization customer by customer_acct_number
+  summary: Convert An Individual Customer to An Organization Customer by Customer Number.
   tags: []
+  parameters:
+    - $ref: ../../parameters/CustomerAcctNumber.v1.yaml
   requestBody:
     required: true
     content:

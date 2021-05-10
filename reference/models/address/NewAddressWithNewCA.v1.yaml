@@ -7,4 +7,3 @@ allOf:
   - $ref: ../common/IsPrimary.v1.yaml
 x-tags:
   - NewAddressWithNewCA
-description: New address with new CA model

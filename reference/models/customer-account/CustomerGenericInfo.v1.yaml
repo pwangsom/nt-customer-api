@@ -87,4 +87,3 @@ properties:
     description: Reference key สำหรับใช้อ้างอิง กรณีลูกค้า NT2
 x-tags:
   - CustomerGenericInfo
-description: Customer generic info model
