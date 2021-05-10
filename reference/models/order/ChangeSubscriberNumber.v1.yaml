@@ -1,7 +1,19 @@
 title: ChangeSubscriberNumber
-allOf:
-  - $ref: SubscriberInfo.v1.yaml
-  - type: object
+type: object
+x-tags:
+  - ChangeSubscriberNumber
+properties:
+  client_info:
+    $ref: ../common/RequestClientInfo.v1.yaml
+  subscriber_reference_info:
+    $ref: SubscriberInfo.v1.yaml
+  order_info:
+    type: object
+    required:
+      - order_type
+      - order_subtype
+      - order_no
+      - order_effective_date
     properties:
       order_type:
         type: integer
@@ -17,17 +29,17 @@ allOf:
         type: string
         example: '25412'
         description: Reference order number
-      subscriber_number:
+      order_effective_date:
         type: string
-        example: '881234567'
-        description: Subscriber number
-      client_info:
-        $ref: ../common/RequestClientInfo.v1.yaml
-    required:
-      - order_type
-      - order_subtype
-      - order_no
-      - subscriber_number
-      - client_info
-x-tags:
-  - ChangeSubscriberNumber
+        format: date-time
+        example: '2016-08-29T09:12:33.001Z'
+        description: วันที่มีผลต่อการใช้งาน
+  subscriber_number:
+    type: string
+    example: '881234567'
+    description: Subscriber number
+required:
+  - client_info
+  - subscriber_reference_info
+  - order_info
+  - subscriber_number

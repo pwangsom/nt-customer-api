@@ -1,7 +1,7 @@
-title: ChangeSubscriberProperty
+title: AddPackageComponent
 type: object
 x-tags:
-  - ChangeSubscriberProperty
+  - AddPackageComponent
 properties:
   client_info:
     $ref: ../common/RequestClientInfo.v1.yaml
@@ -23,8 +23,8 @@ properties:
       order_subtype:
         type: integer
         enum:
-          - 6
-        description: Change number order
+          - 2
+        description: Change package
       order_no:
         type: string
         example: '25412'
@@ -34,12 +34,13 @@ properties:
         format: date-time
         example: '2016-08-29T09:12:33.001Z'
         description: วันที่มีผลต่อการใช้งาน
-  subscriber_property:
-    type: string
-    example: '1234567890123456789'
-    description: Subscriber property e.g. ICCID
+  new_package_component_list:
+    anyOf:
+      - $ref: NewPackage.v1.yaml
+      - $ref: NewComponentCurrentPackage.v1.yaml
+      - $ref: NewComponent.v1.yaml
 required:
   - client_info
   - subscriber_reference_info
   - order_info
-  - subscriber_property
+  - new_package_component_list

@@ -1,0 +1,13 @@
+title: ContactPersonWithoutAddress
+allOf:
+  - $ref: BasicContactPerson.v1.yaml
+  - type: object
+    properties:
+      telephone:
+        $ref: ../telephone/Telephone.v1.yaml
+      email:
+        $ref: ../email-social/Email.v1.yaml
+      social_account:
+        $ref: ../email-social/SocialAccount.v1.yaml
+x-tags:
+  - ContactPersonWithoutAddress

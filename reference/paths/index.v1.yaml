@@ -157,6 +157,12 @@
 '/subscriber/{ref_subscr_no}/terminate':
   $ref: subscriber/S19.v1.yaml
 
+'/subscriber/{ref_subscr_no}/package_comp/add':
+  $ref: subscriber/S20.v1.yaml
+
+'/subscriber/{ref_subscr_no}/package_comp/terminate':
+  $ref: subscriber/S21.v1.yaml
+
 '/invoice/{invoice_number}':      
   $ref: invoice-payment/I01.v1.yaml
 

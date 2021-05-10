@@ -1,0 +1,25 @@
+title: NewComponent
+type: object
+x-tags:
+  - NewComponent
+properties:
+  new_component_list:
+    type: array
+    items:
+      type: object
+      properties:
+        component_part_number:
+          type: string
+          format: number
+          example: '2525212'
+          description: Billing system reference number
+        start_date:
+          type: string
+          format: date-time
+          example: '2016-08-29T09:12:33.001Z'
+          description: วันที่เริ่มต้นใช้บริการ
+      required:
+        - component_part_number
+        - start_date
+required:
+  - new_component_list

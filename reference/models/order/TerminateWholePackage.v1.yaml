@@ -1,0 +1,25 @@
+title: TerminateWholePackage
+type: object
+x-tags:
+  - TerminateWholePackage
+properties:
+  terminate_whole_package_list:
+    type: array
+    items:
+      type: object
+      properties:
+        package_part_number:
+          type: string
+          format: number
+          example: '25252'
+          description: Billing system reference number
+        end_date:
+          type: string
+          format: date-time
+          example: '2016-08-29T09:12:33.001Z'
+          description: วันที่เริ่มต้นใช้บริการ
+      required:
+        - package_part_number
+        - end_date
+required:
+  - terminate_whole_package_list

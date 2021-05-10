@@ -1,7 +1,19 @@
 title: SuspendSubscriber
-allOf:
-  - $ref: SubscriberInfo.v1.yaml
-  - type: object
+type: object
+x-tags:
+  - SuspendSubscriber
+properties:
+  client_info:
+    $ref: ../common/RequestClientInfo.v1.yaml
+  subscriber_reference_info:
+    $ref: SubscriberInfo.v1.yaml
+  order_info:
+    type: object
+    required:
+      - order_type
+      - order_subtype_lkp
+      - order_no
+      - order_effective_date
     properties:
       order_type:
         type: integer
@@ -9,23 +21,20 @@ allOf:
           - 2
         description: Suspend order
       order_subtype_lkp:
-        allOf:
-          - $ref: ../common/DisplayLookup.v1.yaml
-        description: Subscriber status
-        example:
-          lookup_ref_id: '9'
-          display_value: Suspended-Debt
-          lookup_category_name: order_subtype_lkp
+        type: string
+        format: number
+        example: '9'
+        description: Suspendeded-Debt
       order_no:
         type: string
         example: '25412'
         description: Reference order number
-      client_info:
-        $ref: ../common/RequestClientInfo.v1.yaml
-    required:
-      - order_type
-      - order_subtype_lkp
-      - order_no
-      - client_info
-x-tags:
-  - SuspendSubscriber
+      order_effective_date:
+        type: string
+        format: date-time
+        example: '2016-08-29T09:12:33.001Z'
+        description: วันที่มีผลต่อการใช้งาน
+required:
+  - client_info
+  - subscriber_reference_info
+  - order_info

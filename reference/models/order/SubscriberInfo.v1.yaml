@@ -16,6 +16,11 @@ properties:
     format: number
     example: '25412'
     description: Sub reference number
+  service_type_code:
+    type: string
+    format: number
+    example: '110'
+    description: รหัสบริการ
 required:
   - customer_acct_number
   - ref_subscr_no

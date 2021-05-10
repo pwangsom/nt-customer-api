@@ -1,7 +1,7 @@
-title: ChangeSubscriberProperty
+title: TerminatePackageComponent
 type: object
 x-tags:
-  - ChangeSubscriberProperty
+  - TerminatePackageComponent
 properties:
   client_info:
     $ref: ../common/RequestClientInfo.v1.yaml
@@ -23,8 +23,8 @@ properties:
       order_subtype:
         type: integer
         enum:
-          - 6
-        description: Change number order
+          - 2
+        description: Change package
       order_no:
         type: string
         example: '25412'
@@ -34,12 +34,13 @@ properties:
         format: date-time
         example: '2016-08-29T09:12:33.001Z'
         description: วันที่มีผลต่อการใช้งาน
-  subscriber_property:
-    type: string
-    example: '1234567890123456789'
-    description: Subscriber property e.g. ICCID
+  terminate_package_component_list:
+    anyOf:
+      - $ref: TerminateWholePackage.v1.yaml
+      - $ref: TerminateComponentCurrentPackage.v1.yaml
+      - $ref: TerminateComponent.v1.yaml
 required:
   - client_info
   - subscriber_reference_info
   - order_info
-  - subscriber_property
+  - terminate_package_component_list

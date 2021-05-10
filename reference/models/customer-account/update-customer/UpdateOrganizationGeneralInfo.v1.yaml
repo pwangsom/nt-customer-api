@@ -3,7 +3,7 @@ type: object
 properties:
   client_info:
     $ref: ../../common/RequestClientInfo.v1.yaml
-  reference_info:
+  customer_reference_info:
     $ref: UpdateCustomerReference.v1.yaml
   general_info:
     $ref: OrganizationGeneralInfo.v1.yaml

@@ -9,4 +9,4 @@ allOf:
         example: '2425'
         description: Installation address - contact person reference id
       contact_person_info:
-        $ref: ../contact-person/BasicContactPersonWithTelephone.v1.yaml
+        $ref: ../contact-person/ContactPersonWithoutAddress.v1.yaml

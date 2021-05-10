@@ -5,7 +5,7 @@ x-tags:
 properties:
   client_info:
     $ref: ../../common/RequestClientInfo.v1.yaml
-  reference_info:
+  customer_reference_info:
     $ref: UpdateCustomerReference.v1.yaml
   general_info:
     $ref: IndividualGeneralInfo.v1.yaml
