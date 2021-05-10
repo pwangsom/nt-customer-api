@@ -10,16 +10,10 @@ properties:
   order_info:
     type: object
     required:
-      - order_type
-      - order_subtype_lkp
       - order_no
       - order_effective_date
     properties:
-      order_type:
-        type: integer
-        enum:
-          - 2
-        description: Suspend order
+      # order_type_lkp = 2
       order_subtype_lkp:
         type: string
         format: number

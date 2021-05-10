@@ -1,0 +1,17 @@
+title: NewSubscriberOrder
+type: object
+required:
+  - order_no
+  - order_effective_date
+properties:
+  order_no:
+    type: string
+    example: '25412'
+    description: Reference order number
+  order_effective_date:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: วันที่มีผลต่อการใช้งาน
+x-tags:
+  - NewSubscriberOrder

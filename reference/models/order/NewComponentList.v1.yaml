@@ -1,0 +1,11 @@
+title: NewComponentList
+type: object
+x-tags:
+  - NewComponentList
+properties:
+  new_component_list:
+    type: array
+    items:
+      $ref: ../subscriber/new-subscriber/NewSubscriberComponent.v1.yaml
+required:
+  - new_component_list

@@ -3,14 +3,6 @@ allOf:
   - $ref: BasicSubscriber.v1.yaml
   - type: object
     properties:
-      installation_address_list:
-        type: array
-        items:
-          $ref: InstallationAddress.v1.yaml
-      subscriber_property_list:
-        type: array
-        items:
-          $ref: SubscriberProperty.v1.yaml
       package_list:
         type: array
         items:
@@ -19,5 +11,13 @@ allOf:
         type: array
         items:
           $ref: Component.v1.yaml
+      subscriber_property_list:
+        type: array
+        items:
+          $ref: SubscriberProperty.v1.yaml
+      installation_address_list:
+        type: array
+        items:
+          $ref: InstallationAddress.v1.yaml
 x-tags:
   - Subscriber

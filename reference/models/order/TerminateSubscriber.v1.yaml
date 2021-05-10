@@ -10,16 +10,10 @@ properties:
   order_info:
     type: object
     required:
-      - order_type
-      - order_subtype_lkp
       - order_no
       - order_effective_date
     properties:
-      order_type:
-        type: integer
-        enum:
-          - 4
-        description: Teminate order
+      # order_type_lkp = 4
       order_subtype_lkp:
         type: string
         format: number
@@ -34,6 +28,15 @@ properties:
         format: date-time
         example: '2016-08-29T09:12:33.001Z'
         description: วันที่มีผลต่อการใช้งาน
+  reason_lkp:
+    type: string
+    format: number
+    example: '1'
+    description: Terminate reason
+  reason_ext:
+    type: string
+    example: ราคาถูกกว่า
+    description: Reason extension    
 required:
   - client_info
   - subscriber_reference_info

@@ -9,22 +9,11 @@ properties:
     $ref: SubscriberInfo.v1.yaml
   order_info:
     type: object
-    required:
-      - order_type
-      - order_subtype
       - order_no
       - order_effective_date
     properties:
-      order_type:
-        type: integer
-        enum:
-          - 5
-        description: Change order
-      order_subtype:
-        type: integer
-        enum:
-          - 6
-        description: Change number order
+      # order_type_lkp = 5
+      # order_subtype_lkp = 6
       order_no:
         type: string
         example: '25412'

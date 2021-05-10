@@ -1,0 +1,49 @@
+title: NewSubscriberGeneralInfo
+type: object
+x-tags:
+  - NewSubscriberGeneralInfo
+properties:
+  subscriber_number:
+    type: string
+    example: '881234567'
+    description: Subscriber number
+  subscriber_property:
+    type: string
+    example: '1234567890123456789'
+    description: Subscriber property e.g. ICCID
+  service_type_code:
+    type: string
+    format: number
+    example: '110'
+    description: รหัสบริการ
+  start_date:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: วันที่เริ่มต้นใช้บริการ
+  css_cat_id:
+    type: string
+    example: '123654855881234567'
+    description: CSS CAT ID
+  sales_employee_code:
+    type: string
+    example: '00123456'
+    description: Sales employee code
+  sap_cost_center:
+    type: string
+    example: 1J23456
+    description: Sales department code
+  original_data_owner_lkp:
+    type: string
+    format: number
+    example: '1'
+    description: ต้นฉบับข้อมูลลูกค้า
+  original_reference_key:
+    type: string
+    example: '3464656546'
+    description: Reference key สำหรับใช้อ้างอิง กรณีลูกค้า NT2
+required:
+  - subscriber_number
+  - service_type_code
+  - start_date
+  - sap_cost_center

@@ -1,0 +1,11 @@
+title: NewPackageList
+type: object
+properties:
+  new_package_list:
+    type: array
+    items:
+      $ref: ../subscriber/new-subscriber/NewSubscriberPackage.v1.yaml
+required:
+  - new_package_list
+x-tags:
+  - NewPackage
