@@ -186,7 +186,3 @@
 
 '/lookup/{lookup_category_name}':
   $ref: utility/U03.v1.yaml
-
-
-
-

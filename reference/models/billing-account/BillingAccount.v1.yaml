@@ -6,6 +6,11 @@ properties:
     format: number
     example: '12254127'
     description: BA number
+  reference_time:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: Reference up-to-date time 
   customer_acct_number:
     type: string
     format: number
@@ -29,3 +34,5 @@ properties:
     $ref: BillingMoreInfo.v1.yaml
   egp_info:
     $ref: BillingEgpInfo.v1.yaml
+x-tags:
+  - BillingAccount

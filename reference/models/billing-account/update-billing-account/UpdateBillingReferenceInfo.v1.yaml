@@ -1,0 +1,18 @@
+title: UpdateBillingReferenceInfo
+type: object
+properties:
+  bill_acct_number:
+    type: string
+    format: number
+    example: '12254127'
+    description: BA number
+  reference_time:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: Reference up-to-date time
+required:
+  - bill_acct_number
+  - reference_time
+x-tags:
+  - UpdateBillingReferenceInfo
