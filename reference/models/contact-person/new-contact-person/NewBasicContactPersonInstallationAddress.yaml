@@ -1,0 +1,15 @@
+title: NewBasicContactPersonInstallationAddress
+allOf:
+  - $ref: NewBasicContactPerson.v1.yaml
+  - type: object
+    properties:
+      telephone:
+        $ref: ../../telephone/NewTelephoneWithNewCA.v1.yaml
+      email:
+        $ref: ../../email-social/NewEmailWithNewCA.v1.yaml
+      social_account:
+        $ref: ../../email-social/NewSocialWithNewCA.v1.yaml
+    required:
+      - telephone
+x-tags:
+  - NewBasicContactPersonInstallationAddress

@@ -1,37 +1,33 @@
 title: AddPackageComponent
-type: object
+allOf:
+  - type: object
+    properties:
+      client_info:
+        $ref: ../common/RequestClientInfo.v1.yaml
+      subscriber_reference_info:
+        $ref: SubscriberInfo.v1.yaml
+      order_info:
+        type: object
+        required:
+          - order_no
+          - order_effective_date
+        properties:
+          # order_type_lkp = 5
+          # order_subtype_lkp = 2
+          # status_lkp = 1 (Active)
+          order_no:
+            type: string
+            example: '25412'
+            description: Reference order number
+          order_effective_date:
+            type: string
+            format: date-time
+            example: '2016-08-29T09:12:33.001Z'
+            description: วันที่มีผลต่อการใช้งาน
+    required:
+      - client_info
+      - subscriber_reference_info
+      - order_info
+  - $ref: AddPackageComponentLitst.v1.yaml
 x-tags:
   - AddPackageComponent
-properties:
-  client_info:
-    $ref: ../common/RequestClientInfo.v1.yaml
-  subscriber_reference_info:
-    $ref: SubscriberInfo.v1.yaml
-  order_info:
-    type: object
-    required:
-      - order_no
-      - order_effective_date
-    properties:
-      # order_type_lkp = 5
-      # order_subtype_lkp = 2
-      # status_lkp = 1 (Active) (Status of terminated packages and components)
-      order_no:
-        type: string
-        example: '25412'
-        description: Reference order number
-      order_effective_date:
-        type: string
-        format: date-time
-        example: '2016-08-29T09:12:33.001Z'
-        description: วันที่มีผลต่อการใช้งาน
-  new_package_component_list:
-    anyOf:
-      - $ref: NewPackageList.v1.yaml
-      - $ref: NewComponentCurrentPackageList.v1.yaml
-      - $ref: NewComponentList.v1.yaml
-required:
-  - client_info
-  - subscriber_reference_info
-  - order_info
-  - new_package_component_list

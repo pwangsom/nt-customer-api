@@ -1,0 +1,10 @@
+title: NewInstallationAddress
+allOf:
+  - type: object
+    properties:
+      installation_address_type_lkp:
+        type: string
+        format: number
+        example: '1'
+        description: ประเภทที่อยู่การติดตั้ง เช่น ที่อยู่ติดตั้งต้นทาง และ ที่อยู่ติดตั้งปลายทาง
+  - $ref: ../../address/NewCustomerAddress.v1.yaml

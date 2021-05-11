@@ -1,18 +1,18 @@
 title: InstallationAddress
-type: object
-properties:
-  sub_installation_address_id:
-    type: string
-    format: number
-    example: '2425'
-    description: Installation address - subcriber reference id
-  installation_address_type_lkp:
-    allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
-    description: ประเภทที่อยู่การติดตั้ง เช่น ที่อยู่ติดตั้งต้นทาง และ ที่อยู่ติดตั้งปลายทาง
-    example:
-      lookup_ref_id: '1'
-      display_value: 'Front installation'
-      lookup_category_name: 'installation_address_type_lkp'
-  address:
-    $ref: ../address/Address.v1.yaml
+allOf:
+  - type: object
+    properties:
+      sub_installation_address_id:
+        type: string
+        format: number
+        example: '2425'
+        description: Installation address - subcriber reference id
+      installation_address_type_lkp:
+        allOf:
+          - $ref: ../common/DisplayLookup.v1.yaml
+        description: ประเภทที่อยู่การติดตั้ง เช่น ที่อยู่ติดตั้งต้นทาง และ ที่อยู่ติดตั้งปลายทาง
+        example:
+          lookup_ref_id: '1'
+          display_value: 'Front installation'
+          lookup_category_name: 'installation_address_type_lkp'
+  - $ref: ../address/Address.v1.yaml

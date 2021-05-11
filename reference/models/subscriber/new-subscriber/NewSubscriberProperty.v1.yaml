@@ -1,5 +1,15 @@
-title: NewSubscriberProperty.v1
+title: NewSubscriberProperty
 type: object
+x-tags:
+  - NewSubscriberProperty
 properties:
-  id:
+  property_key:
     type: string
+    example: Download speed
+    description: Property key
+  property_value:
+    type: string
+    example: 100Mb
+    description: Property value
+required:
+  - property_key

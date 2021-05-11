@@ -1,0 +1,7 @@
+title: TerminatePackageComponentList
+anyOf:
+  - $ref: TerminateWholePackageList.v1.yaml
+  - $ref: TerminateComponentCurrentPackageList.v1.yaml
+  - $ref: TerminateComponentList.v1.yaml
+x-tags:
+  - TerminatePackageComponentList

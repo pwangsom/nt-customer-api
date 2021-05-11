@@ -145,6 +145,9 @@
 '/subscriber/create':
   $ref: subscriber/S12.v1.yaml
 
+'/subscriber/prepaid/create':
+  $ref: subscriber/S13.v1.yaml
+
 '/subscriber/{ref_subscr_no}/subscriber_number/change':
   $ref: subscriber/S14.v1.yaml
 

@@ -1,0 +1,21 @@
+title: NewBasicContactPerson
+type: object
+properties:
+  salutation_lkp:
+    type: string
+    format: number
+    example: '1'
+    description: คำนำหน้าขื่อ
+  first_name:
+    type: string
+    example: สมชาย
+  middle_name:
+    type: string
+    example: ชื่อกลาง
+  last_name:
+    type: string
+    example: เจริญยิ่ง
+required:
+  - first_name
+x-tags:
+  - NewBasicContactPerson

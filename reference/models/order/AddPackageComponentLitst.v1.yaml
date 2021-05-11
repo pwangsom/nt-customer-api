@@ -1,0 +1,7 @@
+title: AddPackageComponentLitst.v1
+anyOf:
+  - $ref: NewPackageList.v1.yaml
+  - $ref: NewComponentCurrentPackageList.v1.yaml
+  - $ref: NewComponentList.v1.yaml
+x-tags:
+  - AddPackageComponentLitst

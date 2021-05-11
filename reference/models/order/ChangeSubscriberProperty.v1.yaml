@@ -9,11 +9,10 @@ properties:
     $ref: SubscriberInfo.v1.yaml
   order_info:
     type: object
+    required:
       - order_no
       - order_effective_date
     properties:
-      # order_type_lkp = 5
-      # order_subtype_lkp = 6
       order_no:
         type: string
         example: '25412'

@@ -29,20 +29,6 @@ properties:
         type: string
         example: abc@def.com
         description: อีเมล์
-  receipt_dispatch_method:
-    type: object
-    required:
-      - receipt_dispatch_method_lkp
-    properties:
-      receipt_dispatch_method_lkp:
-        type: string
-        format: number
-        example: '1'
-        description: dispatch_method_lkp
-      email_address:
-        type: string
-        example: abc@def.com
-        description: อีเมล์
 required:
   - dispatch_method
   - vat_dispatch_method

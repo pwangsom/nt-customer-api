@@ -1,0 +1,94 @@
+title: NewSubscriberMyContractInfo
+type: object
+properties:
+  ref_document_id:
+    type: string
+    example: กสท/สค.พะเยา 3984
+    description: หมายเลขสัญญาจริง
+  contract_code:
+    type: string
+    example: ABC1234
+    description: Reference your promotion/component description id
+  contract_type:
+    type: string
+    format: number
+    example: '110'
+    description: บิล master CAT_CONTRACT_TYPE
+  contract_desc:
+    type: string
+    example: สัญญารายเดือน 12 รอบ
+    description: Contract description
+  contract_month:
+    type: integer
+    example: 12
+    description: Number of contract months
+  contract_start:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: วันที่เริ่มต้นสัญญา
+  contract_end:
+    type: string
+    format: date-time
+    example: '2018-08-29T09:12:33.001Z'
+    description: วันที่สิ้นสุดสัญญา
+  contract_value:
+    type: integer
+    example: 299
+    description: Contract value
+  enable:
+    type: string
+    enum:
+      - 'Y'
+      - 'N'
+    description: Contract enable
+  bypass_by:
+    type: string
+    example: '00000003'
+    description: Bypass by
+  bypass_approve_by:
+    type: string
+    example: '00000003'
+    description: Bypass approve by
+  bypass_fee:
+    type: integer
+    example: 299
+    description: Bypass fee
+  bypass_reason:
+    type: string
+    example: Cancel
+    description: Bypass reason
+  bypass_date:
+    type: string
+    format: date-time
+    example: '2018-08-29T09:12:33.001Z'
+    description: Bypass date
+  request_bypass_date:
+    type: string
+    format: date-time
+    example: '2018-08-29T09:12:33.001Z'
+    description: Request bypass date
+  approve_bypass_date:
+    type: string
+    format: date-time
+    example: '2018-08-29T09:12:33.001Z'
+    description: Approve bypass date
+  offer_id:
+    type: string
+    format: number
+    example: '51005969'
+    description: Offer ID
+  bill_ref_no:
+    type: string
+    format: number
+    example: '23423424'
+    description: Bill ref no
+  bill_ref_date:
+    type: string
+    format: date-time
+    example: '2018-08-29T09:12:33.001Z'
+    description: Bill ref date
+  bill_ref_amount:
+    type: integer
+    example: 299
+    description: Bill ref amount

@@ -1,10 +1,10 @@
-title: NewSubscriber
+title: NewPrepaidSubscriber
 type: object
 properties:
   client_info:
     $ref: ../../common/RequestClientInfo.v1.yaml
   subscriber_reference_info:
-    $ref: NewSubscriberReference.v1.yaml
+    $ref: NewPrepaidSubscriberReference.v1.yaml
   order_info:
     $ref: NewSubscriberOrder.v1.yaml
   general_info:
@@ -21,10 +21,6 @@ properties:
     type: array
     items:
       $ref: NewSubscriberProperty.v1.yaml
-  installation_address_list:
-    type: array
-    items:
-      $ref: NewInstallationAddressWithContactPerson.v1.yaml
   my_contract_info:
     $ref: NewSubscriberMyContractInfo.v1.yaml
 required:
@@ -34,4 +30,4 @@ required:
   - general_info
   - package_list
 x-tags:
-  - NewSubscriber
+  - NewPrepaidSubscriber
