@@ -1,7 +1,7 @@
 post:
   operationId: B07
-  description: Create an billing account in Customer DB
-  summary: Create an Billing Account in Customer DB.
+  description: Create a billing account in Customer DB
+  summary: Create a Billing Account in Customer DB.
   tags: []
   requestBody:
     required: true

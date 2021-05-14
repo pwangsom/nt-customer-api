@@ -1,0 +1,4 @@
+title: NewBillingAddressBody
+oneOf:
+  - $ref: NewBillingAddressTh.v1.yaml
+  - $ref: NewBillingAddressForiegn.v1.yaml

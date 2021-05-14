@@ -1,0 +1,10 @@
+name: mode
+in: path
+required: true
+description: 1 = Customer DB, 2 = Billing, 3 = Both Customer DB and Billing
+schema:
+  type: integer
+  enum:
+    - 1
+    - 2
+    - 3

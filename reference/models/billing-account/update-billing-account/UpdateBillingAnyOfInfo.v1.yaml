@@ -1,0 +1,16 @@
+title: UpdateBillingAnyOfInfo
+anyOf:
+  - type: object
+    properties:
+      general_info:
+        $ref: UpdateBillingGeneralInfo.v1.yaml
+  - type: object
+    properties:
+      more_info:
+        $ref: UpdateBillingMoreInfo.v1.yaml
+  - type: object
+    properties:
+      egp_info:
+        $ref: UpdateBillingEgpInfo.v1.yaml
+x-tags:
+  - UpdateBillingAnyOfInfo

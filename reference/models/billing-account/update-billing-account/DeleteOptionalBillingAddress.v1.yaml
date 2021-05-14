@@ -1,0 +1,11 @@
+title: DeleteOptionalBillingAddress
+allOf:
+  - type: object
+    properties:
+      client_info:
+        $ref: ../../common/RequestClientInfo.v1.yaml
+      billing_reference_info:
+        $ref: UpdateBillingReferenceInfo.v1.yaml
+  - $ref: DeleteOptionalBillingAddressInfo.v1.yaml
+x-tags:
+  - DeleteOptionalBillingAddress

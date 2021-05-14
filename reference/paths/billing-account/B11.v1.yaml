@@ -1,14 +1,17 @@
 post:
-  operationId: B06
-  description: Create a billing account in both Billing and Customer DB
-  summary: Create a Billing Account in Both Billing and Customer DB.
+  operationId: B11
+  description: Update general info of a billing account by bill_acct_number
+  summary: Update General Info of a Billing Account Number.
   tags: []
+  parameters:
+    - $ref: ../../parameters/BillAcctNumber.v1.yaml
+    - $ref: ../../parameters/Mode.v1.yaml
   requestBody:
     required: true
     content:
       application/json:
         schema:
-          $ref: ../../models/billing-account/new-billing-account/NewBillingAccount.v1.yaml
+          $ref: ../../models/billing-account/update-billing-account/UpdateBillingInfo.v1.yaml
   responses:
     '200':
       description: Operation success
@@ -31,4 +34,4 @@ post:
           schema:
             $ref: ../../models/common/OperationFailed.v1.yaml      
     '500':
-      description: Unexpected error.            
+      description: Unexpected error.

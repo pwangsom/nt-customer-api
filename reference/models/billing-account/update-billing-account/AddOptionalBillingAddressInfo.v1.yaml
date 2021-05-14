@@ -1,0 +1,12 @@
+title: AddOptionalBillingAddressInfo
+anyOf:
+  - type: object
+    properties:
+      billing_delivery_address:
+        $ref: ../new-billing-account/NewBillingAddressInfo.v1.yaml
+  - type: object
+    properties:
+      vat_delivery_address:
+        $ref: ../new-billing-account/NewBillingAddressInfo.v1.yaml
+x-tags:
+  - AddOptionalBillingAddressInfo

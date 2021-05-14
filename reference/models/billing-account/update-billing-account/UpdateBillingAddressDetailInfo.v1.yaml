@@ -1,0 +1,61 @@
+title: UpdateBillingAddressDetailInfo
+type: object
+x-tags:
+  - UpdateBillingAddressDetailInfo
+properties:
+  billing_address_reference_info:
+    $ref: UpdateBillingAddressReferenceInfo.v1.yaml
+  salutation_lkp:
+    type: string
+    format: number
+    example: '1'
+    description: คำนำหน้าชื่อไทย
+  first_name:
+    type: string
+    example: สมชาย
+  last_name:
+    type: string
+    example: เจริญยิ่ง
+  corp_type_lkp:
+    type: string
+    format: number
+    example: '1'
+    description: คำนำหน้าองค์กรไทย เช่น บมจ. บจก. และห้างหุ้นส่วน
+  organization_name:
+    type: string
+    example: เชฟรอน
+  address_country_lkp:
+    type: string
+    format: number
+    example: '1'
+    description: ประเทศ
+  house_number_moo_village:
+    type: string
+    example: 202/24 หมู่ 1 หมู่บ้านสราญสิริ
+    description: บ้านเลขที่/หมู่/หมู่บ้าน (Address line1)
+  building_floor_room_trok_soi:
+    type: string
+    example: ตึก 4 ซอย 5
+    description: อาคาร/ชั้น/ห้อง/ตรอก/ซอย (Address line2)
+  road:
+    type: string
+    example: ถนนแจ้งวัฒนะ
+    description: ถนน (Address line3)
+  subdistrict:
+    type: string
+    example: ตำบลคลองเกลือ
+    description: ตำบล/แขวง
+  district:
+    type: string
+    example: อำเภอปากเกร็ด
+    description: อำเภอ/เขต
+  province:
+    type: string
+    example: นนทบุรี
+    description: จังหวัด
+  postal_code:
+    type: string
+    example: '11120'
+    description: รหัสไปรษณีย์
+required:
+  - billing_address_reference_info

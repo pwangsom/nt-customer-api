@@ -1,0 +1,128 @@
+title: UpdateBillingGeneralInfo
+type: object
+properties:
+  bill_acct_category_lkp:
+    type: string
+    format: number
+    example: '6'
+    description: Billing account category (bill_acct_category_lkp)
+  currency_lkp:
+    type: string
+    format: number
+    example: '1'
+    description: currency_lkp
+  language_lkp:
+    type: string
+    format: number
+    example: '1'
+    description: language_lkp
+  parent_acct_number:
+    type: string
+    format: number
+    example: '22254127'
+    description: Parent BA number
+  vat_rate_lkp:
+    type: string
+    format: number
+    example: '1'
+    description: vat_rate_lkp
+  is_display_vat:
+    type: integer
+    example: 1
+    description: Display VAT.
+  collection_region_code:
+    type: string
+    example: '34521'
+    description: Collection region code
+  collection_treatment_lkp:
+    type: string
+    format: number
+    example: '1'
+    description: collection_treatment_lkp
+  tax_number:
+    type: string
+    example: '1234567890123'
+    description: หมายเลขประจำตัวผู้เสียภาษี
+  tax_branch_id:
+    type: string
+    example: '00000'
+    description: หมายเลขประจำสาขา 5 หลัก
+  government_code:
+    type: string
+    example: '99393'
+    description: รหัสหน่วยงานราชการ
+  rate_class_lkp:
+    type: string
+    format: number
+    example: '1'
+    description: rate_class_lkp
+  nacc_number:
+    type: string
+    example: '99393'
+    description: NACC number
+  is_billable:
+    type: integer
+    example: 1
+    description: Billable.
+  is_internal_bill:
+    type: integer
+    example: 0
+    description: Internal bill.
+  billing_group:
+    type: string
+    example: HO-C internet (On Net)
+    description: Billing group
+  sub_billing_group:
+    type: string
+    example: HO-C internet (On Net)
+    description: Bundle group
+  credit_limit:
+    type: number
+    format: double
+    example: 590
+    description: Credit limit
+  bundle_service_name:
+    type: string
+    example: Internet
+    description: Bundle Service Name
+  discount_bundle_acct_number:
+    type: string
+    example: '948484738'
+    description: Discount bundle account number
+  is_accumulated_charge:
+    type: integer
+    example: 0
+    description: บิลพันยอดหรือไม่
+  is_period_on_service_active:
+    type: integer
+    example: 0
+    description: Bill period on service active
+  is_vip_dept:
+    type: integer
+    example: 0
+    description: Internal bill.
+  related_party_lkp:
+    type: string
+    format: number
+    example: '1'
+    description: related_party_lkp
+  trading_partner:
+    type: string
+    example: '1234567890123'
+    description: Trading partner
+  billing_system_lkp:
+    type: string
+    format: number
+    example: '1'
+    description: billing_system_lkp
+  original_data_owner_lkp:
+    type: string
+    format: number
+    example: '1'
+    description: original_data_owner_lkp
+  original_reference_key:
+    type: string
+    example: '3464656546'
+    description: Reference key สำหรับใช้อ้างอิง กรณีลูกค้า NT2
+x-tags:
+  - UpdateBillingGeneralInfo

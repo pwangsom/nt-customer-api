@@ -1,8 +1,10 @@
 post:
   operationId: B08
-  description: Create an billing account in Billing
-  summary: Create an Billing Account in Billing.
+  description: Create a billing account
+  summary: Create a Billing Account.
   tags: []
+  parameters:
+    - $ref: ../../parameters/Mode.v1.yaml
   requestBody:
     required: true
     content:

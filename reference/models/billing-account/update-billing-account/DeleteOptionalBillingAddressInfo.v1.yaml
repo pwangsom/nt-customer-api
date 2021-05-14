@@ -1,0 +1,12 @@
+title: DeleteOptionalBillingAddressInfo
+anyOf:
+  - type: object
+    properties:
+      billing_delivery_address:
+        $ref: UpdateBillingAddressReferenceInfo.v1.yaml
+  - type: object
+    properties:
+      vat_delivery_address:
+        $ref: UpdateBillingAddressReferenceInfo.v1.yaml
+x-tags:
+  - DeleteOptionalBillingAddressInfo

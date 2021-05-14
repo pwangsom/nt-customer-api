@@ -106,14 +106,20 @@
 '/billing/{bill_acct_number}/invoice/{invoice_record}':
   $ref: billing-account/B05.v1.yaml
 
-'/billing/create/billing/customer_db':
-  $ref: billing-account/B06.v1.yaml
-
-'/billing/create/customer_db':
-  $ref: billing-account/B07.v1.yaml
-
-'/billing/create/billing':
+'/billing/create/{mode}':
   $ref: billing-account/B08.v1.yaml
+
+'/billing/{bill_acct_number}/info/update/{mode}':
+  $ref: billing-account/B11.v1.yaml
+
+'/billing/{bill_acct_number}/address/update/{mode}':
+  $ref: billing-account/B14.v1.yaml
+
+'/billing/{bill_acct_number}/optional_address/add/{mode}':
+  $ref: billing-account/B17.v1.yaml
+
+'/billing/{bill_acct_number}/optional_address/delete/{mode}':
+  $ref: billing-account/B20.v1.yaml
 
 '/subscriber/{ref_subscr_no}/basic':
   $ref: subscriber/S01.v1.yaml

@@ -10,7 +10,7 @@ properties:
     type: string
     format: date-time
     example: '2016-08-29T09:12:33.001Z'
-    description: Reference up-to-date time
+    description: Reference up-to-date time of BA
 required:
   - bill_acct_number
   - reference_time
