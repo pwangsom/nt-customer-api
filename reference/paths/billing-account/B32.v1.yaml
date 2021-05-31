@@ -1,0 +1,37 @@
+post:
+  operationId: B32
+  description: Update payment method of a billing account by bill_acct_number
+  summary: Update Payment Method of a Billing Account Number.
+  tags: []
+  parameters:
+    - $ref: ../../parameters/BillAcctNumber.v1.yaml
+    - $ref: ../../parameters/Mode.v1.yaml
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: ../../models/billing-account/update-billing-account/UpdateBillingPayment.v1.yaml
+  responses:
+    '200':
+      description: Operation success
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/common/OperationSuccess.v1.yaml
+    '400':
+      description: Bad request.
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/common/OperationFailed.v1.yaml
+    '401':
+      description: Authorization information is missing or invalid.
+    '404':
+      description: Operation failed.
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/common/OperationFailed.v1.yaml      
+    '500':
+      description: Unexpected error.

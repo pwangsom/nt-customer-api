@@ -1,0 +1,34 @@
+title: UpdateBillingDispatchMethodInfo
+anyOf:
+  - type: object
+    properties:
+      dispatch_method:
+        type: object
+        required:
+          - dispatch_method_lkp
+        properties:
+          dispatch_method_lkp:
+            type: string
+            format: number
+            example: '1'
+            description: dispatch_method_lkp
+          email_address:
+            type: string
+            example: abc@def.com
+            description: อีเมล์
+  - type: object
+    properties:
+      vat_dispatch_method:
+        type: object
+        required:
+          - vat_dispatch_method_lkp
+        properties:
+          vat_dispatch_method_lkp:
+            type: string
+            format: number
+            example: '1'
+            description: dispatch_method_lkp
+          email_address:
+            type: string
+            example: abc@def.com
+            description: อีเมล์

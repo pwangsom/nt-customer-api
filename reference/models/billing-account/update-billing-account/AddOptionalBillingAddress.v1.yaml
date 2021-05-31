@@ -6,6 +6,9 @@ allOf:
         $ref: ../../common/RequestClientInfo.v1.yaml
       billing_reference_info:
         $ref: UpdateBillingReferenceInfo.v1.yaml
+    required:
+      - client_info
+      - billing_reference_info
   - $ref: AddOptionalBillingAddressInfo.v1.yaml
 x-tags:
   - AddOptionalBillingAddress

@@ -1,4 +1,4 @@
-title: UpdateBillingAddress
+title: UpdateBillingDispatchMethod
 allOf:
   - type: object
     properties:
@@ -9,6 +9,6 @@ allOf:
     required:
       - client_info
       - billing_reference_info
-  - $ref: UpdateBillingAddressInfo.v1.yaml
+  - $ref: UpdateBillingDispatchMethodInfo.v1.yaml
 x-tags:
-  - UpdateBillingAddress
+  - UpdateBillingDispatchMethod

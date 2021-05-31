@@ -1,0 +1,8 @@
+title: UpdatePaymentCash
+type: object
+properties:
+  payment_method_type:
+    type: string
+    enum:
+      - UpdatePaymentCash
+    description: รูปแบบการชำระเงินแบบเงินสด

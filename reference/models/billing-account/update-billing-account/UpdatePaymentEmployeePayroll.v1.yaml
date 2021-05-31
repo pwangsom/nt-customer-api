@@ -1,0 +1,22 @@
+title: UpdatePaymentEmployeePayroll
+type: object
+x-tags:
+  - UpdatePaymentEmployeePayroll
+properties:
+  payment_method_type:
+    type: string
+    enum:
+      - UpdatePaymentEmployeePayroll
+    description: รูปแบบการชำระเงินแบบหักผ่านบัญชีเงินเดือน
+  payroll_employee_code:
+    type: string
+    example: '123456'
+    description: รหัสพนักงานที่ถูกหักบัญชี
+  payroll_employee_name:
+    type: string
+    example: สมชาย เจริญยิ่ง
+    description: ชื่อ-นามสกุลพนักงานที่ถูกหักบัญชี
+required:
+  - payment_method_type
+  - payroll_employee_code
+  - payroll_employee_name

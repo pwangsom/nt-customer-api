@@ -121,6 +121,12 @@
 '/billing/{bill_acct_number}/optional_address/delete/{mode}':
   $ref: billing-account/B20.v1.yaml
 
+'/billing/{bill_acct_number}/dispatch_method/update/{mode}':
+  $ref: billing-account/B23.v1.yaml
+
+'/billing/{bill_acct_number}/payment/update/{mode}':
+  $ref: billing-account/B32.v1.yaml
+
 '/subscriber/{ref_subscr_no}/basic':
   $ref: subscriber/S01.v1.yaml
 

@@ -1,0 +1,34 @@
+title: UpdatePaymentBankAccount
+type: object
+x-tags:
+  - UpdatePaymentBankAccount
+properties:
+  payment_method_type:
+    type: string
+    enum:
+      - UpdatePaymentBankAccount
+    description: 'รูปแบบการชำระเงินแบบหักผ่านบัญชีธนาคาร (Direct Debit, Direct Debit + WT)'
+  payment_method_lkp:
+    type: string
+    format: number
+    example: '1'
+    description: 'payment_method_lkp (Direct Debit, Direct Debit + WT)'
+  bank_name_lkp:
+    type: string
+    format: number
+    example: '1'
+    description: bank_name_lkp
+  bank_number:
+    type: string
+    format: number
+    example: '1234567890'
+    description: Bank number
+  bank_branch_name:
+    type: string
+    example: Lak Si branch
+    description: Bank branch name
+required:
+  - payment_method_type
+  - payment_method_lkp
+  - bank_name_lkp
+  - bank_number
