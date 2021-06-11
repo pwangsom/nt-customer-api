@@ -1,16 +1,6 @@
-title: NewBillingAddressForiegn
+title: NewBillingAddressTh.v2
 type: object
 properties:
-  address_country_type:
-    type: string
-    enum:
-      - NewBillingAddressForiegn
-    description: ที่อยู่รองรับรูปแบบของต่างประเทศ
-  address_country_lkp:
-    type: string
-    format: number
-    example: '1'
-    description: ประเทศ
   house_number_moo_village:
     type: string
     example: 202/24 หมู่ 1 หมู่บ้านสราญสิริ
@@ -40,10 +30,8 @@ properties:
     example: '11120'
     description: รหัสไปรษณีย์
 required:
-  - address_country_type
-  - address_country_lkp
   - house_number_moo_village
+  - subdistrict
+  - district
   - province
   - postal_code
-x-tags:
-  - NewBillingAddressForiegn

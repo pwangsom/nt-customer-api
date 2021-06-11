@@ -1,0 +1,15 @@
+title: NewBillingAddressOrgInfo.v2
+type: object
+x-tags:
+  - NewBillingAddressOrgInfo.v2
+properties:
+  corp_type_lkp:
+    type: string
+    format: number
+    example: '1'
+    description: คำนำหน้าองค์กรไทย เช่น บมจ. บจก. และห้างหุ้นส่วน
+  organization_name:
+    type: string
+    example: เชฟรอน
+required:
+  - organization_name

@@ -1,0 +1,12 @@
+title: NewBillingAddressInfo.v2
+type: object
+x-tags:
+  - NewBillingAddressInfo.v2
+properties:
+  address_header:
+    $ref: NewBillingAddressHeader.v2.yaml
+  address_body:
+    $ref: NewBillingAddressBody.v2.yaml
+required:
+  - address_header
+  - address_body

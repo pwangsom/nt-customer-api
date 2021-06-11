@@ -1,0 +1,28 @@
+title: NewBillingAddressIndyOrgInfo.v2
+type: object
+properties:
+  salutation_lkp:
+    type: string
+    format: number
+    example: '1'
+    description: คำนำหน้าชื่อไทย
+  first_name:
+    type: string
+    example: สมชาย
+  last_name:
+    type: string
+    example: เจริญยิ่ง
+  corp_type_lkp:
+    type: string
+    format: number
+    example: '1'
+    description: คำนำหน้าองค์กรไทย เช่น บมจ. บจก. และห้างหุ้นส่วน
+  organization_name:
+    type: string
+    example: เชฟรอน
+required:
+  - first_name
+  - last_name
+  - organization_name
+x-tags:
+  - NewBillingAddressIndyOrgInfo.v2

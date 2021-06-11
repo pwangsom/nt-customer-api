@@ -4,7 +4,7 @@ properties:
   client_info:
     $ref: ../../common/RequestClientInfo.v1.yaml
   id_card_info:
-    $ref: NewIndyCustomerCard.v1.yaml
+    $ref: NewIndyCustomerCard.v2.yaml
   customer_acct_type:
     $ref: NewIndividual.v1.yaml
   general_info:

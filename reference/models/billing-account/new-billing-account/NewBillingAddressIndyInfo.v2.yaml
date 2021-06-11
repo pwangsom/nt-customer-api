@@ -1,0 +1,19 @@
+title: NewBillingAddressIndyInfo.v2
+type: object
+x-tags:
+  - NewBillingAddressIndyInfo.v2
+properties:
+  salutation_lkp:
+    type: string
+    format: number
+    example: '1'
+    description: คำนำหน้าชื่อไทย
+  first_name:
+    type: string
+    example: สมชาย
+  last_name:
+    type: string
+    example: เจริญยิ่ง
+required:
+  - first_name
+  - last_name

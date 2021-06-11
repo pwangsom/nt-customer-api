@@ -1,0 +1,22 @@
+title: NewIndyCustomerCard.v2
+allOf:
+  - oneOf:
+      - type: object
+        properties:
+          id_card_th:
+            $ref: NewIndyCustomerThaiIdCard.v2.yaml
+      - type: object
+        properties:
+          id_card_general:
+            $ref: NewIndyCustomerOtherIdCard.v2.yaml
+  - type: object
+    properties:
+      id_card_issued_by:
+        type: string
+        example: 'เขตหลักสี่'
+        description: หน่วยงานที่ออกเอกสาร
+      id_card_expired_date:
+        type: string
+        format: date
+        example: '2030-02-02'
+        description: วันหมดอายุของเอกสาร

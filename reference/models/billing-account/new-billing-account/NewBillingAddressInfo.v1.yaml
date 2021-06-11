@@ -1,6 +1,12 @@
 title: NewBillingAddressInfo
-allOf:
-  - $ref: NewBillingAddressHeader.v1.yaml
-  - $ref: NewBillingAddressBody.v1.yaml
+type: object
 x-tags:
   - NewBillingAddressInfo
+properties:
+  address_header:
+    $ref: NewBillingAddressHeader.v1.yaml
+  address_body:
+    $ref: NewBillingAddressBody.v1.yaml
+required:
+  - address_header
+  - address_body

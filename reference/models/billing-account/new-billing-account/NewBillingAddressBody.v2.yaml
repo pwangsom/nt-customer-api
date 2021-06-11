@@ -1,0 +1,10 @@
+title: NewBillingAddressBody.v2
+oneOf:
+  - type: object
+    properties:
+      address_body_th:
+        $ref: NewBillingAddressTh.v2.yaml
+  - type: object
+    properties:
+      address_body_foriegn:
+        $ref: NewBillingAddressForiegn.v2.yaml

@@ -1,11 +1,6 @@
-title: NewBillingAddressForiegn
+title: NewBillingAddressForiegn.v2
 type: object
 properties:
-  address_country_type:
-    type: string
-    enum:
-      - NewBillingAddressForiegn
-    description: ที่อยู่รองรับรูปแบบของต่างประเทศ
   address_country_lkp:
     type: string
     format: number
@@ -40,10 +35,7 @@ properties:
     example: '11120'
     description: รหัสไปรษณีย์
 required:
-  - address_country_type
   - address_country_lkp
   - house_number_moo_village
   - province
   - postal_code
-x-tags:
-  - NewBillingAddressForiegn

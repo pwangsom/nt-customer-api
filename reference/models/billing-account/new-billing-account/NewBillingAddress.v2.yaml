@@ -1,0 +1,14 @@
+title: NewBillingAddress.v2
+type: object
+properties:
+  billing_address:
+    $ref: NewBillingAddressInfo.v2.yaml
+  vat_address:
+    $ref: NewBillingAddressInfo.v2.yaml
+  billing_delivery_address:
+    $ref: NewBillingAddressInfo.v2.yaml
+  vat_delivery_address:
+    $ref: NewBillingAddressInfo.v2.yaml
+required:
+  - billing_address
+  - vat_address
