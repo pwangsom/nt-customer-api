@@ -1,4 +1,4 @@
-title: NewBillingAddressForiegn.v2
+title: NewBillingAddressForiegn
 type: object
 properties:
   address_country_lkp:
@@ -39,3 +39,5 @@ required:
   - house_number_moo_village
   - province
   - postal_code
+x-tags:
+  - NewBillingAddressForiegn

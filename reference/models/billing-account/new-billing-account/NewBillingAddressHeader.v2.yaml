@@ -1,4 +1,4 @@
-title: NewBillingAddressHeader.v2
+title: NewBillingAddressHeader
 oneOf:
   - type: object
     properties:
@@ -13,4 +13,4 @@ oneOf:
       address_header_indy_org_info:
         $ref: NewBillingAddressIndyOrgInfo.v2.yaml
 x-tags:
-  - NewBillingAddressHeader.v2
+  - NewBillingAddressHeader

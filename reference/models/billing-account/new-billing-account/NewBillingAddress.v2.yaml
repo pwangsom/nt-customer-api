@@ -1,4 +1,4 @@
-title: NewBillingAddress.v2
+title: NewBillingAddress
 type: object
 properties:
   billing_address:
@@ -12,3 +12,5 @@ properties:
 required:
   - billing_address
   - vat_address
+x-tags:
+  - NewBillingAddress

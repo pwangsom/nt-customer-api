@@ -1,7 +1,7 @@
-title: NewBillingAddressInfo.v2
+title: NewBillingAddressInfo
 type: object
 x-tags:
-  - NewBillingAddressInfo.v2
+  - NewBillingAddressInfo
 properties:
   address_header:
     $ref: NewBillingAddressHeader.v2.yaml

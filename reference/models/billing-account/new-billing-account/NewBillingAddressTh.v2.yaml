@@ -1,4 +1,4 @@
-title: NewBillingAddressTh.v2
+title: NewBillingAddressTh
 type: object
 properties:
   house_number_moo_village:
@@ -35,3 +35,5 @@ required:
   - district
   - province
   - postal_code
+x-tags:
+  - NewBillingAddressTh

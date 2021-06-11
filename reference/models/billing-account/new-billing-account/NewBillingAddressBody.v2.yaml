@@ -1,4 +1,4 @@
-title: NewBillingAddressBody.v2
+title: NewBillingAddressBody
 oneOf:
   - type: object
     properties:
@@ -8,3 +8,5 @@ oneOf:
     properties:
       address_body_foriegn:
         $ref: NewBillingAddressForiegn.v2.yaml
+x-tags:
+  - NewBillingAddressBody

@@ -1,4 +1,4 @@
-title: NewBillingAddressIndyOrgInfo.v2
+title: NewBillingAddressIndyOrgInfo
 type: object
 properties:
   salutation_lkp:
@@ -25,4 +25,4 @@ required:
   - last_name
   - organization_name
 x-tags:
-  - NewBillingAddressIndyOrgInfo.v2
+  - NewBillingAddressIndyOrgInfo

@@ -1,7 +1,7 @@
-title: NewBillingAddressOrgInfo.v2
+title: NewBillingAddressOrgInfo
 type: object
 x-tags:
-  - NewBillingAddressOrgInfo.v2
+  - NewBillingAddressOrgInfo
 properties:
   corp_type_lkp:
     type: string
