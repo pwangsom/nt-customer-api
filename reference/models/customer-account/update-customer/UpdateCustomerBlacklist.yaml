@@ -2,9 +2,9 @@ title: UpdateCustomerBlacklist
 type: object
 properties:
   client_info:
-    $ref: ../../common/RequestClientInfo.v1.yaml
+    $ref: ../../common/RequestClientInfo.yaml
   customer_reference_info:
-    $ref: UpdateCustomerReference.v1.yaml
+    $ref: UpdateCustomerReference.yaml
   black_list_lkp:
     type: string
     example: '1'

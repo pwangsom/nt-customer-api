@@ -3,12 +3,12 @@ allOf:
   - type: object
     properties:
       client_info:
-        $ref: ../../common/RequestClientInfo.v1.yaml
+        $ref: ../../common/RequestClientInfo.yaml
       billing_reference_info:
-        $ref: UpdateBillingReferenceInfo.v1.yaml
+        $ref: UpdateBillingReferenceInfo.yaml
     required:
       - client_info
       - billing_reference_info
-  - $ref: UpdateBillingAnyOfInfo.v1.yaml
+  - $ref: UpdateBillingAnyOfInfo.yaml
 x-tags:
   - UpdateBillingInfo

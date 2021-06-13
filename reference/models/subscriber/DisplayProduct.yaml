@@ -16,7 +16,7 @@ properties:
     example: 590.00
   status_lkp:
     allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
+      - $ref: ../common/DisplayLookup.yaml
     description: Status
     example:
       ilookup_ref_idd: '1'

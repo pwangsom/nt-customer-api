@@ -3,10 +3,10 @@ anyOf:
   - type: object
     properties:
       billing_delivery_address:
-        $ref: UpdateBillingAddressReferenceInfo.v1.yaml
+        $ref: UpdateBillingAddressReferenceInfo.yaml
   - type: object
     properties:
       vat_delivery_address:
-        $ref: UpdateBillingAddressReferenceInfo.v1.yaml
+        $ref: UpdateBillingAddressReferenceInfo.yaml
 x-tags:
   - DeleteOptionalBillingAddressInfo

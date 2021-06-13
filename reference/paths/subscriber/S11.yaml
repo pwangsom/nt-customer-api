@@ -4,7 +4,7 @@ get:
   summary: Get Full Info of Subscriber with All Pakages and Components by Reference Subscriber Number.
   tags: []
   parameters:
-    - $ref: ../../parameters/RefSubscrNo.v1.yaml
+    - $ref: ../../parameters/RefSubscrNo.yaml
   responses:
     '200':
       description: Data Found
@@ -13,7 +13,7 @@ get:
           schema:
             type: array
             items:
-              $ref: ../../models/subscriber/Subscriber.v1.yaml
+              $ref: ../../models/subscriber/Subscriber.yaml
     '400':
       description: Bad request.
     '401':

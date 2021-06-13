@@ -11,14 +11,14 @@ properties:
     description: Subscriber property e.g. ICCID
   service_type:
     allOf:
-      - $ref: ServiceType.v1.yaml
+      - $ref: ServiceType.yaml
     description: Service type
     example:
       service_type_code: '110'
       service_type_name: my Postpaid
   status_lkp:
     allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
+      - $ref: ../common/DisplayLookup.yaml
     description: Subscriber status
     example:
       lookup_ref_id: '1'
@@ -39,12 +39,12 @@ properties:
     example: '123654855881234567'
     description: CSS CAT ID
   sales_representative:
-    $ref: SalesRepresentative.v1.yaml
+    $ref: SalesRepresentative.yaml
   cost_center:
-    $ref: CostCenter.v1.yaml
+    $ref: CostCenter.yaml
   order_pending_lkp:
     allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
+      - $ref: ../common/DisplayLookup.yaml
     description: Subscriber order status
     example:
       lookup_ref_id: '1'
@@ -52,7 +52,7 @@ properties:
       lookup_category_name: order_pending_lkp
   reason_lkp:
     allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
+      - $ref: ../common/DisplayLookup.yaml
     description: Terminated reason
     example:
       lookup_ref_id: '1'
@@ -64,7 +64,7 @@ properties:
     description: Reason extension
   original_data_owner_lkp:
     allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
+      - $ref: ../common/DisplayLookup.yaml
     description: ต้นฉบับข้อมูลลูกค้า
     example:
       lookup_ref_id: '1'

@@ -4,7 +4,7 @@ get:
   summary: Get Customer Info with Email List by Customer Number.
   tags: []
   parameters:
-    - $ref: ../../parameters/CustomerAcctNumber.v1.yaml
+    - $ref: ../../parameters/CustomerAcctNumber.yaml
   responses:
     '200':
       description: Data Found
@@ -13,7 +13,7 @@ get:
           schema:
             type: array
             items:
-              $ref: ../../models/customer-account/BasicCustomerAccountWithEmail.v1.yaml
+              $ref: ../../models/customer-account/BasicCustomerAccountWithEmail.yaml
     '400':
       description: Bad request.
     '401':

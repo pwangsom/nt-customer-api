@@ -3,7 +3,7 @@ type: object
 properties:
   customer_value_lkp:
     allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
+      - $ref: ../common/DisplayLookup.yaml
     description: Customer value class
     example:
       lookup_ref_id: '1'
@@ -16,7 +16,7 @@ properties:
     description: Reference up-to-date time 
   user_customer_value_lkp:
     allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
+      - $ref: ../common/DisplayLookup.yaml
     description: Customer value class
     example:
       lookup_ref_id: '1'
@@ -38,7 +38,7 @@ properties:
       properties:
         service_value_lkp:
           allOf:
-            - $ref: ../common/DisplayLookup.v1.yaml
+            - $ref: ../common/DisplayLookup.yaml
           description: Customer value class
           example:
             lookup_ref_id: '1'
@@ -46,7 +46,7 @@ properties:
             lookup_category_name: 'customer_value_lkp'
         service_type:
           allOf:
-            - $ref: ../subscriber/ServiceType.v1.yaml
+            - $ref: ../subscriber/ServiceType.yaml
           description: Service type
           example:
             service_type_code: '110'
@@ -58,7 +58,7 @@ properties:
           description: Reference up-to-date time 
         user_customer_value_lkp:
           allOf:
-            - $ref: ../common/DisplayLookup.v1.yaml
+            - $ref: ../common/DisplayLookup.yaml
           description: Customer value class
           example:
             lookup_ref_id: '1'

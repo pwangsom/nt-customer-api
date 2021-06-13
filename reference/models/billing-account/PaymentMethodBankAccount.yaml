@@ -8,7 +8,7 @@ properties:
     description: รูปแบบการชำระเงินแบบหักผ่านบัญชีธนาคาร
   bank_name_lkp:
     allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
+      - $ref: ../common/DisplayLookup.yaml
     description: Bank name
     example:
       lookup_ref_id: '1'

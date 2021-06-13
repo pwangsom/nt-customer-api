@@ -65,4 +65,4 @@ properties:
   invoice_sub_list:
     type: array
     items:
-      $ref: InvoiceSubscriber.v1.yaml
+      $ref: InvoiceSubscriber.yaml

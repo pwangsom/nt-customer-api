@@ -4,7 +4,7 @@ get:
   summary: Get Basic BA Info by BA Number.
   tags: []
   parameters:
-    - $ref: ../../parameters/BillAcctNumber.v1.yaml
+    - $ref: ../../parameters/BillAcctNumber.yaml
   responses:
     '200':
       description: Data Found
@@ -13,7 +13,7 @@ get:
           schema:
             type: array
             items:
-              $ref: ../../models/billing-account/BasicBillingAccount.v1.yaml
+              $ref: ../../models/billing-account/BasicBillingAccount.yaml
     '400':
       description: Bad request.
     '401':

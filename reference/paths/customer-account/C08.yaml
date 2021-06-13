@@ -16,7 +16,7 @@ get:
           schema:
             type: array
             items:
-              $ref: ../../models/customer-account/CustomerAccount.v1.yaml         
+              $ref: ../../models/customer-account/CustomerAccount.yaml         
     '400':
       description: Bad request.
     '401':

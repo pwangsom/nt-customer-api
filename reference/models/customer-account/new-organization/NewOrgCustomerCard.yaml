@@ -1,8 +1,8 @@
 title: NewOrgCustomerCard
 allOf:
   - oneOf:
-      - $ref: NewOrgCustomerTaxIdCard.v1.yaml
-      - $ref: NewOrgCustomerOtherIdCard.v1.yaml
+      - $ref: NewOrgCustomerTaxIdCard.yaml
+      - $ref: NewOrgCustomerOtherIdCard.yaml
   - type: object
     properties:
       id_card_issued_by:

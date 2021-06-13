@@ -2,7 +2,7 @@ title: NewBillingAccountMode1
 type: object
 properties:
   client_info:
-    $ref: ../../common/RequestClientInfo.v1.yaml
+    $ref: ../../common/RequestClientInfo.yaml
   customer_acct_number:
     type: string
     format: number
@@ -19,15 +19,15 @@ properties:
     example: '12254127'
     description: Reference ESB number
   general_info:
-    $ref: NewBillingGeneralInfo.v1.yaml
+    $ref: NewBillingGeneralInfo.yaml
   dispatch_method_info:
-    $ref: NewBillingDispatchMethodInfo.v1.yaml
+    $ref: NewBillingDispatchMethodInfo.yaml
   billing_address_list:
     $ref: NewBillingAddress.v2.yaml
   more_info:
-    $ref: NewBillingMoreInfo.v1.yaml
+    $ref: NewBillingMoreInfo.yaml
   egp_info:
-    $ref: NewBillingEgpInfo.v1.yaml
+    $ref: NewBillingEgpInfo.yaml
 required:
   - customer_acct_number
   - bill_acct_number

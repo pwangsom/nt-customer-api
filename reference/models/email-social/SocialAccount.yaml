@@ -13,7 +13,7 @@ properties:
     description: Reference up-to-date time 
   social_type_lkp:
     allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
+      - $ref: ../common/DisplayLookup.yaml
     description: ประเภท Social Account
     example:
       lookup_ref_id: '1'

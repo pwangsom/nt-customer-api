@@ -3,7 +3,7 @@ type: object
 properties:
   salutation_lkp:
     allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
+      - $ref: ../common/DisplayLookup.yaml
     description: คำนำหน้าชื่อไทย
     example:
       lookup_ref_id: '1'
@@ -20,7 +20,7 @@ properties:
     example: เจริญยิ่ง
   salutation_en_lkp:
     allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
+      - $ref: ../common/DisplayLookup.yaml
     description: คำนำหน้าชื่ออังกฤษ
     example:
       lookup_ref_id: '5'
@@ -37,7 +37,7 @@ properties:
     example: Henry
   gender_lkp:
     allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
+      - $ref: ../common/DisplayLookup.yaml
     description: เพศ
     example:
       lookup_ref_id: '1'
@@ -50,7 +50,7 @@ properties:
     description: วันเกิด
   nationality_lkp:
     allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
+      - $ref: ../common/DisplayLookup.yaml
     description: สัญชาติ
     example:
       lookup_ref_id: '1'

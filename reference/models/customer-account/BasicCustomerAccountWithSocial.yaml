@@ -1,6 +1,6 @@
 title: BasicCustomerAccountWithSocial
 allOf:
-  - $ref: BasicCustomerAccount.v1.yaml
+  - $ref: BasicCustomerAccount.yaml
   - type: object
     properties:
       social_account_list:

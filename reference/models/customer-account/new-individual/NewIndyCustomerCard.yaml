@@ -1,8 +1,8 @@
 title: NewIndyCustomerCard
 allOf:
   - oneOf:
-      - $ref: NewIndyCustomerThaiIdCard.v1.yaml
-      - $ref: NewIndyCustomerOtherIdCard.v1.yaml
+      - $ref: NewIndyCustomerThaiIdCard.yaml
+      - $ref: NewIndyCustomerOtherIdCard.yaml
   - type: object
     properties:
       id_card_issued_by:

@@ -7,7 +7,7 @@ get:
   summary: Get Full BA Info by BA Number.
   tags: []
   parameters:
-    - $ref: ../../parameters/BillAcctNumber.v1.yaml
+    - $ref: ../../parameters/BillAcctNumber.yaml
   responses:
     '200':
       description: Data Found
@@ -16,7 +16,7 @@ get:
           schema:
             type: array
             items:
-              $ref: ../../models/billing-account/BillingAccount.v1.yaml
+              $ref: ../../models/billing-account/BillingAccount.yaml
     '400':
       description: Bad request.
     '401':

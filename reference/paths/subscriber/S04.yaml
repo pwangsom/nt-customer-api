@@ -4,7 +4,7 @@ get:
   summary: Get Basic Subscriber with Active Pakages and Components by Subscriber Number.
   tags: []
   parameters:
-    - $ref: ../../parameters/SubscriberNumber.v1.yaml
+    - $ref: ../../parameters/SubscriberNumber.yaml
   responses:
     '200':
       description: Data Found
@@ -13,7 +13,7 @@ get:
           schema:
             type: array
             items:
-              $ref: ../../models/subscriber/BasicSubscriberWithActivePackageComponent.v1.yaml
+              $ref: ../../models/subscriber/BasicSubscriberWithActivePackageComponent.yaml
     '400':
       description: Bad request.
     '401':

@@ -9,7 +9,7 @@ allOf:
         description: Installation address - subcriber reference id
       installation_address_type_lkp:
         allOf:
-          - $ref: ../common/DisplayLookup.v1.yaml
+          - $ref: ../common/DisplayLookup.yaml
         description: ประเภทที่อยู่การติดตั้ง เช่น ที่อยู่ติดตั้งต้นทาง และ ที่อยู่ติดตั้งปลายทาง
         example:
           lookup_ref_id: '1'

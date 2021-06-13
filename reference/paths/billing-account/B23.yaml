@@ -4,27 +4,27 @@ post:
   summary: Update Dispatch Method of a Billing Account Number.
   tags: []
   parameters:
-    - $ref: ../../parameters/BillAcctNumber.v1.yaml
-    - $ref: ../../parameters/Mode.v1.yaml
+    - $ref: ../../parameters/BillAcctNumber.yaml
+    - $ref: ../../parameters/Mode.yaml
   requestBody:
     required: true
     content:
       application/json:
         schema:
-          $ref: ../../models/billing-account/update-billing-account/UpdateBillingDispatchMethod.v1.yaml
+          $ref: ../../models/billing-account/update-billing-account/UpdateBillingDispatchMethod.yaml
   responses:
     '200':
       description: Operation success
       content:
         application/json:
           schema:
-            $ref: ../../models/common/OperationSuccess.v1.yaml
+            $ref: ../../models/common/OperationSuccess.yaml
     '400':
       description: Bad request.
       content:
         application/json:
           schema:
-            $ref: ../../models/common/OperationFailed.v1.yaml
+            $ref: ../../models/common/OperationFailed.yaml
     '401':
       description: Authorization information is missing or invalid.
     '404':
@@ -32,6 +32,6 @@ post:
       content:
         application/json:
           schema:
-            $ref: ../../models/common/OperationFailed.v1.yaml      
+            $ref: ../../models/common/OperationFailed.yaml      
     '500':
       description: Unexpected error.

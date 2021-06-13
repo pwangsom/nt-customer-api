@@ -7,10 +7,10 @@ properties:
     example: '2030-02-02'
     description: วันที่เริ่มใช้งาน
   customer_contract:
-    $ref: ../customer-contract/DisplayCustomerContract.v1.yaml
+    $ref: ../customer-contract/DisplayCustomerContract.yaml
   bill_acct_category_lkp:
     allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
+      - $ref: ../common/DisplayLookup.yaml
     description: Billing account category
     example:
       lookup_ref_id: '14'
@@ -18,7 +18,7 @@ properties:
       lookup_category_name: bill_acct_category_lkp
   currency_lkp:
     allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
+      - $ref: ../common/DisplayLookup.yaml
     description: Default currency
     example:
       lookup_ref_id: '1'
@@ -26,7 +26,7 @@ properties:
       lookup_category_name: currency_lkp
   language_lkp:
     allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
+      - $ref: ../common/DisplayLookup.yaml
     description: Default language
     example:
       lookup_ref_id: '1'
@@ -39,7 +39,7 @@ properties:
     description: Parent BA number
   vat_rate_lkp:
     allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
+      - $ref: ../common/DisplayLookup.yaml
     description: VAT
     example:
       lookup_ref_id: '1'
@@ -50,10 +50,10 @@ properties:
     example: 1
     description: Display VAT.
   collection_unit:
-    $ref: CollectionUnit.v1.yaml
+    $ref: CollectionUnit.yaml
   collection_treatment_lkp:
     allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
+      - $ref: ../common/DisplayLookup.yaml
     description: Collection treatment
     example:
       lookup_ref_id: '1'
@@ -68,10 +68,10 @@ properties:
     example: '00000'
     description: หมายเลขประจำสาขา 5 หลัก
   government_unit:
-    $ref: GovernmentUnit.v1.yaml
+    $ref: GovernmentUnit.yaml
   rate_class_lkp:
     allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
+      - $ref: ../common/DisplayLookup.yaml
     description: Rate class
     example:
       lookup_ref_id: '1'
@@ -124,7 +124,7 @@ properties:
     description: Internal bill.
   related_party_lkp:
     allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
+      - $ref: ../common/DisplayLookup.yaml
     description: Related party
     example:
       lookup_ref_id: '1'
@@ -136,7 +136,7 @@ properties:
     description: Trading partner
   billing_system_lkp:
     allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
+      - $ref: ../common/DisplayLookup.yaml
     description: Billing system
     example:
       lookup_ref_id: '1'
@@ -144,7 +144,7 @@ properties:
       lookup_category_name: billing_system_lkp
   original_data_owner_lkp:
     allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
+      - $ref: ../common/DisplayLookup.yaml
     description: ต้นฉบับข้อมูลลูกค้า
     example:
       lookup_ref_id: '1'

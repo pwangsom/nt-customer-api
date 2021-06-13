@@ -1,23 +1,23 @@
 title: Subscriber
 allOf:
-  - $ref: BasicSubscriber.v1.yaml
+  - $ref: BasicSubscriber.yaml
   - type: object
     properties:
       package_list:
         type: array
         items:
-          $ref: Package.v1.yaml
+          $ref: Package.yaml
       component_list:
         type: array
         items:
-          $ref: Component.v1.yaml
+          $ref: Component.yaml
       subscriber_property_list:
         type: array
         items:
-          $ref: SubscriberProperty.v1.yaml
+          $ref: SubscriberProperty.yaml
       installation_address_list:
         type: array
         items:
-          $ref: InstallationAddress.v1.yaml
+          $ref: InstallationAddress.yaml
 x-tags:
   - Subscriber

@@ -4,9 +4,9 @@ x-tags:
   - AddCustomerTelephone
 properties:
   client_info:
-    $ref: ../../common/RequestClientInfo.v1.yaml
+    $ref: ../../common/RequestClientInfo.yaml
   customer_reference_info:
-    $ref: UpdateCustomerReference.v1.yaml
+    $ref: UpdateCustomerReference.yaml
   telephone_list:
     type: array
     items:

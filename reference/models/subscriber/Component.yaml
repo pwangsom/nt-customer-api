@@ -9,6 +9,6 @@ allOf:
         description: Component reference number
     required:
       - component_id
-  - $ref: DisplayProduct.v1.yaml
+  - $ref: DisplayProduct.yaml
 x-tags:
   - Component

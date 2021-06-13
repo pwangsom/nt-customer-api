@@ -1,12 +1,12 @@
 title: CustomerAccount
 allOf:
-  - $ref: BasicCustomerAccount.v1.yaml
+  - $ref: BasicCustomerAccount.yaml
   - type: object
     properties:
       customer_acct_type:
         oneOf:
-          - $ref: Individual.v1.yaml
-          - $ref: Organization.v1.yaml
+          - $ref: Individual.yaml
+          - $ref: Organization.yaml
       address:
         $ref: ../address/Address.yaml
       telephone:

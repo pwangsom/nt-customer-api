@@ -16,8 +16,8 @@ properties:
     example: 'นายสมชาย เจริญยิ่ง'
     description: Customer full name.
   id_card_info:
-    $ref: IdCardInfo.v1.yaml
+    $ref: IdCardInfo.yaml
   generic_info:
-    $ref: CustomerGenericInfo.v1.yaml
+    $ref: CustomerGenericInfo.yaml
 x-tags:
   - BasicCustomerAccount

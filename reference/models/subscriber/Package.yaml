@@ -10,9 +10,9 @@ allOf:
       component_list:
         type: array
         items:
-          $ref: Component.v1.yaml
+          $ref: Component.yaml
     required:
       - package_id
-  - $ref: DisplayProduct.v1.yaml
+  - $ref: DisplayProduct.yaml
 x-tags:
   - Package

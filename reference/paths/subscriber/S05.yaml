@@ -4,7 +4,7 @@ get:
   summary: Get Basic Subscriber with Active Pakages and Components by CSS CAT ID.
   tags: []
   parameters:
-    - $ref: ../../parameters/CssCatId.v1.yaml
+    - $ref: ../../parameters/CssCatId.yaml
   responses:
     '200':
       description: Data Found
@@ -13,7 +13,7 @@ get:
           schema:
             type: array
             items:
-              $ref: ../../models/subscriber/BasicSubscriberWithActivePackageComponent.v1.yaml
+              $ref: ../../models/subscriber/BasicSubscriberWithActivePackageComponent.yaml
     '400':
       description: Bad request.
     '401':

@@ -4,9 +4,9 @@ x-tags:
   - AddCustomerAddress
 properties:
   client_info:
-    $ref: ../../common/RequestClientInfo.v1.yaml
+    $ref: ../../common/RequestClientInfo.yaml
   customer_reference_info:
-    $ref: UpdateCustomerReference.v1.yaml
+    $ref: UpdateCustomerReference.yaml
   address_list:
     type: array
     items:

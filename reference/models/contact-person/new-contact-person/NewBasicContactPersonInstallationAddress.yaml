@@ -1,6 +1,6 @@
 title: NewBasicContactPersonInstallationAddress
 allOf:
-  - $ref: NewBasicContactPerson.v1.yaml
+  - $ref: NewBasicContactPerson.yaml
   - type: object
     properties:
       telephone:

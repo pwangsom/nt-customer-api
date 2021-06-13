@@ -4,9 +4,9 @@ get:
   summary: Get Prepaid Over Usage by Subscriber Number.
   tags: []
   parameters:
-    - $ref: ../../parameters/SubscriberNumber.v1.yaml  
-    - $ref: ../../parameters/DateFrom.v1.yaml    
-    - $ref: ../../parameters/DateTo.v1.yaml    
+    - $ref: ../../parameters/SubscriberNumber.yaml  
+    - $ref: ../../parameters/DateFrom.yaml    
+    - $ref: ../../parameters/DateTo.yaml    
   responses:
     '200':
       description: Data Found
@@ -15,7 +15,7 @@ get:
           schema:
             type: array
             items:
-              $ref: ../../models/invoice-payment/PrepaidOverUsageCharge.v1.yaml
+              $ref: ../../models/invoice-payment/PrepaidOverUsageCharge.yaml
     '400':
       description: Bad request.
     '401':

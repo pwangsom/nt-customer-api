@@ -1,8 +1,8 @@
 title: UpdateBillingPaymentInfo
 oneOf:
-  - $ref: UpdatePaymentCash.v1.yaml
-  - $ref: UpdatePaymentEmployeePayroll.v1.yaml
-  - $ref: UpdatePaymentBankAccount.v1.yaml
-  - $ref: UpdatePaymentCreditCard.v1.yaml
+  - $ref: UpdatePaymentCash.yaml
+  - $ref: UpdatePaymentEmployeePayroll.yaml
+  - $ref: UpdatePaymentBankAccount.yaml
+  - $ref: UpdatePaymentCreditCard.yaml
 x-tags:
   - UpdateBillingPaymentInfo

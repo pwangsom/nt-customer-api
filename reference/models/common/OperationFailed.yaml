@@ -2,7 +2,7 @@ title: OperationFailed
 type: object
 properties:
   client_info:
-    $ref: RequestClientInfo.v1.yaml
+    $ref: RequestClientInfo.yaml
   api_trans_id:
     type: string
     example: '29'
@@ -15,6 +15,6 @@ properties:
   error_info:
     type: array
     items:
-      $ref: ErrorInfo.v1.yaml
+      $ref: ErrorInfo.yaml
 x-tags:
   - OperationFailed

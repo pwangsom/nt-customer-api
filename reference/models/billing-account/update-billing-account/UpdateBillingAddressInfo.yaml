@@ -3,16 +3,16 @@ anyOf:
   - type: object
     properties:
       billing_address:
-        $ref: UpdateBillingAddressDetailInfo.v1.yaml
+        $ref: UpdateBillingAddressDetailInfo.yaml
   - type: object
     properties:
       vat_address:
-        $ref: UpdateBillingAddressDetailInfo.v1.yaml
+        $ref: UpdateBillingAddressDetailInfo.yaml
   - type: object
     properties:
       billing_delivery_address:
-        $ref: UpdateBillingAddressDetailInfo.v1.yaml
+        $ref: UpdateBillingAddressDetailInfo.yaml
   - type: object
     properties:
       vat_delivery_address:
-        $ref: UpdateBillingAddressDetailInfo.v1.yaml
+        $ref: UpdateBillingAddressDetailInfo.yaml

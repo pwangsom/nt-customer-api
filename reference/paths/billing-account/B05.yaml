@@ -4,8 +4,8 @@ get:
   summary: Get Invoices by BA Number and Desired Record.
   tags: []
   parameters:
-    - $ref: ../../parameters/BillAcctNumber.v1.yaml  
-    - $ref: ../../parameters/InvoiceRecord.v1.yaml  
+    - $ref: ../../parameters/BillAcctNumber.yaml  
+    - $ref: ../../parameters/InvoiceRecord.yaml  
   responses:
     '200':
       description: Data Found
@@ -14,7 +14,7 @@ get:
           schema:
             type: array
             items:
-              $ref: ../../models/invoice-payment/Invoice.v1.yaml
+              $ref: ../../models/invoice-payment/Invoice.yaml
     '400':
       description: Bad request.
     '401':

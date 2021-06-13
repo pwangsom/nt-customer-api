@@ -2,31 +2,31 @@ title: NewSubscriber
 type: object
 properties:
   client_info:
-    $ref: ../../common/RequestClientInfo.v1.yaml
+    $ref: ../../common/RequestClientInfo.yaml
   subscriber_reference_info:
-    $ref: NewSubscriberReference.v1.yaml
+    $ref: NewSubscriberReference.yaml
   order_info:
-    $ref: NewSubscriberOrder.v1.yaml
+    $ref: NewSubscriberOrder.yaml
   general_info:
-    $ref: NewSubscriberGeneralInfo.v1.yaml
+    $ref: NewSubscriberGeneralInfo.yaml
   package_list:
     type: array
     items:
-      $ref: NewSubscriberPackage.v1.yaml
+      $ref: NewSubscriberPackage.yaml
   component_list:
     type: array
     items:
-      $ref: NewSubscriberComponent.v1.yaml
+      $ref: NewSubscriberComponent.yaml
   subscriber_property_list:
     type: array
     items:
-      $ref: NewSubscriberProperty.v1.yaml
+      $ref: NewSubscriberProperty.yaml
   installation_address_list:
     type: array
     items:
-      $ref: NewInstallationAddressWithContactPerson.v1.yaml
+      $ref: NewInstallationAddressWithContactPerson.yaml
   my_contract_info:
-    $ref: NewSubscriberMyContractInfo.v1.yaml
+    $ref: NewSubscriberMyContractInfo.yaml
 required:
   - client_info
   - subscriber_reference_info

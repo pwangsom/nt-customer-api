@@ -17,22 +17,22 @@ properties:
     example: '7017480851'
     description: CA reference number
   general_info:
-    $ref: BillingGeneralInfo.v1.yaml
+    $ref: BillingGeneralInfo.yaml
   dispatch_method_info:
-    $ref: BillingDispatchMethodInfo.v1.yaml
+    $ref: BillingDispatchMethodInfo.yaml
   payment_method_info:
-    $ref: BillingPaymentMethodInfo.v1.yaml
+    $ref: BillingPaymentMethodInfo.yaml
   billing_address_list:
     type: array
     items:
-      $ref: BillingAddress.v1.yaml
+      $ref: BillingAddress.yaml
   subscriber_list:
     type: array
     items:
-      $ref: ../subscriber/BasicSubscriber.v1.yaml
+      $ref: ../subscriber/BasicSubscriber.yaml
   more_info:
-    $ref: BillingMoreInfo.v1.yaml
+    $ref: BillingMoreInfo.yaml
   egp_info:
-    $ref: BillingEgpInfo.v1.yaml
+    $ref: BillingEgpInfo.yaml
 x-tags:
   - BillingAccount

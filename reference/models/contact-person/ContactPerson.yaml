@@ -1,7 +1,7 @@
 # Not finish and Not Publish yet
 title: ContactPerson
 allOf:
-  - $ref: BasicContactPerson.v1.yaml
+  - $ref: BasicContactPerson.yaml
   - type: object
     properties:
       address:

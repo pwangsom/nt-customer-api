@@ -7,7 +7,7 @@ get:
   summary: Get Basic Subscriber with Active Pakages and Components by ID Card Number.
   tags: []
   parameters:
-    - $ref: ../../parameters/IdCardNumber.v1.yaml
+    - $ref: ../../parameters/IdCardNumber.yaml
   responses:
     '200':
       description: Data Found
@@ -16,7 +16,7 @@ get:
           schema:
             type: array
             items:
-              $ref: ../../models/subscriber/BasicSubscriberWithActivePackageComponent.v1.yaml
+              $ref: ../../models/subscriber/BasicSubscriberWithActivePackageComponent.yaml
     '400':
       description: Bad request.
     '401':

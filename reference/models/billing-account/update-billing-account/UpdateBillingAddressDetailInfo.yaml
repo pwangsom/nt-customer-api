@@ -4,7 +4,7 @@ x-tags:
   - UpdateBillingAddressDetailInfo
 properties:
   billing_address_reference_info:
-    $ref: UpdateBillingAddressReferenceInfo.v1.yaml
+    $ref: UpdateBillingAddressReferenceInfo.yaml
   salutation_lkp:
     type: string
     format: number

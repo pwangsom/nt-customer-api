@@ -3,14 +3,14 @@ anyOf:
   - type: object
     properties:
       general_info:
-        $ref: UpdateBillingGeneralInfo.v1.yaml
+        $ref: UpdateBillingGeneralInfo.yaml
   - type: object
     properties:
       more_info:
-        $ref: UpdateBillingMoreInfo.v1.yaml
+        $ref: UpdateBillingMoreInfo.yaml
   - type: object
     properties:
       egp_info:
-        $ref: UpdateBillingEgpInfo.v1.yaml
+        $ref: UpdateBillingEgpInfo.yaml
 x-tags:
   - UpdateBillingAnyOfInfo

@@ -8,20 +8,20 @@ post:
     content:
       application/json:
         schema:
-          $ref: ../../models/billing-account/new-billing-account/NewBillingAccount.v1.yaml
+          $ref: ../../models/billing-account/new-billing-account/NewBillingAccount.yaml
   responses:
     '200':
       description: Operation success
       content:
         application/json:
           schema:
-            $ref: ../../models/common/OperationSuccess.v1.yaml
+            $ref: ../../models/common/OperationSuccess.yaml
     '400':
       description: Bad request.
       content:
         application/json:
           schema:
-            $ref: ../../models/common/OperationFailed.v1.yaml
+            $ref: ../../models/common/OperationFailed.yaml
     '401':
       description: Authorization information is missing or invalid.
     '404':
@@ -29,6 +29,6 @@ post:
       content:
         application/json:
           schema:
-            $ref: ../../models/common/OperationFailed.v1.yaml      
+            $ref: ../../models/common/OperationFailed.yaml      
     '500':
       description: Unexpected error.            

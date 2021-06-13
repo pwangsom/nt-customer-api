@@ -3,7 +3,7 @@ type: object
 properties:
   invoice_type_lkp:
     allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
+      - $ref: ../common/DisplayLookup.yaml
     description: Invoice type
     example:
       lookup_ref_id: '1'
@@ -11,7 +11,7 @@ properties:
       lookup_category_name: invoice_type_lkp
   carrier_type_lkp:
     allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
+      - $ref: ../common/DisplayLookup.yaml
     description: Carrier type
     example:
       lookup_ref_id: '1'
@@ -36,7 +36,7 @@ properties:
     description: Service type
   statement_parent_lkp:
     allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
+      - $ref: ../common/DisplayLookup.yaml
     description: Statement parent
     example:
       lookup_ref_id: '1'

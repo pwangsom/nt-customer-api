@@ -4,15 +4,15 @@ allOf:
   properties:
     payment_method_lkp:
       allOf:
-        - $ref: ../common/DisplayLookup.v1.yaml
+        - $ref: ../common/DisplayLookup.yaml
       description: Payment method
       example:
         lookup_ref_id: '1'
         display_value: Cash
         lookup_category_name: payment_method_lkp
 - oneOf:
-  - $ref: PaymentMethodBankAccount.v1.yaml
-  - $ref: PaymentMethodCreditCard.v1.yaml
-  - $ref: PaymentEmployeePayroll.v1.yaml
+  - $ref: PaymentMethodBankAccount.yaml
+  - $ref: PaymentMethodCreditCard.yaml
+  - $ref: PaymentEmployeePayroll.yaml
 x-tags:
   - BillingPaymentMethodInfo

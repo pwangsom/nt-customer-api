@@ -13,7 +13,7 @@ properties:
     description: Reference up-to-date time 
   address_type_lkp:
     allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
+      - $ref: ../common/DisplayLookup.yaml
     description: ประเภทที่อยู่ เช่น Home Office
     example:
       lookup_ref_id: '1'
@@ -21,7 +21,7 @@ properties:
       lookup_category_name: 'address_type_lkp'
   address_country_lkp:
     allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
+      - $ref: ../common/DisplayLookup.yaml
     description: ประเทศ
     example:
       lookup_ref_id: '1'

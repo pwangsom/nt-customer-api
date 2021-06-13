@@ -4,7 +4,7 @@ get:
   summary: Get Customer Info by Telephone Number.
   tags: []
   parameters:
-    - $ref: ../../parameters/TelephoneNumber.v1.yaml
+    - $ref: ../../parameters/TelephoneNumber.yaml
   responses:
     '200':
       description: Data Found
@@ -13,7 +13,7 @@ get:
           schema:
             type: array
             items:
-              $ref: ../../models/customer-account/CustomerAccount.v1.yaml         
+              $ref: ../../models/customer-account/CustomerAccount.yaml         
     '400':
       description: Bad request.
     '401':

@@ -7,7 +7,7 @@ get:
   summary: Get Customer Info by Email Address.
   tags: []
   parameters:
-    - $ref: ../../parameters/EmailAddress.v1.yaml
+    - $ref: ../../parameters/EmailAddress.yaml
   responses:
     '200':
       description: Data Found
@@ -16,7 +16,7 @@ get:
           schema:
             type: array
             items:
-              $ref: ../../models/customer-account/CustomerAccount.v1.yaml         
+              $ref: ../../models/customer-account/CustomerAccount.yaml         
     '400':
       description: Bad request.
     '401':

@@ -4,7 +4,7 @@ properties:
   new_package_list:
     type: array
     items:
-      $ref: ../subscriber/new-subscriber/NewSubscriberPackage.v1.yaml
+      $ref: ../subscriber/new-subscriber/NewSubscriberPackage.yaml
 required:
   - new_package_list
 x-tags:

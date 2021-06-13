@@ -3,7 +3,7 @@ type: object
 properties:
   id_card_type_lkp:
     allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
+      - $ref: ../common/DisplayLookup.yaml
     description: ประเภทเอกสาร
     example:
       lookup_ref_id: '1'

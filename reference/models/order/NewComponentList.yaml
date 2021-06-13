@@ -6,6 +6,6 @@ properties:
   new_component_list:
     type: array
     items:
-      $ref: ../subscriber/new-subscriber/NewSubscriberComponent.v1.yaml
+      $ref: ../subscriber/new-subscriber/NewSubscriberComponent.yaml
 required:
   - new_component_list

@@ -2,11 +2,11 @@ title: UpdateOrganizationGeneralInfo
 type: object
 properties:
   client_info:
-    $ref: ../../common/RequestClientInfo.v1.yaml
+    $ref: ../../common/RequestClientInfo.yaml
   customer_reference_info:
-    $ref: UpdateCustomerReference.v1.yaml
+    $ref: UpdateCustomerReference.yaml
   general_info:
-    $ref: OrganizationGeneralInfo.v1.yaml
+    $ref: OrganizationGeneralInfo.yaml
 required:
   - client_info
   - reference_info

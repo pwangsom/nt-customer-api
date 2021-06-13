@@ -3,7 +3,7 @@ type: object
 properties:
   customer_segment_lkp:
     allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
+      - $ref: ../common/DisplayLookup.yaml
     description: Customer Segment (ลูกค้าบุคคล ลูกค้าเอกชน ลูกค้าผู้ประกอบการ และลูกค้าภาครัฐ)
     example:
       lookup_ref_id: '14'
@@ -11,7 +11,7 @@ properties:
       lookup_category_name: 'customer_segment_lkp'
   customer_group_lkp:
     allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
+      - $ref: ../common/DisplayLookup.yaml
     description: Customer group
     example:
       lookup_ref_id: '25'
@@ -19,7 +19,7 @@ properties:
       lookup_category_name: 'customer_group_lkp'
   currency_lkp:
     allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
+      - $ref: ../common/DisplayLookup.yaml
     description: Default currency
     example:
       lookup_ref_id: '1'
@@ -27,7 +27,7 @@ properties:
       lookup_category_name: 'currency_lkp'
   language_lkp:
     allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
+      - $ref: ../common/DisplayLookup.yaml
     description: Default language
     example:
       lookup_ref_id: '1'
@@ -43,7 +43,7 @@ properties:
     description: VIP customer for debt department.
   black_list_lkp:
     allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
+      - $ref: ../common/DisplayLookup.yaml
     description: Black list
     example:
       lookup_ref_id: '1'
@@ -51,7 +51,7 @@ properties:
       lookup_category_name: black_list_lkp
   collection_treatment_lkp:
     allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
+      - $ref: ../common/DisplayLookup.yaml
     description: Collection treatment
     example:
       lookup_ref_id: '1'
@@ -59,7 +59,7 @@ properties:
       lookup_category_name: collection_treatment_lkp
   related_party_lkp:
     allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
+      - $ref: ../common/DisplayLookup.yaml
     description: ประเภทความสัมพันธ์กัน
     example:
       lookup_ref_id: '1'
@@ -75,7 +75,7 @@ properties:
     description: Internal customer flag.
   original_data_owner_lkp:
     allOf:
-      - $ref: ../common/DisplayLookup.v1.yaml
+      - $ref: ../common/DisplayLookup.yaml
     description: ต้นฉบับข้อมูลลูกค้า
     example:
       lookup_ref_id: '1'

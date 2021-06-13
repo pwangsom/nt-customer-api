@@ -4,7 +4,7 @@ get:
   summary: Get Basic Subscriber with Active Pakages and Components by Telephone Number.
   tags: []
   parameters:
-    - $ref: ../../parameters/TelephoneNumber.v1.yaml
+    - $ref: ../../parameters/TelephoneNumber.yaml
   responses:
     '200':
       description: Data Found
@@ -13,7 +13,7 @@ get:
           schema:
             type: array
             items:
-              $ref: ../../models/subscriber/BasicSubscriberWithActivePackageComponent.v1.yaml
+              $ref: ../../models/subscriber/BasicSubscriberWithActivePackageComponent.yaml
     '400':
       description: Bad request.
     '401':

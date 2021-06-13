@@ -4,8 +4,8 @@ get:
   summary: Get Customer Info by ID Card Number and BA Number.
   tags: []
   parameters:
-    - $ref: ../../parameters/IdCardNumber.v1.yaml
-    - $ref: ../../parameters/BillAcctNumber.v1.yaml
+    - $ref: ../../parameters/IdCardNumber.yaml
+    - $ref: ../../parameters/BillAcctNumber.yaml
   responses:
     '200':
       description: Data Found
@@ -14,7 +14,7 @@ get:
           schema:
             type: array
             items:
-              $ref: ../../models/customer-account/CustomerAccount.v1.yaml         
+              $ref: ../../models/customer-account/CustomerAccount.yaml         
     '400':
       description: Bad request.
     '401':

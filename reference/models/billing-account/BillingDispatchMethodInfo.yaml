@@ -6,26 +6,26 @@ properties:
     properties:
       dispatch_method_lkp:
         allOf:
-          - $ref: ../common/DisplayLookup.v1.yaml
+          - $ref: ../common/DisplayLookup.yaml
         description: Billing dispatch method
         example:
           lookup_ref_id: '1'
           display_value: Printing & Email
           lookup_category_name: dispatch_method_lkp
       email_address_info:
-        $ref: BillingEmail.v1.yaml
+        $ref: BillingEmail.yaml
   vat_dispatch_method:
     type: object
     properties:
       vat_dispatch_method_lkp:
         allOf:
-          - $ref: ../common/DisplayLookup.v1.yaml
+          - $ref: ../common/DisplayLookup.yaml
         description: VAT dispatch method
         example:
           lookup_ref_id: '1'
           display_value: Printing & Email
           lookup_category_name: dispatch_method_lkp
       email_address_info:
-        $ref: BillingEmail.v1.yaml
+        $ref: BillingEmail.yaml
 x-tags:
   - BillingDispatchMethodInfo

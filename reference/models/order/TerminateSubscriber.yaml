@@ -4,9 +4,9 @@ x-tags:
   - TerminateSubscriber
 properties:
   client_info:
-    $ref: ../common/RequestClientInfo.v1.yaml
+    $ref: ../common/RequestClientInfo.yaml
   subscriber_reference_info:
-    $ref: SubscriberInfo.v1.yaml
+    $ref: SubscriberInfo.yaml
   order_info:
     type: object
     required:

@@ -4,7 +4,7 @@ get:
   summary: Get Invoice Info by Invoice Number.
   tags: []
   parameters:
-    - $ref: ../../parameters/InvoiceNumber.v1.yaml  
+    - $ref: ../../parameters/InvoiceNumber.yaml  
   responses:
     '200':
       description: Data Found
@@ -13,7 +13,7 @@ get:
           schema:
             type: array
             items:
-              $ref: ../../models/invoice-payment/Invoice.v1.yaml   
+              $ref: ../../models/invoice-payment/Invoice.yaml   
     '400':
       description: Bad request.
     '401':

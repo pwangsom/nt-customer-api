@@ -14,7 +14,7 @@ get:
           schema:
             type: array
             items:
-              $ref: ../../models/common/Lookup.v1.yaml
+              $ref: ../../models/common/Lookup.yaml
     '400':
       description: Bad request.
     '401':

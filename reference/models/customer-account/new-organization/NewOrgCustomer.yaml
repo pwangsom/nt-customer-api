@@ -4,13 +4,13 @@ x-tags:
   - NewOrgCustomer
 properties:
   client_info:
-    $ref: ../../common/RequestClientInfo.v1.yaml
+    $ref: ../../common/RequestClientInfo.yaml
   id_card_info:
-    $ref: NewOrgCustomerCard.v1.yaml
+    $ref: NewOrgCustomerCard.yaml
   customer_acct_type:
-    $ref: NewOrganization.v1.yaml
+    $ref: NewOrganization.yaml
   general_info:
-    $ref: ../NewCustomerGenericInfo.v1.yaml
+    $ref: ../NewCustomerGenericInfo.yaml
   address:
     $ref: ../../address/NewPrimaryAddress.yaml
   telephone:

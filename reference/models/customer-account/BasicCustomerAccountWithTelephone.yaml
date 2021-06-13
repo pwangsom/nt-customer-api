@@ -1,6 +1,6 @@
 title: BasicCustomerAccountWithTelephone
 allOf:
-  - $ref: BasicCustomerAccount.v1.yaml
+  - $ref: BasicCustomerAccount.yaml
   - type: object
     properties:
       telephone_list:

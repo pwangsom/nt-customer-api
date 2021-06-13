@@ -1,6 +1,6 @@
 title: BasicSubscriberWithActivePackageComponent
 allOf:
-  - $ref: BasicSubscriber.v1.yaml
+  - $ref: BasicSubscriber.yaml
   - type: object
     properties:
       active_package_component:
@@ -11,10 +11,10 @@ allOf:
       package_list:
         type: array
         items:
-          $ref: Package.v1.yaml
+          $ref: Package.yaml
       component_list:
         type: array
         items:
-          $ref: Component.v1.yaml
+          $ref: Component.yaml
 x-tags:
   - BasicSubscriberWithActivePackageComponent

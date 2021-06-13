@@ -4,8 +4,8 @@ get:
   summary: Get a Payment Tran by Invoice Number and Tracking ID.
   tags: []
   parameters:
-    - $ref: ../../parameters/InvoiceNumber.v1.yaml  
-    - $ref: ../../parameters/TrackingId.v1.yaml  
+    - $ref: ../../parameters/InvoiceNumber.yaml  
+    - $ref: ../../parameters/TrackingId.yaml  
   responses:
     '200':
       description: Data Found
@@ -14,7 +14,7 @@ get:
           schema:
             type: array
             items:
-              $ref: ../../models/invoice-payment/PaymentTransaction.v1.yaml
+              $ref: ../../models/invoice-payment/PaymentTransaction.yaml
     '400':
       description: Bad request.
     '401':
