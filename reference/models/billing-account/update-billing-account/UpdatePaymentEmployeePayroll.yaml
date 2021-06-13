@@ -1,10 +1,10 @@
 title: UpdatePaymentEmployeePayroll
 type: object
 properties:
-  payment_method_type:
+  payment_method_lkp:
     type: string
     enum:
-      - UpdatePaymentEmployeePayroll
+      - '2'
     description: รูปแบบการชำระเงินแบบหักผ่านบัญชีเงินเดือน
   payroll_employee_code:
     type: string
@@ -15,6 +15,5 @@ properties:
     example: สมชาย เจริญยิ่ง
     description: ชื่อ-นามสกุลพนักงานที่ถูกหักบัญชี
 required:
-  - payment_method_type
+  - payment_method_lkp
   - payroll_employee_code
-  - payroll_employee_name

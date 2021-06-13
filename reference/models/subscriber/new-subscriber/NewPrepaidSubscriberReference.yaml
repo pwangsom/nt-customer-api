@@ -1,4 +1,4 @@
-title: NewPrepaidSubscriberReference.v1
+title: NewPrepaidSubscriberReference
 type: object
 properties:
   customer_acct_number:

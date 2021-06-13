@@ -1,8 +1,10 @@
 title: UpdatePaymentCash
 type: object
 properties:
-  payment_method_type:
+  payment_method_lkp:
     type: string
     enum:
-      - UpdatePaymentCash
+      - '1'
     description: รูปแบบการชำระเงินแบบเงินสด
+required:
+  - payment_method_lkp

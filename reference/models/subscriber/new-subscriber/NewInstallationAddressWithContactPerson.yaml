@@ -1,7 +1,7 @@
 title: NewInstallationAddressWithContactPerson
-allOf:
-  - $ref: NewInstallationAddress.yaml
-  - type: object
-    properties:
-      contact_person_info:
-        $ref: ../../contact-person/new-contact-person/NewBasicContactPersonInstallationAddress.yaml
+type: object
+properties:
+  address_info:
+    $ref: ../../address/NewOptionalAddress.yaml
+  contact_person_info:
+    $ref: ../../contact-person/new-contact-person/NewBasicContactPersonInstallationAddress.yaml

@@ -1,15 +1,11 @@
 title: UpdatePaymentCreditCard
 type: object
 properties:
-  payment_method_type:
-    type: string
-    enum:
-      - UpdatePaymentCreditCard
-    description: รูปแบบการชำระเงินแบบหักผ่านบัตรเครดิต
   payment_method_lkp:
     type: string
-    format: number
-    example: '1'
+    enum:
+      - '3'
+      - '4'
     description: 'payment_method_lkp (Direct Credit, Direct Credit + WT)'
   credit_carrier_lkp:
     type: string
@@ -27,7 +23,6 @@ properties:
     example: '0725'
     description: Credit card expiration (MMYY)
 required:
-  - payment_method_type
   - payment_method_lkp
   - credit_carrier_lkp
   - credit_card_number

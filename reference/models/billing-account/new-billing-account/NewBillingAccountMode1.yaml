@@ -23,7 +23,7 @@ properties:
   dispatch_method_info:
     $ref: NewBillingDispatchMethodInfo.yaml
   billing_address_list:
-    $ref: NewBillingAddress.v2.yaml
+    $ref: NewBillingAddress.yaml
   more_info:
     $ref: NewBillingMoreInfo.yaml
   egp_info:
