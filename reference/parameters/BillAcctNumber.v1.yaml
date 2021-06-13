@@ -1,8 +1,0 @@
-name: bill_acct_number
-in: path
-required: true
-description: หมายเลข BA
-schema:
-  type: string
-  format: number
-  example: '12254127'

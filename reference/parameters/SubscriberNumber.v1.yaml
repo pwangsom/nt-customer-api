@@ -1,7 +1,0 @@
-name: subscriber_number
-in: path
-required: true
-description: หมายเลข Subscriber
-schema:
-  type: string
-  example: '882952859'

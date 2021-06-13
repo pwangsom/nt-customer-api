@@ -1,9 +1,0 @@
-name: invoice_record
-in: path
-required: true
-description: Record of Invoice
-schema:
-  type: integer
-  example: 1
-  minimum: 1
-  maximum: 12

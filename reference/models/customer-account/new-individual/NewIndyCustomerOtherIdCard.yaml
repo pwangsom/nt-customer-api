@@ -1,0 +1,30 @@
+title: NewIndyCustomerOtherIdCard
+type: object
+properties:
+  indy_id_card_type:
+    type: string
+    enum:
+      - NewIndyCustomerOtherIdCard
+    description: เอกสารประเภทอื่นที่ไม่ใช่บัตรประชาชน
+  id_card_type_lkp:
+    type: string
+    format: number
+    example: '6'
+    description: ประเภทเอกสารของลูกค้า
+  id_card_number:
+    type: string
+    example: '1234567890123'
+    description: หมายเลขเอกสารของลูกค้า
+  tax_number:
+    type: string
+    example: '1234567890123'
+    description: หมายเลขประจำตัวผู้เสียภาษี
+  branch_id:
+    type: string
+    example: '00000'
+    description: หมายเลขประจำสาขา 5 หลัก
+required:
+  - indy_id_card_type
+  - id_card_type_lkp
+x-tags:
+  - NewIndyCustomerOtherIdCard

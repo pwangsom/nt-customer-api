@@ -1,0 +1,25 @@
+get:
+  operationId: I04
+  description: Retrieve payment info by invoice_number and tracking_id
+  summary: Get a Payment Tran by Invoice Number and Tracking ID.
+  tags: []
+  parameters:
+    - $ref: ../../parameters/InvoiceNumber.v1.yaml  
+    - $ref: ../../parameters/TrackingId.v1.yaml  
+  responses:
+    '200':
+      description: Data Found
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../../models/invoice-payment/PaymentTransaction.v1.yaml
+    '400':
+      description: Bad request.
+    '401':
+      description: Authorization information is missing or invalid.
+    '404':
+      description: Data was not found.
+    '500':
+      description: Unexpected error.

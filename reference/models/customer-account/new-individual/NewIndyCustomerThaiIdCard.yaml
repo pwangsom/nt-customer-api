@@ -1,0 +1,17 @@
+title: NewIndyCustomerThaiIdCard
+type: object
+properties:
+  indy_id_card_type:
+    type: string
+    enum:
+      - NewIndyCustomerThaiIdCard
+    description: บัตรประชาชน
+  id_card_number:
+    type: string
+    example: '1234567890123'
+    description: หมายเลขบัตรประชาชน 13 หลัก ตามรูปแบบของกรมการปกครอง
+required:
+  - indy_id_card_type
+  - id_card_number
+x-tags:
+  - NewIndyCustomerThaiIdCard
