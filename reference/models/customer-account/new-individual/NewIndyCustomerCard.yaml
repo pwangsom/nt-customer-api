@@ -2,7 +2,7 @@ title: NewIndyCustomerCard
 oneOf:
   - type: object
     properties:
-      id_card_th:
+      id_card_th_citizen:
         $ref: NewIndyCustomerThaiIdCard.yaml
   - type: object
     properties:

@@ -1,17 +1,10 @@
 title: NewOrgCustomerCard
-allOf:
-  - oneOf:
-      - $ref: NewOrgCustomerTaxIdCard.yaml
-      - $ref: NewOrgCustomerOtherIdCard.yaml
+oneOf:
   - type: object
     properties:
-      id_card_issued_by:
-        type: string
-        example: เขตหลักสี่
-        description: หน่วยงานที่ออกเอกสาร
-      id_card_expired_date:
-        type: string
-        format: date
-        example: '2030-02-02'
-        description: วันหมดอายุของเอกสาร
-
+      id_card_tax:
+        $ref: NewOrgCustomerTaxIdCard.yaml
+  - type: object
+    properties:
+      id_card_general:
+        $ref: NewOrgCustomerGeneralIdCard.yaml
