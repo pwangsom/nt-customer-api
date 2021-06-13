@@ -14,5 +14,3 @@ properties:
 required:
   - bill_acct_number
   - reference_time
-x-tags:
-  - UpdateBillingReferenceInfo

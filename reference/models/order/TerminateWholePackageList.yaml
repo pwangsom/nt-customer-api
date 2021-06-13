@@ -1,7 +1,5 @@
 title: TerminateWholePackageList
 type: object
-x-tags:
-  - TerminateWholePackageList
 properties:
   terminate_whole_package_list:
     type: array

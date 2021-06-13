@@ -14,5 +14,3 @@ properties:
     format: number
     example: '12254127'
     description: BA number
-x-tags:
-  - NewSubscriberReference

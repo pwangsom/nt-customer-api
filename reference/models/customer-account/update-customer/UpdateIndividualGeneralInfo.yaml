@@ -1,7 +1,5 @@
 title: UpdateIndividualInfo
 type: object
-x-tags:
-  - UpdateIndividualInfo
 properties:
   client_info:
     $ref: ../../common/RequestClientInfo.yaml

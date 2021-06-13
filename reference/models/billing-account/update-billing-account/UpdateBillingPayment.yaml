@@ -10,5 +10,3 @@ allOf:
       - client_info
       - billing_reference_info
   - $ref: UpdateBillingPaymentInfo.yaml
-x-tags:
-  - UpdateBillingPayment

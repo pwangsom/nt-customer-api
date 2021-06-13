@@ -40,5 +40,3 @@ properties:
     type: string
     example: G001
     description: รหัสหน่วยงานราชการ
-x-tags:
-  - Organization

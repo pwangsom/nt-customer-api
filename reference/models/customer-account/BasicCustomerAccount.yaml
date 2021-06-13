@@ -19,5 +19,3 @@ properties:
     $ref: IdCardInfo.yaml
   generic_info:
     $ref: CustomerGenericInfo.yaml
-x-tags:
-  - BasicCustomerAccount

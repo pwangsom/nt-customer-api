@@ -14,5 +14,3 @@ properties:
     type: string
     example: สมชาย เจริญยิ่ง
     description: ชื่อ-นามสกุลพนักงานที่ถูกหักบัญชี
-x-tags:
-  - PaymentEmployeePayroll

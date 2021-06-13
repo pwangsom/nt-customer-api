@@ -1,7 +1,5 @@
 title: TerminateSubscriber
 type: object
-x-tags:
-  - TerminateSubscriber
 properties:
   client_info:
     $ref: ../common/RequestClientInfo.yaml

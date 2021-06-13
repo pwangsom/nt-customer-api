@@ -7,5 +7,3 @@ allOf:
         type: array
         items:
           $ref: ../email-social/SocialAccount.yaml
-x-tags:
-  - BasicCustomerAccountWithSocial

@@ -10,5 +10,3 @@ allOf:
     required:
       - component_id
   - $ref: DisplayProduct.yaml
-x-tags:
-  - Component

@@ -13,5 +13,3 @@ properties:
     format: date-time
     example: '2016-08-29T09:12:33.001Z'
     description: วันที่มีผลต่อการใช้งาน
-x-tags:
-  - NewSubscriberOrder

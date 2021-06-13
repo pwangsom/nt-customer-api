@@ -1,7 +1,5 @@
 title: UpdateIndividualIdCard
 type: object
-x-tags:
-  - UpdateIndividualIdCard
 properties:
   client_info:
     $ref: ../../common/RequestClientInfo.yaml

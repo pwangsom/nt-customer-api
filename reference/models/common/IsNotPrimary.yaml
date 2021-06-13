@@ -8,5 +8,3 @@ properties:
     description: ไม่เป็นข้อมูลหลัก
 required:
   - is_primary
-x-tags:
-  - IsNotPrimary

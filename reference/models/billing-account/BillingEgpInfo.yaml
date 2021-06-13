@@ -23,5 +23,3 @@ properties:
     type: string
     example: '1'
     description: e-GP value
-x-tags:
-  - BillingEgpInfo

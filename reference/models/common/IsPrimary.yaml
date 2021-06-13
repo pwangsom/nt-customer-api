@@ -8,5 +8,3 @@ properties:
     description: ข้อมูลหลัก
 required:
   - is_primary
-x-tags:
-  - IsPrimary

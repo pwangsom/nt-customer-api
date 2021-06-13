@@ -1,7 +1,5 @@
 title: PrepaidOverUsageCharge
 type: object
-x-tags:
-  - PrepaidOverUsageCharge
 properties:
   usage_date:
     type: string

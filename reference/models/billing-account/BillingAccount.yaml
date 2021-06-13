@@ -34,5 +34,3 @@ properties:
     $ref: BillingMoreInfo.yaml
   egp_info:
     $ref: BillingEgpInfo.yaml
-x-tags:
-  - BillingAccount

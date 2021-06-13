@@ -14,5 +14,3 @@ properties:
 required:
   - component_part_number
   - start_date
-x-tags:
-  - NewSubscriberComponent

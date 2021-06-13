@@ -45,5 +45,3 @@ properties:
     type: integer
     example: 0
     description: my number (0 = No, 1 = Yes).
-x-tags:
-  - Telephone

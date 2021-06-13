@@ -1,7 +1,5 @@
 title: NewComponentList
 type: object
-x-tags:
-  - NewComponentList
 properties:
   new_component_list:
     type: array

@@ -4,5 +4,3 @@ oneOf:
   - $ref: UpdatePaymentEmployeePayroll.yaml
   - $ref: UpdatePaymentBankAccount.yaml
   - $ref: UpdatePaymentCreditCard.yaml
-x-tags:
-  - UpdateBillingPaymentInfo

@@ -10,5 +10,4 @@ allOf:
       - client_info
       - billing_reference_info
   - $ref: UpdateBillingDispatchMethodInfo.yaml
-x-tags:
-  - UpdateBillingDispatchMethod
+

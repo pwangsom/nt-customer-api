@@ -32,5 +32,3 @@ properties:
 required:
   - dispatch_method
   - vat_dispatch_method
-x-tags:
-  - NewBillingDispatchMethodInfo

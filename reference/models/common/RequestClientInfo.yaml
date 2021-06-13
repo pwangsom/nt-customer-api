@@ -1,7 +1,5 @@
 title: RequestClientInfo
 type: object
-x-tags:
-  - RequestClientInfo
 properties:
   client_trans_id:
     type: string

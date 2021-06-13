@@ -88,5 +88,3 @@ properties:
     type: string
     format: number
     example: '13.03135321643213'
-x-tags:
-  - BillingAddress

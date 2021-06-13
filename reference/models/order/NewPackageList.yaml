@@ -7,5 +7,3 @@ properties:
       $ref: ../subscriber/new-subscriber/NewSubscriberPackage.yaml
 required:
   - new_package_list
-x-tags:
-  - NewPackage

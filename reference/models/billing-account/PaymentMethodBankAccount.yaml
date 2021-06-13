@@ -23,5 +23,3 @@ properties:
     type: string
     example: 'Lak Si branch'
     description: Bank branch name
-x-tags:
-  - PaymentMethodBankAccount

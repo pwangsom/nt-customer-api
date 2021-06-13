@@ -27,5 +27,3 @@ properties:
           lookup_category_name: dispatch_method_lkp
       email_address_info:
         $ref: BillingEmail.yaml
-x-tags:
-  - BillingDispatchMethodInfo

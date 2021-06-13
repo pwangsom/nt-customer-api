@@ -29,5 +29,3 @@ allOf:
       - subscriber_reference_info
       - order_info
   - $ref: AddPackageComponentLitst.yaml
-x-tags:
-  - AddPackageComponent

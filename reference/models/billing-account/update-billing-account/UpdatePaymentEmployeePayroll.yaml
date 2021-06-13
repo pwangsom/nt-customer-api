@@ -1,7 +1,5 @@
 title: UpdatePaymentEmployeePayroll
 type: object
-x-tags:
-  - UpdatePaymentEmployeePayroll
 properties:
   payment_method_type:
     type: string

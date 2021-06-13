@@ -1,7 +1,5 @@
 title: NewBillingAddressIndyInfo
 type: object
-x-tags:
-  - NewBillingAddressIndyInfo
 properties:
   salutation_lkp:
     type: string

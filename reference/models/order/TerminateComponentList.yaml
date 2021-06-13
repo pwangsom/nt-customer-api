@@ -1,7 +1,5 @@
 title: TerminateComponentList
 type: object
-x-tags:
-  - TerminateComponentList
 properties:
   terminate_component_list:
     type: array

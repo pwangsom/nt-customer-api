@@ -24,5 +24,3 @@ required:
   - first_name
   - last_name
   - organization_name
-x-tags:
-  - NewBillingAddressIndyOrgInfo

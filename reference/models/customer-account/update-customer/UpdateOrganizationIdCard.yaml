@@ -1,7 +1,5 @@
 title: UpdateOrganizationIdCard
 type: object
-x-tags:
-  - UpdateOrganizationIdCard
 properties:
   client_info:
     $ref: ../../common/RequestClientInfo.yaml

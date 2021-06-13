@@ -30,5 +30,3 @@ properties:
     type: string
     example: '00000'
     description: หมายเลขประจำสาขา 5 หลัก
-x-tags:
-  - IdCardInfo

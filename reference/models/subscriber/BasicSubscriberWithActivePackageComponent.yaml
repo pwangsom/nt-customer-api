@@ -16,5 +16,3 @@ allOf:
         type: array
         items:
           $ref: Component.yaml
-x-tags:
-  - BasicSubscriberWithActivePackageComponent

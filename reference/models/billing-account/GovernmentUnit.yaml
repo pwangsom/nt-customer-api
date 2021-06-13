@@ -9,5 +9,3 @@ properties:
     type: string
     example: กระทรวงศึกษาธิการ
     description: Government name
-x-tags:
-  - GovernmentUnit

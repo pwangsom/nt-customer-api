@@ -27,5 +27,3 @@ required:
   - package_part_number
   - start_date
   - component_list
-x-tags:
-  - NewSubscriberPackage

@@ -27,5 +27,3 @@ properties:
         - start_date
 required:
   - new_compoenent_current_package_list
-x-tags:
-  - NewComponentCurrentPackage

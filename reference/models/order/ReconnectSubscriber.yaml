@@ -1,7 +1,5 @@
 title: ReconnectSubscriber
 type: object
-x-tags:
-  - ReconnectSubscriber
 properties:
   client_info:
     $ref: ../common/RequestClientInfo.yaml

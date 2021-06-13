@@ -1,7 +1,5 @@
 title: Invoice
 type: object
-x-tags:
-  - Invoice
 properties:
   invoice_number:
     type: string

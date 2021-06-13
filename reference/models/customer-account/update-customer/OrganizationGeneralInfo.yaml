@@ -50,5 +50,3 @@ properties:
     type: string
     example: '1'
     description: Default is Thai.
-x-tags:
-  - OrganizationGeneralInfo

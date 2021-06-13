@@ -50,5 +50,3 @@ properties:
     type: string
     example: '1'
     description: PPM number
-x-tags:
-  - BillingMoreInfo

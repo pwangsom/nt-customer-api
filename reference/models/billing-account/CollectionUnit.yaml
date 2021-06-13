@@ -9,5 +9,3 @@ properties:
     type: string
     example: 0000 คต.
     description: Collection unit name
-x-tags:
-  - CollectionUnit

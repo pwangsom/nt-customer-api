@@ -3,5 +3,3 @@ anyOf:
   - $ref: NewPackageList.yaml
   - $ref: NewComponentCurrentPackageList.yaml
   - $ref: NewComponentList.yaml
-x-tags:
-  - AddPackageComponentLitst

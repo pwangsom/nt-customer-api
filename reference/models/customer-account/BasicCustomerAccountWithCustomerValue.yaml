@@ -2,5 +2,3 @@ title: BasicCustomerAccountWithCustomerValue
 allOf:
   - $ref: BasicCustomerAccount.yaml
   - $ref: CustomerValue.yaml
-x-tags:
-  - BasicCustomerAccountWithCustomerValue

@@ -10,5 +10,3 @@ allOf:
       - client_info
       - billing_reference_info
   - $ref: AddOptionalBillingAddressInfo.yaml
-x-tags:
-  - AddOptionalBillingAddress

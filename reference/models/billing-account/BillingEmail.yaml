@@ -23,5 +23,3 @@ properties:
     type: string
     example: abc@def.com
     description: อีเมล์
-x-tags:
-  - BillingEmail

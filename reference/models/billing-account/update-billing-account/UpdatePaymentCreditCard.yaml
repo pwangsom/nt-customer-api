@@ -1,7 +1,5 @@
 title: UpdatePaymentCreditCard
 type: object
-x-tags:
-  - UpdatePaymentCreditCard
 properties:
   payment_method_type:
     type: string

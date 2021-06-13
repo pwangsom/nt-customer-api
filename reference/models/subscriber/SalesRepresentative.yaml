@@ -9,5 +9,3 @@ properties:
     type: string
     example: สมชาย เจริญยิ่ง
     description: Sales employee name
-x-tags:
-  - SalesRepresentative

@@ -14,5 +14,3 @@ allOf:
     required:
       - package_id
   - $ref: DisplayProduct.yaml
-x-tags:
-  - Package

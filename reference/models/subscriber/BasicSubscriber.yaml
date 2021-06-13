@@ -18,5 +18,3 @@ properties:
     description: BA number
   general_info:
     $ref: SubscriberGeneralInfo.yaml
-x-tags:
-  - BasicSubscriber

@@ -1,7 +1,5 @@
 title: ErrorInfo
 type: object
-x-tags:
-  - ErrorInfo
 properties:
   error_type:
     type: string

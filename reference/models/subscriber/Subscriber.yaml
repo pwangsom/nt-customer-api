@@ -19,5 +19,3 @@ allOf:
         type: array
         items:
           $ref: InstallationAddress.yaml
-x-tags:
-  - Subscriber

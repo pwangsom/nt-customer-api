@@ -29,5 +29,3 @@ required:
   - order_info
   - general_info
   - package_list
-x-tags:
-  - NewPrepaidSubscriber

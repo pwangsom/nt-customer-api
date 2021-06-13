@@ -1,7 +1,5 @@
 title: ChangeSubscriberProperty
 type: object
-x-tags:
-  - ChangeSubscriberProperty
 properties:
   client_info:
     $ref: ../common/RequestClientInfo.yaml

@@ -12,5 +12,4 @@ properties:
 required:
   - reference_type
   - reference_id
-x-tags:
-  - ReferenceInfo
+  

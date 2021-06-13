@@ -24,5 +24,3 @@ properties:
     format: number
     example: '0725'
     description: Credit card expiration (MMYY)
-x-tags:
-  - PaymentMethodCreditCard

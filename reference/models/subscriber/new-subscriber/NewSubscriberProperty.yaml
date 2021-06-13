@@ -1,7 +1,5 @@
 title: NewSubscriberProperty
 type: object
-x-tags:
-  - NewSubscriberProperty
 properties:
   property_key:
     type: string

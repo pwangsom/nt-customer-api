@@ -12,5 +12,3 @@ anyOf:
     properties:
       egp_info:
         $ref: UpdateBillingEgpInfo.yaml
-x-tags:
-  - UpdateBillingAnyOfInfo

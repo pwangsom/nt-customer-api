@@ -1,7 +1,5 @@
 title: PaymentTransaction
 type: object
-x-tags:
-  - PaymentTransaction
 properties:
   tracking_id:
     type: string

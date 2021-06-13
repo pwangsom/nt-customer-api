@@ -1,7 +1,5 @@
 title: NewBillingGeneralInfo
 type: object
-x-tags:
-  - NewBillingGeneralInfo
 properties:
   active_date:
     type: string

@@ -1,7 +1,5 @@
 title: DisplayLookup
 type: object
-x-tags:
-  - DisplayLookup
 properties:
   lookup_ref_id:
     type: string

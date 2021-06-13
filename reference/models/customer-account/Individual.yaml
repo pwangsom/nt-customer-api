@@ -60,5 +60,4 @@ properties:
     type: string
     example: '12345678'
     description: รหัสประจำตัวพนักงาน กรณีที่ลูกค้าเป็นพนักงานของ NT
-x-tags:
-  - Individual
+    

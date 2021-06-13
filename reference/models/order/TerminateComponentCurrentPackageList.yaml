@@ -1,7 +1,5 @@
 title: TerminateComponentCurrentPackageList
 type: object
-x-tags:
-  - TerminateComponentCurrentPackageList
 properties:
   terminate_compoenent_current_package_list:
     type: array

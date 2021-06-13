@@ -16,5 +16,3 @@ properties:
     type: array
     items:
       $ref: ErrorInfo.yaml
-x-tags:
-  - OperationFailed

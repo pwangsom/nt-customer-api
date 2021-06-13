@@ -3,5 +3,3 @@ anyOf:
   - $ref: TerminateWholePackageList.yaml
   - $ref: TerminateComponentCurrentPackageList.yaml
   - $ref: TerminateComponentList.yaml
-x-tags:
-  - TerminatePackageComponentList

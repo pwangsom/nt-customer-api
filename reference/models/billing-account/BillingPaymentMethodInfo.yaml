@@ -14,5 +14,3 @@ allOf:
   - $ref: PaymentMethodBankAccount.yaml
   - $ref: PaymentMethodCreditCard.yaml
   - $ref: PaymentEmployeePayroll.yaml
-x-tags:
-  - BillingPaymentMethodInfo

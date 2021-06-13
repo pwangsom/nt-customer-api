@@ -26,5 +26,3 @@ allOf:
       - subscriber_reference_info
       - order_info
   - $ref: TerminatePackageComponentLits.yaml
-x-tags:
-  - TerminatePackageComponent

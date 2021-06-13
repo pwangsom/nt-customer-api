@@ -1,7 +1,5 @@
 title: InvoiceSubscirber
 type: object
-x-tags:
-  - InvoiceSubscirber
 properties:
   invoice_number:
     type: string
