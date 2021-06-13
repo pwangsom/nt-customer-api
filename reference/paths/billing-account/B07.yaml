@@ -8,7 +8,7 @@ post:
     content:
       application/json:
         schema:
-          $ref: ../../models/billing-account/new-billing-account/NewBillingAccountForCustomerDB.yaml
+          $ref: ../../models/billing-account/new-billing-account/NewBillingAccountMode1.yaml
   responses:
     '200':
       description: Operation success

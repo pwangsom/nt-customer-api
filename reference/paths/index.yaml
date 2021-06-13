@@ -106,8 +106,14 @@
 '/billing/{bill_acct_number}/invoice/{invoice_record}':
   $ref: billing-account/B05.yaml
 
-'/billing/create/{mode}':
+'/billing/create/1':
+  $ref: billing-account/B07.yaml
+
+'/billing/create/2':
   $ref: billing-account/B08.yaml
+
+'/billing/create/3':
+  $ref: billing-account/B06.yaml
 
 '/billing/{bill_acct_number}/info/update/{mode}':
   $ref: billing-account/B11.yaml

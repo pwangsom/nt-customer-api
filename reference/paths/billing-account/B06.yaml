@@ -1,7 +1,7 @@
 post:
   operationId: B06
-  description: Create a billing account in both Billing and Customer DB
-  summary: Create a Billing Account in Both Billing and Customer DB.
+  description: Create a billing account in both Billing System and Customer DB
+  summary: Create a Billing Account in Both Billing System and Customer DB.
   tags: []
   requestBody:
     required: true
