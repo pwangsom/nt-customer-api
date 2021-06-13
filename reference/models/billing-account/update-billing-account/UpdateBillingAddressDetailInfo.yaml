@@ -1,7 +1,5 @@
 title: UpdateBillingAddressDetailInfo
 type: object
-x-tags:
-  - UpdateBillingAddressDetailInfo
 properties:
   billing_address_reference_info:
     $ref: UpdateBillingAddressReferenceInfo.yaml

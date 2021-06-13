@@ -1,7 +1,5 @@
 title: NewOrgCustomerOtherIdCard
 type: object
-x-tags:
-  - NewOrgCustomerOtherIdCard
 properties:
   org_id_card_type:
     type: string

@@ -1,4 +1,4 @@
-title: NewIndyCustomerOtherIdCard.v2
+title: NewIndyCustomerGeneralIdCard
 type: object
 properties:
   id_card_type_lkp:
@@ -18,5 +18,14 @@ properties:
     type: string
     example: '00000'
     description: หมายเลขประจำสาขา 5 หลัก
+  id_card_issued_by:
+    type: string
+    example: 'เขตหลักสี่'
+    description: หน่วยงานที่ออกเอกสาร
+  id_card_expired_date:
+    type: string
+    format: date
+    example: '2030-02-02'
+    description: วันหมดอายุของเอกสาร    
 required:
   - id_card_type_lkp

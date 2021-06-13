@@ -1,7 +1,5 @@
 title: NewOrgCustomer
 type: object
-x-tags:
-  - NewOrgCustomer
 properties:
   client_info:
     $ref: ../../common/RequestClientInfo.yaml

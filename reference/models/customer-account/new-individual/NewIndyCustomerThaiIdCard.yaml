@@ -1,17 +1,24 @@
 title: NewIndyCustomerThaiIdCard
 type: object
 properties:
-  indy_id_card_type:
+  id_card_type_lkp:
     type: string
     enum:
-      - NewIndyCustomerThaiIdCard
-    description: บัตรประชาชน
+      - '1'
+    description: หมายเลขบัตรประชาชน
   id_card_number:
     type: string
     example: '1234567890123'
     description: หมายเลขบัตรประชาชน 13 หลัก ตามรูปแบบของกรมการปกครอง
+  id_card_issued_by:
+    type: string
+    example: 'เขตหลักสี่'
+    description: หน่วยงานที่ออกเอกสาร
+  id_card_expired_date:
+    type: string
+    format: date
+    example: '2030-02-02'
+    description: วันหมดอายุของเอกสาร
 required:
-  - indy_id_card_type
+  - id_card_type_lkp
   - id_card_number
-x-tags:
-  - NewIndyCustomerThaiIdCard

@@ -5,5 +5,4 @@ allOf:
     properties:
       telephone:
         $ref: ../telephone/Telephone.yaml
-x-tags:
-  - BasicContactPersonWithTelephone
+

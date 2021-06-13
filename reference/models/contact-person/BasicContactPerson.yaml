@@ -28,5 +28,3 @@ properties:
   last_name:
     type: string
     example: เจริญยิ่ง
-x-tags:
-  - BasicContactPerson

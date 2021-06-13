@@ -1,7 +1,5 @@
 title: NewOrganization
 type: object
-x-tags:
-  - NewOrganization
 properties:
   corp_type_lkp:
     type: string

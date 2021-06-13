@@ -21,5 +21,4 @@ required:
   - client_info
   - customer_acct_type
   - telephone
-x-tags:
-  - NewOrgProspect
+

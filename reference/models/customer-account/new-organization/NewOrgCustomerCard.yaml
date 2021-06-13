@@ -14,5 +14,4 @@ allOf:
         format: date
         example: '2030-02-02'
         description: วันหมดอายุของเอกสาร
-x-tags:
-  - NewOrgCustomerCard
+

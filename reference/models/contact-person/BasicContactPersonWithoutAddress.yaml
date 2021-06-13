@@ -9,5 +9,3 @@ allOf:
         $ref: ../email-social/Email.yaml
       social_account:
         $ref: ../email-social/SocialAccount.yaml
-x-tags:
-  - BasicContactPersonWithoutAddress

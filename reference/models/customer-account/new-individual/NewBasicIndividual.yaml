@@ -1,7 +1,5 @@
 title: NewBasicIndividual
 type: object
-x-tags:
-  - NewBasicIndividual
 properties:
   salutation_lkp:
     type: string

@@ -2,13 +2,13 @@ title: NewBillingAddressHeader
 oneOf:
   - type: object
     properties:
-      address_header_indy_info:
+      address_header_indy:
         $ref: NewBillingAddressIndyInfo.yaml
   - type: object
     properties:
-      address_header_org_info:
+      address_header_org:
         $ref: NewBillingAddressOrgInfo.yaml
   - type: object
     properties:
-      address_header_indy_org_info:
+      address_header_indy_org:
         $ref: NewBillingAddressIndyOrgInfo.yaml

@@ -11,5 +11,3 @@ allOf:
         $ref: ../../email-social/NewPrimarySocialAccount.yaml
     required:
       - telephone
-x-tags:
-  - NewBasicContactPersonInstallationAddress

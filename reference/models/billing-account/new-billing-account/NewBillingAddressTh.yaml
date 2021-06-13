@@ -1,6 +1,11 @@
 title: NewBillingAddressTh
 type: object
 properties:
+  address_country_lkp:
+    type: string
+    enum:
+      - '5'
+    description: ประเทศไทย
   house_number_moo_village:
     type: string
     example: 202/24 หมู่ 1 หมู่บ้านสราญสิริ
@@ -29,11 +34,18 @@ properties:
     type: string
     example: '11120'
     description: รหัสไปรษณีย์
+  latitude:
+    type: string
+    format: number
+    example: '13.03135321643213'
+  longtitude:
+    type: string
+    format: number
+    example: '13.03135321643213'    
 required:
+  - address_country_lkp
   - house_number_moo_village
   - subdistrict
   - district
   - province
   - postal_code
-x-tags:
-  - NewBillingAddressTh

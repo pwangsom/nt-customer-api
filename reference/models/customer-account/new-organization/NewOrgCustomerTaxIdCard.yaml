@@ -18,5 +18,3 @@ required:
   - org_id_card_type
   - id_card_number
   - branch_id
-x-tags:
-  - NewOrgCustomerTaxIdCard

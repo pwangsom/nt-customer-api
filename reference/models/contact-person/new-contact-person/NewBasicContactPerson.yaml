@@ -17,5 +17,3 @@ properties:
     example: เจริญยิ่ง
 required:
   - first_name
-x-tags:
-  - NewBasicContactPerson
