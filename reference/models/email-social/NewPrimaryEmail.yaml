@@ -1,0 +1,4 @@
+title: NewPrimaryEmail
+allOf:
+  - $ref: NewEmail.yaml
+  - $ref: ../common/IsPrimary.yaml

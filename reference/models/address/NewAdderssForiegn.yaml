@@ -1,0 +1,62 @@
+title: NewAdderssForiegn
+type: object
+properties:
+  address_country_lkp:
+    type: string
+    format: number
+    example: '1'
+    description: ประเทศ
+  house_number:
+    type: string
+    example: 202/24
+    description: บ้านเลขที่
+  moo:
+    type: string
+    example: '1'
+    description: หมู่ที่
+  village:
+    type: string
+    example: เมืองทองธานี
+    description: หมู่บ้าน
+  more_info:
+    type: string
+    example: ตึก 4
+    description: อาคาร/ชั้น/ห้อง
+  trok_soi:
+    type: string
+    example: ซอย 19
+    description: ตรอก/ซอย
+  road:
+    type: string
+    example: ถนนแจ้งวัฒนะ
+    description: ถนน
+  subdistrict:
+    type: string
+    example: ตำบลคลองเกลือ
+    description: ตำบล/แขวง
+  district:
+    type: string
+    example: อำเภอปากเกร็ด
+    description: อำเภอ/เขต
+  province:
+    type: string
+    example: นนทบุรี
+    description: จังหวัด
+  postal_code:
+    type: string
+    example: '11120'
+    description: รหัสไปรษณีย์
+  latitude:
+    type: string
+    format: number
+    example: '13.03135321643213'
+  longtitude:
+    type: string
+    format: number
+    example: '13.03135321643213'    
+required:
+  - address_country_lkp
+  - house_number
+  - province
+  - postal_code
+description: ที่อยู่ต่างประเทศ

@@ -1,0 +1,11 @@
+title: IsPrimaryFlag
+type: object
+properties:
+  is_primary:
+    type: integer
+    enum:
+      - 0
+      - 1
+    description: ข้อมูลหลักหรือไม่
+required:
+  - is_primary

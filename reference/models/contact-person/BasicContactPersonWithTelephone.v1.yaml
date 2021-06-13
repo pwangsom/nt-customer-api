@@ -4,6 +4,6 @@ allOf:
   - type: object
     properties:
       telephone:
-        $ref: ../telephone/Telephone.v1.yaml
+        $ref: ../telephone/Telephone.yaml
 x-tags:
   - BasicContactPersonWithTelephone

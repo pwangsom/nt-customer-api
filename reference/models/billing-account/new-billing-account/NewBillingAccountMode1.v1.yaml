@@ -1,4 +1,4 @@
-title: NewBillingAccount
+title: NewBillingAccountMode1
 type: object
 properties:
   client_info:
@@ -13,6 +13,11 @@ properties:
     format: number
     example: '12254127'
     description: BA number
+  esb_bill_acct_id:
+    type: string
+    format: number
+    example: '12254127'
+    description: Reference ESB number
   general_info:
     $ref: NewBillingGeneralInfo.v1.yaml
   dispatch_method_info:
@@ -24,8 +29,9 @@ properties:
   egp_info:
     $ref: NewBillingEgpInfo.v1.yaml
 required:
-  - client_info
   - customer_acct_number
+  - bill_acct_number
+  - esb_bill_acct_id
   - general_info
   - dispatch_method_info
   - billing_address_list

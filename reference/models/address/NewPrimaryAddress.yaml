@@ -1,0 +1,4 @@
+title: NewPrimaryAddress
+allOf:
+  - $ref: NewAddress.yaml
+  - $ref: ../common/IsPrimary.yaml

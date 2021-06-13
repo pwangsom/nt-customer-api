@@ -1,0 +1,4 @@
+title: NewPrimaryTelephone
+allOf:
+  - $ref: NewTelephone.yaml
+  - $ref: ../common/IsPrimary.yaml

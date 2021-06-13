@@ -1,0 +1,4 @@
+title: NewPrimarySocialAccount
+allOf:
+  - $ref: NewSocialAccount.yaml
+  - $ref: ../common/IsPrimary.yaml

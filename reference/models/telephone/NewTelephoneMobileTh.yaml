@@ -1,0 +1,20 @@
+title: NewTelephoneMobileTh
+type: object
+properties:
+  telephone_type_lkp:
+    type: string
+    enum: ['3']
+    description: Mobile
+  telephone_country_code_lkp:
+    type: string
+    enum: ['1']
+    description: Thailand
+  telephone_number:
+    type: string
+    format: number
+    example: '0987654321'
+    description: หมายเลขโทรศัพท์มือถือ 10 หลัก มี 0 นำหน้า
+required:
+  - telephone_type_lkp
+  - telephone_country_code_lkp
+  - telephone_number

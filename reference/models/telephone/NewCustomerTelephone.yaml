@@ -1,8 +1,4 @@
 title: NewCustomerTelephone
 allOf:
-  - oneOf:
-    - $ref: NewTelephoneMobileTH.v1.yaml
-    - $ref: NewTelephoneGeneral.v1.yaml
-  - $ref: ../common/IsPrimaryType.v1.yaml
-x-tags:
-  - NewCustomerTelephone
+  - $ref: NewTelephone.yaml
+  - $ref: ../common/IsPrimaryFlag.yaml

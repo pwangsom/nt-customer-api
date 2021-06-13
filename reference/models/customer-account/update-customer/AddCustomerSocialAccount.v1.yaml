@@ -10,7 +10,7 @@ properties:
   social_account_list:
     type: array
     items:
-      $ref: ../../email-social/NewCustomerSocialAccount.v1.yaml
+      $ref: ../../email-social/NewCustomerSocialAccount.yaml
 required:
   - client_info
   - reference_info

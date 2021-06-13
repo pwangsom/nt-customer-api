@@ -6,6 +6,6 @@ allOf:
       address_list:
         type: array
         items:
-          $ref: ../address/Address.v1.yaml
+          $ref: ../address/Address.yaml
 x-tags:
   - BasicCustomerAccountWithAddress

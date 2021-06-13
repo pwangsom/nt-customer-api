@@ -6,6 +6,6 @@ allOf:
       social_account_list:
         type: array
         items:
-          $ref: ../email-social/SocialAccount.v1.yaml
+          $ref: ../email-social/SocialAccount.yaml
 x-tags:
   - BasicCustomerAccountWithSocial

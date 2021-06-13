@@ -6,6 +6,6 @@ allOf:
       email_list:
         type: array
         items:
-          $ref: ../email-social/Email.v1.yaml
+          $ref: ../email-social/Email.yaml
 x-tags:
   - BasicCustomerAccountWithEmail

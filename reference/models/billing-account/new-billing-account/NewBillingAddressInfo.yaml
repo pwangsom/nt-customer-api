@@ -1,0 +1,10 @@
+title: NewBillingAddressInfo
+type: object
+properties:
+  address_header:
+    $ref: NewBillingAddressHeader.yaml
+  address_body:
+    $ref: NewBillingAddressBody.yaml
+required:
+  - address_header
+  - address_body

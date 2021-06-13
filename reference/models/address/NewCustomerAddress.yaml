@@ -1,0 +1,4 @@
+title: NewCustomerAddress
+allOf:
+  - $ref: NewAddress.yaml
+  - $ref: ../common/IsPrimaryFlag.yaml

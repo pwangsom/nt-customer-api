@@ -10,7 +10,7 @@ properties:
   address_list:
     type: array
     items:
-      $ref: ../../address/NewCustomerAddress.v1.yaml
+      $ref: ../../address/NewCustomerAddress.yaml
 required:
   - client_info
   - reference_info

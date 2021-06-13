@@ -10,13 +10,13 @@ properties:
   general_info:
     $ref: ../NewCustomerGenericInfo.v1.yaml
   address:
-    $ref: ../../address/NewAddressWithNewCA.v1.yaml
+    $ref: ../../address/NewPrimaryAddress.yaml
   telephone:
-    $ref: ../../telephone/NewTelephoneWithNewCA.v1.yaml
+    $ref: ../../telephone/NewPrimaryTelephone.yaml
   email:
-    $ref: ../../email-social/NewEmailWithNewCA.v1.yaml
+    $ref: ../../email-social/NewPrimaryEmail.yaml
   social_account:
-    $ref: ../../email-social/NewSocialWithNewCA.v1.yaml
+    $ref: ../../email-social/NewPrimarySocialAccount.yaml
 required:
   - client_info
   - customer_acct_type

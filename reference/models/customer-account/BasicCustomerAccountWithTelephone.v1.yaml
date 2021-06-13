@@ -6,6 +6,6 @@ allOf:
       telephone_list:
         type: array
         items:
-          $ref: ../telephone/Telephone.v1.yaml
+          $ref: ../telephone/Telephone.yaml
 x-tags:
   - BasicCustomerAccountWithTelephone

@@ -1,0 +1,200 @@
+'/customer/generate/customer_acct_number/{offset}':
+  $ref: utility/U01.v1.yaml
+
+'/customer/name/{customer_full_name}':
+  $ref: customer-account/C01.v1.yaml
+
+'/customer/tax/{tax_number}':
+  $ref: customer-account/C02.v1.yaml
+
+'/customer/id/{id_card_number}':
+  $ref: customer-account/C03.v1.yaml
+
+'/customer/ba/{bill_acct_number}':
+  $ref: customer-account/C04.v1.yaml
+
+'/customer/sub/{subscriber_number}':
+  $ref: customer-account/C05.v1.yaml
+
+'/customer/tel/{telephone_number}':
+  $ref: customer-account/C06.v1.yaml
+
+'/customer/id/{id_card_number}/ba/{bill_acct_number}':
+  $ref: customer-account/C09.v1.yaml
+
+'/customer/id/{id_card_number}/sub/{subscriber_number}':
+  $ref: customer-account/C10.v1.yaml
+
+'/customer/id/{id_card_number}/tel/{telephone_number}':
+  $ref: customer-account/C11.v1.yaml
+
+'/customer/{customer_acct_number}/duplication':
+  $ref: customer-account/C12.v1.yaml
+
+'/customer/{customer_acct_number}':
+  $ref: customer-account/C13.v1.yaml
+
+'/customer/{customer_acct_number}/bill_sub':
+  $ref: customer-account/C14.v1.yaml
+
+'/customer/{customer_acct_number}/address':
+  $ref: customer-account/C15.v1.yaml
+
+'/customer/{customer_acct_number}/telephone':
+  $ref: customer-account/C16.v1.yaml
+
+'/customer/{customer_acct_number}/email':
+  $ref: customer-account/C17.v1.yaml
+
+'/customer/{customer_acct_number}/social_account':
+  $ref: customer-account/C18.v1.yaml
+
+'/customer/individual/create':
+  $ref: customer-account/C19.v1.yaml
+
+'/customer/organization/create':
+  $ref: customer-account/C20.v1.yaml
+
+'/customer/{customer_acct_number}/individual/update/info':
+  $ref: customer-account/C21.v1.yaml
+
+'/customer/{customer_acct_number}/organization/update/info':
+  $ref: customer-account/C22.v1.yaml
+
+'/customer/{customer_acct_number}/individual/update/id':
+  $ref: customer-account/C23.v1.yaml
+
+'/customer/{customer_acct_number}/organization/update/id':
+  $ref: customer-account/C24.v1.yaml
+
+'/customer/{customer_acct_number}/individual/convert':
+  $ref: customer-account/C29.v1.yaml
+
+'/customer/{customer_acct_number}/organization/convert':
+  $ref: customer-account/C69.v1.yaml
+
+'/customer/{customer_acct_number}/address/add':
+  $ref: customer-account/C30.v1.yaml
+
+'/customer/{customer_acct_number}/telephone/add':
+  $ref: customer-account/C31.v1.yaml
+
+'/customer/{customer_acct_number}/email/add':
+  $ref: customer-account/C32.v1.yaml
+
+'/customer/{customer_acct_number}/social_account/add':
+  $ref: customer-account/C33.v1.yaml
+
+'/customer/{customer_acct_number}/customer_value':
+  $ref: customer-account/C64.v1.yaml
+
+'/prospect/individual/create':
+  $ref: customer-account/C67.v1.yaml
+
+'/prospect/organization/create':
+  $ref: customer-account/C68.v1.yaml
+
+'/billing/{bill_acct_number}/basic':
+  $ref: billing-account/B01.v1.yaml
+
+'/billing/{bill_acct_number}/invoice':
+  $ref: billing-account/B03.v1.yaml
+
+'/billing/{bill_acct_number}/invoice/debt':
+  $ref: billing-account/B04.v1.yaml
+
+'/billing/{bill_acct_number}/invoice/{invoice_record}':
+  $ref: billing-account/B05.v1.yaml
+
+'/billing/create/{mode}':
+  $ref: billing-account/B08.v1.yaml
+
+'/billing/{bill_acct_number}/info/update/{mode}':
+  $ref: billing-account/B11.v1.yaml
+
+'/billing/{bill_acct_number}/address/update/{mode}':
+  $ref: billing-account/B14.v1.yaml
+
+'/billing/{bill_acct_number}/optional_address/add/{mode}':
+  $ref: billing-account/B17.v1.yaml
+
+'/billing/{bill_acct_number}/optional_address/delete/{mode}':
+  $ref: billing-account/B20.v1.yaml
+
+'/billing/{bill_acct_number}/dispatch_method/update/{mode}':
+  $ref: billing-account/B23.v1.yaml
+
+'/billing/{bill_acct_number}/payment/update/{mode}':
+  $ref: billing-account/B32.v1.yaml
+
+'/subscriber/{ref_subscr_no}/basic':
+  $ref: subscriber/S01.v1.yaml
+
+'/subscriber/ca/{customer_acct_number}/sub/{subscriber_number}':
+  $ref: subscriber/S02.v1.yaml
+
+'/subscriber/{ref_subscr_no}/package_comp':
+  $ref: subscriber/S03.v1.yaml
+
+'/subscriber/sub/{subscriber_number}':
+  $ref: subscriber/S04.v1.yaml
+
+'/subscriber/css/{css_cat_id}':
+  $ref: subscriber/S05.v1.yaml
+
+'/subscriber/ca/{customer_acct_number}':
+  $ref: subscriber/S06.v1.yaml
+
+'/subscriber/tel/{telephone_number}':
+  $ref: subscriber/S09.v1.yaml
+
+'/subscriber/ba/{bill_acct_number}':
+  $ref: subscriber/S10.v1.yaml
+
+'/subscriber/{ref_subscr_no}':
+  $ref: subscriber/S11.v1.yaml
+
+'/subscriber/create':
+  $ref: subscriber/S12.v1.yaml
+
+'/subscriber/prepaid/create':
+  $ref: subscriber/S13.v1.yaml
+
+'/subscriber/{ref_subscr_no}/subscriber_number/change':
+  $ref: subscriber/S14.v1.yaml
+
+'/subscriber/{ref_subscr_no}/subscriber_property/change':
+  $ref: subscriber/S35.v1.yaml
+
+'/subscriber/{ref_subscr_no}/suspend':
+  $ref: subscriber/S17.v1.yaml
+
+'/subscriber/{ref_subscr_no}/reconnect':
+  $ref: subscriber/S18.v1.yaml
+
+'/subscriber/{ref_subscr_no}/terminate':
+  $ref: subscriber/S19.v1.yaml
+
+'/subscriber/{ref_subscr_no}/package_comp/add':
+  $ref: subscriber/S20.v1.yaml
+
+'/subscriber/{ref_subscr_no}/package_comp/terminate':
+  $ref: subscriber/S21.v1.yaml
+
+'/invoice/{invoice_number}':      
+  $ref: invoice-payment/I01.v1.yaml
+
+'/invoice/{invoice_number}/payment':      
+  $ref: invoice-payment/I03.v1.yaml      
+
+'/invoice/{invoice_number}/payment/{tracking_id}':      
+  $ref: invoice-payment/I04.v1.yaml      
+
+'/prepaid/sub/{subscriber_number}/subscription_charge/peroid/{date_from}/{date_to}':
+  $ref: invoice-payment/I05.v1.yaml 
+
+'/prepaid/sub/{subscriber_number}/over_usage/peroid/{date_from}/{date_to}':
+  $ref: invoice-payment/I06.v1.yaml 
+
+'/lookup/{lookup_category_name}':
+  $ref: utility/U03.v1.yaml

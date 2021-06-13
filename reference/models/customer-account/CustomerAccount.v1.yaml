@@ -8,12 +8,12 @@ allOf:
           - $ref: Individual.v1.yaml
           - $ref: Organization.v1.yaml
       address:
-        $ref: ../address/Address.v1.yaml
+        $ref: ../address/Address.yaml
       telephone:
-        $ref: ../telephone/Telephone.v1.yaml
+        $ref: ../telephone/Telephone.yaml
       email:
-        $ref: ../email-social/Email.v1.yaml
+        $ref: ../email-social/Email.yaml
       social_account:
-        $ref: ../email-social/SocialAccount.v1.yaml
+        $ref: ../email-social/SocialAccount.yaml
 x-tags:
   - CustomerAccount

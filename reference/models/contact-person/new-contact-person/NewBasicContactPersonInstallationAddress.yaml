@@ -4,11 +4,11 @@ allOf:
   - type: object
     properties:
       telephone:
-        $ref: ../../telephone/NewTelephoneWithNewCA.v1.yaml
+        $ref: ../../telephone/NewPrimaryTelephone.yaml
       email:
-        $ref: ../../email-social/NewEmailWithNewCA.v1.yaml
+        $ref: ../../email-social/NewPrimaryEmail.yaml
       social_account:
-        $ref: ../../email-social/NewSocialWithNewCA.v1.yaml
+        $ref: ../../email-social/NewPrimarySocialAccount.yaml
     required:
       - telephone
 x-tags:

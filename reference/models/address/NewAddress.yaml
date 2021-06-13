@@ -1,0 +1,20 @@
+title: NewAddress
+allOf:
+  - type: object
+    properties:
+      address_type_lkp:
+        type: string
+        format: number
+        example: '1'
+        description: 'ประเภทที่อยู่ Home, Office'
+    required:
+      - address_type_lkp
+  - oneOf:
+      - type: object
+        properties:
+          address_th:
+            $ref: NewAddressTh.yaml
+      - type: object
+        properties:
+          address_foriegn:
+            $ref: NewAdderssForiegn.yaml

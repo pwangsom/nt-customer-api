@@ -1,0 +1,27 @@
+title: NewTelephoneGeneral
+type: object
+properties:
+  telephone_type_lkp:
+    type: string
+    format: number
+    example: '6'
+    description: ประเภทของเบอร์โทรศัพท์
+  telephone_country_code_lkp:
+    type: string
+    format: number
+    example: '66'
+    description: รหัสประเทศ
+  telephone_number:
+    type: string
+    format: number
+    example: '021041322'
+    description: หมายเลขโทรศัพท์
+  extension_code:
+    type: string
+    format: number
+    example: '4321'
+    description: เบอร์ต่อ
+required:
+  - telephone_type_lkp
+  - telephone_country_code_lkp
+  - telephone_number

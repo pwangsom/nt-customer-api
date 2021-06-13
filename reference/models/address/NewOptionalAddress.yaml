@@ -1,0 +1,4 @@
+title: NewOptionalAddress
+allOf:
+  - $ref: NewAddress.yaml
+  - $ref: ../common/IsNotPrimary.yaml

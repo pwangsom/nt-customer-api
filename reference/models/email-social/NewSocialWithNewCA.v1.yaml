@@ -1,6 +1,0 @@
-title: NewSocialWithNewCA
-allOf:
-  - $ref: NewSocialAccount.v1.yaml
-  - $ref: ../common/IsPrimary.v1.yaml
-x-tags:
-  - NewSocialWithNewCA

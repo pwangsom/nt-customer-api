@@ -1,0 +1,8 @@
+title: NewBillingDeliveryAddressType
+allOf:
+  - type: object
+    properties:
+      bill_address_type_lkp:
+        type: string
+        enum: ['3']
+  - $ref: NewBillingAddressInfo.yaml

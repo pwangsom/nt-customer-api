@@ -1,0 +1,4 @@
+title: NewCustomerSocialAccount
+allOf:
+  - $ref: NewSocialAccount.yaml
+  - $ref: ../common/IsPrimaryFlag.yaml

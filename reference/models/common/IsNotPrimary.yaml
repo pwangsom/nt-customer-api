@@ -1,0 +1,12 @@
+title: IsNotPrimary
+type: object
+properties:
+  is_primary:
+    type: integer
+    enum:
+      - 0
+    description: ไม่เป็นข้อมูลหลัก
+required:
+  - is_primary
+x-tags:
+  - IsNotPrimary

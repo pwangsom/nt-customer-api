@@ -1,7 +1,0 @@
-title: NewBillingAddressHeader
-oneOf:
-  - $ref: NewBillingAddressIndyInfo.v1.yaml
-  - $ref: NewBillingAddressOrgInfo.v1.yaml
-  - $ref: NewBillingAddressIndyOrgInfo.v1.yaml
-x-tags:
-  - NewBillingAddressHeader

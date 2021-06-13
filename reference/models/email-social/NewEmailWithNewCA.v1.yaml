@@ -1,6 +1,0 @@
-title: NewEmailWithNewCA
-allOf:
-  - $ref: NewEmail.v1.yaml
-  - $ref: ../common/IsPrimary.v1.yaml
-x-tags:
-  - NewEmailWithNewCA

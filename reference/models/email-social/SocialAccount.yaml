@@ -1,0 +1,29 @@
+title: SocialAccount
+type: object
+properties:
+  social_acct_id:
+    type: string
+    format: number
+    example: '2425'
+    description: Social account reference id
+  reference_time:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: Reference up-to-date time 
+  social_type_lkp:
+    allOf:
+      - $ref: ../common/DisplayLookup.v1.yaml
+    description: ประเภท Social Account
+    example:
+      lookup_ref_id: '1'
+      display_value: 'Line'
+      lookup_category_name: 'social_type_lkp'
+  social_account:
+    type: string
+    example: abc_12346
+    description: Social Account
+  is_primary:
+    type: integer
+    example: 1
+    description: Primary social account (0 = No, 1 = Yes)

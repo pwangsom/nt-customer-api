@@ -10,7 +10,7 @@ properties:
   email_list:
     type: array
     items:
-      $ref: ../../email-social/NewCustomerEmail.v1.yaml
+      $ref: ../../email-social/NewCustomerEmail.yaml
 required:
   - client_info
   - reference_info

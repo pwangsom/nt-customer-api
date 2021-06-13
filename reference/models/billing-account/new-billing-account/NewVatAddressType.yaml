@@ -1,0 +1,8 @@
+title: NewVatAddressType
+allOf:
+  - type: object
+    properties:
+      bill_address_type_lkp:
+        type: string
+        enum: ['2']
+  - $ref: NewBillingAddressInfo.yaml

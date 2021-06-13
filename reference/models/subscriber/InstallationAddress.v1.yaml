@@ -15,4 +15,4 @@ allOf:
           lookup_ref_id: '1'
           display_value: 'Front installation'
           lookup_category_name: 'installation_address_type_lkp'
-  - $ref: ../address/Address.v1.yaml
+  - $ref: ../address/Address.yaml

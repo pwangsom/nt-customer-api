@@ -1,8 +1,11 @@
-title: BasicContactPersonWithoutAddress
+# Not finish and Not Publish yet
+title: ContactPerson
 allOf:
   - $ref: BasicContactPerson.v1.yaml
   - type: object
     properties:
+      address:
+        $ref: ../address/Address.yaml
       telephone:
         $ref: ../telephone/Telephone.yaml
       email:
@@ -10,4 +13,4 @@ allOf:
       social_account:
         $ref: ../email-social/SocialAccount.yaml
 x-tags:
-  - BasicContactPersonWithoutAddress
+  - ContactPerson

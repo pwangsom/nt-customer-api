@@ -1,0 +1,15 @@
+title: NewSocialAccount
+type: object
+properties:
+  social_type_lkp:
+    type: string
+    format: number
+    example: Line
+    description: ประเภทของ Social Account
+  social_account:
+    type: string
+    example: abc_12346
+    description: Social Account
+required:
+  - social_type_lkp
+  - social_account

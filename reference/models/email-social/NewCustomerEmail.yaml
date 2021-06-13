@@ -1,0 +1,4 @@
+title: NewCustomerEmail
+allOf:
+  - $ref: NewEmail.yaml
+  - $ref: ../common/IsPrimaryFlag.yaml

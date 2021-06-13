@@ -1,13 +1,10 @@
-# Not publish yet
-# Create: 30-Mar-21
-# Version: 2.0.1
 get:
-  operationId: C08
-  description: Retrieve customer info by social account
-  summary: Get Customer Info by Social Account.
+  operationId: B03
+  description: Retrieve a list of invoices by bill_acct_number
+  summary: Get All Invoices by BA Number.
   tags: []
   parameters:
-    - $ref: ../../parameters/SocialAccount.yaml
+    - $ref: ../../parameters/BillAcctNumber.v1.yaml  
   responses:
     '200':
       description: Data Found
@@ -16,7 +13,7 @@ get:
           schema:
             type: array
             items:
-              $ref: ../../models/customer-account/CustomerAccount.v1.yaml         
+              $ref: ../../models/invoice-payment/Invoice.v1.yaml
     '400':
       description: Bad request.
     '401':

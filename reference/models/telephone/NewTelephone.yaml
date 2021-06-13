@@ -1,0 +1,10 @@
+title: NewTelephone
+oneOf:
+  - type: object
+    properties:
+      telephone_mobile_th:
+        $ref: NewTelephoneMobileTh.yaml
+  - type: object
+    properties:
+      telephone_general:
+        $ref: NewTelephoneGeneral.yaml
