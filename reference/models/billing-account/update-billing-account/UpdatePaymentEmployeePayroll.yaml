@@ -4,7 +4,7 @@ properties:
   payment_method_lkp:
     type: string
     enum:
-      - '2'
+      - '6'
     description: รูปแบบการชำระเงินแบบหักผ่านบัญชีเงินเดือน
   payroll_employee_code:
     type: string

@@ -1,0 +1,15 @@
+title: NewBillingReferenceInfo
+type: object
+properties:
+  customer_acct_number:
+    type: string
+    format: number
+    example: '7017480851'
+    description: CA reference number
+  bill_acct_number:
+    type: string
+    format: number
+    example: '12254127'
+    description: BA number
+required:
+  - customer_acct_number

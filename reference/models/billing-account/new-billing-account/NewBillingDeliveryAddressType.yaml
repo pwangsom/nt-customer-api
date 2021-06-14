@@ -4,5 +4,5 @@ allOf:
     properties:
       bill_address_type_lkp:
         type: string
-        enum: ['3']
+        enum: ['2']
   - $ref: NewBillingAddressInfo.yaml

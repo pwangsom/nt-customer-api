@@ -3,21 +3,8 @@ type: object
 properties:
   client_info:
     $ref: ../../common/RequestClientInfo.yaml
-  customer_acct_number:
-    type: string
-    format: number
-    example: '7017480851'
-    description: CA reference number
-  bill_acct_number:
-    type: string
-    format: number
-    example: '12254127'
-    description: BA number
-  esb_bill_acct_id:
-    type: string
-    format: number
-    example: '12254127'
-    description: Reference ESB number
+  reference_info:
+    $ref: NewBillingReferenceInfoMode1.yaml
   general_info:
     $ref: NewBillingGeneralInfo.yaml
   dispatch_method_info:

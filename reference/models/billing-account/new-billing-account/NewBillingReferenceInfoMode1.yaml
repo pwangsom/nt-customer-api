@@ -1,0 +1,22 @@
+title: NewBillingReferenceInfoMode1
+type: object
+properties:
+  customer_acct_number:
+    type: string
+    format: number
+    example: '7017480851'
+    description: CA reference number
+  bill_acct_number:
+    type: string
+    format: number
+    example: '12254127'
+    description: BA number
+  esb_bill_acct_id:
+    type: string
+    format: number
+    example: '36545464858'
+    description: Reference ESB number
+required:
+  - customer_acct_number
+  - bill_acct_number
+  - esb_bill_acct_id
