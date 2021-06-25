@@ -120,11 +120,6 @@ properties:
     type: string
     example: '1234567890123'
     description: Trading partner
-  payment_method_lkp:
-    type: string
-    format: number
-    example: '1'
-    description: payment_method_lkp
   billing_system_lkp:
     type: string
     format: number
