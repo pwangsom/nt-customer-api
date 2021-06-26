@@ -3,8 +3,9 @@ type: object
 properties:
   payment_method_lkp:
     type: string
-    format: number
-    example: '3'
+    enum:
+      - '2'
+      - '5'
     description: 'payment_method_lkp (Direct Credit, Direct Credit + WT)'
   credit_carrier_lkp:
     type: string
