@@ -3,8 +3,9 @@ type: object
 properties:
   payment_method_lkp:
     type: string
-    format: number
-    example: '3'
+    enum:
+      - '3'
+      - '4'
     description: 'payment_method_lkp (Direct Debit, Direct Debit + WT)'
   bank_name_lkp:
     type: string
