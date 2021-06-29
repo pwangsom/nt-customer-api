@@ -14,5 +14,5 @@ oneOf:
         $ref: UpdatePaymentBankAccount.yaml
   - type: object
     properties:
-      payment_bank_account:
+      payment_credit_card:
         $ref: UpdatePaymentCreditCard.yaml
