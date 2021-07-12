@@ -40,6 +40,11 @@ properties:
     format: double
     example: 41.3
     description: VAT
+  adjust_amount:
+    type: number
+    format: double
+    example: 0
+    description: ยอดเงิน Adjust
   paid_amount:
     type: number
     format: double
