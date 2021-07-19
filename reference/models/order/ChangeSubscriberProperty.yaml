@@ -11,6 +11,8 @@ properties:
       - order_no
       - order_effective_date
     properties:
+      # order_type_lkp = 5
+      # order_subtype_lkp = 1
       order_no:
         type: string
         example: '25412'
@@ -20,6 +22,11 @@ properties:
         format: date-time
         example: '2016-08-29T09:12:33.001Z'
         description: วันที่มีผลต่อการใช้งาน
+      order_complete_date:
+        type: string
+        format: date-time
+        example: '2016-08-29T09:12:33.001Z'
+        description: Order Complete Date
   subscriber_property:
     type: string
     example: '1234567890123456789'
