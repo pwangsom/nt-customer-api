@@ -13,6 +13,8 @@ allOf:
           - order_no
           - order_effective_date
         properties:
+          # order_type_lkp = 5
+          # status_lkp = 1 (Active)          
           order_subtype_lkp:
             type: string
             format: number
