@@ -1,6 +1,11 @@
 title: NewSubscriberGeneralInfo
 type: object
 properties:
+  ref_subscr_no:
+    type: string
+    format: number
+    example: '25412'
+    description: Sub reference number
   subscriber_number:
     type: string
     example: '881234567'
@@ -41,6 +46,7 @@ properties:
     example: '3464656546'
     description: Reference key สำหรับใช้อ้างอิง กรณีลูกค้า NT2
 required:
+  - ref_subscr_no
   - subscriber_number
   - service_type_code
   - start_date
