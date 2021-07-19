@@ -22,6 +22,11 @@ properties:
         format: date-time
         example: '2016-08-29T09:12:33.001Z'
         description: วันที่มีผลต่อการใช้งาน
+      order_complete_date:
+        type: string
+        format: date-time
+        example: '2016-08-29T09:12:33.001Z'
+        description: Order Complete Date
   subscriber_number:
     type: string
     example: '881234567'
