@@ -9,12 +9,15 @@ allOf:
       order_info:
         type: object
         required:
+          - order_subtype_lkp
           - order_no
           - order_effective_date
         properties:
-          # order_type_lkp = 5
-          # order_subtype_lkp = 2
-          # status_lkp = 1 (Active)
+          order_subtype_lkp:
+            type: string
+            format: number
+            example: '20'
+            description: Change-Package or Change-Component
           order_no:
             type: string
             example: '25412'
@@ -24,6 +27,11 @@ allOf:
             format: date-time
             example: '2016-08-29T09:12:33.001Z'
             description: วันที่มีผลต่อการใช้งาน
+          order_complete_date:
+            type: string
+            format: date-time
+            example: '2016-08-29T09:12:33.001Z'
+            description: Order Complete Date
     required:
       - client_info
       - subscriber_reference_info
