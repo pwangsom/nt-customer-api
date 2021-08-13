@@ -94,6 +94,9 @@
 '/prospect/organization/create':
   $ref: customer-account/C68.yaml
 
+'/billing/generate/bill_acct_number':
+  $ref: utility/U02.yaml
+
 '/billing/{bill_acct_number}/basic':
   $ref: billing-account/B01.yaml
 
