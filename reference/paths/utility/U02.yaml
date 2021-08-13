@@ -1,0 +1,25 @@
+get:
+  operationId: U02
+  description: Generate BA number
+  summary: Get BA Number.
+  tags: []
+  responses:
+    '200':
+      description: Generate success.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: string
+              format: number
+              example: '7480851'
+              description: BA number
+    '400':
+      description: Bad request.
+    '401':
+      description: Authorization information is missing or invalid.
+    '404':
+      description: Generate failed.
+    '500':
+      description: Unexpected error.
