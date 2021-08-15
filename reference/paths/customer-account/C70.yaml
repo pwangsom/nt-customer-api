@@ -1,6 +1,6 @@
 get:
   operationId: C70
-  description: Retrieve customer info with registration apps list by customer_acct_number
+  description: Retrieve customer info with registration app list by customer_acct_number
   summary: Get Customer Info with Registration App List by Customer Number.
   tags: []
   parameters:
