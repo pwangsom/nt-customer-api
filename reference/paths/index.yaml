@@ -213,3 +213,6 @@
 
 '/lookup/{lookup_category_name}':
   $ref: utility/U03.yaml
+
+'/user/{user_name}':
+  $ref: utility/U11.yaml  
