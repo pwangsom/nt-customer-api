@@ -1,0 +1,18 @@
+title: UpdateAppRegisReferenceInfo
+type: object
+properties:
+  app_registration_id:
+    type: string
+    format: number
+    example: '2425'
+    description: App registration reference id
+  reference_time:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: Reference up-to-date time 
+  app_registration_type_lkp:
+    type: string
+    format: number
+    example: '1'
+    description: ประเภท App ที่ลงทะเบียนใช้งาน เช่น Mobile ID
