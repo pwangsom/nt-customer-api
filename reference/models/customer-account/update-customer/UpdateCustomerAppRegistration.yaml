@@ -1,0 +1,15 @@
+title: UpdateCustomerAppRegistration
+allOf:
+  - type: object
+    properties:
+      client_info:
+        $ref: ../../common/RequestClientInfo.yaml
+      customer_reference_info:
+        $ref: UpdateCustomerReference.yaml
+      app_registration_reference_info:
+        $ref: UpdateAppRegisReferenceInfo.yaml
+    required:
+      - client_info
+      - customer_reference_info
+      - app_registration_reference_info
+  - $ref: UpdateAppRegistration.yaml

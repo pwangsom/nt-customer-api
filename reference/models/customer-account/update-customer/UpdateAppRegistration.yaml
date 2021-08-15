@@ -1,0 +1,21 @@
+title: UpdateAppRegistration
+type: object
+properties:
+  app_account_name:
+    type: string
+    example: abc@example.com
+    description: App Account Name
+  subscriber_number:
+    type: string
+    example: '881234567'
+    description: Subscriber number ที่ใช้ลงทะเบียน
+  start_date:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: วันที่ลงเบียนใช้งาน
+  end_date:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: วันที่ยกเลิกการลงทะเบียนใช้งาน
