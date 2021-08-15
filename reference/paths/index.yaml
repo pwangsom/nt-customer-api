@@ -88,6 +88,9 @@
 '/customer/{customer_acct_number}/customer_value':
   $ref: customer-account/C64.yaml
 
+'/customer/{customer_acct_number}/app_registration':
+  $ref: customer-account/C70.yaml
+
 '/prospect/individual/create':
   $ref: customer-account/C67.yaml
 
