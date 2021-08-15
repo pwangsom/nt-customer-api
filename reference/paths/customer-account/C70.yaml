@@ -1,0 +1,24 @@
+get:
+  operationId: C70
+  description: Retrieve customer info with registration apps list by customer_acct_number
+  summary: Get Customer Info with Registration App List by Customer Number.
+  tags: []
+  parameters:
+    - $ref: ../../parameters/CustomerAcctNumber.yaml
+  responses:
+    '200':
+      description: Data Found
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../../models/customer-account/BasicCustomerAccountWithAppRegistration.yaml
+    '400':
+      description: Bad request.
+    '401':
+      description: Authorization information is missing or invalid.
+    '404':
+      description: Data was not found.
+    '500':
+      description: Unexpected error.
