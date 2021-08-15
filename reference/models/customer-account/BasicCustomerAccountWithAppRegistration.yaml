@@ -1,0 +1,9 @@
+title: BasicCustomerAccountWithAppRegistration
+allOf:
+  - $ref: BasicCustomerAccount.yaml
+  - type: object
+    properties:
+      app_registration_list:
+        type: array
+        items:
+          $ref: AppRegistration.yaml
