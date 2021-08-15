@@ -1,7 +1,5 @@
 title: AddCustomerEmail
 type: object
-x-tags:
-  - AddCustomerEmail
 properties:
   client_info:
     $ref: ../../common/RequestClientInfo.yaml
