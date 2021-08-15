@@ -1,0 +1,22 @@
+title: UserAccess
+type: object
+properties:
+  user_name:
+    type: string
+    example: '00123456'
+    description: User name เข้าใช้งาน กรณีพนักงาน CAT เป็นรหัสพนักงาน
+  is_cat_employee:
+    type: string
+    format: number
+    example: '1'
+    description: 0 = ไม่ใช่พนักงาน CAT, 1 = พนักงาน CAT
+  mobile_activated:
+    type: string
+    format: number
+    example: '0881234567'
+    description: OTP mobile number
+  is_access:
+    type: string
+    format: number
+    example: '1'
+    description: 0 = ไม่มีสิทธิใช้งานระบบ Customer360, 1 = มีสิทธิใช้งานระบบ Customer360
