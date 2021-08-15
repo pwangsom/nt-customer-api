@@ -1,0 +1,39 @@
+title: AppRegistration
+type: object
+properties:
+  app_registration_id:
+    type: string
+    format: number
+    example: '2425'
+    description: App registration reference id
+  reference_time:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: Reference up-to-date time 
+  app_registration_type_lkp:
+    allOf:
+      - $ref: ../common/DisplayLookup.yaml
+    description: ประเภทอีเมล์
+    example:
+      ilookup_ref_idd: '1'
+      display_value: Mobile ID
+      lookup_category_name: 'app_registration_type_lkp'
+  app_account_name:
+    type: string
+    example: 'abc@example.com'
+    description: App Account Name
+  subscriber_number:
+    type: string
+    example: '881234567'
+    description: Subscriber number ที่ใช้ลงทะเบียน
+  start_date:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: วันที่ลงเบียนใช้งาน
+  end_date:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: วันที่ยกเลิกการลงทะเบียนใช้งาน
