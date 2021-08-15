@@ -97,6 +97,9 @@
 '/customer/{customer_acct_number}/app_registration/add':
   $ref: customer-account/C72.yaml
 
+'/customer/{customer_acct_number}/app_registration/update':
+  $ref: customer-account/C73.yaml
+
 '/prospect/individual/create':
   $ref: customer-account/C67.yaml
 
