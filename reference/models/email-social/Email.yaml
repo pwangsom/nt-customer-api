@@ -16,7 +16,7 @@ properties:
       - $ref: ../common/DisplayLookup.yaml
     description: ประเภทอีเมล์
     example:
-      ilookup_ref_idd: '1'
+      lookup_ref_id: '1'
       display_value: Work
       lookup_category_name: 'email_type_lkp'
   email_address:
