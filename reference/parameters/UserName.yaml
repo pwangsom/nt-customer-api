@@ -1,0 +1,7 @@
+name: user_name
+in: path
+required: true
+description: User name เข้าใช้งาน กรณีพนักงาน CAT เป็นรหัสพนักงาน
+schema:
+    type: string
+    example: '00123456'
