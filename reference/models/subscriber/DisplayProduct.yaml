@@ -19,7 +19,7 @@ properties:
       - $ref: ../common/DisplayLookup.yaml
     description: Status
     example:
-      ilookup_ref_idd: '1'
+      lookup_ref_id: '1'
       display_value: Active
       lookup_category_name: 'status_lkp'
   start_date:
