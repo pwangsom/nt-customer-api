@@ -24,6 +24,12 @@ properties:
     format: date-time
     example: '2016-08-29T09:12:33.001Z'
     description: วันที่ยกเลิกการลงทะเบียนใช้งาน
+  is_identity_approval:
+    type: integer
+    enum:
+      - 0
+      - 1
+    description: 0 = ไม่มีการยืนยันตัวตน, 1 = มีการยืนยันตัวตน
 required:
   - app_registration_type_lkp
   - start_date
