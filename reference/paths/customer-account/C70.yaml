@@ -1,3 +1,7 @@
+# Not publish yet
+# Create: 16-Aug-21
+# Version: 2.1.2
+# In the job training
 get:
   operationId: C70
   description: Retrieve customer info with registration app list by customer_acct_number
