@@ -73,6 +73,9 @@
 '/customer/{customer_acct_number}/organization/update/id':
   $ref: customer-account/C24.yaml
 
+'/customer/{customer_acct_number}/merge':
+  $ref: customer-account/C28.yaml
+
 '/customer/{customer_acct_number}/individual/convert':
   $ref: customer-account/C29.yaml
 
