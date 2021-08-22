@@ -1,0 +1,36 @@
+post:
+  operationId: C28
+  description: Merge a duplicated customer to master customer by customer_acct_number
+  summary: Merge a Duplicated Customer to Master Customer by Customer Number.
+  tags: []
+  parameters:
+    - $ref: ../../parameters/CustomerAcctNumber.yaml
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: ../../models/customer-account/update-customer/MergeCustomer.yaml
+  responses:
+    '200':
+      description: Operation success
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/common/OperationSuccess.yaml
+    '400':
+      description: Bad request.
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/common/OperationFailed.yaml
+    '401':
+      description: Authorization information is missing or invalid.
+    '404':
+      description: Operation failed.
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/common/OperationFailed.yaml      
+    '500':
+      description: Unexpected error.        
