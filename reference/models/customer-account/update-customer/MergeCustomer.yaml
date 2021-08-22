@@ -1,0 +1,20 @@
+title: MergeCustomer
+type: object
+properties:
+  client_info:
+    $ref: ../../common/RequestClientInfo.yaml
+  customer_reference_info:
+    $ref: UpdateCustomerReference.yaml
+  duplicated_ca_list:
+    type: array
+    items:
+      type: object
+      properties:
+        customer_acct_number:
+          type: string
+          format: number
+          example: '7017480851'
+          description: CA reference number
+required:
+  - client_info
+  - reference_info
