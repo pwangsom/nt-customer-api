@@ -1,7 +1,5 @@
 title: AddCustomerAddress
 type: object
-x-tags:
-  - AddCustomerAddress
 properties:
   client_info:
     $ref: ../../common/RequestClientInfo.yaml
