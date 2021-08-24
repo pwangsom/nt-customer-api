@@ -10,9 +10,13 @@ properties:
     type: string
     format: date-time
     example: '2016-08-29T09:12:33.001Z'
-    description: Reference up-to-date time 
+    description: Reference up-to-date time
   app_registration_type_lkp:
     type: string
     format: number
     example: '1'
     description: ประเภท App ที่ลงทะเบียนใช้งาน เช่น Mobile ID
+required:
+  - app_registration_id
+  - reference_time
+  - app_registration_type_lkp
