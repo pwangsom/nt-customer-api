@@ -1,0 +1,37 @@
+post:
+  operationId: C58
+  description: Add new area to a partner contract by partner_ref_id and contract_ref_number
+  summary: Add New Area to A Partner Contract by Partner Ref ID and Contract Ref Number.
+  tags: []
+  parameters:
+    - $ref: ../../parameters/PartnerRefId.yaml
+    - $ref: ../../parameters/ContractRefNumber.yaml
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: ../../models/partner/AddPartnerArea.yaml
+  responses:
+    '200':
+      description: Operation success
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/common/OperationSuccess.yaml
+    '400':
+      description: Bad request.
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/common/OperationFailed.yaml
+    '401':
+      description: Authorization information is missing or invalid.
+    '404':
+      description: Operation failed.
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/common/OperationFailed.yaml      
+    '500':
+      description: Unexpected error.

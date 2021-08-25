@@ -1,0 +1,9 @@
+title: NewPartnerAreaInfo
+type: object
+properties:
+  saa_code:
+    type: string
+    example: '7017480851'
+    description: PARTNER_SALE_AREA_ACCOUNT.SAA_CODE of PMS
+required:
+  - saa_code

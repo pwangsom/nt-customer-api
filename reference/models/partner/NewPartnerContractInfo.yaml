@@ -1,0 +1,13 @@
+title: NewPartnerContractInfo
+type: object
+properties:
+  contract_ref_number:
+    type: string
+    example: '7017480851'
+    description: CONTRACT_MAST.CONTRACT_ID of PMS
+  partner_area_list:
+    type: array
+    items:
+      $ref: NewPartnerAreaInfo.yaml
+required:
+  - contract_ref_number

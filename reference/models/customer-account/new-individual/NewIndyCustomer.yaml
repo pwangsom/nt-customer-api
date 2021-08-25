@@ -19,6 +19,6 @@ properties:
     $ref: ../../email-social/NewPrimarySocialAccount.yaml
 required:
   - client_info
-  - id_card_type
+  - id_card_info
   - customer_acct_type
   - address

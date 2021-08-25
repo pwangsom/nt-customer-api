@@ -1,0 +1,7 @@
+name: contract_ref_number
+in: path
+required: true
+description: CONTRACT_MAST.CONTRACT_ID of PMS
+schema:
+  type: string
+  example: '11234768'

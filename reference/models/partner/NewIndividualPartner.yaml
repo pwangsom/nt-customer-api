@@ -1,0 +1,27 @@
+title: NewIndividualPartner
+type: object
+properties:
+  client_info:
+    $ref: ../common/RequestClientInfo.yaml
+  id_card_info:
+    $ref: ../customer-account/new-individual/NewIndyCustomerCard.yaml
+  customer_acct_type:
+    $ref: ../customer-account/new-individual/NewIndividual.yaml
+  general_info:
+    $ref: ../customer-account/NewCustomerGenericInfo.yaml
+  address:
+    $ref: ../address/NewPrimaryAddress.yaml
+  telephone:
+    $ref: ../telephone/NewPrimaryTelephone.yaml
+  email:
+    $ref: ../email-social/NewPrimaryEmail.yaml
+  social_account:
+    $ref: ../email-social/NewPrimarySocialAccount.yaml
+  partner_info:
+    $ref: NewPartnerInfo.yaml
+required:
+  - client_info
+  - id_card_info
+  - customer_acct_type
+  - address
+  - partner_info

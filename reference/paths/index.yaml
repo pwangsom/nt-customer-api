@@ -106,6 +106,18 @@
 '/prospect/organization/create':
   $ref: customer-account/C68.yaml
 
+'/partner/individual/create':
+  $ref: customer-account/C54.yaml
+
+'/partner/organization/create':
+  $ref: customer-account/C74.yaml
+
+'/partner/{partner_ref_id}/contract/add':
+  $ref: customer-account/C56.yaml
+
+'/partner/{partner_ref_id}/contract/{contract_ref_number}/saa/add':
+  $ref: customer-account/C58.yaml
+
 '/billing/generate/bill_acct_number':
   $ref: utility/U02.yaml
 

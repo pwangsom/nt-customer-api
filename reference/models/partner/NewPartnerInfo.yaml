@@ -1,0 +1,14 @@
+title: NewPartnerInfo
+type: object
+properties:
+  partner_ref_id:
+    type: string
+    format: number
+    example: '25856552'
+    description: PARTNER_MAST.PARTNER_ID of PMS
+  partner_contract_list:
+    type: array
+    items:
+      $ref: NewPartnerContractInfo.yaml
+required:
+  - partner_ref_id

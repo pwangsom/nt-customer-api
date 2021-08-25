@@ -1,0 +1,8 @@
+name: partner_ref_id
+in: path
+required: true
+description: PARTNER_MAST.PARTNER_ID of PMS
+schema:
+  type: string
+  format: number
+  example: '11234768'
