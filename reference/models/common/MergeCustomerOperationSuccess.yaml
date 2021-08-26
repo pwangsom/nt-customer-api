@@ -1,0 +1,38 @@
+title: MergeCustomerOperationSuccess
+type: object
+properties:
+  client_info:
+    $ref: RequestClientInfo.yaml
+  api_trans_id:
+    type: string
+    example: '29'
+    description: API transaction id for reference
+  api_timestamp:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: API Response timestamp
+  duplicated_ca_list:
+    type: array
+    items:
+      type: object
+      properties:
+        customer_acct_number:
+          type: string
+          format: number
+          example: '7017480851'
+          description: CA reference number
+        is_success:
+          type: integer
+          enum:
+            - 0
+            - 1
+          description: '0 = merge failed, 1 = merge success'
+      required:
+        - customer_acct_number
+        - is_success
+required:
+  - client_info
+  - api_trans_id
+  - api_timestamp
+  - duplicated_ca_list
