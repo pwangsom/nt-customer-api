@@ -17,7 +17,7 @@ post:
       content:
         application/json:
           schema:
-            $ref: ../../models/common/OperationSuccess.yaml
+            $ref: ../../models/common/MergeCustomerOperationSuccess.yaml
     '400':
       description: Bad request.
       content:
