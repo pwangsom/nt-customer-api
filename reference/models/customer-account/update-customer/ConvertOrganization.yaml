@@ -10,9 +10,9 @@ properties:
   general_info:
     $ref: OrganizationGeneralInfo.yaml
   id_card_info:
-    $ref: ../new-individual/NewIndyCustomerCard.yaml
+    $ref: ../new-organization/NewOrgCustomerCard.yaml
 required:
   - client_info
-  - reference_info
+  - customer_reference_info
   - general_info
   - id_card_info
