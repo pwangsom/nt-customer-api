@@ -15,6 +15,9 @@ properties:
           format: number
           example: '7017480851'
           description: CA reference number
+      required:
+        - customer_acct_number
 required:
   - client_info
-  - reference_info
+  - customer_reference_info
+  - duplicated_ca_list
