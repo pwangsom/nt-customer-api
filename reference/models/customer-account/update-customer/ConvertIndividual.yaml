@@ -7,12 +7,15 @@ properties:
     $ref: ../../common/RequestClientInfo.yaml
   customer_reference_info:
     $ref: UpdateCustomerReference.yaml
-  general_info:
-    $ref: IndividualGeneralInfo.yaml
   id_card_info:
     $ref: ../new-individual/NewIndyCustomerCard.yaml
+  customer_acct_type:
+    $ref: ../new-individual/NewIndividual.yaml
+  general_info:
+    $ref: ../NewCustomerGenericInfo.yaml
 required:
   - client_info
   - customer_reference_info
-  - general_info
   - id_card_info
+  - customer_acct_type
+  - general_info

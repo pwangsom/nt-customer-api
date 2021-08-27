@@ -24,11 +24,15 @@ properties:
     description: Default is Thai.
   is_vip_sales:
     type: integer
-    enum: [0, 1]
+    enum:
+      - 0
+      - 1
     description: Default is 0 (No).
   is_vip_debt:
     type: integer
-    enum: [0, 1]
+    enum:
+      - 0
+      - 1
     description: Default is 0 (No).
   black_list_lkp:
     type: string
@@ -44,11 +48,13 @@ properties:
     description: Default is Null.
   trading_partner:
     type: string
-    example: 'M345'
+    example: M345
     description: Default is Null.
   is_internal_customer_account:
     type: integer
-    enum: [0, 1]
+    enum:
+      - 0
+      - 1
     description: Default is 0 (No).
   original_data_owner_lkp:
     type: string
@@ -58,4 +64,6 @@ properties:
     type: string
     example: '3464656546'
     description: Reference key สำหรับใช้อ้างอิง กรณีลูกค้า NT2
-
+required:
+  - customer_segment_lkp
+  - customer_group_lkp

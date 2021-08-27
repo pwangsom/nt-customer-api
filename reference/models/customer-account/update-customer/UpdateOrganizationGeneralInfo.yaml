@@ -9,5 +9,5 @@ properties:
     $ref: OrganizationGeneralInfo.yaml
 required:
   - client_info
-  - reference_info
+  - customer_reference_info
   - general_info

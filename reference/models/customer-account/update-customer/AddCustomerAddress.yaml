@@ -11,5 +11,5 @@ properties:
       $ref: ../../address/NewCustomerAddress.yaml
 required:
   - client_info
-  - reference_info
+  - customer_reference_info
   - address_list

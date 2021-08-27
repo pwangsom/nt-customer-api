@@ -13,5 +13,5 @@ properties:
       $ref: ../../email-social/NewCustomerSocialAccount.yaml
 required:
   - client_info
-  - reference_info
+  - customer_reference_info
   - social_account_list

@@ -11,5 +11,5 @@ properties:
     description: Default is None.
 required:
   - client_info
-  - reference_info
+  - customer_reference_info
   - black_list_lkp
