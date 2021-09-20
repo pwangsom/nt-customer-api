@@ -1,7 +1,7 @@
 title: NewPartnerContractInfo
 type: object
 properties:
-  contract_ref_number:
+  contract_id:
     type: string
     example: '7017480851'
     description: CONTRACT_MAST.CONTRACT_ID of PMS
@@ -10,4 +10,4 @@ properties:
     items:
       $ref: NewPartnerAreaInfo.yaml
 required:
-  - contract_ref_number
+  - contract_id
