@@ -55,6 +55,9 @@
 '/customer/{customer_acct_number}/app_registration/{app_registration_type_lkp}':
   $ref: customer-account/C71.yaml
 
+'/customer/{id_card_number}/app_registration/{app_registration_type_lkp}/sub/{subscriber_number}':
+  $ref: customer-account/C75.yaml
+
 '/customer/individual/create':
   $ref: customer-account/C19.yaml
 
