@@ -1,7 +1,7 @@
 get:
   operationId: C71
-  description: Retrieve customer info with specific registration app by customer_acct_number
-  summary: Get Customer Info with Specific Registration App by Customer Number.
+  description: Retrieve customer info with specific registration app by customer_acct_number and app_registration_type_lkp
+  summary: Get Customer Info with Specific Registration App by Customer Number and App Registration Type
   tags: []
   parameters:
     - $ref: ../../parameters/CustomerAcctNumber.yaml
