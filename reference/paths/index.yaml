@@ -181,6 +181,12 @@
 '/subscriber/ca/{customer_acct_number}':
   $ref: subscriber/S06.yaml
 
+'/subscriber/name/{customer_full_name}':
+  $ref: subscriber/S07.yaml
+
+'/subscriber/id/{id_card_number}':
+  $ref: subscriber/S08.yaml
+
 '/subscriber/tel/{telephone_number}':
   $ref: subscriber/S09.yaml
 

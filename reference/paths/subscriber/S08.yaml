@@ -1,6 +1,3 @@
-# Not publish yet
-# Create: 12-Apr-21
-# Version: 2.0.3
 get:
   operationId: S08
   description: Retrieve basic subscriber with active packages and components by id_card_number

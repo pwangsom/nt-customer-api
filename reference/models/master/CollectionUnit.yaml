@@ -1,0 +1,11 @@
+title: CollectionUnit
+type: object
+properties:
+  region_code:
+    type: string
+    example: ตำบลคลองเกลือ
+    description: รหัสหน่วยงานติดตามหนี้
+  collection_unit:
+    type: string
+    example: ตำบลคลองเกลือ
+    description: หน่วยงานติดตามหนี้

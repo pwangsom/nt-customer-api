@@ -1,6 +1,3 @@
-# Not publish yet
-# Create: 12-Apr-21
-# Version: 2.0.3
 get:
   operationId: S07
   description: Retrieve basic subscriber with active packages and components by customer_full_name
