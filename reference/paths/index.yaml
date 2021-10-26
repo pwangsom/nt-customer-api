@@ -234,6 +234,9 @@
 
 '/lookup/{lookup_category_name}':
   $ref: utility/U03.yaml
+  
+'/master/address_lookup/th':
+  $ref: utility/U05.yaml
 
 '/user/{user_name}':
   $ref: utility/U11.yaml  
