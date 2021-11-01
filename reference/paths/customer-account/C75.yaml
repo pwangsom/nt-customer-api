@@ -1,12 +1,12 @@
 get:
   operationId: C75
-  description: Retrieve customer info with specific registration app by customer_acct_number, app_registration_type_lkp, and subscriber_number
-  summary: Get Customer Info with Specific Registration App by Customer Number, App Registration Type, and Subscriber Number
+  description: Retrieve customer info with specific registration app by customer_acct_number, app_registration_type_lkp, and ref_subscr_no
+  summary: Get Customer Info with Specific Registration App by Customer Number, App Registration Type, and Ref Subcriber No
   tags: []
   parameters:
     - $ref: ../../parameters/IdCardNumber.yaml
     - $ref: ../../parameters/AppRegistrationTypeLkp.yaml
-    - $ref: ../../parameters/SubscriberNumber.yaml
+    - $ref: ../../parameters/RefSubscrNo.yaml
   responses:
     '200':
       description: Data Found
