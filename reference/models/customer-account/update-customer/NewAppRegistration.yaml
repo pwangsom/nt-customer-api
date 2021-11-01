@@ -14,6 +14,11 @@ properties:
     type: string
     example: '881234567'
     description: Subscriber number ที่ใช้ลงทะเบียน
+  ref_subscr_no:
+    type: string
+    format: number
+    example: '25412'
+    description: Sub reference number ถ้าฟิลด์ subscriber_number ไม่ว่าง ฟิลด์ ref_subscr_no ต้องไม่ว่าง
   start_date:
     type: string
     format: date-time
