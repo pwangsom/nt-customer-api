@@ -1,0 +1,38 @@
+title: ProductProperty
+type: object
+properties:
+  property_key:
+    type: string
+    example: 'Up Speed'
+  property_input_type:
+    type: string
+    example: 'TEXT'
+    description: ประเภทของการป้อน value ของ property_value (TEXT,NUMBER,DATE,LOOKUP)
+  is_required:
+    type: integer
+    enum:
+      - 0
+      - 1
+    description: Required field?
+  lookup_category_name_up:
+    type: string
+    example: 'STATUS_LKP'
+    description: Lookup category ที่นำมาเป็น property_value
+  start_date:
+    type: string
+    format: date
+    example: '2030-02-02'
+    description: วันที่เริ่มใช้งาน Property
+  end_date:
+    type: string
+    format: date
+    example: '2030-02-02'
+    description: วันที่เริ่มใช้งาน Property
+  list_order:
+    type: integer
+    example: 1
+    description: The order of values displayed on screen
+  requested_system:
+    type: string
+    example: 'CUSTOMER_DB'
+    description: ระบบที่ต้องการใช้งาน Property
