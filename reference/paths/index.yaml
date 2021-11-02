@@ -246,3 +246,6 @@
 
 '/user/{user_name}':
   $ref: utility/U11.yaml  
+
+'/master/product_property/{service_type_code}':
+  $ref: utility/U13.yaml  
