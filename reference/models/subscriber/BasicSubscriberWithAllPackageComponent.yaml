@@ -3,7 +3,7 @@ allOf:
   - $ref: BasicSubscriber.yaml
   - type: object
     properties:
-      active_package_component:
+      all_package_component:
         type: string
         enum:
           - BasicSubscriberWithAllPackageComponent
