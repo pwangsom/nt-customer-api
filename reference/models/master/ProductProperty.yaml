@@ -35,4 +35,4 @@ properties:
   requested_system:
     type: string
     example: 'CUSTOMER_DB'
-    description: ระบบที่ต้องการใช้งาน Property
+    description: ระบบที่ต้องการใช้งาน Property (CUSTOMER_DB,BILLING,CSS)
