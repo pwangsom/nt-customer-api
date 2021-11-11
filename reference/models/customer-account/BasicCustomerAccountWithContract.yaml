@@ -3,7 +3,7 @@ allOf:
   - $ref: BasicCustomerAccount.yaml
   - type: object
     properties:
-      address_list:
+      contract_list:
         type: array
         items:
-          $ref: ../address/Address.yaml
+          $ref: ../customer-contract/DisplayCustomerContract.yaml
