@@ -5,7 +5,7 @@ post:
   tags: []
   parameters:
     - $ref: ../../parameters/PartnerRefId.yaml
-    - $ref: ../../parameters/ContractRefNumber.yaml
+    - $ref: ../../parameters/ContractId.yaml
   requestBody:
     required: true
     content:

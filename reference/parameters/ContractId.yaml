@@ -1,4 +1,4 @@
-name: contract_ref_number
+name: contract_id
 in: path
 required: true
 description: CONTRACT_MAST.CONTRACT_ID of PMS
