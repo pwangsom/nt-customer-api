@@ -1,7 +1,7 @@
 post:
   operationId: C58
-  description: Add new area to a partner contract by partner_ref_id and contract_ref_number
-  summary: Add New Area to A Partner Contract by Partner Ref ID and Contract Ref Number.
+  description: Add new area to a partner contract by partner_ref_id and contract_id
+  summary: Add New Area to A Partner Contract by Partner Ref ID and Contract ID.
   tags: []
   parameters:
     - $ref: ../../parameters/PartnerRefId.yaml
