@@ -49,6 +49,9 @@
 '/customer/{customer_acct_number}/social_account':
   $ref: customer-account/C18.yaml
 
+'/customer/{customer_acct_number}/contract':
+  $ref: customer-account/C50.yaml
+
 '/customer/{customer_acct_number}/customer_value':
   $ref: customer-account/C64.yaml
 
