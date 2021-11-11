@@ -3,7 +3,7 @@ allOf:
   - $ref: BasicCustomerAccount.yaml
   - type: object
     properties:
-      address_list:
+      contact_person_list:
         type: array
         items:
-          $ref: ../address/Address.yaml
+          $ref: ../contact-person/ContactPerson.yaml
