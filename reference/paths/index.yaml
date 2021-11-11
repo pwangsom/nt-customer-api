@@ -49,6 +49,9 @@
 '/customer/{customer_acct_number}/social_account':
   $ref: customer-account/C18.yaml
 
+'/customer/{customer_acct_number}/contact_person':
+  $ref: customer-account/C47.yaml
+
 '/customer/{customer_acct_number}/contract':
   $ref: customer-account/C50.yaml
 
@@ -121,7 +124,7 @@
 '/partner/{partner_ref_id}/contract/add':
   $ref: customer-account/C56.yaml
 
-'/partner/{partner_ref_id}/contract/{contract_ref_number}/saa/add':
+'/partner/{partner_ref_id}/contract/{contract_id}/saa/add':
   $ref: customer-account/C58.yaml
 
 '/billing/generate/bill_acct_number':
