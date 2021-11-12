@@ -12,7 +12,7 @@ info:
 servers:
   - url: 'https://customerapi.cattelecom.com/dev'
     description: Development
-  - url: 'https://customerapi.cattelecom.com'
+  - url: 'https://customerapi.cattelecom.com/app'
     description: Production
 
 paths:

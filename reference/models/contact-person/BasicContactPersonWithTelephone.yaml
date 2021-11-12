@@ -3,6 +3,8 @@ allOf:
   - $ref: BasicContactPerson.yaml
   - type: object
     properties:
-      telephone:
-        $ref: ../telephone/Telephone.yaml
+      telephone_list:
+        type: array
+        items:
+          $ref: ../telephone/Telephone.yaml
 

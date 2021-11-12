@@ -1,0 +1,15 @@
+title: NtOraganization
+type: object
+properties:
+  unit_id:
+    type: string
+    example: 11270
+    decription: Organization Name Short
+  unit_name:
+    type: string
+    example: ฝ่ายเทคโนโลยีสารสนเทศเพื่อสนับสนุนธุรกิจ
+    decription: Organization Name
+  unit_short_name:
+    type: string
+    example: ธท.
+    decription: Organization Name Short

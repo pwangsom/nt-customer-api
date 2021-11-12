@@ -6,4 +6,4 @@ allOf:
       contract_list:
         type: array
         items:
-          $ref: ../customer-contract/DisplayCustomerContract.yaml
+          $ref: ../customer-contract/BasicCustomerContract.yaml

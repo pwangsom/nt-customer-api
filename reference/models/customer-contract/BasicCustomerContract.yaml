@@ -1,0 +1,57 @@
+title: BasicCustomerContract
+type: object
+properties:
+  customer_contract_id:
+    type: string
+    format: number
+    example: '65546'
+    description: Customer contract reference key
+  reference_time:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: Reference up-to-date time 
+  contract_type_lkp:
+    allOf:
+      - $ref: ../common/DisplayLookup.yaml
+    description: คำนำหน้าชื่อไทย
+    example:
+      lookup_ref_id: '1'
+      display_value: Sales Contract
+      lookup_category_name: contract_type_lkp
+  contract_ref_number:
+    type: string
+    example: 'NT 2021/001'
+    description: Contract Ref Number
+  contract_name:
+    type: string
+    example: 'โครงการ Mega Bangna'
+    description: Contract name
+  contract_approve_date:
+    type: string
+    format: date
+    example: '2030-02-02'
+    description: Contract Approve Date
+  contract_start_date:
+    type: string
+    format: date
+    example: '2030-02-02'
+    description: Contract Start Date
+  contract_end_date:
+    type: string
+    format: date
+    example: '2030-02-02'
+    description: Contract End Date
+  revenue_forecast:
+    type: number
+    format: double
+    example: 400000.0
+    description: Revenue Forecast
+  sale_process:
+    type: string
+    example: 'Bidding Project'
+    description: Sales Process
+  unit_contract_owner:
+    type: string
+    example: 'ฝ่ายเทคโนโลยีสารสนเทศเพื่อสนับสนุนธุรกิจ - ธท.'
+    description: Unit Contract Owner

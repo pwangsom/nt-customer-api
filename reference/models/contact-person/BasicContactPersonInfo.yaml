@@ -1,4 +1,4 @@
-title: BasicContactPersonWithoutAddress
+title: BasicContactPersonInfo
 allOf:
   - $ref: BasicContactPerson.yaml
   - type: object

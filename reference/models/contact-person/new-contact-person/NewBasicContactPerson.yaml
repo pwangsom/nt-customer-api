@@ -9,11 +9,18 @@ properties:
   first_name:
     type: string
     example: สมชาย
-  middle_name:
-    type: string
-    example: ชื่อกลาง
   last_name:
     type: string
     example: เจริญยิ่ง
+  prefer_name:
+    type: string
+    example: Prefer Name
+  position_occupation:
+    type: string
+    example: Position Occupation
+  id_card_number:
+    type: string
+    example: '1234567890123'
+    description: หมายเลขเอกสารของผู้ติดต่อ
 required:
   - first_name
