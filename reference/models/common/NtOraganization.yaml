@@ -8,8 +8,8 @@ properties:
   unit_name:
     type: string
     example: ฝ่ายเทคโนโลยีสารสนเทศเพื่อสนับสนุนธุรกิจ
-    decription: Organization Name
+    description: Organization Name
   unit_short_name:
     type: string
     example: ธท.
-    decription: Organization Name Short
+    description: Organization Name Short
