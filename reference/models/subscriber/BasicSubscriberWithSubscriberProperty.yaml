@@ -1,0 +1,9 @@
+title: BasicSubscriberWithSubscriberProperty
+allOf:
+  - $ref: BasicSubscriber.yaml
+  - type: object
+    properties:
+      subscriber_property_list:
+        type: array
+        items:
+          $ref: SubscriberProperty.yaml
