@@ -11,3 +11,7 @@ allOf:
         type: array
         items:
           $ref: ../contact-person/BasicContactPersonInfo.yaml
+      employee_support_list:
+        type: array
+        items:
+          $ref: ../common/NtEmployeeInfo.yaml

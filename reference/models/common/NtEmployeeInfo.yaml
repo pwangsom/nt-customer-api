@@ -1,0 +1,19 @@
+title: NtEmployeeInfo
+type: object
+properties:
+  employee_code:
+    type: string
+    example: '00123456'
+    description: Sales employee code
+  employee_name:
+    type: string
+    example: สมชาย เจริญยิ่ง
+    description: employee name
+  unit_name:
+    type: string
+    example: ฝ่ายเทคโนโลยีสารสนเทศเพื่อสนับสนุนธุรกิจ
+    decription: Organization Name
+  unit_short_name:
+    type: string
+    example: ธท.
+    decription: Organization Name Short  
