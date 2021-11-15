@@ -10,9 +10,9 @@ info:
     name: MIT
     url: 'https://github.com/pwangsom/nt-customer-api/blob/main/LICENSE'
 servers:
-  - url: 'https://customerapi.cattelecom.com/dev'
+  - url: 'https://customerapi.cattelecom.com/dev/customerapi'
     description: Development
-  - url: 'https://customerapi.cattelecom.com/app'
+  - url: 'https://customerapi.cattelecom.com/app/customerapi'
     description: Production
 
 paths:
