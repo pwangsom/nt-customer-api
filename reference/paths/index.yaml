@@ -133,6 +133,12 @@
 '/billing/{bill_acct_number}/basic':
   $ref: billing-account/B01.yaml
 
+'/billing/{bill_acct_number}':
+  $ref: billing-account/B02.yaml
+
+'/billing/{bill_acct_number}/contact_person':
+  $ref: billing-account/B33.yaml
+
 '/billing/{bill_acct_number}/invoice':
   $ref: billing-account/B03.yaml
 

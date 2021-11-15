@@ -1,7 +1,7 @@
 get:
-  operationId: B02
-  description: Retrieve full BA info by bill_acct_number
-  summary: Get Full BA Info by BA Number.
+  operationId: B33
+  description: Retrieve basic BA info with contact persons by bill_acct_number
+  summary: Get Basic BA Info with Contact Persons by BA Number.
   tags: []
   parameters:
     - $ref: ../../parameters/BillAcctNumber.yaml
@@ -13,7 +13,7 @@ get:
           schema:
             type: array
             items:
-              $ref: ../../models/billing-account/BillingAccount.yaml
+              $ref: ../../models/billing-account/BasicBillingAccountWithContactPerson.yaml
     '400':
       description: Bad request.
     '401':

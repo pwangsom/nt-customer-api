@@ -34,3 +34,11 @@ properties:
     $ref: BillingMoreInfo.yaml
   egp_info:
     $ref: BillingEgpInfo.yaml
+  contact_person_list:
+    type: array
+    items:
+      $ref: ../contact-person/BasicContactPersonInfo.yaml
+  ba_sales_support_list:
+    type: array
+    items:
+      $ref: BaEmployeeSupport.yaml
