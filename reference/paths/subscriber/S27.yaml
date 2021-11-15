@@ -1,0 +1,24 @@
+get:
+  operationId: S27
+  description: Retrieve basic subscriber with contact persons by ref_subscr_no
+  summary: Get Basic Subscriber with Contact Persons by Reference Subscriber Number.
+  tags: []
+  parameters:
+    - $ref: ../../parameters/RefSubscrNo.yaml
+  responses:
+    '200':
+      description: Data Found
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../../models/subscriber/BasicSubscriberWithContactPerson.yaml
+    '400':
+      description: Bad request.
+    '401':
+      description: Authorization information is missing or invalid.
+    '404':
+      description: Data was not found.
+    '500':
+      description: Unexpected error.

@@ -205,6 +205,9 @@
 '/subscriber/{ref_subscr_no}/property':
   $ref: subscriber/S25.yaml
 
+'/subscriber/{ref_subscr_no}/contact_person':
+  $ref: subscriber/S27.yaml
+
 '/subscriber/create':
   $ref: subscriber/S12.yaml
 
