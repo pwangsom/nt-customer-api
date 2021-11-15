@@ -6,4 +6,4 @@ allOf:
       contact_person_list:
         type: array
         items:
-          $ref: ../contact-person/ContactPerson.yaml
+          $ref: ../contact-person/BasicContactPersonInfo.yaml
