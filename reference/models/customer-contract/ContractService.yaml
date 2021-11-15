@@ -1,0 +1,14 @@
+title: ContractService
+type: object
+properties:
+  service_type:
+    allOf:
+      - $ref: ../subscriber/ServiceType.yaml
+    description: Service type
+    example:
+      service_type_code: '110'
+      service_type_name: my Postpaid
+  service_sla_property:
+    type: array
+    items:
+      $ref: ../subscriber/SubscriberProperty.yaml

@@ -3,6 +3,10 @@ allOf:
   - $ref: BasicCustomerContract.yaml
   - type: object
     properties:
+      contract_service_list:
+        type: array
+        items:
+          $ref: ContractService.yaml
       contact_person_list:
         type: array
         items:
