@@ -16,4 +16,4 @@ properties:
   unit_short_name:
     type: string
     example: ธท.
-    decription: Organization Name Short  
+    decription: Organization Name Short 
