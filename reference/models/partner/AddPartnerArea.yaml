@@ -8,7 +8,7 @@ properties:
     format: number
     example: '25856552'
     description: PARTNER_MAST.PARTNER_ID of PMS
-  contract_ref_number:
+  contract_id:
     type: string
     example: '7017480851'
     description: CONTRACT_MAST.CONTRACT_ID of PMS
@@ -19,5 +19,5 @@ properties:
 required:
   - client_info
   - partner_ref_id
-  - contract_ref_number
+  - contract_id
   - partner_area_list
