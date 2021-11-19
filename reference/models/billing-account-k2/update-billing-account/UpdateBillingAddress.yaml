@@ -1,0 +1,18 @@
+title: UpdateBillingAddress
+type: object
+properties:
+  client_info:
+    $ref: ../../common/RequestClientInfo.yaml
+  billing_reference_info:
+    $ref: ../../billing-account/update-billing-account/UpdateBillingReferenceInfo.yaml
+  billing_address:
+    $ref: ../../billing-account/update-billing-account/UpdateBillingAddressDetailInfo.yaml
+  vat_address:
+    $ref: ../../billing-account/update-billing-account/UpdateBillingAddressDetailInfo.yaml
+  billing_delivery_address:
+    $ref: ../../billing-account/update-billing-account/UpdateBillingAddressDetailInfo.yaml
+  vat_delivery_address:
+    $ref: ../../billing-account/update-billing-account/UpdateBillingAddressDetailInfo.yaml
+required:
+  - client_info
+  - billing_reference_info

@@ -1,0 +1,15 @@
+title: NewVatDeliveryAddressType
+type: object
+properties:
+  bill_address_type_lkp:
+    type: string
+    enum:
+      - '4'
+  address_header:
+    $ref: NewBillingAddressHeader.yaml
+  address_body:
+    $ref: NewBillingAddressBody.yaml
+required:
+  - bill_address_type_lkp
+  - address_header
+  - address_body

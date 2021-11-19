@@ -1,0 +1,18 @@
+title: UpdateBillingPayment
+type: object
+properties:
+  client_info:
+    $ref: ../../common/RequestClientInfo.yaml
+  billing_reference_info:
+    $ref: ../../billing-account/update-billing-account/UpdateBillingReferenceInfo.yaml
+  payment_cash:
+    $ref: ../../billing-account/update-billing-account/UpdatePaymentCash.yaml
+  payment_payroll:
+    $ref: ../../billing-account/update-billing-account/UpdatePaymentEmployeePayroll.yaml
+  payment_bank_account:
+    $ref: ../../billing-account/update-billing-account/UpdatePaymentBankAccount.yaml
+  payment_credit_card:
+    $ref: ../../billing-account/update-billing-account/UpdatePaymentCreditCard.yaml
+required:
+  - client_info
+  - billing_reference_info

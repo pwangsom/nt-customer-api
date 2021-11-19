@@ -1,4 +1,4 @@
-title: UpdateBillingAddressReferenceInfo.v1
+title: UpdateBillingAddressReferenceInfo
 type: object
 properties:
   bill_acct_number:

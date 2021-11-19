@@ -1,0 +1,7 @@
+title: NewBillingAddressBody
+type: object
+properties:
+  address_body_th:
+    $ref: ../../billing-account/new-billing-account/NewBillingAddressTh.yaml
+  address_body_foriegn:
+    $ref: ../../billing-account/new-billing-account/NewBillingAddressForiegn.yaml

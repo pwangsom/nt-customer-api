@@ -1,0 +1,9 @@
+title: NewBillingAddressHeader
+type: object
+properties:
+  address_header_indy:
+    $ref: ../../billing-account/new-billing-account/NewBillingAddressIndyInfo.yaml
+  address_header_org:
+    $ref: ../../billing-account/new-billing-account/NewBillingAddressOrgInfo.yaml
+  address_header_indy_org:
+    $ref: ../../billing-account/new-billing-account/NewBillingAddressIndyOrgInfo.yaml

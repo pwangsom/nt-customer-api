@@ -1,0 +1,22 @@
+
+'/billing/create/2':
+  $ref: billing-account-k2/B08.yaml
+
+'/billing/{bill_acct_number}/info/update/{mode}':
+  $ref: billing-account-k2/B11.yaml
+
+'/billing/{bill_acct_number}/address/update/{mode}':
+  $ref: billing-account-k2/B14.yaml
+
+'/billing/{bill_acct_number}/optional_address/add/{mode}':
+  $ref: billing-account-k2/B17.yaml
+
+'/billing/{bill_acct_number}/optional_address/delete/{mode}':
+  $ref: billing-account-k2/B20.yaml
+
+'/billing/{bill_acct_number}/dispatch_method/update/{mode}':
+  $ref: billing-account-k2/B23.yaml
+
+'/billing/{bill_acct_number}/payment/update/{mode}':
+  $ref: billing-account-k2/B32.yaml
+

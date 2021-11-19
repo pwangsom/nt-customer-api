@@ -16,4 +16,4 @@ servers:
     description: Production
 
 paths:
-  $ref: paths/index.yaml
+  $ref: paths/index-k2.yaml

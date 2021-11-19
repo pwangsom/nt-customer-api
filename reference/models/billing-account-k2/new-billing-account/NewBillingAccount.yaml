@@ -1,0 +1,23 @@
+title: NewBillingAccount
+type: object
+properties:
+  client_info:
+    $ref: ../../common/RequestClientInfo.yaml
+  reference_info:
+    $ref: NewBillingReferenceInfo.yaml
+  general_info:
+    $ref: ../../billing-account/new-billing-account/NewBillingGeneralInfo.yaml
+  dispatch_method_info:
+    $ref: ../../billing-account/new-billing-account/NewBillingDispatchMethodInfo.yaml
+  billing_address_list:
+    $ref: NewBillingAddress.yaml
+  more_info:
+    $ref: ../../billing-account/new-billing-account/NewBillingMoreInfo.yaml
+  egp_info:
+    $ref: ../../billing-account/new-billing-account/NewBillingEgpInfo.yaml
+required:
+  - client_info
+  - reference_info
+  - general_info
+  - dispatch_method_info
+  - billing_address_list

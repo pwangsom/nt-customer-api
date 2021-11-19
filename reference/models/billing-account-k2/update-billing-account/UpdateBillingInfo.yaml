@@ -1,0 +1,16 @@
+title: UpdateBillingInfo
+type: object
+properties:
+  client_info:
+    $ref: ../../common/RequestClientInfo.yaml
+  billing_reference_info:
+    $ref: ../../billing-account/update-billing-account/UpdateBillingReferenceInfo.yaml
+  general_info:
+    $ref: ../../billing-account/update-billing-account/UpdateBillingGeneralInfo.yaml
+  more_info:
+    $ref: ../../billing-account/update-billing-account/UpdateBillingMoreInfo.yaml
+  egp_info:
+    $ref: ../../billing-account/update-billing-account/UpdateBillingEgpInfo.yaml
+required:
+  - client_info
+  - billing_reference_info
