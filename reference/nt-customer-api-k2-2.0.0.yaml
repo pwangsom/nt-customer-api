@@ -1,0 +1,17 @@
+swagger: '2.0'
+info:
+  title: NT Customer API
+  version: '2.2.0'
+  description: Full API services for NT customer database
+  contact:
+    email: peerasak.w@nc.ntplc.co.th
+    name: Peerasak Wangsom
+host: 'localhost:3000'
+schemes:
+  - http
+produces:
+  - application/json
+consumes:
+  - application/json
+paths:
+  $ref: paths/index.yaml
