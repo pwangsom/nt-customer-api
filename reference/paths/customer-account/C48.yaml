@@ -10,7 +10,7 @@ post:
     content:
       application/json:
         schema:
-          $ref: ../../models/customer-account/update-customer/AddCustomerAddress.yaml
+          $ref: ../../models/customer-account/update-customer/AddCustomerContactPerson.yaml
   responses:
     '200':
       description: Operation success

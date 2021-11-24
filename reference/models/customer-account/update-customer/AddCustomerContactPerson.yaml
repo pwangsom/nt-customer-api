@@ -1,0 +1,15 @@
+title: AddCustomerContactPerson
+type: object
+properties:
+  client_info:
+    $ref: ../../common/RequestClientInfo.yaml
+  customer_reference_info:
+    $ref: UpdateCustomerReference.yaml
+  contact_person_list:
+    type: array
+    items:
+      $ref: ../../contact-person/new-contact-person/NewBasicContactPersonInfo.yaml
+required:
+  - client_info
+  - customer_reference_info
+  - contact_person_list
