@@ -1,0 +1,15 @@
+title: AddBillingContactPerson
+type: object
+properties:
+  client_info:
+    $ref: ../../common/RequestClientInfo.yaml
+  billing_reference_info:
+    $ref: UpdateBillingReferenceInfo.yaml
+  contact_person_list:
+    type: array
+    items:
+      $ref: ../../contact-person/new-contact-person/NewBasicContactPersonInfo.yaml
+required:
+  - client_info
+  - billing_reference_info
+  - contact_person_list

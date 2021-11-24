@@ -1,5 +1,5 @@
 get:
-  operationId: U5
+  operationId: U05
   description: Get Thai Address Lookup
   summary: Get Thai Address Lookup.
   tags: []
