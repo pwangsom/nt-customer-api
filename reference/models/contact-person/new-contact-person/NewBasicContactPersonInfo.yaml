@@ -1,4 +1,4 @@
-title: NewBasicContactPersonInstallationAddress
+title: NewBasicContactPersonInfo
 allOf:
   - $ref: NewBasicContactPerson.yaml
   - type: object

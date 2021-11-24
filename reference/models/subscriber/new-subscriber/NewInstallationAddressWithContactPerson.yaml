@@ -4,4 +4,4 @@ properties:
   address_info:
     $ref: ../../address/NewOptionalAddress.yaml
   contact_person_info:
-    $ref: ../../contact-person/new-contact-person/NewBasicContactPersonInstallationAddress.yaml
+    $ref: ../../contact-person/new-contact-person/NewBasicContactPersonInfo.yaml
