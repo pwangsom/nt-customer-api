@@ -103,6 +103,9 @@
 '/customer/{customer_acct_number}/social_account/add':
   $ref: customer-account/C33.yaml
 
+'/customer/{customer_acct_number}/contact_person/add':
+  $ref: customer-account/C48.yaml
+
 '/customer/{customer_acct_number}/app_registration/add':
   $ref: customer-account/C72.yaml
 
