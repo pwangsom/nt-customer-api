@@ -1,0 +1,36 @@
+post:
+  operationId: S26
+  description: Add contact person to subscriber by ref_subscr_no
+  summary: Add Contact Person to Subscriber by Reference Subscriber Number.
+  tags: []
+  parameters:
+    - $ref: ../../parameters/RefSubscrNo.yaml
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: ../../models/subscriber/update-subscriber/AddSubscriberContactPerson.yaml
+  responses:
+    '200':
+      description: Operation success
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/common/OperationSuccess.yaml
+    '400':
+      description: Bad request.
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/common/OperationFailed.yaml
+    '401':
+      description: Authorization information is missing or invalid.
+    '404':
+      description: Operation failed.
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/common/OperationFailed.yaml      
+    '500':
+      description: Unexpected error.

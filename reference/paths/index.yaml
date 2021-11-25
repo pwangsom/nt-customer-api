@@ -247,6 +247,9 @@
 '/subscriber/{ref_subscr_no}/package_comp/terminate':
   $ref: subscriber/S21.yaml
 
+'/subscriber/{ref_subscr_no}/contact_person/add':
+  $ref: subscriber/S26.yaml
+
 '/invoice/{invoice_number}':      
   $ref: invoice-payment/I01.yaml
 

@@ -1,0 +1,15 @@
+title: AddSubscriberContactPerson
+type: object
+properties:
+  client_info:
+    $ref: ../../common/RequestClientInfo.yaml
+  subscriber_reference_info:
+    $ref: UpdateSubscriberReference.yaml
+  contact_person_list:
+    type: array
+    items:
+      $ref: ../../contact-person/new-contact-person/NewBasicContactPersonInfo.yaml
+required:
+  - client_info
+  - customer_reference_info
+  - contact_person_list

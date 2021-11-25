@@ -1,0 +1,22 @@
+title: UpdateSubscriberReference
+type: object
+properties:
+  ref_subscr_no:
+    type: string
+    format: number
+    example: '25412'
+    description: Sub reference number
+  service_type_code:
+    type: string
+    format: number
+    example: '110'
+    description: รหัสบริการ
+  reference_time:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: Reference up-to-date time
+required:
+  - ref_subscr_no
+  - service_type_code
+  - reference_time
