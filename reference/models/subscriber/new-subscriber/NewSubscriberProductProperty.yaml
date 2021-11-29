@@ -1,4 +1,4 @@
-title: NewSubscriberProperty
+title: NewSubscriberProductProperty
 type: object
 properties:
   product_property_id:

@@ -1,5 +1,0 @@
-title: MergeSubscriberProperty
-type: object
-properties:
-  id:
-    type: string

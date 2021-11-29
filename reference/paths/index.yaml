@@ -232,6 +232,9 @@
 '/subscriber/{ref_subscr_no}/subscriber_property/change':
   $ref: subscriber/S35.yaml
 
+'/subscriber/{ref_subscr_no}/property/merge':
+  $ref: subscriber/S22.yaml
+
 '/subscriber/{ref_subscr_no}/suspend':
   $ref: subscriber/S17.yaml
 

@@ -20,7 +20,7 @@ properties:
   subscriber_property_list:
     type: array
     items:
-      $ref: NewSubscriberProperty.yaml
+      $ref: NewSubscriberProductProperty.yaml
   installation_address_info:
       $ref: NewInstallationAddressInfo.yaml
   my_contract_info:
