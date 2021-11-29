@@ -1,10 +1,11 @@
 title: NewSubscriberProperty
 type: object
 properties:
-  property_key:
+  product_property_id:
     type: string
-    example: Download speed
-    description: Property key
+    format: number
+    example: '2425'
+    description: Product property reference id
   property_value:
     type: string
     example: 100Mb
