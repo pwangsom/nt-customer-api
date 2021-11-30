@@ -94,6 +94,9 @@
 '/customer/{customer_acct_number}/address/add':
   $ref: customer-account/C30.yaml
 
+'/customer/{customer_acct_number}/address/{address_id}/update':
+  $ref: customer-account/C34.yaml
+
 '/customer/{customer_acct_number}/telephone/add':
   $ref: customer-account/C31.yaml
 

@@ -1,0 +1,37 @@
+post:
+  operationId: C34
+  description: Update an address of a customer by customer_acct_number
+  summary: Update an address of a customer by Customer Number.
+  tags: []
+  parameters:
+    - $ref: ../../parameters/CustomerAcctNumber.yaml
+    - $ref: ../../parameters/AddressId.yaml
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: ../../models/customer-account/update-customer/UpdateCustomerAddress.yaml
+  responses:
+    '200':
+      description: Operation success
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/common/OperationSuccess.yaml
+    '400':
+      description: Bad request.
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/common/OperationFailed.yaml
+    '401':
+      description: Authorization information is missing or invalid.
+    '404':
+      description: Operation failed.
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/common/OperationFailed.yaml      
+    '500':
+      description: Unexpected error.
