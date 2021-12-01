@@ -1,5 +1,9 @@
 title: ChangeOwnerPrepaidSubscriber
-type: object
-properties:
-  id:
-    type: string
+allOf:
+  - $ref: ChangeOwnerSubscriber.yaml
+  - type: object
+    properties:
+      transfered_subscriber_reference_info:
+        $ref: NewTransferSubscriber.yaml
+    required:
+      - transfered_subscriber_reference_info
