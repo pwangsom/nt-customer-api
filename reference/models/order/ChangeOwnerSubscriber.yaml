@@ -1,5 +1,33 @@
 title: ChangeOwnerSubscriber
 type: object
 properties:
-  id:
-    type: string
+  client_info:
+    $ref: ../common/RequestClientInfo.yaml
+  terminated_subscriber_reference_info:
+    $ref: SubscriberInfo.yaml
+  order_info:
+    type: object
+    required:
+      - order_subtype_lkp
+      - order_no
+      - order_effective_date
+    properties:
+      order_subtype_lkp:
+        type: string
+        format: number
+        example: '20'
+        description: Terminated-Debt
+      order_no:
+        type: string
+        example: '25412'
+        description: Reference order number
+      order_effective_date:
+        type: string
+        format: date-time
+        example: '2016-08-29T09:12:33.001Z'
+        description: วันที่มีผลต่อการใช้งาน
+      order_complete_date:
+        type: string
+        format: date-time
+        example: '2016-08-29T09:12:33.001Z'
+        description: Order Complete Date
