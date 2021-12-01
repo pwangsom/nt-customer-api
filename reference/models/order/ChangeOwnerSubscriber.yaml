@@ -5,8 +5,6 @@ properties:
     $ref: ../common/RequestClientInfo.yaml
   terminated_subscriber_reference_info:
     $ref: SubscriberInfo.yaml
-  transfered_subscriber_reference_info:
-    $ref: NewTransferSubscriber.yaml
   order_info:
     type: object
     required:
