@@ -1,0 +1,5 @@
+title: ChangeOwnerPrepaidSubscriber
+type: object
+properties:
+  id:
+    type: string
