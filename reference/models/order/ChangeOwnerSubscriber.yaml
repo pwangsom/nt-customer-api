@@ -5,6 +5,8 @@ properties:
     $ref: ../common/RequestClientInfo.yaml
   terminated_subscriber_reference_info:
     $ref: SubscriberInfo.yaml
+  transfered_subscriber_reference_info:
+    $ref: NewTransferSubscriber.yaml
   order_info:
     type: object
     required:
@@ -31,3 +33,8 @@ properties:
         format: date-time
         example: '2016-08-29T09:12:33.001Z'
         description: Order Complete Date
+required:
+  - client_info
+  - terminated_subscriber_reference_info
+  - transfered_subscriber_reference_info
+  - order_info
