@@ -1,0 +1,5 @@
+title: ChangeOwnerSubscriber
+type: object
+properties:
+  id:
+    type: string
