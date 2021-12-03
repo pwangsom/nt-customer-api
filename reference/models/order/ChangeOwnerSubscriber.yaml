@@ -14,11 +14,6 @@ properties:
     properties:
       # order_type_lkp = 5
       # order_subtype_lkp = 6
-      order_subtype_lkp:
-        type: string
-        format: number
-        example: '20'
-        description: Terminated-Debt
       order_no:
         type: string
         example: '25412'
@@ -36,5 +31,4 @@ properties:
 required:
   - client_info
   - terminated_subscriber_reference_info
-  - transfered_subscriber_reference_info
   - order_info
