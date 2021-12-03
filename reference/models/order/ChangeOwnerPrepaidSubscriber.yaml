@@ -3,7 +3,7 @@ allOf:
   - $ref: ChangeOwnerSubscriber.yaml
   - type: object
     properties:
-      transfered_subscriber_reference_info:
+      transfered_prepaid_subscriber_reference_info:
         $ref: NewTransferSubscriber.yaml
     required:
       - transfered_subscriber_reference_info
