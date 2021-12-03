@@ -1,0 +1,27 @@
+title: NewTransferPrepaidSubscriber
+type: object
+properties:
+  subscriber_reference_info:
+    $ref: ../subscriber/new-subscriber/NewPrepaidSubscriberReference.yaml
+  general_info:
+    $ref: ../subscriber/new-subscriber/NewSubscriberGeneralInfo.yaml
+  package_list:
+    type: array
+    items:
+      $ref: ../subscriber/new-subscriber/NewSubscriberPackage.yaml
+  component_list:
+    type: array
+    items:
+      $ref: ../subscriber/new-subscriber/NewSubscriberComponent.yaml
+  subscriber_property_list:
+    type: array
+    items:
+      $ref: ../subscriber/new-subscriber/NewSubscriberProductProperty.yaml
+  installation_address_info:
+    $ref: ../subscriber/new-subscriber/NewInstallationAddressInfo.yaml
+  my_contract_info:
+    $ref: ../subscriber/new-subscriber/NewSubscriberMyContractInfo.yaml
+required:
+  - subscriber_reference_info
+  - general_info
+  - package_list
