@@ -1,0 +1,36 @@
+post:
+  operationId: S36
+  description: Change subscriber owner by ref_subscr_no
+  summary: Change Subscriber Owner by Reference Subscriber Number.
+  tags: []
+  parameters:
+    - $ref: ../../parameters/RefSubscrNo.yaml
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: ../../models/order/ChangeOwnerPostpaidSubscriber.yaml
+  responses:
+    '200':
+      description: Operation success
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/common/OperationSuccess.yaml
+    '400':
+      description: Bad request.
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/common/OperationFailed.yaml
+    '401':
+      description: Authorization information is missing or invalid.
+    '404':
+      description: Operation failed.
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/common/OperationFailed.yaml      
+    '500':
+      description: Unexpected error.    
