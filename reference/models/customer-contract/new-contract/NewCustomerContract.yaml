@@ -22,3 +22,7 @@ properties:
     type: array
     items:
       $ref: NewSalesSupport.yaml
+required:
+  - client_info
+  - customer_acct_number
+  - general_info
