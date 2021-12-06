@@ -1,0 +1,31 @@
+title: NewCustomerContract
+type: object
+properties:
+  client_info:
+    $ref: ../../common/RequestClientInfo.yaml
+  customer_acct_number:
+    type: string
+    format: number
+    example: '7017480851'
+    description: CA reference number
+  general_info:
+    $ref: NewBasicCustomerContract.yaml
+  contract_service_list:
+    type: array
+    items:
+      $ref: NewContractService.yaml
+  contact_person_list:
+    type: array
+    items:
+      $ref: ../../contact-person/new-contact-person/NewBasicContactPersonInfo.yaml
+  sales_support_list:
+    type: array
+    items:
+      type: object
+      properties:
+        employee_code:
+          type: string
+          example: '00123456'
+          description: Sales employee code
+      required:
+        - employee_code
