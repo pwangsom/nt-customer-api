@@ -1,0 +1,13 @@
+title: UpdateCustomerContract
+type: object
+properties:
+  client_info:
+    $ref: ../../common/RequestClientInfo.yaml
+  contract_reference_info:
+    $ref: UpdateContractReference.yaml
+  general_info:
+    $ref: UpdateBasicCustomerContract.yaml
+required:
+  - client_info
+  - contract_reference_info
+  - general_info
