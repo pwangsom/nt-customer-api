@@ -14,7 +14,7 @@ properties:
   contract_type_lkp:
     allOf:
       - $ref: ../common/DisplayLookup.yaml
-    description: คำนำหน้าชื่อไทย
+    description: ประเภทสัญญา
     example:
       lookup_ref_id: '1'
       display_value: Sales Contract
