@@ -21,11 +21,4 @@ properties:
   sales_support_list:
     type: array
     items:
-      type: object
-      properties:
-        employee_code:
-          type: string
-          example: '00123456'
-          description: Sales employee code
-      required:
-        - employee_code
+      $ref: NewSalesSupport.yaml
