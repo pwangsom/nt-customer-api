@@ -1,0 +1,8 @@
+title: NewContractService
+type: object
+properties:
+  service_type_code:
+    type: string
+    format: number
+    example: '110'
+    description: รหัสบริการ
