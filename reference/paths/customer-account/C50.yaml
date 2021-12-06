@@ -1,7 +1,7 @@
 get:
   operationId: C50
   description: Retrieve customer info with contract list by customer_acct_number
-  summary: Get Customer Info with Contract List by Customer Number.
+  summary: Retrieve Customer Info with Contract List by Customer Number.
   tags: []
   parameters:
     - $ref: ../../parameters/CustomerAcctNumber.yaml
