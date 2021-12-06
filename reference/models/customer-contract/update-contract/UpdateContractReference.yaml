@@ -1,0 +1,22 @@
+title: UpdateContractReference
+type: object
+properties:
+  customer_acct_number:
+    type: string
+    format: number
+    example: '7017480851'
+    description: CA reference number
+  customer_contract_id:
+    type: string
+    format: number
+    example: '65546'
+    description: Customer contract reference key
+  reference_time:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: Reference up-to-date time of Contract
+required:
+  - customer_acct_number
+  - customer_contract_id
+  - reference_time
