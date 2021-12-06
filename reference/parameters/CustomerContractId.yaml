@@ -1,0 +1,8 @@
+name: customer_contract_id
+in: path
+required: true
+description: Customer contract reference id
+schema:
+  type: string
+  format: number
+  example: '2425'
