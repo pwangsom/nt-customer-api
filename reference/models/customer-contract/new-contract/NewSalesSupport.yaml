@@ -1,0 +1,7 @@
+title: NewSalesSupport
+type: object
+properties:
+  employee_code:
+    type: string
+    example: '00123456'
+    description: Sales employee code
