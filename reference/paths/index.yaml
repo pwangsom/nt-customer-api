@@ -110,7 +110,7 @@
   $ref: customer-account/C48.yaml
 
 '/customer/{customer_acct_number}/contract/add':
-  $ref: customer-account/C48.yaml
+  $ref: customer-account/C51.yaml
 
 '/customer/{customer_acct_number}/app_registration/add':
   $ref: customer-account/C72.yaml
