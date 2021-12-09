@@ -17,8 +17,6 @@ properties:
     type: array
     items:
       $ref: ../subscriber/new-subscriber/NewSubscriberProductProperty.yaml
-  installation_address_info:
-    $ref: ../subscriber/new-subscriber/NewInstallationAddressInfo.yaml
   my_contract_info:
     $ref: ../subscriber/new-subscriber/NewSubscriberMyContractInfo.yaml
 required:
