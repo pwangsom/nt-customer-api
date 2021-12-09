@@ -4,6 +4,6 @@ allOf:
   - type: object
     properties:
       transfered_prepaid_subscriber_reference_info:
-        $ref: NewTransferSubscriber.yaml
+        $ref: NewTransferPrepaidSubscriber.yaml
     required:
       - transfered_subscriber_reference_info
