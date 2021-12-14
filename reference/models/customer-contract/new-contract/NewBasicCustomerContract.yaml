@@ -2,13 +2,10 @@ title: NewBasicCustomerContract
 type: object
 properties:
   contract_type_lkp:
-    allOf:
-      - $ref: ../../common/DisplayLookup.yaml
-    description: ประเภทสัญญา
-    example:
-      lookup_ref_id: '1'
-      display_value: Sales Contract
-      lookup_category_name: contract_type_lkp
+    type: string
+    format: number
+    example: '1'
+    description: contract_type_lkp     
   contract_ref_number:
     type: string
     example: NT 2021/001
