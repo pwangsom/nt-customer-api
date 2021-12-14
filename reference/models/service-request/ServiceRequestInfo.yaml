@@ -1,0 +1,222 @@
+title: ServiceRequestInfo
+type: object
+properties:
+  service_request_id:
+    type: string
+    format: number
+    example: '2425'
+    description: service request reference id
+  reference_time:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: Reference up-to-date time 
+  customer_acct_number:
+    type: string
+    format: number
+    example: '7017480851'
+    description: CA reference number
+  bill_acct_number:
+    type: string
+    format: number
+    example: '12254127'
+    description: BA number
+  ref_subscr_no:
+    type: string
+    format: number
+    example: '25412'
+    description: Sub reference number
+  subscriber_number:
+    type: string
+    example: '881234567'
+    description: Subscriber number
+  service_type:
+    allOf:
+      - $ref: ../subscriber/ServiceType.yaml
+    description: Service type
+    example:
+      service_type_code: '150'
+      service_type_name: my Prepaid
+  incident_id:
+    type: string
+    example: 'SD8888390'
+    description: INCIDENT_ID
+  category:
+    type: string
+    example: 'incident'
+    description: CATEGORY
+  area:
+    type: string
+    example: 'Prepaid'
+    description: AREA
+  sub_area:
+    type: string
+    example: 'Data'
+    description: SUB_AREA
+  title:
+    type: string
+    example: 'รับ - ส่ง SMS ไม่ได้'
+    description: TITLE
+  opened_by:
+    type: string
+    example: 'n13858'
+    description: OPENED_BY
+  assignee:
+    type: string
+    example: 'n13858'
+    description: ASSIGNEE
+  service:
+    type: string
+    example: 'my'
+    description: SERVICE
+  unique_id:
+    type: string
+    example: ''
+    description: UNIQUE_ID
+  call_number:
+    type: string
+    example: ''
+    description: CALL_NUMBER
+  skill_set:
+    type: string
+    example: ''
+    description: SKILL_SET
+  agent_no:
+    type: string
+    example: ''
+    description: AGENT_NO
+  impact:
+    type: string
+    example: '4 - User'
+    description: IMPACT
+  urgency:
+    type: string
+    example: '4 - Low'
+    description: URGENCY
+  priority:
+    type: string
+    example: '4'
+    description: PRIORITY
+  first_touch:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: FIRST_TOUCH
+  handle_time:
+    type: string
+    example: '12.02.46'
+    description: HANDLE_TIME
+  open_time:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: OPEN_TIME
+  close_time:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: CLOSE_TIME
+  contact_name:
+    type: string
+    example: 'สมชาย เจริญยิ่ง'
+    description: CONTACT_NAME
+  status:
+    type: string
+    example: 'Closed'
+    description: STATUS
+  first_call:
+    type: string
+    example: 't'
+    description: FIRST_CALL
+  source_service:
+    type: string
+    example: 'Direct Input'
+    description: SOURCE_SERVICE
+  crm_search_type:
+    type: string
+    example: 'Phone Number'
+    description: CRM_SEARCH_TYPE
+  crm_search_value:
+    type: string
+    example: '880378858'
+    description: CRM_SEARCH_VALUE
+  crm_catid_mobile:
+    type: string
+    example: '880378858'
+    description: CRM_CATID_MOBILE
+  crm_service:
+    type: string
+    example: 'my Prepaid'
+    description: CRM_SERVICE
+  crm_ba:
+    type: string
+    example: ''
+    description: CRM_BA
+  crm_bill_company:
+    type: string
+    example: ''
+    description: CRM_BILL_COMPANY
+  crm_status:
+    type: string
+    example: 'Active'
+    description: CRM_STATUS
+  crm_customer_name:
+    type: string
+    example: 'พงศภัค ศิริรักษ์'
+    description: CRM_CUSTOMER_NAME
+  crm_type:
+    type: string
+    example: 'Consumer'
+    description: CRM_TYPE
+  crm_customer_type:
+    type: string
+    example: 'Personal'
+    description: CRM_CUSTOMER_TYPE
+  crm_card_type:
+    type: string
+    example: 'บัตรประชาชนไทย(Citizen ID Card)'
+    description: CRM_CARD_TYPE
+  crm_card_no:
+    type: string
+    example: '1234567890123'
+    description: CRM_CARD_NO
+  crm_amphur:
+    type: string
+    example: 'อ.เมืองชัยนาท'
+    description: CRM_AMPHUR
+  crm_province:
+    type: string
+    example: 'จ.ชัยนาท'
+    description: CRM_PROVINCE
+  crm_front:
+    type: string
+    example: ''
+    description: CRM_FRONT
+  crm_end:
+    type: string
+    example: ''
+    description: CRM_END
+  description:
+    type: string
+    example: 'ไม่ได้รับ sms OTP ทาง IG'
+    description: DESCRIPTION
+  closure_close:
+    type: string
+    example: 'Solved by Service Desk'
+    description: CLOSURE_CLOSE
+  solution:
+    type: string
+    example: 'RESET SIM เรียบร้อยแล้ว กรุณาปิด-เปิดเครื่องใหม่'
+    description: SOLUTION
+  callback_type:
+    type: string
+    example: 'Telephone'
+    description: CALLBACK_TYPE
+  callback_phone:
+    type: string
+    example: '830370558'
+    description: CALLBACK_PHONE
+  callback_email:
+    type: string
+    example: ''
+    description: CALLBACK_EMAIL
