@@ -41,4 +41,4 @@ properties:
   ba_sales_support_list:
     type: array
     items:
-      $ref: BaEmployeeSupport.yaml
+      $ref: BillingSalesSupport.yaml
