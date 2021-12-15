@@ -21,7 +21,7 @@ properties:
   sales_support_list:
     type: array
     items:
-      $ref: NewSalesSupport.yaml
+      $ref: ../../common/NtSalesSupport.yaml
 required:
   - client_info
   - customer_acct_number
