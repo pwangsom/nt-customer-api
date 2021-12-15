@@ -1,0 +1,9 @@
+title: BasicBillingAccountWithSalesSupport
+allOf:
+  - $ref: SimpleBillingAccount.yaml
+  - type: object
+    properties:
+      sales_support_list:
+        type: array
+        items:
+          $ref: BaEmployeeSupport.yaml
