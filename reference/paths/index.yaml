@@ -154,6 +154,9 @@
 '/billing/{bill_acct_number}/contact_person':
   $ref: billing-account/B33.yaml
 
+'/billing/{bill_acct_number}/sales_support':
+  $ref: billing-account/B42.yaml
+
 '/billing/{bill_acct_number}/service_request':
   $ref: billing-account/B41.yaml
 
