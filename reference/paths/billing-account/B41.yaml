@@ -1,7 +1,7 @@
 get:
   operationId: B41
-  description: Retrieve a list of service requests by bill_acct_number
-  summary: Get a List of Service Requests by BA Number.
+  description: Retrieve basic BA info with a list of service requests by bill_acct_number
+  summary: Get Basic BA Info with a List of Service Requests by BA Number.
   tags: []
   parameters:
     - $ref: ../../parameters/BillAcctNumber.yaml
@@ -13,7 +13,7 @@ get:
           schema:
             type: array
             items:
-              $ref: ../../models/service-request/ServiceRequest.yaml
+              $ref: ../../models/customer-account/BasicCustomerAccountWithServiceRequest.yaml
     '400':
       description: Bad request.
     '401':
