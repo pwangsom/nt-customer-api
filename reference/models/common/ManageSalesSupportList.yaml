@@ -1,0 +1,14 @@
+title: ManageSalesSupportList
+anyOf:
+  - type: object
+    properties:
+      remove_sales_support_list:
+        type: array
+        items:
+          $ref: NtSalesSupport.yaml
+  - type: object
+    properties:
+      add_sales_support_list:
+        type: array
+        items:
+          $ref: NtSalesSupport.yaml
