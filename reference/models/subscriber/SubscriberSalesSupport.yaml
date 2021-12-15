@@ -1,0 +1,22 @@
+title: SubscriberSalesSupport
+allOf:
+  - type: object
+    properties:
+      subscriber_sale_support_id:
+        type: string
+        format: number
+        description: CA Sales Support ID
+      reference_time:
+        type: string
+        format: date-time
+        example: '2016-08-29T09:12:33.001Z'
+        description: Reference up-to-date time 
+      sub_sale_support_type_lkp:
+        allOf:
+          - $ref: ../common/DisplayLookup.yaml
+        description: Subscriber Sales Support
+        example:
+          lookup_ref_id: 's'
+          display_value: Sales Account
+          lookup_category_name: sub_sale_support_type_lkp
+  - $ref: ../common/NtEmployeeInfo.yaml         
