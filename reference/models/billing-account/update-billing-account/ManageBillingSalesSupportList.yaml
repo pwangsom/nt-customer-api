@@ -1,0 +1,12 @@
+title: ManageBillingSalesSupportList
+anyOf:
+  - type: object
+    properties:
+      remove_sales_support_list:
+        type: array
+        items:
+          
+  - type: object
+    properties:
+      more_info:
+        $ref: UpdateBillingMoreInfo.yaml
