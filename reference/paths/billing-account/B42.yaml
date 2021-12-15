@@ -1,0 +1,24 @@
+get:
+  operationId: B42
+  description: Retrieve basic BA info with sales supports by bill_acct_number
+  summary: Get Basic BA Info with Sales Supports by BA Number.
+  tags: []
+  parameters:
+    - $ref: ../../parameters/BillAcctNumber.yaml
+  responses:
+    '200':
+      description: Data Found
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../../models/billing-account/BasicBillingAccountWithSalesSupport.yaml
+    '400':
+      description: Bad request.
+    '401':
+      description: Authorization information is missing or invalid.
+    '404':
+      description: Data was not found.
+    '500':
+      description: Unexpected error.
