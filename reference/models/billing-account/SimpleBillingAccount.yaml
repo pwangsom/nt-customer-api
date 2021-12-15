@@ -1,0 +1,28 @@
+title: SimpleBillingAccount
+type: object
+properties:
+  bill_acct_number:
+    type: string
+    format: number
+    example: '12254127'
+    description: BA number
+  reference_time:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: Reference up-to-date time 
+  customer_acct_number:
+    type: string
+    format: number
+    example: '7017480851'
+    description: CA reference number
+  general_info:
+    $ref: BillingGeneralInfo.yaml
+  dispatch_method_info:
+    $ref: BillingDispatchMethodInfo.yaml
+  payment_method_info:
+    $ref: BillingPaymentMethodInfo.yaml
+  billing_address_list:
+    type: array
+    items:
+      $ref: BillingAddress.yaml

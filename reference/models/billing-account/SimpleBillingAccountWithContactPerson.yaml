@@ -1,0 +1,9 @@
+title: SimpleBillingAccountWithContactPerson
+allOf:
+  - $ref: SimpleBillingAccount.yaml
+  - type: object
+    properties:
+      contact_person_list:
+        type: array
+        items:
+          $ref: ../contact-person/BasicContactPersonInfo.yaml
