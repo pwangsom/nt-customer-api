@@ -1,7 +1,7 @@
 get:
-  operationId: S38
-  description: Retrieve a list of service requests by ref_subscr_no
-  summary: Get a List of Service Requests by Reference Subscriber Number.
+  operationId: S27
+  description: Retrieve basic subscriber with a list of service requests by ref_subscr_no
+  summary: Get Basic Subscriber with a List of Service Requests by Reference Subscriber Number.
   tags: []
   parameters:
     - $ref: ../../parameters/RefSubscrNo.yaml
@@ -13,7 +13,7 @@ get:
           schema:
             type: array
             items:
-              $ref: ../../models/service-request/ServiceRequest.yaml
+              $ref: ../../models/subscriber/BasicSubscriberWithServiceRequest.yaml
     '400':
       description: Bad request.
     '401':
