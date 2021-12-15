@@ -26,7 +26,3 @@ properties:
     type: array
     items:
       $ref: BillingAddress.yaml
-  subscriber_list:
-    type: array
-    items:
-      $ref: ../subscriber/BasicSubscriber.yaml
