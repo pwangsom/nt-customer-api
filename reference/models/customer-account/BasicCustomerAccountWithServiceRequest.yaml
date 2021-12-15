@@ -3,7 +3,7 @@ allOf:
   - $ref: BasicCustomerAccount.yaml
   - type: object
     properties:
-      address_list:
+      service_request_list:
         type: array
         items:
           $ref: ../service-request/ServiceRequest.yaml
