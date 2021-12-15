@@ -1,0 +1,33 @@
+title: ChangeInstallationAddress
+type: object
+properties:
+  client_info:
+    $ref: ../common/RequestClientInfo.yaml
+  subscriber_reference_info:
+    $ref: SubscriberInfo.yaml
+  order_info:
+    type: object
+    properties:
+      order_no:
+        type: string
+        example: '25412'
+        description: Reference order number
+      order_effective_date:
+        type: string
+        format: date-time
+        example: '2016-08-29T09:12:33.001Z'
+        description: วันที่มีผลต่อการใช้งาน
+      order_complete_date:
+        type: string
+        format: date-time
+        example: '2016-08-29T09:12:33.001Z'
+        description: Order Complete Date
+    required:
+      - order_no
+      - order_effective_date
+  installation_address_info:
+    $ref: ChangeInstallationAddressInfo.yaml
+required:
+  - client_info
+  - subscriber_reference_info
+  - installation_address_info
