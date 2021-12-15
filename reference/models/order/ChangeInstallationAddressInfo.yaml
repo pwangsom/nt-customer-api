@@ -1,0 +1,26 @@
+title: ChangeInstallationAddressInfo
+anyOf:
+  - type: object
+    properties:
+      front_installation:
+        type: object
+        properties:
+          installation_address_type_lkp:
+            type: string
+            enum:
+              - '1'
+            description: ที่อยู่ติดตั้งต้นทาง
+          installation_info:
+            $ref: ChangeInstallationAddressOneOf.yaml
+  - type: object
+    properties:
+      end_installation:
+        type: object
+        properties:
+          installation_address_type_lkp:
+            type: string
+            enum:
+              - '2'
+            description: ที่อยู่ติดตั้งปลายทาง    
+          installation_info:        
+            $ref: ChangeInstallationAddressOneOf.yaml
