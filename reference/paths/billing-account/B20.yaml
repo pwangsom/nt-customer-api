@@ -1,7 +1,7 @@
 post:
   operationId: B20
   description: Delete optional address of a billing account by bill_acct_number
-  summary: Delete Optional Address of a Billing Account Number.
+  summary: Delete Optional Address of a Billing Account by BA Number.
   tags: []
   parameters:
     - $ref: ../../parameters/BillAcctNumber.yaml

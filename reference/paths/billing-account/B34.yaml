@@ -1,7 +1,7 @@
 post:
   operationId: B34
   description: Add new contact person of a billing account by bill_acct_number
-  summary: Add New Contact Person of a Billing Account Number.
+  summary: Add New Contact Person of a Billing Account by BA Number.
   tags: []
   parameters:
     - $ref: ../../parameters/BillAcctNumber.yaml

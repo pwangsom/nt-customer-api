@@ -1,7 +1,7 @@
 post:
   operationId: B14
   description: Update address of a billing account by bill_acct_number
-  summary: Update Address of a Billing Account Number.
+  summary: Update Address of a Billing Account by BA Number.
   tags: []
   parameters:
     - $ref: ../../parameters/BillAcctNumber.yaml

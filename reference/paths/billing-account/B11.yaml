@@ -1,7 +1,7 @@
 post:
   operationId: B11
   description: Update general info of a billing account by bill_acct_number
-  summary: Update General Info of a Billing Account Number.
+  summary: Update General Info of a Billing Account by BA Number.
   tags: []
   parameters:
     - $ref: ../../parameters/BillAcctNumber.yaml

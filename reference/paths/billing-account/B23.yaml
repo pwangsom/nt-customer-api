@@ -1,7 +1,7 @@
 post:
   operationId: B23
   description: Update dispatch method of a billing account by bill_acct_number
-  summary: Update Dispatch Method of a Billing Account Number.
+  summary: Update Dispatch Method of a Billing Account by BA Number.
   tags: []
   parameters:
     - $ref: ../../parameters/BillAcctNumber.yaml

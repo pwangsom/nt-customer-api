@@ -1,17 +1,16 @@
 post:
-  operationId: B17
-  description: Add optional address of a billing account by bill_acct_number
-  summary: Add Optional Address of a Billing Account by BA Number.
+  operationId: B36
+  description: Manage sales support of a billing account by bill_acct_number
+  summary: Manage sales support of a Billing Account by BA Number.
   tags: []
   parameters:
     - $ref: ../../parameters/BillAcctNumber.yaml
-    - $ref: ../../parameters/Mode.yaml
   requestBody:
     required: true
     content:
       application/json:
         schema:
-          $ref: ../../models/billing-account/update-billing-account/AddOptionalBillingAddress.yaml
+          $ref: ../../models/billing-account/update-billing-account/AddBillingContactPerson.yaml
   responses:
     '200':
       description: Operation success
