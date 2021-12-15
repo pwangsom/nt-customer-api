@@ -1,7 +1,7 @@
 get:
   operationId: C60
-  description: Retrieve a list of service requests by customer_acct_number
-  summary: Retrieve a List of Service Requests by Customer Number.
+  description: Retrieve customer info with a list of service requests by customer_acct_number
+  summary: Get Customer Info with a List of Service Requests by Customer Number.
   tags: []
   parameters:
     - $ref: ../../parameters/CustomerAcctNumber.yaml
@@ -13,7 +13,7 @@ get:
           schema:
             type: array
             items:
-              $ref: ../../models/service-request/ServiceRequest.yaml
+              $ref: ../../models/customer-account/BasicCustomerAccountWithServiceRequest.yaml
     '400':
       description: Bad request.
     '401':
