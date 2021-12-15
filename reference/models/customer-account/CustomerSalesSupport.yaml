@@ -16,7 +16,7 @@ allOf:
           - $ref: ../common/DisplayLookup.yaml
         description: CA Sales Support
         example:
-          lookup_ref_id: 's'
+          lookup_ref_id: '2'
           display_value: Sales Account
           lookup_category_name: ca_sale_support_type_lkp
   - $ref: ../common/NtEmployeeInfo.yaml         
