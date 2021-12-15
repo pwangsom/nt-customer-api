@@ -1,7 +1,7 @@
 get:
   operationId: C47
   description: Retrieve customer info with contact person list by customer_acct_number
-  summary: Retrieve Customer Info with Contract Person List by Customer Number.
+  summary: Get Customer Info with Contract Person List by Customer Number.
   tags: []
   parameters:
     - $ref: ../../parameters/CustomerAcctNumber.yaml
