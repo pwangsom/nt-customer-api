@@ -1,7 +1,7 @@
 post:
   operationId: B36
-  description: Manage sales support of a billing account by bill_acct_number
-  summary: Manage sales support of a Billing Account by BA Number.
+  description: Manage sales support team of a billing account by bill_acct_number
+  summary: Manage Sales Support Team of a Billing Account by BA Number.
   tags: []
   parameters:
     - $ref: ../../parameters/BillAcctNumber.yaml
