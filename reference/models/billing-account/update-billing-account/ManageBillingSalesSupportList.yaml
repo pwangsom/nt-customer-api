@@ -5,8 +5,10 @@ anyOf:
       remove_sales_support_list:
         type: array
         items:
-          
+          $ref: ../../common/NtSalesSupport.yaml
   - type: object
     properties:
-      more_info:
-        $ref: UpdateBillingMoreInfo.yaml
+      add_sales_support_list:
+        type: array
+        items:
+          $ref: ../../common/NtSalesSupport.yaml
