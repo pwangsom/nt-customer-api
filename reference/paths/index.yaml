@@ -290,7 +290,7 @@
   $ref: subscriber/S37.yaml
 
 '/subscriber/{ref_subscr_no}/installation_address/change':
-  $ref: subscriber/S37.yaml
+  $ref: subscriber/S30.yaml
 
 '/subscriber/{ref_subscr_no}/contact_person/add':
   $ref: subscriber/S26.yaml
