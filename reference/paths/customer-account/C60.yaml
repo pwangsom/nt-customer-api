@@ -1,3 +1,4 @@
+get:
   operationId: C60
   description: Retrieve a list of service requests by customer_acct_number
   summary: Retrieve a List of Service Requests by Customer Number.
