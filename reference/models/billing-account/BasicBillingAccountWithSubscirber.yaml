@@ -1,0 +1,9 @@
+title: BasicBillingAccountWithSubscirber
+allOf:
+  - $ref: BasicBillingAccount.yaml
+  - type: object
+    properties:
+      subscriber_list:
+        type: array
+        items:
+          $ref: ../subscriber/BasicSubscriber.yaml
