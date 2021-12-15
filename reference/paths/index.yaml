@@ -289,11 +289,14 @@
 '/subscriber/{ref_subscr_no}/prepaid/change_owner':
   $ref: subscriber/S37.yaml
 
+'/subscriber/{ref_subscr_no}/installation_address/change':
+  $ref: subscriber/S37.yaml
+
 '/subscriber/{ref_subscr_no}/contact_person/add':
   $ref: subscriber/S26.yaml
 
 '/subscriber/{ref_subscr_no}/sales_support/manage':
-  $ref: subscriber/S32.yaml
+  $ref: subscriber/S30.yaml
 
 '/invoice/{invoice_number}':      
   $ref: invoice-payment/I01.yaml
