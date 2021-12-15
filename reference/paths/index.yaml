@@ -52,11 +52,14 @@
 '/customer/{customer_acct_number}/contact_person':
   $ref: customer-account/C47.yaml
 
-'/customer/{customer_acct_number}/contract':
-  $ref: customer-account/C50.yaml
+'/customer/{customer_acct_number}/sales_support':
+  $ref: customer-account/C79.yaml
 
 '/customer/{customer_acct_number}/service_request':
   $ref: customer-account/C60.yaml
+
+'/customer/{customer_acct_number}/contract':
+  $ref: customer-account/C50.yaml
 
 '/customer/{customer_acct_number}/customer_value':
   $ref: customer-account/C64.yaml
@@ -240,6 +243,9 @@
 
 '/subscriber/{ref_subscr_no}/contact_person':
   $ref: subscriber/S27.yaml
+
+'/subscriber/{ref_subscr_no}/sales_support':
+  $ref: subscriber/S39.yaml
 
 '/subscriber/{ref_subscr_no}/service_request':
   $ref: subscriber/S38.yaml
