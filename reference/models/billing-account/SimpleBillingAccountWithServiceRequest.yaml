@@ -1,9 +1,0 @@
-title: SimpleBillingAccountWithServiceRequest
-allOf:
-  - $ref: SimpleBillingAccount.yaml
-  - type: object
-    properties:
-      service_request_list:
-        type: array
-        items:
-          $ref: ../service-request/ServiceRequest.yaml
