@@ -1,0 +1,24 @@
+get:
+  operationId: B41
+  description: Retrieve a list of service requests by bill_acct_number
+  summary: Get a List of Service Requests by BA Number.
+  tags: []
+  parameters:
+    - $ref: ../../parameters/BillAcctNumber.yaml
+  responses:
+    '200':
+      description: Data Found
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../../models/service-request/ServiceRequest.yaml
+    '400':
+      description: Bad request.
+    '401':
+      description: Authorization information is missing or invalid.
+    '404':
+      description: Data was not found.
+    '500':
+      description: Unexpected error.
