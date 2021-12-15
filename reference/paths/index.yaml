@@ -196,6 +196,9 @@
 '/billing/{bill_acct_number}/contact_person/add':
   $ref: billing-account/B34.yaml
 
+'/billing/{bill_acct_number}/sales_support/manage':
+  $ref: billing-account/B36.yaml
+
 '/subscriber/{ref_subscr_no}/basic':
   $ref: subscriber/S01.yaml
 
