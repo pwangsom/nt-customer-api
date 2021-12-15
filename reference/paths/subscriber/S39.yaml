@@ -1,0 +1,24 @@
+get:
+  operationId: S39
+  description: Retrieve basic subscriber with sales support team by ref_subscr_no
+  summary: Get Basic Subscriber with Sales Support Team by Reference Subscriber Number.
+  tags: []
+  parameters:
+    - $ref: ../../parameters/RefSubscrNo.yaml
+  responses:
+    '200':
+      description: Data Found
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../../models/subscriber/BasicSubscriberWithServiceRequest.yaml
+    '400':
+      description: Bad request.
+    '401':
+      description: Authorization information is missing or invalid.
+    '404':
+      description: Data was not found.
+    '500':
+      description: Unexpected error.
