@@ -1,0 +1,4 @@
+title: ChangeInstallationAddressOneOf
+oneOf:
+  - $ref: ../subscriber/new-subscriber/NewInstallationAddress.yaml
+  - $ref: ../subscriber/new-subscriber/NewInstallationAddressWithContactPerson.yaml
