@@ -1,6 +1,6 @@
 title: BasicBillingAccountWithContactPerson
 allOf:
-  - $ref: SimpleBillingAccount.yaml
+  - $ref: BasicBillingAccount.yaml
   - type: object
     properties:
       contact_person_list:
