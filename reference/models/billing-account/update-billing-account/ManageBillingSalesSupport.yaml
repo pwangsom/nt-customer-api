@@ -1,0 +1,10 @@
+title: ManageBillingSalesSupport
+type: object
+properties:
+  client_info:
+    $ref: ../../common/RequestClientInfo.yaml
+  billing_reference_info:
+    $ref: UpdateBillingReferenceInfo.yaml
+required:
+  - client_info
+  - billing_reference_info
