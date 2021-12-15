@@ -1,0 +1,9 @@
+title: BasicSubscriberWithSalesSupport
+allOf:
+  - $ref: BasicSubscriber.yaml
+  - type: object
+    properties:
+      sales_support_list:
+        type: array
+        items:
+          $ref: SubscriberSalesSupport.yaml
