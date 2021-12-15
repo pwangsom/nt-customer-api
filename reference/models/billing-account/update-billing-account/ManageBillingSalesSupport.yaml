@@ -9,4 +9,4 @@ allOf:
     required:
       - client_info
       - billing_reference_info
-  - $ref: ManageBillingSalesSupportList.yaml
+  - $ref: ../../common/ManageSalesSupportList.yaml
