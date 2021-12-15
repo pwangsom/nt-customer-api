@@ -10,7 +10,7 @@ post:
     content:
       application/json:
         schema:
-          $ref: ../../models/billing-account/update-billing-account/AddBillingContactPerson.yaml
+          $ref: ../../models/billing-account/update-billing-account/ManageBillingSalesSupport.yaml
   responses:
     '200':
       description: Operation success
