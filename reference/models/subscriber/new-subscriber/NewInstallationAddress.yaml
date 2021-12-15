@@ -1,0 +1,5 @@
+title: NewInstallationAddress
+type: object
+properties:
+  address_info:
+    $ref: ../../address/NewOptionalAddress.yaml
