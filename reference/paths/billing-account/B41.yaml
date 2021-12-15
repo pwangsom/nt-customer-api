@@ -13,7 +13,7 @@ get:
           schema:
             type: array
             items:
-              $ref: ../../models/customer-account/BasicCustomerAccountWithServiceRequest.yaml
+              $ref: ../../models/billing-account/BasicBillingAccountWithServiceRequest.yaml
     '400':
       description: Bad request.
     '401':
