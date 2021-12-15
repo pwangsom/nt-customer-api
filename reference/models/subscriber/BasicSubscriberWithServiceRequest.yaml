@@ -3,7 +3,7 @@ allOf:
   - $ref: BasicSubscriber.yaml
   - type: object
     properties:
-      contact_person_list:
+      service_request_list:
         type: array
         items:
           $ref: ../service-request/ServiceRequest.yaml
