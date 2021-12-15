@@ -1,0 +1,12 @@
+title: ManageCustomerSalesSupport
+allOf:
+  - type: object
+    properties:
+      client_info:
+        $ref: ../../common/RequestClientInfo.yaml
+      customer_reference_info:
+        $ref: UpdateCustomerReference.yaml
+    required:
+      - client_info
+      - customer_reference_info
+  - $ref: ../../common/ManageSalesSupportList.yaml
