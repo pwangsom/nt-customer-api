@@ -53,7 +53,7 @@
   $ref: customer-account/C47.yaml
 
 '/customer/{customer_acct_number}/sales_support':
-  $ref: customer-account/C79.yaml
+  $ref: customer-account/C76.yaml
 
 '/customer/{customer_acct_number}/service_request':
   $ref: customer-account/C60.yaml
@@ -117,6 +117,9 @@
 
 '/customer/{customer_acct_number}/contract/add':
   $ref: customer-account/C51.yaml
+
+'/customer/{customer_acct_number}/sales_support/manage':
+  $ref: customer-account/C61.yaml
 
 '/customer/{customer_acct_number}/contract/{customer_contract_id}/update':
   $ref: customer-account/C53.yaml
@@ -288,6 +291,9 @@
 
 '/subscriber/{ref_subscr_no}/contact_person/add':
   $ref: subscriber/S26.yaml
+
+'/subscriber/{ref_subscr_no}/sales_support/manage':
+  $ref: subscriber/S32.yaml
 
 '/invoice/{invoice_number}':      
   $ref: invoice-payment/I01.yaml
