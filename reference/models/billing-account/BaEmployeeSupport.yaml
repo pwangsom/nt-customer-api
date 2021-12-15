@@ -1,4 +1,4 @@
-title: BaEmployeeSupport
+title: BillingSalesSupport
 allOf:
   - type: object
     properties:
