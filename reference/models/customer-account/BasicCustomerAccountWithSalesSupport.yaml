@@ -1,0 +1,9 @@
+title: BasicCustomerAccountWithSalesSupport
+allOf:
+  - $ref: BasicCustomerAccount.yaml
+  - type: object
+    properties:
+      service_request_list:
+        type: array
+        items:
+          $ref: CustomerSalesSupport.yaml
