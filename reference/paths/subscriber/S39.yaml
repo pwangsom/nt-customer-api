@@ -13,7 +13,7 @@ get:
           schema:
             type: array
             items:
-              $ref: ../../models/subscriber/BasicSubscriberWithServiceRequest.yaml
+              $ref: ../../models/subscriber/BasicSubscriberWithSalesSupport.yaml
     '400':
       description: Bad request.
     '401':
