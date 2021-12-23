@@ -296,7 +296,7 @@
   $ref: subscriber/S26.yaml
 
 '/subscriber/{ref_subscr_no}/sales_support/manage':
-  $ref: subscriber/S30.yaml
+  $ref: subscriber/S32.yaml
 
 '/invoice/{invoice_number}':      
   $ref: invoice-payment/I01.yaml
@@ -319,8 +319,8 @@
 '/master/address_lookup/th':
   $ref: utility/U05.yaml
 
-'/user/{user_name}':
-  $ref: utility/U11.yaml  
-
 '/master/product_property/{service_type_code}':
   $ref: utility/U13.yaml  
+
+'/user/{user_name}':
+  $ref: utility/U11.yaml  
