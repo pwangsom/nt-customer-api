@@ -18,4 +18,4 @@ allOf:
       installation_address_list:
         type: array
         items:
-          $ref: InstallationAddress.yaml
+          $ref: InstallationAddressWithBasicContactPerson.yaml
