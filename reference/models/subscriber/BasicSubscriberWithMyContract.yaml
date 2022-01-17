@@ -1,0 +1,7 @@
+title: BasicSubscriberWithMyContract
+allOf:
+  - $ref: BasicSubscriber.yaml
+  - type: object
+    properties:
+      my_contract_info:
+        $ref: SubscriberMyContract.yaml

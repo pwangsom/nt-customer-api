@@ -253,6 +253,9 @@
 '/subscriber/{ref_subscr_no}/service_request':
   $ref: subscriber/S38.yaml
 
+'/subscriber/{ref_subscr_no}/my_contract':
+  $ref: subscriber/S40.yaml
+
 '/subscriber/create':
   $ref: subscriber/S12.yaml
 

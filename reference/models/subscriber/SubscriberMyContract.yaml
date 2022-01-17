@@ -1,0 +1,94 @@
+title: SubscriberMyContract
+type: object
+properties:
+      ref_document_id:
+        type: string
+        example: 'กสท/สค.พะเยา 3984'
+        description: Reference document id
+      contract_code:
+        type: string
+        example: '3737392'
+        description: Reference promotion/component description id
+      contract_type:
+        type: string
+        example: '3737392'
+        description: Contract Type
+      contract_desc:
+        type: string
+        example: 'สัญญารายเดือน 12 รอบบิล'
+        description: Contract Description
+      contract_month:
+        type: string
+        format: number
+        example: '12'
+        description: จำนวนเดือน
+      contract_start:
+        type: string
+        format: date
+        example: '2020-06-10'
+        description: วันที่เริ่มต้นสัญญา
+      contract_end:
+        type: string
+        format: date
+        example: '2020-06-10'
+        description: วันที่สิ้นสุดสัญญา
+      contract_value:
+        type: string
+        format: number
+        example: '1000.00'
+        description: จำนวนส่วนลดทั้งสัญญา
+      enable:
+        type: string
+        example: 'Y'
+        description: Enable
+      bypass_by:
+        type: string
+        example: '3737392'
+        description: รหัสพนักงานที่เปิด Request ให้ยกเว้นสัญญา
+      bypass_approve_by:
+        type: string
+        example: '3737392'
+        description: รหัสพนักงานที่ Approve ให้ยกเว้นสัญญา
+      bypass_fee:
+        type: string
+        format: number
+        example: '1000.00'
+        description: มูลค่าของสัญญาที่ยกเว้น
+      bypass_reason:
+        type: string
+        example: 'Terminate'
+        description: เหตุผลที่ยกเว้นสัญญา
+      bypass_date:
+        type: string
+        format: date-time
+        example: '2016-08-29T09:12:33.001Z'
+        description: วันและเวลาที่ยกเว้นสัญญามีผล
+      request_bypass_date:
+        type: string
+        format: date-time
+        example: '2016-08-29T09:12:33.001Z'
+        description: วันและเวลาที่ร้องขอยกเว้นสัญญา
+      approve_bypass_date:
+        type: string
+        format: date-time
+        example: '2016-08-29T09:12:33.001Z'
+        description: วันและเวลาที่อนุมัติการยกเว้นสัญญา
+      offer_id:
+        type: string
+        format: number
+        example: '1365436'
+        description: Reference offer id
+      bill_ref_no:
+        type: string
+        example: '3737392'
+        description: Reference invoice
+      bill_ref_date:
+        type: string
+        format: date-time
+        example: '2016-08-29T09:12:33.001Z'
+        description: วันและเวลาชำระค่าปรับตามสัญญา
+      bill_ref_amount:
+        type: string
+        format: number
+        example: '1000.00'
+        description: จำนวนเงินที่ชำระค่าปรับตามสัญญา

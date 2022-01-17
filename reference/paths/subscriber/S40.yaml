@@ -1,0 +1,24 @@
+get:
+  operationId: S40
+  description: Retrieve basic subscriber with my contract info by ref_subscr_no
+  summary: Get Basic Subscriber with my Contract by Reference Subscriber Number.
+  tags: []
+  parameters:
+    - $ref: ../../parameters/RefSubscrNo.yaml
+  responses:
+    '200':
+      description: Data Found
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../../models/subscriber/BasicSubscriberWithMyContract.yaml
+    '400':
+      description: Bad request.
+    '401':
+      description: Authorization information is missing or invalid.
+    '404':
+      description: Data was not found.
+    '500':
+      description: Unexpected error.
