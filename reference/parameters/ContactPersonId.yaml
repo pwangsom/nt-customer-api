@@ -1,0 +1,8 @@
+name: contact_person_id
+in: path
+required: true
+description: Contact Person ID
+schema:
+  type: string
+  format: number
+  example: '2425'

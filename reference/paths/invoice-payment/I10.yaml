@@ -1,0 +1,37 @@
+post:
+  operationId: I10
+  description: Cancel payment transaction by invoice_number and tracking_id
+  summary: Cancel Payment Transaction by Invoice Number and Tracking ID
+  tags: []
+  parameters:
+    - $ref: ../../parameters/InvoiceNumber.yaml
+    - $ref: ../../parameters/TrackingId.yaml
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: ../../models/invoice-payment/update-invoice-payment/UpdatePaymentTransaction.yaml
+  responses:
+    '200':
+      description: Operation success
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/common/OperationSuccess.yaml
+    '400':
+      description: Bad request.
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/common/OperationFailed.yaml
+    '401':
+      description: Authorization information is missing or invalid.
+    '404':
+      description: Operation failed.
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/common/OperationFailed.yaml      
+    '500':
+      description: Unexpected error.

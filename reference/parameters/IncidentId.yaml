@@ -1,0 +1,7 @@
+name: incident_id
+in: path
+required: true
+description: Incident ID
+schema:
+  type: string
+  example: '2425'

@@ -1,0 +1,36 @@
+post:
+  operationId: I09
+  description: Add new payment transaction by invoice_number
+  summary: Add new Payment Transaction by Invoice Number
+  tags: []
+  parameters:
+    - $ref: ../../parameters/InvoiceNumber.yaml
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: ../../models/invoice-payment/new-invoice-payment/NewPaymentTransaction.yaml
+  responses:
+    '200':
+      description: Operation success
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/common/OperationSuccess.yaml
+    '400':
+      description: Bad request.
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/common/OperationFailed.yaml
+    '401':
+      description: Authorization information is missing or invalid.
+    '404':
+      description: Operation failed.
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/common/OperationFailed.yaml      
+    '500':
+      description: Unexpected error.

@@ -1,0 +1,36 @@
+title: UpdateBasicContactPersonInfo
+type: object
+properties:
+  client_info:
+    $ref: ../../common/RequestClientInfo.yaml
+  reference_info:
+    type: object
+    required:
+      - contact_person_id
+      - reference_time
+    properties:
+      contact_person_id:
+        type: string
+        format: number
+        example: '2425'
+        description: Address reference id
+      reference_time:
+        type: string
+        format: date-time
+        example: '2016-08-29T09:12:33.001Z'
+        description: Reference up-to-date time
+  contact_person_info:
+    allOf:
+      - $ref: UpdateBasicContactPerson.yaml
+      - type: object
+        properties:
+          telephone:
+            $ref: ../../telephone/NewPrimaryTelephone.yaml
+          email:
+            $ref: ../../email-social/NewPrimaryEmail.yaml
+          social_account:
+            $ref: ../../email-social/NewPrimarySocialAccount.yaml
+required:
+  - client_info
+  - reference_info
+  - contact_person_info

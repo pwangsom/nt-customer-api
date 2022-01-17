@@ -1,0 +1,36 @@
+title: UpdatePaymentTransaction
+type: object
+properties:
+  client_info:
+    $ref: ../../common/RequestClientInfo.yaml
+  reference_info:
+    type: object
+    required:
+      - bill_acct_number
+      - allocate_invoice_number
+      - tracking_id
+      - pay_date
+    properties:
+      bill_acct_number:
+        type: string
+        format: number
+        example: '12254127'
+        description: BA number
+      allocate_invoice_number:
+        type: string
+        format: number
+        example: '25856552'
+        description: เลขที่ใบ invoice ที่หักล้างหนี้
+      tracking_id:
+        type: string
+        format: number
+        example: '25856552'
+        description: payment transaction id
+      cancel_date:
+        type: string
+        format: date-time
+        example: '2016-08-29T09:12:33.001Z'
+        description: วันและเวลาที่ยกเลิกการชำระ
+required:
+  - client_info
+  - reference_info

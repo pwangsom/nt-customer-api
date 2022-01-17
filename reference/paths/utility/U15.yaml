@@ -1,0 +1,36 @@
+post:
+  operationId: U15
+  description: Update contact person by contact_person_id
+  summary: Update Contact Person by Contact Person ID
+  tags: []
+  parameters:
+    - $ref: ../../parameters/ContactPersonId.yaml
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: ../../models/contact-person/update-contact-person/UpdateBasicContactPersonInfo.yaml
+  responses:
+    '200':
+      description: Operation success
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/common/OperationSuccess.yaml
+    '400':
+      description: Bad request.
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/common/OperationFailed.yaml
+    '401':
+      description: Authorization information is missing or invalid.
+    '404':
+      description: Operation failed.
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/common/OperationFailed.yaml      
+    '500':
+      description: Unexpected error.

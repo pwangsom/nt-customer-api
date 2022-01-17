@@ -1,0 +1,10 @@
+title: NewPaymentTransaction
+type: object
+properties:
+  client_info:
+    $ref: ../../common/RequestClientInfo.yaml
+  payment_info:
+    $ref: NewPaymentTransactionInfo.yaml
+required:
+  - client_info
+  - payment_info

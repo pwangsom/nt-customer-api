@@ -316,6 +316,12 @@
 '/prepaid/sub/{subscriber_number}/over_usage/peroid/{date_from}/{date_to}':
   $ref: invoice-payment/I06.yaml 
 
+'/invoice/{invoice_number}/payment/add':      
+  $ref: invoice-payment/I09.yaml      
+
+'/invoice/{invoice_number}/payment/{tracking_id}/cancel':      
+  $ref: invoice-payment/I10.yaml      
+
 '/lookup/{lookup_category_name}':
   $ref: utility/U03.yaml
   
@@ -330,3 +336,8 @@
 
 '/service_request/merge':
   $ref: utility/U14.yaml  
+
+'/contact_person/{contact_person_id}/update':
+  $ref: utility/U15.yaml  
+
+

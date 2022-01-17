@@ -1,0 +1,79 @@
+title: NewPaymentTransactionInfo
+type: object
+properties:
+  tracking_id:
+    type: string
+    format: number
+    example: '25856552'
+    description: payment transaction id
+  distrib_order:
+    type: string
+    format: number
+    example: '25856552'
+    description: ลำดับการชำระ (กรณีมากกว่า 1 invoice)
+  bill_acct_number:
+    type: string
+    format: number
+    example: '12254127'
+    description: BA number
+  pay_date:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: วันและเวลาที่รับชำระ
+  location:
+    type: string
+    example: ศูนย์บริการลูกค้าสุขุมวิท
+    description: สถานที่รับชำระ
+  receipt_id:
+    type: string
+    example: '25856552'
+    description: เลขที่ใบเสร็จ
+  pay_invoice_number:
+    type: string
+    format: number
+    example: '25856552'
+    description: เลขที่ใบ invoice ที่ยื่นชำระ
+  pay_amount:
+    type: number
+    format: double
+    example: 590
+    description: ยอดชำระ
+  allocate_invoice_number:
+    type: string
+    format: number
+    example: '25856552'
+    description: เลขที่ใบ invoice ที่หักล้างหนี้
+  allocate_amount:
+    type: number
+    format: double
+    example: 590
+    description: จำนวนเงินที่หักล้าง
+  vat:
+    type: number
+    format: double
+    example: 41.3
+  balance_before_pay:
+    type: number
+    format: double
+    example: 590
+    description: ยอดคงค้างก่อนชำระ
+  balance_after_pay:
+    type: number
+    format: double
+    example: 0
+    description: ยอดคงค้าง (ณ วันที่ชำระ)
+  pay_source:
+    type: string
+    format: number
+    example: 'Online'
+    description: ช่องทางการชำระเงิน
+required:
+  - tracking_id
+  - bill_acct_number
+  - pay_date
+  - pay_invoice_number
+  - pay_amount
+  - allocate_invoice_number
+  - allocate_amount
+  - vat
