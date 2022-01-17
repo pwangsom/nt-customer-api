@@ -1,7 +1,7 @@
 post:
-  operationId: C48
-  description: Add new contact person to a customer by customer_acct_number
-  summary: Add New Contact Persons to A Customer by Customer Number.
+  operationId: C77
+  description: Add new service request to a customer by customer_acct_number
+  summary: Add New Service Request to a Customer by Customer Number.
   tags: []
   parameters:
     - $ref: ../../parameters/CustomerAcctNumber.yaml
