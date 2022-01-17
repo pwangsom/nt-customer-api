@@ -1,0 +1,26 @@
+title: MergeServiceRequest
+type: object
+properties:
+  client_info:
+    $ref: ../common/RequestClientInfo.yaml
+  reference_info:
+    type: object
+    required:
+      - customer_acct_number
+      - incident_id
+    properties:
+      customer_acct_number:
+        type: string
+        format: number
+        example: '7017480851'
+        description: CA reference number
+      incident_id:
+        type: string
+        example: SD8888390
+        description: INCIDENT_ID
+  service_request_info:
+    $ref: NewServiceRequest.yaml
+required:
+  - client_info
+  - reference_info
+  - service_request_info

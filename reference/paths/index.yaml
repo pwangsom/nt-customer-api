@@ -324,3 +324,6 @@
 
 '/user/{user_name}':
   $ref: utility/U11.yaml  
+
+'/service_request/merge':
+  $ref: utility/U14.yaml  

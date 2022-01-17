@@ -1,11 +1,6 @@
 title: NewServiceRequest
 type: object
 properties:
-  customer_acct_number:
-    type: string
-    format: number
-    example: '7017480851'
-    description: CA reference number
   bill_acct_number:
     type: string
     format: number
@@ -16,10 +11,6 @@ properties:
     format: number
     example: '25412'
     description: Sub reference number
-  incident_id:
-    type: string
-    example: SD8888390
-    description: INCIDENT_ID
   category:
     type: string
     example: incident
@@ -199,5 +190,3 @@ properties:
     type: string
     example: ''
     description: CALLBACK_EMAIL
-required:
-  - ref_subscr_no
