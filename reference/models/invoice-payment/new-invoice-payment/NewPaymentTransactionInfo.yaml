@@ -66,14 +66,11 @@ properties:
   pay_source:
     type: string
     format: number
-    example: 'Online'
+    example: Online
     description: ช่องทางการชำระเงิน
 required:
   - tracking_id
   - bill_acct_number
-  - pay_date
-  - pay_invoice_number
-  - pay_amount
   - allocate_invoice_number
   - allocate_amount
   - vat

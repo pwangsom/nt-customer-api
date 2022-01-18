@@ -1,0 +1,38 @@
+title: NewInvoiceSubscriberInfo
+type: object
+properties:
+  ref_subscr_no:
+    type: string
+    format: number
+    example: '25412'
+    description: Sub reference number
+  subscriber_number:
+    type: string
+    example: '881234567'
+    description: Subscriber number
+  service_type_code:
+    type: string
+    format: number
+    example: '110'
+    description: รหัสบริการ
+  amount:
+    type: number
+    format: double
+    example: 590
+    description: ยอดเรียกเก็บจริงไม่รวม Vat
+  full_amount:
+    type: number
+    format: double
+    example: 590
+    description: ยอดค่าใช้บริการเต็มเดือน (Price list)
+  componet_list:
+    type: array
+    items:
+      $ref: NewInvoiceComponentInfo.yaml
+required:
+  - ref_subscr_no
+  - subscriber_number
+  - service_type_code
+  - amount
+  - full_amount
+  - componet_list

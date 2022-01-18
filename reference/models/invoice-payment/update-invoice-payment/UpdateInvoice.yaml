@@ -1,0 +1,52 @@
+title: UpdateInvoice
+type: object
+properties:
+  client_info:
+    $ref: ../../common/RequestClientInfo.yaml
+  reference_info:
+    type: object
+    required:
+      - bill_acct_number
+      - invoice_number
+    properties:
+      bill_acct_number:
+        type: string
+        format: number
+        example: '12254127'
+        description: BA number
+      invoice_number:
+        type: string
+        format: number
+        example: '25856552'
+        description: เลขที่ใบ invoice ที่อัพเดต
+  invoice_info:
+    type: object
+    required:
+      - adjust_amount
+      - balance_amount
+      - balance_udpate_date
+    properties:
+      adjust_amount:
+        type: number
+        format: double
+        example: 0
+        description: ยอดตั้งหนี้
+      balance_amount:
+        type: number
+        format: double
+        example: 631.3
+        description: ยอดคงค้างล่าสุด
+      balance_udpate_date:
+        type: string
+        format: date-time
+        example: '2016-08-29T09:12:33.001Z'
+        description: วันและเวลาที่อัพเดต balance ล่าสุด
+      pay_amount:
+        type: number
+        format: double
+        example: 0
+        description: ยอดชำระ
+required:
+  - client_info
+  - reference_info
+  - invoice_info

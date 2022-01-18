@@ -1,16 +1,16 @@
 post:
-  operationId: I08
-  description: Update invoice by invoice_number
-  summary: Update Invoice by Invoice Number
+  operationId: I07
+  description: Add new invoice by bill_acct_number
+  summary: Add new Invoice by BA Number
   tags: []
   parameters:
-    - $ref: ../../parameters/InvoiceNumber.yaml
+    - $ref: ../../parameters/BillAcctNumber.yaml
   requestBody:
     required: true
     content:
       application/json:
         schema:
-          $ref: ../../models/invoice-payment/update-invoice-payment/UpdateInvoice.yaml
+          $ref: ../../models/invoice-payment/new-invoice-payment/NewInvoice.yaml
   responses:
     '200':
       description: Operation success

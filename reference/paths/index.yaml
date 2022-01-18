@@ -208,6 +208,9 @@
 '/billing/{bill_acct_number}/sales_support/manage':
   $ref: billing-account/B36.yaml
 
+'/billing/{bill_acct_number}/invoice/add':      
+  $ref: invoice-payment/I07.yaml      
+
 '/subscriber/{ref_subscr_no}/basic':
   $ref: subscriber/S01.yaml
 
@@ -315,6 +318,9 @@
 
 '/prepaid/sub/{subscriber_number}/over_usage/peroid/{date_from}/{date_to}':
   $ref: invoice-payment/I06.yaml 
+
+'/invoice/{invoice_number}/update_adjust':      
+  $ref: invoice-payment/I08.yaml      
 
 '/invoice/{invoice_number}/payment/add':      
   $ref: invoice-payment/I09.yaml      

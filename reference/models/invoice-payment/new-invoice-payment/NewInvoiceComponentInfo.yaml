@@ -1,0 +1,60 @@
+title: NewInvoiceComponent
+type: object
+properties:
+  component_id:
+    type: string
+    format: number
+    example: '340350002'
+    description: Component ID
+  component_name:
+    type: string
+    example: ค่าใช้บริการ C internet Home (Private IP) 250/250 Mbps
+    description: Component Name
+  component_type:
+    type: string
+    example: RC
+    description: Component type (RC/NRC/USAGE)
+  account_code:
+    type: string
+    format: number
+    example: '340350002'
+    description: รหัส Account Code ตามระบบ SAP
+  segment_code:
+    type: string
+    format: number
+    example: '340350002'
+    description: รหัส Segment Code ตามระบบ SAP
+  product_code:
+    type: string
+    format: number
+    example: '340350002'
+    description: รหัส Product Code ตามระบบ SAP
+  sub_product_code:
+    type: string
+    format: number
+    example: '340350002'
+    description: รหัส Sub Product Code ตามระบบ SAP
+  revenue_type_code:
+    type: string
+    format: number
+    example: '340350002'
+    description: รหัส Revenue Type Code ตามระบบ SAP
+  amount:
+    type: number
+    format: double
+    example: 590
+    description: ยอดเรียกเก็บจริงไม่รวม Vat
+  full_amount:
+    type: number
+    format: double
+    example: 590
+    description: ยอดค่าใช้บริการเต็มเดือน (Price list)
+  discount:
+    type: number
+    format: double
+    example: 0
+    description: ส่วนลด
+required:
+  - component_id
+  - component_name
+  - amount

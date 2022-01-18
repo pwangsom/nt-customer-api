@@ -1,0 +1,10 @@
+title: NewInvoice
+type: object
+properties:
+  client_info:
+    $ref: ../../common/RequestClientInfo.yaml
+  invoice_info:
+    $ref: NewInvoiceInfo.yaml
+required:
+  - client_info
+  - invoice_info

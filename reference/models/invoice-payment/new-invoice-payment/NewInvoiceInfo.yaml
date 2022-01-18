@@ -1,0 +1,106 @@
+title: NewInvoiceInfo
+type: object
+properties:
+  bill_acct_number:
+    type: string
+    format: number
+    example: '12254127'
+    description: BA number
+  invoice_number:
+    type: string
+    format: number
+    example: '25856552'
+    description: เลขที่ invoice
+  issue_date:
+    type: string
+    format: date
+    example: '2020-06-10'
+    description: วันที่ออกใบแจ้งหนี้
+  due_date:
+    type: string
+    format: date
+    example: '2020-06-10'
+    description: วันครบกำหนดชำระ
+  period_from:
+    type: string
+    format: date
+    example: '2020-06-10'
+    description: วันที่เริ่มต้นคิดค่าบริการ
+  period_to:
+    type: string
+    format: date
+    example: '2020-06-10'
+    description: วันที่สิ้นสุดคิดค่าบริการ
+  invoice_period:
+    type: string
+    format: date
+    example: '2020-06-10'
+    description: งวดเดือนการใช้บริการ
+  period_type:
+    type: string
+    example: M01
+    description: ประเภท Period การออกบิล
+  number_of_months:
+    type: number
+    format: integer
+    example: 1
+    description: จำนวนเดือนในรอบบิล
+  amount:
+    type: number
+    format: double
+    example: 590
+    description: ยอดเรียกเก็บจริงไม่รวม Vat
+  tax:
+    type: number
+    format: double
+    example: 41.3
+    description: VAT
+  adjust_amount:
+    type: number
+    format: double
+    example: 0
+    description: ยอดตั้งหนี้
+  pay_amount:
+    type: number
+    format: double
+    example: 0
+    description: ยอดชำระ
+  withholding_tax:
+    type: number
+    format: double
+    example: 0
+    description: ภาษี ณ ที่จ่าย
+  balance_withholding_tax:
+    type: number
+    format: double
+    example: 0
+    description: ภาษี ณ ที่จ่ายคงเหลือ
+  balance_amount:
+    type: number
+    format: double
+    example: 631.3
+    description: ยอดคงค้างล่าสุด
+  balance_udpate_date:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: วันและเวลาที่อัพเดต balance ล่าสุด
+  posting_date:
+    type: string
+    format: date
+    example: '2020-06-10'
+    description: วันที่ส่งข้อมูล SAP
+  subscriber_list:
+    type: array
+    items:
+      $ref: NewInvoiceSubscriberInfo.yaml
+required:
+  - bill_acct_number
+  - invoice_number
+  - issue_date
+  - due_date
+  - period_from
+  - period_to
+  - amount
+  - tax
+  - subscriber_list
