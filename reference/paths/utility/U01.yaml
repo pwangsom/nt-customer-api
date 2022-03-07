@@ -17,11 +17,30 @@ get:
               format: number
               example: '7017480851'
               description: CA reference number
-    '400':
-      description: Bad request.
-    '401':
-      description: Authorization information is missing or invalid.
     '404':
-      description: Generate failed.
+      description: Data not found.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: string
+              example: "Data not found"
+    '405':
+      description: JSON format error.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: string
+              example: "JSON format error"
     '500':
-      description: Unexpected error.
+      description: Request time out or internal error.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: string
+              example: "Request time out or internal error"
