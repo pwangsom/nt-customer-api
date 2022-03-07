@@ -19,6 +19,12 @@
 '/customer/tel/{telephone_number}':
   $ref: customer-account/C06.yaml
 
+'/customer/email/{email_address}':
+  $ref: customer-account/C07.yaml
+
+'/customer/social/{social_account}':
+  $ref: customer-account/C08.yaml
+
 '/customer/id/{id_card_number}/ba/{bill_acct_number}':
   $ref: customer-account/C09.yaml
 
