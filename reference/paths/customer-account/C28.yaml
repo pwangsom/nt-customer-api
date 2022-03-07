@@ -18,19 +18,27 @@ post:
         application/json:
           schema:
             $ref: ../../models/common/MergeCustomerOperationSuccess.yaml
-    '400':
-      description: Bad request.
+    '401':
+      description: Missing require parameter name {Parameter Name}.
       content:
         application/json:
           schema:
             $ref: ../../models/common/OperationFailed.yaml
-    '401':
-      description: Authorization information is missing or invalid.
-    '404':
-      description: Operation failed.
+    '405':
+      description: JSON format error.
       content:
         application/json:
           schema:
-            $ref: ../../models/common/OperationFailed.yaml      
+            $ref: ../../models/common/OperationFailed.yaml
     '500':
-      description: Unexpected error.        
+      description: Request time out or internal error.
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/common/OperationFailed.yaml
+    '501':
+      description: External error.
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/common/OperationFailed.yaml
