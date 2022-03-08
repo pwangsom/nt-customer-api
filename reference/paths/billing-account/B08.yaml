@@ -16,12 +16,6 @@ post:
         application/json:
           schema:
             $ref: ../../models/common/OperationSuccess.yaml
-    '400':
-      description: Bad request.
-      content:
-        application/json:
-          schema:
-            $ref: ../../models/common/OperationFailed.yaml
     '401':
       description: Missing require parameter name {Parameter Name}.
       content:
