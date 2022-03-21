@@ -1,0 +1,14 @@
+title: NewDispatchMethodType
+type: object
+properties:
+  dispatch_method_lkp:
+    type: string
+    format: number
+    example: '1'
+    description: dispatch_method_lkp
+  email_address:
+    type: string
+    example: abc@def.com
+    description: อีเมล์
+required:
+  - dispatch_method_lkp
