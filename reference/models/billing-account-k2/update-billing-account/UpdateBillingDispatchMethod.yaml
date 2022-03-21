@@ -6,33 +6,9 @@ properties:
   billing_reference_info:
     $ref: ../../billing-account/update-billing-account/UpdateBillingReferenceInfo.yaml
   dispatch_method:
-    type: object
-    properties:
-      dispatch_method_lkp:
-        type: string
-        format: number
-        example: '1'
-        description: dispatch_method_lkp
-      email_address:
-        type: string
-        example: abc@def.com
-        description: อีเมล์
-    required:
-      - dispatch_method_lkp
+    $ref: ../../billing-account/new-billing-account/NewDispatchMethodType.yaml
   vat_dispatch_method:
-    type: object
-    required:
-      - vat_dispatch_method_lkp
-    properties:
-      vat_dispatch_method_lkp:
-        type: string
-        format: number
-        example: '1'
-        description: dispatch_method_lkp
-      email_address:
-        type: string
-        example: abc@def.com
-        description: อีเมล์
+    $ref: ../../billing-account/new-billing-account/NewVatDispatchMethodType.yaml
 required:
   - client_info
   - billing_reference_info
