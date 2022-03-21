@@ -1,14 +1,15 @@
 swagger: '2.0'
 info:
   title: NT Customer API
-  version: '2.2.0'
+  version: '2.0.0-227'
   description: Full API services for NT customer database
   contact:
     email: peerasak.w@nc.ntplc.co.th
     name: Peerasak Wangsom
-host: 'localhost:3000'
+host: customerapi.cattelecom.com
+basePath: '/dev/customerapi/v200'
 schemes:
-  - http
+  - https
 produces:
   - application/json
 consumes:
