@@ -1,0 +1,19 @@
+title: NewImageInfo
+type: object
+properties:
+  image_id:
+    type: string
+    example: '1234567890'
+    description: Image ID
+  image_type_lkp:
+    type: string
+    format: number
+    example: '1'
+    description: Image Type
+  description:
+    type: string
+    example: ID card image
+    description: Image description
+required:
+  - image_id
+  - image_type_lkp

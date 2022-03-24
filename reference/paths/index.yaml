@@ -310,6 +310,9 @@
 '/subscriber/{ref_subscr_no}/sales_support/manage':
   $ref: subscriber/S32.yaml
 
+'/subscriber/{ref_subscr_no}/image/add':
+  $ref: subscriber/S41.yaml
+
 '/invoice/{invoice_number}':      
   $ref: invoice-payment/I01.yaml
 

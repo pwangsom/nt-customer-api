@@ -1,15 +1,15 @@
-title: AddSubscriberContactPerson
+title: AddSubscriberImage
 type: object
 properties:
   client_info:
     $ref: ../../common/RequestClientInfo.yaml
   subscriber_reference_info:
     $ref: UpdateSubscriberReference.yaml
-  contact_person_list:
+  image_list:
     type: array
     items:
-      $ref: ../../contact-person/new-contact-person/NewBasicContactPersonInfo.yaml
+      $ref: ../new-subscriber/NewImageInfo.yaml
 required:
   - client_info
   - subscriber_reference_info
-  - contact_person_list
+  - image_list
