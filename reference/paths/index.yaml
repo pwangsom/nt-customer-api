@@ -265,6 +265,12 @@
 '/subscriber/{ref_subscr_no}/my_contract':
   $ref: subscriber/S40.yaml
 
+'/subscriber/id/{id_card_number}/sub/{subscriber_number}':
+  $ref: subscriber/S42.yaml
+
+'/subscriber/ba/{bill_acct_number}/sub/{subscriber_number}':
+  $ref: subscriber/S43.yaml
+
 '/subscriber/create':
   $ref: subscriber/S12.yaml
 
