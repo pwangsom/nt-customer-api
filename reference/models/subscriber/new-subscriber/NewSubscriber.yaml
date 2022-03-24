@@ -22,9 +22,13 @@ properties:
     items:
       $ref: NewSubscriberProductProperty.yaml
   installation_address_info:
-      $ref: NewInstallationAddressInfo.yaml
+    $ref: NewInstallationAddressInfo.yaml
   my_contract_info:
     $ref: NewSubscriberMyContractInfo.yaml
+  image_list:
+    type: array
+    items:
+      $ref: NewImageInfo.yaml
 required:
   - client_info
   - subscriber_reference_info

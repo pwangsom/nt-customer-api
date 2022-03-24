@@ -23,6 +23,10 @@ properties:
       $ref: NewSubscriberProductProperty.yaml
   my_contract_info:
     $ref: NewSubscriberMyContractInfo.yaml
+  image_list:
+    type: array
+    items:
+      $ref: NewImageInfo.yaml
 required:
   - client_info
   - subscriber_reference_info
