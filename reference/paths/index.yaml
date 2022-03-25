@@ -76,10 +76,10 @@
 '/customer/id/{id_card_number}/app_registration/{app_registration_type_lkp}/ref_sub/{ref_subscr_no}':
   $ref: customer-account/C75.yaml
 
-'/customer/id_group/subscriber_count':
+'/customer/{customer_acct_lkp}/id_type/{id_card_type_lkp}/id/{id_card_number}/service_type/{service_type_code}/subscriber/count':
   $ref: customer-account/C77.yaml
 
-'/customer/id_group/vip_blacklist':
+'/customer/{customer_acct_lkp}/id_type/{id_card_type_lkp}/id/{id_card_number}/vip_blacklist/status':
   $ref: customer-account/C78.yaml
 
 '/customer/individual/create':

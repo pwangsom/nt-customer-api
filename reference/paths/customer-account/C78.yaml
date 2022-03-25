@@ -3,12 +3,10 @@ get:
   description: Retrieve VIP and blacklist status group by id_card_number and id_card_type_lkp
   summary: Retrieve VIP and Blacklist Status group by ID Card Number and ID Card Type.
   tags: []
-  requestBody:
-    required: true
-    content:
-      application/json:
-        schema:
-          $ref: ../../models/customer-account/all/CustomerIdCardInfo.yaml
+  parameters:
+    - $ref: ../../parameters/CustomerAcctLkp.yaml
+    - $ref: ../../parameters/IdCardTypeLkp.yaml
+    - $ref: ../../parameters/IdCardNumber.yaml
   responses:
     '200':
       description: Data Found

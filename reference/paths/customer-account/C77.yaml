@@ -4,7 +4,10 @@ get:
   summary: Retrieve No. of Subscriber group by ID Card Number, ID Card Type, and Service Type
   tags: []
   parameters:
-    - $ref: ../../parameters/CustomerAcctNumber.yaml
+    - $ref: ../../parameters/CustomerAcctLkp.yaml
+    - $ref: ../../parameters/IdCardTypeLkp.yaml
+    - $ref: ../../parameters/IdCardNumber.yaml
+    - $ref: ../../parameters/ServiceTypeCode.yaml
   responses:
     '200':
       description: Data Found

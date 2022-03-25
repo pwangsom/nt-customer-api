@@ -1,0 +1,8 @@
+name: customer_acct_lkp
+in: path
+required: true
+description: ประเภทของลูกค้า 1 = individual , 2 = organization
+schema:
+  type: string
+  format: number
+  example: '1'

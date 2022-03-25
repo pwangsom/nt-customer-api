@@ -1,0 +1,8 @@
+name: id_card_type_lkp
+in: path
+required: true
+description: ประเภทเอกสารของลูกค้า โดยลูกค้าบุคคลใช้ข้อมูลจาก individual_id_card_type_lkp , ลูกค้าองค์กรใช้ข้อมูลจาก organization_id_card_type_lkp
+schema:
+  type: string
+  format: number
+  example: '1'
