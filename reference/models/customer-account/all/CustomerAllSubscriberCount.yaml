@@ -1,6 +1,14 @@
 title: CustomerAllSubscriberCount
 type: object
 properties:
+  customer_acct_lkp:
+    allOf:
+      - $ref: ../../common/DisplayLookup.yaml
+    description: ประเภทลูกค้า 1 = individual, 2 = organization
+    example:
+      lookup_ref_id: '1'
+      display_value: 'Individual'
+      lookup_category_name: 'customer_acct_lkp'
   id_card_type_lkp:
     allOf:
       - $ref: ../../common/DisplayLookup.yaml
