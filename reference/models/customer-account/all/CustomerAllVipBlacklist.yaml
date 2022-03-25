@@ -1,0 +1,32 @@
+title: CustomerAllVipBlacklist
+type: object
+properties:
+  id_card_type_lkp:
+    allOf:
+      - $ref: ../../common/DisplayLookup.yaml
+    description: ประเภทเอกสาร
+    example:
+      lookup_ref_id: '1'
+      display_value: 'บัตรประชาชน'
+      lookup_category_name: 'individual_id_card_type_lkp, organization_id_card_type_lkp'
+  id_card_number:
+    type: string
+    example: '1234567890123'
+    description: หมายเลขเอกสารของลูกค้า
+  is_vip_sales:
+    type: integer
+    example: 0
+    description: VIP customer for sales department.
+  is_vip_debt:
+    type: integer
+    example: 0
+    description: VIP customer for debt department.
+  black_list_lkp:
+    allOf:
+      - $ref: ../../common/DisplayLookup.yaml
+    description: Black list
+    example:
+      lookup_ref_id: '1'
+      display_value: None
+      lookup_category_name: black_list_lkp
+  

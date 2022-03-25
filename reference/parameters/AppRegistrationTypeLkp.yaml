@@ -1,7 +1,7 @@
 name: app_registration_type_lkp
 in: path
 required: true
-description: หมาเภทของ App ที่ลงทะเบียนเข้าใช้งาน
+description: ประเภทของ App ที่ลงทะเบียนเข้าใช้งาน
 schema:
   type: string
   format: number

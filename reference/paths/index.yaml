@@ -76,6 +76,12 @@
 '/customer/id/{id_card_number}/app_registration/{app_registration_type_lkp}/ref_sub/{ref_subscr_no}':
   $ref: customer-account/C75.yaml
 
+'/customer/id_group/subscriber_count':
+  $ref: customer-account/C77.yaml
+
+'/customer/id_group/vip_blacklist':
+  $ref: customer-account/C78.yaml
+
 '/customer/individual/create':
   $ref: customer-account/C19.yaml
 
