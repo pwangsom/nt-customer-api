@@ -17,7 +17,7 @@ properties:
     $ref: NewBillingEgpInfo.yaml
 required:
   - client_info
-  - customer_acct_number
+  - reference_info
   - general_info
   - dispatch_method_info
   - billing_address_list
