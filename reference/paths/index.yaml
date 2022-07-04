@@ -277,6 +277,9 @@
 '/subscriber/ba/{bill_acct_number}/sub/{subscriber_number}':
   $ref: subscriber/S43.yaml
 
+'/subscriber/token/{token}/pdpa/registration/status':
+  $ref: subscriber/S44.yaml
+
 '/subscriber/create':
   $ref: subscriber/S12.yaml
 

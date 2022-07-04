@@ -1,0 +1,7 @@
+name: token
+in: path
+required: true
+description: Token
+schema:
+  type: string
+  example: 'fjaoirj;ahvoij493-9302k'

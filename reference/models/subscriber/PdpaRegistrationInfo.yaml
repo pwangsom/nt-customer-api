@@ -1,0 +1,31 @@
+title: PdpaRegistrationInfo
+type: object
+properties:
+  ref_subscr_no:
+    type: string
+    format: number
+    example: '25412'
+    description: Sub reference number
+  customer_acct_number:
+    type: string
+    format: number
+    example: '7017480851'
+    description: CA reference number
+  bill_acct_number:
+    type: string
+    format: number
+    example: '12254127'
+    description: BA number
+  service_type_code:
+    type: string
+    format: number
+    example: '110'
+    description: รหัสบริการ
+  token:
+    type: string
+    example: 'fjaoirj;ahvoij493-9302k'
+    description: Token
+  subscriber_property_list:
+    type: array
+    items:
+      $ref: SubscriberProperty.yaml
