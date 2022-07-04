@@ -1,0 +1,43 @@
+get:
+  operationId: B43
+  description: Retrieve basic BA info by subscriber_number
+  summary: Get Basic BA Info by Subscriber Number.
+  tags: []
+  parameters:
+    - $ref: ../../parameters/SubscriberNumber.yaml
+  responses:
+    '200':
+      description: Data Found
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../../models/billing-account/BasicBillingAccountWithSubscirber.yaml
+    '404':
+      description: Data not found.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: string
+              example: "Data not found"
+    '405':
+      description: JSON format error.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: string
+              example: "JSON format error"
+    '500':
+      description: Request time out or internal error.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: string
+              example: "Request time out or internal error"

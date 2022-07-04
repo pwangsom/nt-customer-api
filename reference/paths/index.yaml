@@ -16,6 +16,9 @@
 '/customer/sub/{subscriber_number}':
   $ref: customer-account/C05.yaml
 
+'/customer/ref_sub/{ref_subscr_no}':
+  $ref: customer-account/C79.yaml
+
 '/customer/tel/{telephone_number}':
   $ref: customer-account/C06.yaml
 
@@ -168,6 +171,12 @@
 
 '/billing/{bill_acct_number}':
   $ref: billing-account/B02.yaml
+
+'/billing/sub/{subscriber_number}':
+  $ref: billing-account/B43.yaml
+
+'/billing/ref_sub/{ref_subscr_no}':
+  $ref: billing-account/B44.yaml
 
 '/billing/{bill_acct_number}/contact_person':
   $ref: billing-account/B33.yaml
