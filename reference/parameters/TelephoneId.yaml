@@ -1,0 +1,8 @@
+name: telephone_id
+in: path
+required: true
+description: Telephone reference id
+schema:
+  type: string
+  format: number
+  example: '881234567'

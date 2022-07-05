@@ -1,0 +1,8 @@
+name: social_acct_id
+in: path
+required: true
+description: Social account reference id
+schema:
+  type: string
+  format: number
+  example: '2425'

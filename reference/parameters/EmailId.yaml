@@ -1,0 +1,8 @@
+name: email_id
+in: path
+required: true
+description: Email reference id
+schema:
+  type: string
+  format: number
+  example: '2425'

@@ -120,12 +120,21 @@
 
 '/customer/{customer_acct_number}/telephone/add':
   $ref: customer-account/C31.yaml
+  
+'/customer/{customer_acct_number}/telephone/{telephone_id}/update':
+  $ref: customer-account/C35.yaml
 
 '/customer/{customer_acct_number}/email/add':
   $ref: customer-account/C32.yaml
 
+'/customer/{customer_acct_number}/email/{email_id}/update':
+  $ref: customer-account/C36.yaml
+
 '/customer/{customer_acct_number}/social_account/add':
   $ref: customer-account/C33.yaml
+
+'/customer/{customer_acct_number}/social_account/{social_acct_id}/update':
+  $ref: customer-account/C37.yaml
 
 '/customer/{customer_acct_number}/contact_person/add':
   $ref: customer-account/C48.yaml

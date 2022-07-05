@@ -1,30 +1,30 @@
-title: UpdateCustomerAddress
+title: UpdateCustomerEmail
 type: object
 properties:
   client_info:
     $ref: ../../common/RequestClientInfo.yaml
   customer_reference_info:
     $ref: UpdateCustomerReference.yaml
-  address_reference_info:
+  email_reference_info:
     type: object
     required:
-      - address_id
+      - email_id
       - reference_time
     properties:
-      address_id:
+      email_id:
         type: string
         format: number
-        example: '2425'
-        description: Address reference id
+        example: '881234567'
+        description: Telephone reference id
       reference_time:
         type: string
         format: date-time
         example: '2016-08-29T09:12:33.001Z'
         description: Reference up-to-date time
-  address_info:
-    $ref: ../../address/NewCustomerAddress.yaml
+  email_info:
+    $ref: ../../email-social/NewCustomerEmail.yaml
 required:
   - client_info
   - customer_reference_info
-  - address_reference_info
-  - address_info
+  - email_reference_info
+  - email_info

@@ -5,4 +5,4 @@ description: Telephone Number 10 digits
 schema:
   type: string
   format: number
-  example: '0882951234'
+  example: '10394'
