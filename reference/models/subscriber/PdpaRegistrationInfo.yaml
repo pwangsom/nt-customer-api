@@ -21,10 +21,78 @@ properties:
     format: number
     example: '110'
     description: รหัสบริการ
+  service_type:
+    type: string
+    example: 'PREPAID'
+    description: ชื่อบริการ
+  id:
+    type: string
+    format: number
+    example: '1'
+    description: id
+  cat_svc_id:
+    type: string
+    example: 'AGHDUJSUEHD14253'
+    description: CAT_SVC_ID
+  mdn:
+    type: string
+    format: number
+    example: '123456789'
+    description: Mobile number
+  appl_source:
+    type: string
+    example: 'OMMFE'
+    description: Application Source
+  activate_date:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: วันที่เริ่มต้นใช้บริการ
+  sms_send_date:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: SMS Send Date
+  create_date:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: Create Date
+  update_date:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: Update Date
+  update_result:
+    type: string
+    example: 'COMPLETE'
+    description: Update Result
   token:
     type: string
     example: 'fjaoirj;ahvoij493-9302k'
     description: Token
+  sync_pkg_status:
+    type: string
+    example: 'COMPLETE'
+    description: Sync Package Status
+  sms_status:
+    type: string
+    example: 'COMPLETE'
+    description: SMS Status
+  text_options:
+    type: string
+    example: 'COMPLETE'
+    description: Text Options
+  number_options:
+    type: string
+    format: number
+    example: '1'
+    description: Number Options
+  date_options:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: Date Options
   subscriber_property_list:
     type: array
     items:
