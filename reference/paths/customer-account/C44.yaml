@@ -1,17 +1,16 @@
 post:
-  operationId: C34
-  description: Update an address of a customer by customer_acct_number and address_id
-  summary: Update an address of a customer by Customer Number and Address ID.
+  operationId: C44
+  description: Merge marketing info list of a customer by customer_acct_number
+  summary: Update Marketing Info List of a customer by Customer Number.
   tags: []
   parameters:
     - $ref: ../../parameters/CustomerAcctNumber.yaml
-    - $ref: ../../parameters/AddressId.yaml
   requestBody:
     required: true
     content:
       application/json:
         schema:
-          $ref: ../../models/customer-account/update-customer/UpdateCustomerAddress.yaml
+          $ref: ../../models/customer-account/update-customer/MergeCustomerMarketingInfo.yaml
   responses:
     '200':
       description: Operation success

@@ -1,0 +1,22 @@
+title: NewMarketingInfo
+type: object
+properties:
+  marketing_info_lkp:
+    type: string
+    example: '1'
+    description: Marketing Info Lkp
+  info_key_type_lkp:
+    type: string
+    example: '1'
+    description: Info Key Type Lkp
+  info_value_type_lkp:
+    type: string
+    example: '1'
+    description: Info Value Type Lkp
+  info_value_entry:
+    type: string
+    example: 'Middle Level'
+    description: Info Value Entry
+required:
+  - marketing_info_lkp
+  - info_key_type_lkp

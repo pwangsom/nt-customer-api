@@ -1,0 +1,15 @@
+title: MergeCustomerMarketingInfo
+type: object
+properties:
+  client_info:
+    $ref: ../../common/RequestClientInfo.yaml
+  customer_reference_info:
+    $ref: UpdateCustomerReference.yaml
+  marketing_info_list:
+    type: array
+    items:
+      $ref: ../NewMarketingInfo.yaml
+required:
+  - client_info
+  - customer_reference_info
+  - marketing_info_list

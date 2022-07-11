@@ -1,0 +1,9 @@
+title: BasicCustomerAccountWithMarketingInfo
+allOf:
+  - $ref: BasicCustomerAccount.yaml
+  - type: object
+    properties:
+      marketing_info_list:
+        type: array
+        items:
+          $ref: MarketingInfo.yaml

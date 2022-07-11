@@ -11,4 +11,5 @@ properties:
     example: 100Mb
     description: Property value
 required:
-  - property_key
+  - product_property_id
+  - property_value

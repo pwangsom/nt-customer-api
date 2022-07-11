@@ -1,0 +1,36 @@
+title: MarketingInfo
+type: object
+properties:
+  marketing_info_id:
+    type: string
+    format: number
+    example: '2425'
+    description: Marketing registration reference id
+  marketing_info_lkp:
+    allOf:
+      - $ref: ../common/DisplayLookup.yaml
+    description: Marketing Info Lkp
+    example:
+      lookup_ref_id: '1'
+      display_value: Individual
+      lookup_category_name: 'marketing_info_lkp'
+  info_key_type_lkp:
+    allOf:
+      - $ref: ../common/DisplayLookup.yaml
+    description: Info Key Type Lkp
+    example:
+      lookup_ref_id: '1'
+      display_value: Revenue
+      lookup_category_name: 'info_key_type_lkp'
+  info_value_type_lkp:
+    allOf:
+      - $ref: ../common/DisplayLookup.yaml
+    description: Info Key Type Lkp
+    example:
+      lookup_ref_id: '1'
+      display_value: '30000 - 50000'
+      lookup_category_name: 'info_value_type_lkp'
+  info_value_entry:
+    type: string
+    example: 'Middle Level'
+    description: Info Value Entry
