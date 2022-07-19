@@ -1,0 +1,45 @@
+get:
+  operationId: S45
+  description: Retrieve basic subscriber with active packages and components by bill_acct_number, service_type_code, and css_cat_id
+  summary: Get Basic Subscriber with Active Pakages and Components by BA Number, Service Type Code, and CSS CAT ID.
+  tags: []
+  parameters:
+    - $ref: ../../parameters/BillAcctNumber.yaml
+    - $ref: ../../parameters/ServiceTypeCode.yaml
+    - $ref: ../../parameters/CssCatId.yaml
+  responses:
+    '200':
+      description: Data Found
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../../models/subscriber/BasicSubscriberWithActivePackageComponent.yaml
+    '404':
+      description: Data not found.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: string
+              example: "Data not found"
+    '405':
+      description: JSON format error.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: string
+              example: "JSON format error"
+    '500':
+      description: Request time out or internal error.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: string
+              example: "Request time out or internal error"
