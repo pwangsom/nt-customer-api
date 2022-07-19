@@ -4,12 +4,12 @@ properties:
   user_name:
     type: string
     example: '00123456'
-    description: User name เข้าใช้งาน กรณีพนักงาน CAT เป็นรหัสพนักงาน
-  is_cat_employee:
+    description: User name เข้าใช้งาน กรณีพนักงาน NT เป็นรหัสพนักงาน
+  is_employee:
     type: string
     format: number
     example: '1'
-    description: 0 = ไม่ใช่พนักงาน CAT, 1 = พนักงาน CAT
+    description: 0 = ไม่ใช่พนักงาน NT, 1 = พนักงาน NT
   mobile_activated:
     type: string
     format: number

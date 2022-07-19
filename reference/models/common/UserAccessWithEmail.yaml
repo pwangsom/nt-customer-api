@@ -1,0 +1,9 @@
+title: UserAccessWithEmail
+allOf:
+  - $ref: UserAccess.yaml
+  - type: object
+    properties:
+      email:
+        type: string
+        example: 'cat@nc.ntplc.co.th'
+        description: Email Address

@@ -391,6 +391,9 @@
 '/user/{user_name}':
   $ref: utility/U11.yaml  
 
+'/user/email/{email_address}':
+  $ref: utility/U17.yaml  
+
 '/service_request/merge':
   $ref: utility/U14.yaml  
 
