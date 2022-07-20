@@ -1,0 +1,35 @@
+title: PartnerContractInfo
+type: object
+properties:
+  contract_id:
+    type: string
+    example: 'CA001'
+    description: เลข Contract ID ของระบบ PMS
+  contract_ref_number:
+    type: string
+    example: 'เลขที่ 1/2565'
+    description: เลขที่สัญญาตามเอกสารจริง
+  contract_name:
+    type: string
+    example: 'สัญญาตัวแทนการขาย my ปี 2565'
+    description: ชื่อสัญญา
+  contract_approve_date:
+    type: string
+    format: date
+    example: '2022-06-10'
+    description: วันที่ลงนามในสัญญา
+  contract_start_date:
+    type: string
+    format: date
+    example: '2022-06-10'
+    description: วันที่เริ่มต้นสัญญา
+  contract_end_date:
+    type: string
+    format: date
+    example: '2023-06-09'
+    description: วันที่สิ้นสุดสัญญา
+  reference_time:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: Reference up-to-date time 
