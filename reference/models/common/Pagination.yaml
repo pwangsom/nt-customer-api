@@ -1,0 +1,24 @@
+title: Pagination
+type: object
+properties:
+  page:
+    type: integer
+    example: 1
+    description: Current page
+  previous:
+    type: integer
+    example: 1
+    description: Previous page (If page = 1 then previous = 1)
+  next:
+    type: integer
+    example: 2
+    description: Next page (If page = last then next = last)
+  last:
+    type: integer
+    example: 2
+    description: Last page
+  page_size:
+    type: integer
+    enum:
+      - 25
+    description: 25 records per page
