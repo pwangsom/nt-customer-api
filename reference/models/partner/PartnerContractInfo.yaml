@@ -28,8 +28,20 @@ properties:
     format: date
     example: '2023-06-09'
     description: วันที่สิ้นสุดสัญญา
+  partner_area_type_lkp:
+    allOf:
+      - $ref: ../common/DisplayLookup.yaml
+    description: ประเภทสัญญาการขาย
+    example:
+      lookup_ref_id: '1'
+      display_value: 'Sales Partner'
+      lookup_category_name: 'partner_area_type_lkp'
   reference_time:
     type: string
     format: date-time
     example: '2016-08-29T09:12:33.001Z'
-    description: Reference up-to-date time 
+    description: Reference up-to-date time
+  partner_area_list:
+    type: array
+    items:
+      $ref: PartnerAreaInfo.yaml

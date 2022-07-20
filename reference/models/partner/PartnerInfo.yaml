@@ -25,3 +25,7 @@ properties:
     format: date-time
     example: '2016-08-29T09:12:33.001Z'
     description: Reference up-to-date time 
+  partner_contract_list:
+    type: array
+    items:
+      $ref: PartnerContractInfo.yaml

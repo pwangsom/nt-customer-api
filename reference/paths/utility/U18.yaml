@@ -1,0 +1,43 @@
+get:
+  operationId: U18
+  description: Get partner master list by page
+  summary: Get Partner Master List by Page.
+  tags: []
+  parameters:
+    - $ref: ../../parameters/Page.yaml
+  responses:
+    '200':
+      description: Data Found.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../../models/partner/PartnerInfoWithPagination.yaml
+    '404':
+      description: Data not found.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: string
+              example: "Data not found"
+    '405':
+      description: JSON format error.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: string
+              example: "JSON format error"
+    '500':
+      description: Request time out or internal error.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: string
+              example: "Request time out or internal error"

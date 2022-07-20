@@ -1,0 +1,8 @@
+name: page
+in: path
+required: true
+description: Page
+schema:
+  type: integer
+  example: 1
+  minimum: 1

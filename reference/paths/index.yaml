@@ -87,6 +87,12 @@
 
 '/customer/{customer_acct_lkp}/id_type/{id_card_type_lkp}/id/{id_card_number}/vip_blacklist/status':
   $ref: customer-account/C78.yaml
+  
+'/partner/saa/{saa_code}':
+  $ref: customer-account/C84.yaml
+
+'/partner/name/{partner_full_name}':
+  $ref: customer-account/C85.yaml
 
 '/customer/individual/create':
   $ref: customer-account/C19.yaml
@@ -390,6 +396,9 @@
 
 '/master/product_property/{service_type_code}':
   $ref: utility/U13.yaml  
+
+'/master/partner/paging/{page}':
+  $ref: utility/U18.yaml  
 
 '/user/{user_name}':
   $ref: utility/U11.yaml  

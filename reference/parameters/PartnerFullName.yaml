@@ -1,0 +1,7 @@
+name: partner_full_name
+in: path
+required: true
+description: Partner full name
+schema:
+  type: string
+  example: 'บริษัท ขายซิม จำกัด'

@@ -1,0 +1,4 @@
+title: PartnerInfoList
+type: array
+items:
+  $ref: PartnerInfo.yaml

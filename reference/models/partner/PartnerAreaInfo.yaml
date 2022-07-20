@@ -1,5 +1,36 @@
 title: PartnerAreaInfo
 type: object
 properties:
-  id:
+  saa_code:
     type: string
+    example: '47473839293'
+    description: รหัส SAA Code ของระบบ PMS
+  saa_name:
+    type: string
+    example: 'ตัวแทนการขาย my ปี 2565 เขตเชียงใหม่'
+    description: ชื่อ SAA
+  saa_status_lkp:
+    allOf:
+      - $ref: ../common/DisplayLookup.yaml
+    description: สถานะของ SAA
+    example:
+      lookup_ref_id: '1'
+      display_value: 'Active'
+      lookup_category_name: 'saa_status_lkp'
+  saa_start_date:
+    type: string
+    format: date
+    example: '2022-06-10'
+    description: วันที่เริ่มต้นสัญญา
+  saa_end_date:
+    type: string
+    format: date
+    example: '2023-06-09'
+    description: วันที่สิ้นสุดสัญญา
+  cost_center:
+    $ref: ../subscriber/CostCenter.yaml
+  reference_time:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: Reference up-to-date time 

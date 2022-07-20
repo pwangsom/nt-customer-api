@@ -1,0 +1,43 @@
+get:
+  operationId: C85
+  description: Retrieve partner info by partner_full_name
+  summary: Get Partner Info by Partner Full Name.
+  tags: []
+  parameters:
+    - $ref: ../../parameters/PartnerFullName.yaml
+  responses:
+    '200':
+      description: Data Found
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../../models/partner/PartnerInfo.yaml     
+    '404':
+      description: Data not found.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: string
+              example: "Data not found"
+    '405':
+      description: JSON format error.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: string
+              example: "JSON format error"
+    '500':
+      description: Request time out or internal error.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: string
+              example: "Request time out or internal error"

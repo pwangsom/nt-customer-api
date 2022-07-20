@@ -1,0 +1,4 @@
+title: PartnerInfoWithPagination
+allOf:
+  - $ref: PartnerInfoList.yaml
+  - $ref: ../common/Pagination.yaml

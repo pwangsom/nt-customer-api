@@ -1,0 +1,7 @@
+name: saa_code
+in: path
+required: true
+description: SAA Code
+schema:
+  type: string
+  example: '47473839293'
