@@ -1,0 +1,27 @@
+title: PartnerInfo
+type: object
+properties:
+  customer_acct_number:
+    type: string
+    format: number
+    example: '7017480851'
+    description: CA reference number
+  partner_ref_id:
+    type: string
+    format: number
+    example: '2425'
+    description: เลข Partner ID ของระบบ PMS
+  partner_full_name:
+    type: string
+    example: 'บริษัท ขายซิม จำกัด'
+    description: Partner full name
+  partner_approve_date:
+    type: string
+    format: date
+    example: '2022-06-10'
+    description: วันที่อนุมัติการเป็นตัวแทน
+  reference_time:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: Reference up-to-date time 
