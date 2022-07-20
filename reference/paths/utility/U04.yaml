@@ -1,0 +1,43 @@
+get:
+  operationId: U04
+  description: Get product catalog by service_type_code
+  summary: Get Product Catalog by Service Type Code.
+  tags: []
+  parameters:
+    - $ref: ../../parameters/ServiceTypeCode.yaml 
+  responses:
+    '200':
+      description: Data Found.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../../models/master/ProductCatalog.yaml
+    '404':
+      description: Data not found.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: string
+              example: "Data not found"
+    '405':
+      description: JSON format error.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: string
+              example: "JSON format error"
+    '500':
+      description: Request time out or internal error.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: string
+              example: "Request time out or internal error"

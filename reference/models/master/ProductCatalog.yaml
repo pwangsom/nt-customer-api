@@ -1,0 +1,18 @@
+title: ProductCatalog
+type: object
+properties:
+  service_info:
+  allOf:
+    - $ref: Product.yaml
+    - type: object
+      properties:
+        package_list:
+          type: array
+          items:
+            $ref: Product.yaml
+    - type: object
+      properties:
+        component_list:
+          type: array
+          items:
+            $ref: Product.yaml

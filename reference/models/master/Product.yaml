@@ -1,0 +1,73 @@
+title: Product
+type: object
+properties:
+  product_id:
+    type: string
+    example: '1'
+    format: number
+    description: Product ID
+  product_type_lkp:
+    allOf:
+      - $ref: ../common/DisplayLookup.yaml
+    description: 'ประเภทของ Product (Service, Package, Component)'
+    example:
+      lookup_ref_id: '1'
+      display_value: Service
+      lookup_category_name: product_type_lkp
+  product_business_type_lkp:
+    allOf:
+      - $ref: ../common/DisplayLookup.yaml
+    description: ประเภทบริการ เช่น my และ C-internet
+    example:
+      lookup_ref_id: '1'
+      display_value: Thailand
+      lookup_category_name: product_business_type_lkp
+  product_name:
+    type: string
+    example: my
+    description: Product Name
+  description:
+    type: string
+    example: Description
+    description: Description
+  start_date:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: วันที่เริ่มต้นใช้บริการ
+  end_date:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: วันที่สิ้นสุดการใช้บริการ
+  price:
+    type: number
+    format: double
+    example: 41.3
+    description: Price
+  part_number:
+    type: string
+    example: '1'
+    format: number
+    description: Part Number
+  charge_type:
+    type: string
+    example: RC
+    description: 'วิธีการคิดค่าบริการ เช่น RC, NRC, Discount  ของ Product ประเภท Component'
+  product_zone:
+    type: string
+    example: Zone
+    description: ใช้ระบุ Zone ของ Product เช่น Package zone
+  is_primary:
+    type: integer
+    example: 1
+    description: 'ใช้ระบุ Package เป็น Package หลักหรือไม่ (0 = No, 1 = yes)'
+  list_order:
+    type: integer
+    example: 1
+    description: ลำดับการแสดงรายการ ซึ่งจัดเรียงภายในกลุ่ม product_type_lkp และ product_business_type_lkp เดียวกัน
+  update_date:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: วันที่อัพเดตข้อมูล

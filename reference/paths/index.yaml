@@ -385,6 +385,9 @@
 '/master/address_lookup/th':
   $ref: utility/U05.yaml
 
+'/master/product_catalog/{service_type_code}':
+  $ref: utility/U04.yaml  
+
 '/master/product_property/{service_type_code}':
   $ref: utility/U13.yaml  
 
