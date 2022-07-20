@@ -1,0 +1,30 @@
+title: EventApiInfo
+type: object
+properties:
+  event_api_lkp:
+    type: string
+    format: number
+    example: '6'
+    description: ประเภทของ Event
+  reference_key:
+    type: string
+    example: '1234567890'
+    description: Reference key
+  client_ref_id:
+    type: string
+    example: '00001'
+    description: Client reference ID
+  client_ref_timestamp:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+  event_request:
+    type: string
+    example: '{"consent_type": "my Postpaid", "consent_date": "2022-02-02"}'
+    description: Event Request
+required:
+  - event_api_lkp
+  - reference_key
+  - client_ref_id
+  - client_ref_timestamp
+  - event_request

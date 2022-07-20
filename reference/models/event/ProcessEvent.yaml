@@ -1,0 +1,10 @@
+title: ProcessEvent
+type: object
+properties:
+  client_info:
+    $ref: ../common/RequestClientInfo.yaml
+  event_api_info:
+    $ref: EventApiInfo.yaml
+required:
+  - client_info
+  - event_api_info

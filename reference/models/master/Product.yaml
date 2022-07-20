@@ -20,7 +20,7 @@ properties:
     description: ประเภทบริการ เช่น my และ C-internet
     example:
       lookup_ref_id: '1'
-      display_value: Thailand
+      display_value: 'my Postpaid'
       lookup_category_name: product_business_type_lkp
   product_name:
     type: string

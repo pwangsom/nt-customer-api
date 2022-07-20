@@ -1,0 +1,35 @@
+title: EventApiResponseInfo
+type: object
+properties:
+  event_api_id:
+    type: string
+    format: number
+    example: '2425'
+    description: Event API reference id  
+  event_api_lkp:
+    allOf:
+      - $ref: ../common/DisplayLookup.yaml
+    description: 'ประเภทของ Event'
+    example:
+      lookup_ref_id: '1'
+      display_value: Service
+      lookup_category_name: event_api_lkp
+  reference_key:
+    type: string
+    example: '1234567890'
+    description: Reference key
+  client_ref_id:
+    type: string
+    example: '00001'
+    description: Client reference ID
+  client_ref_timestamp:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+  event_response:
+    type: string
+    example: '{"event_status": "success"}'
+    description: Event Response
+  event_status:
+    type: string
+    example: 'success'

@@ -1,0 +1,8 @@
+name: event_api_lkp
+in: path
+required: true
+description: ประเภทของ Event
+schema:
+  type: string
+  format: number
+  example: '1'

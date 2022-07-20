@@ -1,0 +1,18 @@
+title: EventSuccessResponse
+type: object
+properties:
+  client_info:
+    $ref: ../common/RequestClientInfo.yaml
+  api_trans_id:
+    type: string
+    example: '29'
+    description: API transaction id for reference
+  api_timestamp:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: API Response timestamp
+  event_api_info:
+    type: array
+    items:
+      $ref: EventApiResponseInfo.yaml
