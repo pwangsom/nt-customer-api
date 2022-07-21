@@ -118,10 +118,10 @@ properties:
     type: integer
     example: 0
     description: Bill period on service active
-  is_vip_dept:
+  is_vip_debt:
     type: integer
     example: 0
-    description: Internal bill.
+    description: VIP customer of Debt team (0 = no, 1 = yes).
   related_party_lkp:
     allOf:
       - $ref: ../common/DisplayLookup.yaml
