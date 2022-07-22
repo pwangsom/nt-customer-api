@@ -97,10 +97,10 @@ properties:
     type: integer
     example: 0
     description: Bill period on service active
-  is_vip_debt:
+  is_vip_dept:
     type: integer
     example: 0
-    description: VIP customer of Debt team (0 = no, 1 = yes).
+    description: Internal bill.
   related_party_lkp:
     type: string
     format: number
