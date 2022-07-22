@@ -20,5 +20,5 @@ properties:
   page_size:
     type: integer
     enum:
-      - 25
-    description: 25 records per page
+      - 100
+    description: 100 records per page
