@@ -166,10 +166,10 @@
 '/customer/{customer_acct_number}/app_registration/update':
   $ref: customer-account/C73.yaml
 
-'/prospect/individual/create':
+'/lead/individual/create':
   $ref: customer-account/C67.yaml
 
-'/prospect/organization/create':
+'/lead/organization/create':
   $ref: customer-account/C68.yaml
 
 '/partner/individual/create':

@@ -1,14 +1,14 @@
 post:
   operationId: C68
-  description: Create an organization prospect
-  summary: Create An Organization Prospect.
+  description: Create an organization lead
+  summary: Create An Organization Lead.
   tags: []
   requestBody:
     required: true
     content:
       application/json:
         schema:
-          $ref: ../../models/customer-account/new-organization/NewOrgProspect.yaml
+          $ref: ../../models/customer-account/new-organization/NewOrgLead.yaml
   responses:
     '200':
       description: Operation success

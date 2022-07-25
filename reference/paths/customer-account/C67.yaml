@@ -1,14 +1,14 @@
 post:
   operationId: C67
-  description: Create an individual prospect
-  summary: Create An Individual Prospect.
+  description: Create an individual lead
+  summary: Create An Individual Lead.
   tags: []
   requestBody:
     required: true
     content:
       application/json:
         schema:
-          $ref: ../../models/customer-account/new-individual/NewIndyProspect.yaml
+          $ref: ../../models/customer-account/new-individual/NewIndyLead.yaml
   responses:
     '200':
       description: Operation success

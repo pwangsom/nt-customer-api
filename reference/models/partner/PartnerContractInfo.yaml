@@ -9,7 +9,7 @@ properties:
     type: string
     example: 'เลขที่ 1/2565'
     description: เลขที่สัญญาตามเอกสารจริง
-  contract_name:
+  project_name:
     type: string
     example: 'สัญญาตัวแทนการขาย my ปี 2565'
     description: ชื่อสัญญา

@@ -1,12 +1,12 @@
-title: NewOrgProspect
+title: NewIndyLead
 type: object
 properties:
   client_info:
     $ref: ../../common/RequestClientInfo.yaml
   id_card_info:
-    $ref: NewOrgCustomerCard.yaml
+    $ref: NewIndyCustomerCard.yaml
   customer_acct_type:
-    $ref: NewOrganization.yaml
+    $ref: NewBasicIndividual.yaml
   general_info:
     $ref: ../NewCustomerGenericInfo.yaml
   address:
@@ -21,4 +21,3 @@ required:
   - client_info
   - customer_acct_type
   - telephone
-
