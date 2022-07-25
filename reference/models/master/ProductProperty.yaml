@@ -1,6 +1,11 @@
 title: ProductProperty
 type: object
 properties:
+  product_property_id:
+    type: string
+    format: number
+    example: '2425'
+    description: Product property reference id
   property_key:
     type: string
     example: 'Up Speed'
