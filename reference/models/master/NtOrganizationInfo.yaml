@@ -1,0 +1,37 @@
+title: NtOrganizationInfo
+type: object
+properties:
+  org_id:
+    type: string
+    example: '50049020'
+    description: Organization ID
+  org_name:
+    type: string
+    example: 'ส่วนอำนวยการสายงาน'
+    description: Organization Name
+  org_name_short:
+    type: string
+    example: 'อภก.'
+    description: Organization Name Short
+  org_level:
+    type: string
+    example: '62'
+    description: Organization Level
+  priority:
+    type: string
+    example: 'AA'
+    description: Organization Parent ID
+  parent_org_id:
+    type: string
+    example: '50048281'
+    description: Parent Organization ID
+  parent_group:
+    type: string
+    example: '10'
+    description: Parent Group
+  update_date:
+    type: string
+    format: date
+    example: '2022-08-30'
+    description: วันที่เริ่มใช้งาน Property
+  

@@ -390,6 +390,12 @@
   
 '/master/address_lookup/th':
   $ref: utility/U05.yaml
+  
+'/master/collection_unit':
+  $ref: utility/U06.yaml
+  
+/master/nt/organization:
+  $ref: utility/U07.yaml
 
 '/master/product_catalog/{service_type_code}':
   $ref: utility/U04.yaml  
