@@ -1,0 +1,43 @@
+get:
+  operationId: C86
+  description: Retrieve customer info by the latest subscriber_number
+  summary: Get Customer Info by the Latest Subscriber Number.
+  tags: []
+  parameters:
+    - $ref: ../../parameters/SubscriberNumber.yaml
+  responses:
+    '200':
+      description: Data Found
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../../models/customer-account/CustomerAccount.yaml         
+    '404':
+      description: Data not found.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: string
+              example: "Data not found"
+    '405':
+      description: JSON format error.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: string
+              example: "JSON format error"
+    '500':
+      description: Request time out or internal error.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: string
+              example: "Request time out or internal error"

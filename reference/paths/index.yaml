@@ -16,6 +16,9 @@
 '/customer/sub/{subscriber_number}':
   $ref: customer-account/C05.yaml
 
+'/customer/sub/{subscriber_number}/latest':
+  $ref: customer-account/C86.yaml
+
 '/customer/ref_sub/{ref_subscr_no}':
   $ref: customer-account/C79.yaml
 
@@ -396,6 +399,9 @@
   
 /master/nt/organization:
   $ref: utility/U07.yaml
+  
+/employee/{employee_code}:
+  $ref: utility/U08.yaml
 
 '/master/product_catalog/{service_type_code}':
   $ref: utility/U04.yaml  
@@ -411,6 +417,9 @@
 
 '/user/email/{email_address}':
   $ref: utility/U17.yaml  
+
+'/exchange_rate/currency/{currency_lkp}/month/{period_month}':
+  $ref: utility/U19.yaml  
 
 '/service_request/merge':
   $ref: utility/U14.yaml  

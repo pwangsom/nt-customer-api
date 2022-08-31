@@ -1,0 +1,15 @@
+title: NtOrganizationShortInfo
+type: object
+properties:
+  org_id:
+    type: string
+    example: '50049020'
+    description: Organization ID
+  org_name:
+    type: string
+    example: 'ส่วนอำนวยการสายงาน'
+    description: Organization Name
+  org_name_short:
+    type: string
+    example: 'อภก.'
+    description: Organization Name Short

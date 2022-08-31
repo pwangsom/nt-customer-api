@@ -1,0 +1,44 @@
+get:
+  operationId: U19
+  description: Get exchange rate by currency and period month
+  summary: Get Exchange Rate by Currency and Period Month.
+  tags: []
+  parameters:
+    - $ref: ../../parameters/CurrencyLkp.yaml
+    - $ref: ../../parameters/PeriodMonth.yaml
+  responses:
+    '200':
+      description: Data Found.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../../models/common/ExchangeRate.yaml
+    '404':
+      description: Data not found.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: string
+              example: "Data not found"
+    '405':
+      description: JSON format error.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: string
+              example: "JSON format error"
+    '500':
+      description: Request time out or internal error.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: string
+              example: "Request time out or internal error"

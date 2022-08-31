@@ -1,0 +1,7 @@
+name: employee_code
+in: path
+required: true
+description: Employee Code
+schema:
+  type: string
+  example: '00123456'

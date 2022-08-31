@@ -1,0 +1,93 @@
+title: NtEmployee
+type: object
+properties:
+  employee_code:
+    type: string
+    example: '00123456'
+    description: Employee code
+  salutation:
+    type: string
+    example: นาย
+    description: คำนำหน้าชื่อ
+  first_name:
+    type: string
+    example: ตัวอย่าง
+    description: ชื่อ
+  last_name:
+    type: string
+    example: ทดสอบ
+    description: นามสกุล
+  gender:
+    type: string
+    example: M
+    description: เพศ
+  birth_date:
+    type: string
+    format: date
+    example: '1970-06-25'
+    description: วันเดือนปีเกิด
+  position_code:
+    type: string
+    example: '50014268'
+    description: รหัสตำแหน่ง
+  position_name:
+    type: string
+    example: นายช่าง
+    description: ชื่อตำแหน่ง
+  admin_code:
+    type: string
+    example: ภ
+    description: รหัสตำแหน่งผู้บริหาร
+  admin_desc:
+    type: string
+    example: ผส/ผสค/ชศ/สน./
+    description: ชื่อตำแหน่งผู้บริหาร
+  salutation_en:
+    type: string
+    example: Mr.
+    description: คำนำหน้าชื่ออังกฤษ
+  first_name_en:
+    type: string
+    example: Example
+    description: ชื่ออังกฤษ
+  last_name_en:
+    type: string
+    example: Test
+    description: นามสกุลอังกฤษ
+  email:
+    type: string
+    example: example.t@nc.ntplc.co.th
+    description: อีเมล์
+  mobile:
+    type: string
+    example: '0881234567'
+    description: เบอร์มือถือ
+  telephone:
+    type: string
+    example: '021040123'
+    description: เบอร์ที่ทำงาน
+  sap_cost_center:
+    type: string
+    example: '1P20209'
+    description: รหัสศูนย์ต้นทุน
+  employee_status_lkp:
+    allOf:
+      - $ref: ../common/DisplayLookup.yaml
+    description: สถานะการเป็นพนักงาน
+    example:
+      lookup_ref_id: '1'
+      display_value: Normal
+      lookup_category_name: employee_status_lkp
+  field_info:
+      $ref: NtOrganizationShortInfo.yaml
+  group_info:
+      $ref: NtOrganizationShortInfo.yaml
+  party_info:
+      $ref: NtOrganizationShortInfo.yaml
+  section_info:
+      $ref: NtOrganizationShortInfo.yaml
+  update_date:
+    type: string
+    format: date-time
+    example: '2016-08-29T09:12:33.001Z'
+    description: Update Date

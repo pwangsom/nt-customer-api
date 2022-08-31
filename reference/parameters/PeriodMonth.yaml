@@ -1,0 +1,8 @@
+name: period_month
+in: path
+required: true
+description: Period Month
+schema:
+  type: string
+  format: date
+  example: '2022-01-01'
