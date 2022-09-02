@@ -1,0 +1,16 @@
+title: CustomerContractWithBaList
+allOf:
+  - type: object
+    properties:
+      customer_reference_info:
+        $ref: ../customer-account/update-customer/UpdateCustomerReference.yaml
+  - $ref: CustomerContract.yaml
+  - type: object
+    properties:
+      billing_account_list:
+        type: array
+        items:
+          type: string
+          format: number
+          example: '12254127'
+          description: BA number

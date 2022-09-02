@@ -1,10 +1,11 @@
 get:
-  operationId: C86
-  description: Retrieve customer info by the latest subscriber_number
-  summary: Get Customer Info by the Latest Subscriber Number.
+  operationId: C83
+  description: Retrieve customer contract info by customer_acct_number and customer_contract_id
+  summary: Retrieve Customer Contract Info by Customer Number and Customer Contract ID.
   tags: []
   parameters:
-    - $ref: ../../parameters/SubscriberNumber.yaml
+    - $ref: ../../parameters/CustomerAcctNumber.yaml
+    - $ref: ../../parameters/CustomerContractId.yaml
   responses:
     '200':
       description: Data Found

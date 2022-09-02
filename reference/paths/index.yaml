@@ -73,6 +73,9 @@
 '/customer/{customer_acct_number}/contract':
   $ref: customer-account/C50.yaml
 
+'/customer/{customer_acct_number}/contract/{customer_contract_id}':
+  $ref: customer-account/C83.yaml
+
 '/customer/{customer_acct_number}/customer_value':
   $ref: customer-account/C64.yaml
 
