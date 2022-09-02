@@ -1,0 +1,12 @@
+title: ManageContractSalesSupport
+allOf:
+  - type: object
+    properties:
+      client_info:
+        $ref: ../../common/RequestClientInfo.yaml
+      contract_reference_info:
+        $ref: UpdateContractReference.yaml
+    required:
+      - client_info
+      - contract_reference_info
+  - $ref: ../../common/ManageSalesSupportList.yaml
