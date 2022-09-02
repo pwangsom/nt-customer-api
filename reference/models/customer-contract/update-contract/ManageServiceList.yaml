@@ -1,0 +1,7 @@
+title: ManageServiceList
+x-stoplight:
+  id: vmeukwrqjvusl
+type: object
+properties:
+  id:
+    type: string

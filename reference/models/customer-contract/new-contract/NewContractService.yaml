@@ -10,3 +10,5 @@ properties:
     type: array
     items:
       $ref: ../../subscriber/new-subscriber/NewSubscriberProductProperty.yaml
+required:
+  - service_type_code
