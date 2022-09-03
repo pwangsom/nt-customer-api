@@ -163,6 +163,9 @@
 '/customer/{customer_acct_number}/contract/{customer_contract_id}/update':
   $ref: customer-account/C53.yaml
 
+'/customer/{customer_acct_number}/contract/{customer_contract_id}/service/manage':
+  $ref: customer-account/C80.yaml
+
 '/customer/{customer_acct_number}/contract/{customer_contract_id}/sales_support/manage':
   $ref: customer-account/C81.yaml
 

@@ -1,7 +1,20 @@
 title: ManageServiceList
-x-stoplight:
-  id: vmeukwrqjvusl
-type: object
-properties:
-  id:
-    type: string
+anyOf:
+  - type: object
+    properties:
+      remove_contract_service_list:
+        type: array
+        items:
+          type: object
+          properties:
+            service_type_code:
+              type: string
+              format: number
+              example: '110'
+              description: รหัสบริการ
+  - type: object
+    properties:
+      add_contract_service_list:
+        type: array
+        items:
+          $ref: ../new-contract/NewContractService.yaml
