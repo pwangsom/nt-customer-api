@@ -10,7 +10,4 @@ allOf:
       billing_account_list:
         type: array
         items:
-          type: string
-          format: number
-          example: '12254127'
-          description: BA number
+          $ref: ContractBillingAccount.yaml
