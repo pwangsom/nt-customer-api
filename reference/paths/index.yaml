@@ -166,6 +166,9 @@
 '/customer/{customer_acct_number}/contract/{customer_contract_id}/service/manage':
   $ref: customer-account/C80.yaml
 
+'/customer/{customer_acct_number}/contract/{customer_contract_id}/billing/manage':
+  $ref: customer-account/C82.yaml
+
 '/customer/{customer_acct_number}/contract/{customer_contract_id}/sales_support/manage':
   $ref: customer-account/C81.yaml
 

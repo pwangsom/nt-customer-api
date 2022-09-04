@@ -1,0 +1,26 @@
+title: ManageBaList
+anyOf:
+  - type: object
+    properties:
+      remove_billing_account_list:
+        type: array
+        items:
+          type: object
+          properties:
+            bill_acct_number:
+              type: string
+              format: number
+              example: '12254127'
+              description: BA number
+  - type: object
+    properties:
+      add_billing_account_list:
+        type: array
+        items:
+          type: object
+          properties:
+            bill_acct_number:
+              type: string
+              format: number
+              example: '12254127'
+              description: BA number
