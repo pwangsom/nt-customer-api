@@ -9,4 +9,4 @@ properties:
   subscriber_list:
     type: array
     items:
-      $ref: ContractService.yaml
+      $ref: ContractSubscriber.yaml
