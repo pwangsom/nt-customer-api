@@ -1,0 +1,12 @@
+title: ContractBillingAccount
+type: object
+properties:
+  bill_acct_number:
+    type: string
+    format: number
+    example: '12254127'
+    description: BA number
+  subscriber_list:
+    type: array
+    items:
+      $ref: ContractService.yaml
