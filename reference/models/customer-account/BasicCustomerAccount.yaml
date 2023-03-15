@@ -10,12 +10,14 @@ properties:
     type: string
     format: date-time
     example: '2016-08-29T09:12:33.001Z'
-    description: Reference up-to-date time 
+    description: Reference up-to-date time
   customer_full_name:
     type: string
-    example: 'นายสมชาย เจริญยิ่ง'
+    example: นายสมชาย เจริญยิ่ง
     description: Customer full name.
   id_card_info:
     $ref: IdCardInfo.yaml
   generic_info:
     $ref: CustomerGenericInfo.yaml
+  customer360_link:
+    type: string
